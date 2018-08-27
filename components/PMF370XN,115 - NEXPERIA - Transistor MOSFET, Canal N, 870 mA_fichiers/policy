@@ -1,0 +1,10 @@
+
+
+
+
+
+
+var basePolicyJSON = '{\"guide\":{\"thor_merch_url_pfx\":\"http://farnell-cz.baynote.net/merch/1\",\"load_jquery\":true,\"fmt\":\"results-xsl\",\"ok\":true,\"thor_rec_url_pfx\":\"https://farnell-cz.baynote.net/recs/1\"},\"baynoteObserver\":{\"dt\":30,\"so\":true,\"uhd\":false,\"cds\":true,\"cdt\":true,\"ioi\":true,\"hn\":\"handler2.js\",\"ec\":false,\"uca\":\"315360000000\",\"alt\":true,\"om\":2,\"ub\":false,\"ep\":50,\"sv\":true,\"sdl\":false,\"ok\":true,\"st\":true},\"search\":{\"ok\":true},\"customScript\":{\"hn\":\"custom-script.js\"},\"trail\":{\"tl\":5,\"so\":false,\"ok\":false},\"GuideSet\":{\"eids\":[]},\"inf\":{\"dt\":\"Fri Aug 03 00:24:26 PDT 2018\",\"exp\":86400,\"u\":\"ANONYMOUS\",\"cn\":\"farnell\",\"ve\":\"V1\",\"cc\":\"cz\",\"cd\":\"d&g&s\"},\"baynoteGuide\":{\"ok\":true},\"guidePro\":{\"ok\":true}}';
+var userPolicyJSON = '{\"dir\":{\"au\":true},\"inf\":{\"dt\":\"Mon Aug 27 02:00:17 PDT 2018\",\"u\":\"6927405365376445525\",\"ve\":\"V1\",\"cd\":\"d&g&s\"}}';
+bnPolicy.registerPolicy(basePolicyJSON, userPolicyJSON);
+
