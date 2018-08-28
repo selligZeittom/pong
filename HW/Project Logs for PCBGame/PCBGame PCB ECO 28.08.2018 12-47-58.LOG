@@ -1,0 +1,187 @@
+Added Component: Designator=A1(accelerometer)
+Add component. Clean all parameters for all variants
+Added Component: Designator=G1(1.5V Cell AAA/LR03)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=G2(1.5V Cell AAA/LR03)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J1(FlatCable2x3 2MM Straight TH FCI 98414-G06-06ULF)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LCD(LCD-NHD-2.4-240320SF)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "LCD-NHD-2.4-240320SF"; VariantName = "[No Variations]"
+Added Component: Designator=PIC18F(TQFP44 P0.8 C10X10 H1.2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R2(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R3(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R4(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R5(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S1(Push Button C6.0x6.0 WE 430186130716)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S-Touch Controller(QFN16 P0.5 T1.5x1.5 C3.0x3.0 H1.0)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "STMPE811"; VariantName = "[No Variations]"
+Added Component: Designator=T1(SOT23 P0.95 C1.6x3.0 H1.3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=A1-4
+Added Pin To Net: NetName=GND Pin=A1-6
+Added Pin To Net: NetName=GND Pin=A1-8
+Added Pin To Net: NetName=GND Pin=A1-9
+Added Pin To Net: NetName=GND Pin=A1-10
+Added Pin To Net: NetName=GND Pin=G2-2
+Added Pin To Net: NetName=GND Pin=G2-2
+Added Pin To Net: NetName=GND Pin=J1-3
+Added Pin To Net: NetName=GND Pin=LCD-1
+Added Pin To Net: NetName=GND Pin=LCD-33
+Added Pin To Net: NetName=GND Pin=LCD-39
+Added Pin To Net: NetName=GND Pin=PIC18F-6
+Added Pin To Net: NetName=GND Pin=PIC18F-29
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=GND Pin=S1-2
+Added Pin To Net: NetName=GND Pin=S1-4
+Added Pin To Net: NetName=GND Pin=S-Touch Controller-10
+Added Pin To Net: NetName=GND Pin=S-Touch Controller-17
+Added Pin To Net: NetName=GND Pin=T1-2
+Added Net: Name=GND
+Added Pin To Net: NetName=NetA1_7 Pin=A1-7
+Added Pin To Net: NetName=NetA1_7 Pin=PIC18F-10
+Added Net: Name=NetA1_7
+Added Pin To Net: NetName=NetA1_11 Pin=A1-11
+Added Pin To Net: NetName=NetA1_11 Pin=PIC18F-37
+Added Pin To Net: NetName=NetA1_11 Pin=S-Touch Controller-4
+Added Net: Name=NetA1_11
+Added Pin To Net: NetName=NetA1_12 Pin=A1-12
+Added Pin To Net: NetName=NetA1_12 Pin=PIC18F-1
+Added Net: Name=NetA1_12
+Added Pin To Net: NetName=NetA1_15 Pin=A1-15
+Added Pin To Net: NetName=NetA1_15 Pin=PIC18F-42
+Added Pin To Net: NetName=NetA1_15 Pin=R2-1
+Added Pin To Net: NetName=NetA1_15 Pin=S-Touch Controller-3
+Added Net: Name=NetA1_15
+Added Pin To Net: NetName=NetA1_16 Pin=A1-16
+Added Pin To Net: NetName=NetA1_16 Pin=PIC18F-43
+Added Pin To Net: NetName=NetA1_16 Pin=S-Touch Controller-7
+Added Net: Name=NetA1_16
+Added Pin To Net: NetName=NetG1_2 Pin=G1-2
+Added Pin To Net: NetName=NetG1_2 Pin=G1-2
+Added Pin To Net: NetName=NetG1_2 Pin=G2-1
+Added Pin To Net: NetName=NetG1_2 Pin=G2-1
+Added Net: Name=NetG1_2
+Added Pin To Net: NetName=NetJ1_1 Pin=J1-1
+Added Pin To Net: NetName=NetJ1_1 Pin=PIC18F-18
+Added Pin To Net: NetName=NetJ1_1 Pin=R5-1
+Added Pin To Net: NetName=NetJ1_1 Pin=S1-1
+Added Pin To Net: NetName=NetJ1_1 Pin=S1-3
+Added Net: Name=NetJ1_1
+Added Pin To Net: NetName=NetJ1_4 Pin=J1-4
+Added Pin To Net: NetName=NetJ1_4 Pin=PIC18F-17
+Added Net: Name=NetJ1_4
+Added Pin To Net: NetName=NetJ1_5 Pin=J1-5
+Added Pin To Net: NetName=NetJ1_5 Pin=PIC18F-16
+Added Net: Name=NetJ1_5
+Added Pin To Net: NetName=NetLCD_2 Pin=LCD-2
+Added Pin To Net: NetName=NetLCD_2 Pin=S-Touch Controller-1
+Added Net: Name=NetLCD_2
+Added Pin To Net: NetName=NetLCD_3 Pin=LCD-3
+Added Pin To Net: NetName=NetLCD_3 Pin=S-Touch Controller-16
+Added Net: Name=NetLCD_3
+Added Pin To Net: NetName=NetLCD_4 Pin=LCD-4
+Added Pin To Net: NetName=NetLCD_4 Pin=S-Touch Controller-15
+Added Net: Name=NetLCD_4
+Added Pin To Net: NetName=NetLCD_5 Pin=LCD-5
+Added Pin To Net: NetName=NetLCD_5 Pin=S-Touch Controller-13
+Added Net: Name=NetLCD_5
+Added Pin To Net: NetName=NetLCD_10 Pin=LCD-10
+Added Pin To Net: NetName=NetLCD_10 Pin=PIC18F-15
+Added Net: Name=NetLCD_10
+Added Pin To Net: NetName=NetLCD_11 Pin=LCD-11
+Added Pin To Net: NetName=NetLCD_11 Pin=PIC18F-35
+Added Net: Name=NetLCD_11
+Added Pin To Net: NetName=NetLCD_12 Pin=LCD-12
+Added Pin To Net: NetName=NetLCD_12 Pin=PIC18F-14
+Added Net: Name=NetLCD_12
+Added Pin To Net: NetName=NetLCD_13 Pin=LCD-13
+Added Pin To Net: NetName=NetLCD_13 Pin=PIC18F-11
+Added Net: Name=NetLCD_13
+Added Pin To Net: NetName=NetLCD_22 Pin=LCD-22
+Added Pin To Net: NetName=NetLCD_22 Pin=PIC18F-19
+Added Net: Name=NetLCD_22
+Added Pin To Net: NetName=NetLCD_23 Pin=LCD-23
+Added Pin To Net: NetName=NetLCD_23 Pin=PIC18F-20
+Added Net: Name=NetLCD_23
+Added Pin To Net: NetName=NetLCD_24 Pin=LCD-24
+Added Pin To Net: NetName=NetLCD_24 Pin=PIC18F-21
+Added Net: Name=NetLCD_24
+Added Pin To Net: NetName=NetLCD_25 Pin=LCD-25
+Added Pin To Net: NetName=NetLCD_25 Pin=PIC18F-22
+Added Net: Name=NetLCD_25
+Added Pin To Net: NetName=NetLCD_26 Pin=LCD-26
+Added Pin To Net: NetName=NetLCD_26 Pin=PIC18F-23
+Added Net: Name=NetLCD_26
+Added Pin To Net: NetName=NetLCD_27 Pin=LCD-27
+Added Pin To Net: NetName=NetLCD_27 Pin=PIC18F-24
+Added Net: Name=NetLCD_27
+Added Pin To Net: NetName=NetLCD_28 Pin=LCD-28
+Added Pin To Net: NetName=NetLCD_28 Pin=PIC18F-31
+Added Net: Name=NetLCD_28
+Added Pin To Net: NetName=NetLCD_29 Pin=LCD-29
+Added Pin To Net: NetName=NetLCD_29 Pin=PIC18F-30
+Added Net: Name=NetLCD_29
+Added Pin To Net: NetName=NetLCD_30 Pin=LCD-30
+Added Pin To Net: NetName=NetLCD_30 Pin=PIC18F-32
+Added Net: Name=NetLCD_30
+Added Pin To Net: NetName=NetLCD_34 Pin=LCD-34
+Added Pin To Net: NetName=NetLCD_34 Pin=LCD-35
+Added Pin To Net: NetName=NetLCD_34 Pin=LCD-36
+Added Pin To Net: NetName=NetLCD_34 Pin=LCD-37
+Added Pin To Net: NetName=NetLCD_34 Pin=T1-3
+Added Net: Name=NetLCD_34
+Added Pin To Net: NetName=NetPIC18F_9 Pin=PIC18F-9
+Added Pin To Net: NetName=NetPIC18F_9 Pin=R1-1
+Added Pin To Net: NetName=NetPIC18F_9 Pin=S-Touch Controller-2
+Added Net: Name=NetPIC18F_9
+Added Pin To Net: NetName=NetPIC18F_36 Pin=PIC18F-36
+Added Pin To Net: NetName=NetPIC18F_36 Pin=R4-2
+Added Pin To Net: NetName=NetPIC18F_36 Pin=T1-1
+Added Net: Name=NetPIC18F_36
+Added Pin To Net: NetName=NetPIC18F_44 Pin=PIC18F-44
+Added Pin To Net: NetName=NetPIC18F_44 Pin=R3-2
+Added Pin To Net: NetName=NetPIC18F_44 Pin=S-Touch Controller-5
+Added Net: Name=NetPIC18F_44
+Added Pin To Net: NetName=VCC Pin=A1-5
+Added Pin To Net: NetName=VCC Pin=A1-13
+Added Pin To Net: NetName=VCC Pin=A1-14
+Added Pin To Net: NetName=VCC Pin=G1-1
+Added Pin To Net: NetName=VCC Pin=G1-1
+Added Pin To Net: NetName=VCC Pin=J1-2
+Added Pin To Net: NetName=VCC Pin=LCD-7
+Added Pin To Net: NetName=VCC Pin=LCD-8
+Added Pin To Net: NetName=VCC Pin=LCD-31
+Added Pin To Net: NetName=VCC Pin=LCD-38
+Added Pin To Net: NetName=VCC Pin=PIC18F-7
+Added Pin To Net: NetName=VCC Pin=PIC18F-28
+Added Pin To Net: NetName=VCC Pin=R1-2
+Added Pin To Net: NetName=VCC Pin=R2-2
+Added Pin To Net: NetName=VCC Pin=R5-2
+Added Pin To Net: NetName=VCC Pin=S-Touch Controller-6
+Added Pin To Net: NetName=VCC Pin=S-Touch Controller-9
+Added Pin To Net: NetName=VCC Pin=S-Touch Controller-14
+Added Net: Name=VCC
+Added Class: Name=PCBGame
+Added Room: Name=PCBGame

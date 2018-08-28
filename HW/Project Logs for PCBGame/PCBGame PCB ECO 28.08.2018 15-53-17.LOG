@@ -1,0 +1,278 @@
+Added Component: Designator=C1(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C2(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C4(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C5(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C6(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C7(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C8(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C9(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=G1(1.5V Cell AAA/LR03)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "36-82-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Battery cell D10.5 L44.5"; VariantName = "[No Variations]"
+Added Component: Designator=G2(1.5V Cell AAA/LR03)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "36-82-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Battery cell D10.5 L44.5"; VariantName = "[No Variations]"
+Added Component: Designator=J1(FlatCable2x3 2MM Straight TH FCI 98414-G06-06ULF)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LCD1(LCD-NHD-2.4-240320SF)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "NHD-2.4-240320CF-CTXI#-F-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "LCD-NHD-2.4-240320SF"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=R2(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=R3(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=R4(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=R5(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=S1(Push Button C6.0x6.0 WE 430186130716)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "401-1433-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "User"; VariantName = "[No Variations]"
+Added Component: Designator=T1(SOT23 P0.95 C1.6x3.0 H1.3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = "Farnell"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1758096"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "PMF370XN"; VariantName = "[No Variations]"
+Added Component: Designator=T2(SOT23 P0.95 C1.6x3.0 H1.3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = "Farnell"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1758096"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "PMF370XN"; VariantName = "[No Variations]"
+Added Component: Designator=U1(accelerometer)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = "Farnell"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "2532377"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "IIS328DQ"; VariantName = "[No Variations]"
+Added Component: Designator=U2(QFN16 P0.5 T1.5x1.5 C3.0x3.0 H1.0)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = "Farnell"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "2807110"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "STMPE811"; VariantName = "[No Variations]"
+Added Component: Designator=U3(TQFP44 P0.8 C10X10 H1.2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Supplier 1"; Value = "Farnell"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1439591"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "PIC18F46K20-_/PT"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=C1-2
+Added Pin To Net: NetName=VCC Pin=C2-2
+Added Pin To Net: NetName=VCC Pin=C3-2
+Added Pin To Net: NetName=VCC Pin=C4-2
+Added Pin To Net: NetName=VCC Pin=C5-2
+Added Pin To Net: NetName=VCC Pin=C6-2
+Added Pin To Net: NetName=VCC Pin=C7-2
+Added Pin To Net: NetName=GND Pin=C8-1
+Added Pin To Net: NetName=VCC Pin=C8-2
+Added Pin To Net: NetName=GND Pin=C9-1
+Added Pin To Net: NetName=VCC Pin=C9-2
+Added Pin To Net: NetName=VCC Pin=G1-1
+Added Pin To Net: NetName=VCC Pin=G1-1
+Added Pin To Net: NetName=NetG1_2 Pin=G1-2
+Added Pin To Net: NetName=NetG1_2 Pin=G1-2
+Added Pin To Net: NetName=NetG1_2 Pin=G2-1
+Added Pin To Net: NetName=NetG1_2 Pin=G2-1
+Added Pin To Net: NetName=GND Pin=G2-2
+Added Pin To Net: NetName=GND Pin=G2-2
+Added Pin To Net: NetName=NetJ1_1 Pin=J1-1
+Added Pin To Net: NetName=VCC Pin=J1-2
+Added Pin To Net: NetName=GND Pin=J1-3
+Added Pin To Net: NetName=NetJ1_4 Pin=J1-4
+Added Pin To Net: NetName=NetJ1_5 Pin=J1-5
+Added Pin To Net: NetName=VCC Pin=LCD1-7
+Added Pin To Net: NetName=VCC Pin=LCD1-8
+Added Pin To Net: NetName=VCC Pin=LCD1-31
+Added Pin To Net: NetName=VCC Pin=LCD1-38
+Added Pin To Net: NetName=VCC Pin=R1-2
+Added Pin To Net: NetName=VCC Pin=R2-2
+Added Pin To Net: NetName=NetJ1_1 Pin=R4-1
+Added Pin To Net: NetName=VCC Pin=R4-2
+Added Pin To Net: NetName=VCC Pin=R5-2
+Added Pin To Net: NetName=GND Pin=S1-2
+Added Pin To Net: NetName=GND Pin=S1-4
+Added Pin To Net: NetName=GND Pin=T1-2
+Added Pin To Net: NetName=VCC Pin=U1-5
+Added Pin To Net: NetName=VCC Pin=U1-13
+Added Pin To Net: NetName=VCC Pin=U1-14
+Added Pin To Net: NetName=VCC Pin=U2-6
+Added Pin To Net: NetName=VCC Pin=U2-9
+Added Pin To Net: NetName=VCC Pin=U2-14
+Added Pin To Net: NetName=GND Pin=U3-6
+Added Pin To Net: NetName=VCC Pin=U3-7
+Added Pin To Net: NetName=NetJ1_5 Pin=U3-16
+Added Pin To Net: NetName=NetJ1_4 Pin=U3-17
+Added Pin To Net: NetName=NetJ1_1 Pin=U3-18
+Added Pin To Net: NetName=VCC Pin=U3-28
+Added Pin To Net: NetName=GND Pin=U3-29
+Added Pin To Net: NetName=CTRL_GND Pin=C1-1
+Added Pin To Net: NetName=CTRL_GND Pin=C2-1
+Added Pin To Net: NetName=CTRL_GND Pin=C3-1
+Added Pin To Net: NetName=CTRL_GND Pin=C4-1
+Added Pin To Net: NetName=CTRL_GND Pin=C5-1
+Added Pin To Net: NetName=CTRL_GND Pin=C6-1
+Added Pin To Net: NetName=CTRL_GND Pin=C7-1
+Added Pin To Net: NetName=CTRL_GND Pin=LCD1-1
+Added Pin To Net: NetName=CTRL_GND Pin=LCD1-33
+Added Pin To Net: NetName=CTRL_GND Pin=LCD1-39
+Added Pin To Net: NetName=CTRL_GND Pin=R3-1
+Added Pin To Net: NetName=CTRL_GND Pin=T1-3
+Added Pin To Net: NetName=CTRL_GND Pin=T2-2
+Added Pin To Net: NetName=CTRL_GND Pin=U1-4
+Added Pin To Net: NetName=CTRL_GND Pin=U1-6
+Added Pin To Net: NetName=CTRL_GND Pin=U1-8
+Added Pin To Net: NetName=CTRL_GND Pin=U1-9
+Added Pin To Net: NetName=CTRL_GND Pin=U1-10
+Added Pin To Net: NetName=CTRL_GND Pin=U2-10
+Added Pin To Net: NetName=CTRL_GND Pin=U2-17
+Added Net: Name=CTRL_GND
+Added Pin To Net: NetName=NetLCD1_2 Pin=LCD1-2
+Added Pin To Net: NetName=NetLCD1_2 Pin=U2-1
+Added Net: Name=NetLCD1_2
+Added Pin To Net: NetName=NetLCD1_3 Pin=LCD1-3
+Added Pin To Net: NetName=NetLCD1_3 Pin=U2-16
+Added Net: Name=NetLCD1_3
+Added Pin To Net: NetName=NetLCD1_4 Pin=LCD1-4
+Added Pin To Net: NetName=NetLCD1_4 Pin=U2-15
+Added Net: Name=NetLCD1_4
+Added Pin To Net: NetName=NetLCD1_5 Pin=LCD1-5
+Added Pin To Net: NetName=NetLCD1_5 Pin=U2-13
+Added Net: Name=NetLCD1_5
+Added Pin To Net: NetName=NetLCD1_10 Pin=LCD1-10
+Added Pin To Net: NetName=NetLCD1_10 Pin=U3-15
+Added Net: Name=NetLCD1_10
+Added Pin To Net: NetName=NetLCD1_11 Pin=LCD1-11
+Added Pin To Net: NetName=NetLCD1_11 Pin=U3-35
+Added Net: Name=NetLCD1_11
+Added Pin To Net: NetName=NetLCD1_12 Pin=LCD1-12
+Added Pin To Net: NetName=NetLCD1_12 Pin=U3-14
+Added Net: Name=NetLCD1_12
+Added Pin To Net: NetName=NetLCD1_13 Pin=LCD1-13
+Added Pin To Net: NetName=NetLCD1_13 Pin=U3-11
+Added Net: Name=NetLCD1_13
+Added Pin To Net: NetName=NetLCD1_22 Pin=LCD1-22
+Added Pin To Net: NetName=NetLCD1_22 Pin=U3-19
+Added Net: Name=NetLCD1_22
+Added Pin To Net: NetName=NetLCD1_23 Pin=LCD1-23
+Added Pin To Net: NetName=NetLCD1_23 Pin=U3-20
+Added Net: Name=NetLCD1_23
+Added Pin To Net: NetName=NetLCD1_24 Pin=LCD1-24
+Added Pin To Net: NetName=NetLCD1_24 Pin=U3-21
+Added Net: Name=NetLCD1_24
+Added Pin To Net: NetName=NetLCD1_25 Pin=LCD1-25
+Added Pin To Net: NetName=NetLCD1_25 Pin=U3-22
+Added Net: Name=NetLCD1_25
+Added Pin To Net: NetName=NetLCD1_26 Pin=LCD1-26
+Added Pin To Net: NetName=NetLCD1_26 Pin=U3-23
+Added Net: Name=NetLCD1_26
+Added Pin To Net: NetName=NetLCD1_27 Pin=LCD1-27
+Added Pin To Net: NetName=NetLCD1_27 Pin=U3-24
+Added Net: Name=NetLCD1_27
+Added Pin To Net: NetName=NetLCD1_28 Pin=LCD1-28
+Added Pin To Net: NetName=NetLCD1_28 Pin=U3-31
+Added Net: Name=NetLCD1_28
+Added Pin To Net: NetName=NetLCD1_29 Pin=LCD1-29
+Added Pin To Net: NetName=NetLCD1_29 Pin=U3-30
+Added Net: Name=NetLCD1_29
+Added Pin To Net: NetName=NetLCD1_30 Pin=LCD1-30
+Added Pin To Net: NetName=NetLCD1_30 Pin=U3-32
+Added Net: Name=NetLCD1_30
+Added Pin To Net: NetName=NetLCD1_34 Pin=LCD1-34
+Added Pin To Net: NetName=NetLCD1_34 Pin=LCD1-35
+Added Pin To Net: NetName=NetLCD1_34 Pin=LCD1-36
+Added Pin To Net: NetName=NetLCD1_34 Pin=LCD1-37
+Added Pin To Net: NetName=NetLCD1_34 Pin=T2-3
+Added Net: Name=NetLCD1_34
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=U2-2
+Added Pin To Net: NetName=NetR1_1 Pin=U3-9
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=NetR2_1 Pin=R2-1
+Added Pin To Net: NetName=NetR2_1 Pin=U1-15
+Added Pin To Net: NetName=NetR2_1 Pin=U2-3
+Added Pin To Net: NetName=NetR2_1 Pin=U3-42
+Added Net: Name=NetR2_1
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=U2-5
+Added Pin To Net: NetName=NetR3_2 Pin=U3-44
+Added Net: Name=NetR3_2
+Added Pin To Net: NetName=NetR5_1 Pin=R5-1
+Added Pin To Net: NetName=NetR5_1 Pin=S1-1
+Added Pin To Net: NetName=NetR5_1 Pin=S1-3
+Added Pin To Net: NetName=NetR5_1 Pin=U3-8
+Added Net: Name=NetR5_1
+Added Pin To Net: NetName=NetT1_1 Pin=T1-1
+Added Pin To Net: NetName=NetT1_1 Pin=U3-38
+Added Net: Name=NetT1_1
+Added Pin To Net: NetName=NetT2_1 Pin=T2-1
+Added Pin To Net: NetName=NetT2_1 Pin=U3-36
+Added Net: Name=NetT2_1
+Added Pin To Net: NetName=NetU1_7 Pin=U1-7
+Added Pin To Net: NetName=NetU1_7 Pin=U3-10
+Added Net: Name=NetU1_7
+Added Pin To Net: NetName=NetU1_11 Pin=U1-11
+Added Pin To Net: NetName=NetU1_11 Pin=U2-4
+Added Pin To Net: NetName=NetU1_11 Pin=U3-37
+Added Net: Name=NetU1_11
+Added Pin To Net: NetName=NetU1_12 Pin=U1-12
+Added Pin To Net: NetName=NetU1_12 Pin=U3-1
+Added Net: Name=NetU1_12
+Added Pin To Net: NetName=NetU1_16 Pin=U1-16
+Added Pin To Net: NetName=NetU1_16 Pin=U2-7
+Added Pin To Net: NetName=NetU1_16 Pin=U3-43
+Added Net: Name=NetU1_16
+Added Member To Class: ClassName=PCBGame Member=Component C1 100nF
+Added Member To Class: ClassName=PCBGame Member=Component C2 100nF
+Added Member To Class: ClassName=PCBGame Member=Component C3 100nF
+Added Member To Class: ClassName=PCBGame Member=Component C4 100nF
+Added Member To Class: ClassName=PCBGame Member=Component C5 100nF
+Added Member To Class: ClassName=PCBGame Member=Component C6 100nF
+Added Member To Class: ClassName=PCBGame Member=Component C7 100nF
+Added Member To Class: ClassName=PCBGame Member=Component C8 100nF
+Added Member To Class: ClassName=PCBGame Member=Component C9 100nF
+Added Member To Class: ClassName=PCBGame Member=Component G1 Battery cell D10.5 L44.5
+Added Member To Class: ClassName=PCBGame Member=Component G2 Battery cell D10.5 L44.5
+Added Member To Class: ClassName=PCBGame Member=Component J1 FlatCable2x3
+Added Member To Class: ClassName=PCBGame Member=Component LCD1 LCD-NHD-2.4-240320SF
+Added Member To Class: ClassName=PCBGame Member=Component R1 10k
+Added Member To Class: ClassName=PCBGame Member=Component R2 10k
+Added Member To Class: ClassName=PCBGame Member=Component R3 10k
+Added Member To Class: ClassName=PCBGame Member=Component R4 10k
+Added Member To Class: ClassName=PCBGame Member=Component R5 10k
+Added Member To Class: ClassName=PCBGame Member=Component S1 User
+Added Member To Class: ClassName=PCBGame Member=Component T1 PMF370XN
+Added Member To Class: ClassName=PCBGame Member=Component T2 PMF370XN
+Added Member To Class: ClassName=PCBGame Member=Component U1 IIS328DQ
+Added Member To Class: ClassName=PCBGame Member=Component U2 STMPE811
+Added Member To Class: ClassName=PCBGame Member=Component U3 PIC18F46K20-_/PT
