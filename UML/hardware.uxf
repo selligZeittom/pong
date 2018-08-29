@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>864</x>
+      <y>324</y>
+      <w>192</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>LCD display
+NHD-2.4-240320
+halign=center
+valign=center
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>492</x>
+      <y>324</y>
+      <w>264</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Game controller
+C software
+halign=center
+valign=center
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>168</x>
+      <y>120</y>
+      <w>204</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Button controller
+halign=center
+valign=center
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>168</x>
+      <y>324</y>
+      <w>204</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Touch screen controller
+halign=center
+valign=center
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>168</x>
+      <y>516</y>
+      <w>204</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Accelerometer controller
+halign=center
+valign=center
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>168</y>
+      <w>156</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+ISR</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;140.0;110.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>360</y>
+      <w>156</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+SPI
+lw=3</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>408</y>
+      <w>156</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+SPI
+lw=3</panel_attributes>
+    <additional_attributes>10.0;140.0;50.0;140.0;50.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>360</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+lw=5
+/data
+
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+</diagram>
