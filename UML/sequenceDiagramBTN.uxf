@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>4</zoom_level>
+  <zoom_level>3</zoom_level>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>148</x>
-      <y>64</y>
-      <w>12</w>
-      <h>916</h>
+      <x>339</x>
+      <y>36</y>
+      <w>9</w>
+      <h>687</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;2270.0</additional_attributes>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>116</x>
-      <y>56</y>
-      <w>76</w>
-      <h>12</h>
+      <x>315</x>
+      <y>30</y>
+      <w>57</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_thePushButton:PushButton_</panel_attributes>
     <additional_attributes/>
@@ -26,10 +26,10 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>100</x>
-      <y>112</y>
-      <w>24</w>
-      <h>44</h>
+      <x>303</x>
+      <y>72</y>
+      <w>18</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>Player</panel_attributes>
     <additional_attributes/>
@@ -37,10 +37,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>116</x>
-      <y>120</y>
-      <w>44</w>
-      <h>16</h>
+      <x>315</x>
+      <y>78</y>
+      <w>33</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
 press</panel_attributes>
@@ -49,10 +49,10 @@ press</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>64</y>
-      <w>12</w>
-      <h>920</h>
+      <x>408</x>
+      <y>36</y>
+      <w>9</w>
+      <h>690</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;2280.0</additional_attributes>
@@ -60,10 +60,10 @@ press</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>220</x>
-      <y>56</y>
-      <w>48</w>
-      <h>12</h>
+      <x>393</x>
+      <y>30</y>
+      <w>36</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_isr:ISR_</panel_attributes>
     <additional_attributes/>
@@ -71,10 +71,10 @@ press</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>148</x>
-      <y>128</y>
-      <w>104</w>
-      <h>16</h>
+      <x>339</x>
+      <y>84</y>
+      <w>78</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 interrupt</panel_attributes>
@@ -83,10 +83,10 @@ interrupt</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>336</x>
-      <y>56</y>
-      <w>40</w>
-      <h>12</h>
+      <x>480</x>
+      <y>30</y>
+      <w>30</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_xf:XF_</panel_attributes>
     <additional_attributes/>
@@ -94,10 +94,10 @@ interrupt</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>136</y>
-      <w>124</w>
-      <h>20</h>
+      <x>408</x>
+      <y>90</y>
+      <w>93</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 XF_pushEvent(EV_BTN_PRESSED : 
@@ -107,10 +107,10 @@ Event, inISR : bool)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>64</y>
-      <w>12</w>
-      <h>916</h>
+      <x>492</x>
+      <y>36</y>
+      <w>9</w>
+      <h>687</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;2270.0</additional_attributes>
@@ -118,21 +118,21 @@ Event, inISR : bool)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>876</x>
-      <y>56</y>
-      <w>100</w>
-      <h>12</h>
+      <x>885</x>
+      <y>30</y>
+      <w>75</w>
+      <h>9</h>
     </coordinates>
-    <panel_attributes>_theTSController:TS_controller_</panel_attributes>
+    <panel_attributes>_tsc_controller:TS_controller_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>924</x>
-      <y>64</y>
-      <w>12</w>
-      <h>912</h>
+      <x>921</x>
+      <y>36</y>
+      <w>9</w>
+      <h>684</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;2260.0</additional_attributes>
@@ -140,10 +140,10 @@ Event, inISR : bool)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1108</x>
-      <y>64</y>
-      <w>12</w>
-      <h>904</h>
+      <x>1059</x>
+      <y>36</y>
+      <w>9</w>
+      <h>678</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;2240.0</additional_attributes>
@@ -151,32 +151,32 @@ Event, inISR : bool)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1060</x>
-      <y>56</y>
-      <w>100</w>
-      <h>12</h>
+      <x>1023</x>
+      <y>30</y>
+      <w>75</w>
+      <h>9</h>
     </coordinates>
-    <panel_attributes>_theAccController:Acc_controller_</panel_attributes>
+    <panel_attributes>_acc_controller:Acc_controller_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>708</x>
-      <y>56</y>
-      <w>100</w>
-      <h>12</h>
+      <x>759</x>
+      <y>30</y>
+      <w>75</w>
+      <h>9</h>
     </coordinates>
-    <panel_attributes>_theBtn_controller:Btn_controller_</panel_attributes>
+    <panel_attributes>_btn_controller:Btn_controller_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>756</x>
-      <y>64</y>
-      <w>12</w>
-      <h>916</h>
+      <x>795</x>
+      <y>36</y>
+      <w>9</w>
+      <h>687</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;2270.0</additional_attributes>
@@ -184,10 +184,10 @@ Event, inISR : bool)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>420</y>
-      <w>280</w>
-      <h>16</h>
+      <x>492</x>
+      <y>294</y>
+      <w>210</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 XF_pushEvent(EV_BTN_TIMEOUT : Event, inISR : bool)</panel_attributes>
@@ -196,10 +196,10 @@ XF_pushEvent(EV_BTN_TIMEOUT : Event, inISR : bool)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>112</x>
-      <y>392</y>
-      <w>1032</w>
-      <h>16</h>
+      <x>312</x>
+      <y>282</y>
+      <w>774</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lw=3
 lt=.
@@ -209,10 +209,10 @@ lt=.
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>572</x>
-      <y>56</y>
-      <w>100</w>
-      <h>12</h>
+      <x>657</x>
+      <y>30</y>
+      <w>75</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_btnTimer:Timer_</panel_attributes>
     <additional_attributes/>
@@ -220,10 +220,10 @@ lt=.
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>64</y>
-      <w>12</w>
-      <h>920</h>
+      <x>693</x>
+      <y>36</y>
+      <w>9</w>
+      <h>690</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;2280.0</additional_attributes>
@@ -231,65 +231,71 @@ lt=.
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>48</x>
-      <y>224</y>
-      <w>68</w>
-      <h>20</h>
+      <x>264</x>
+      <y>156</y>
+      <w>51</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>halign=center
 valign=center
 The user press on the button
-style=wordwrap</panel_attributes>
+style=wordwrap
+bg=orange
+transparency=80</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>64</x>
-      <y>500</y>
-      <w>68</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>halign=center
-valign=center
-The timer of the button against the rebound makes the timeout
-style=wordwrap</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>116</x>
-      <y>648</y>
-      <w>1032</w>
-      <h>16</h>
-    </coordinates>
-    <panel_attributes>lw=3
-lt=.
-</panel_attributes>
-    <additional_attributes>10.0;20.0;2560.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>68</x>
-      <y>748</y>
-      <w>68</w>
+      <x>276</x>
+      <y>363</y>
+      <w>51</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>halign=center
 valign=center
-the game controller puts the system in sleep mode or wake up mode, depending on the previous situation
-style=wordwrap</panel_attributes>
+The timer of the button against the rebound makes the timeout
+style=wordwrap
+bg=orange
+transparency=80</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>116</x>
-      <y>852</y>
-      <w>1032</w>
-      <h>16</h>
+      <x>315</x>
+      <y>474</y>
+      <w>774</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lw=3
+lt=.
+</panel_attributes>
+    <additional_attributes>10.0;20.0;2560.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>279</x>
+      <y>549</y>
+      <w>51</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>halign=center
+valign=center
+the game controller puts the system in sleep mode or wake up mode, depending on the previous situation
+style=wordwrap
+bg=orange
+transparency=80</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>627</y>
+      <w>774</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lw=3
 lt=.
@@ -299,10 +305,10 @@ lt=.
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>340</y>
-      <w>416</w>
-      <h>16</h>
+      <x>492</x>
+      <y>243</y>
+      <w>312</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 btnCtrl_SM(btn_ctrl : Button_controller*, ev : Event)</panel_attributes>
@@ -311,60 +317,60 @@ btnCtrl_SM(btn_ctrl : Button_controller*, ev : Event)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>436</x>
-      <y>196</y>
-      <w>84</w>
-      <h>136</h>
+      <x>579</x>
+      <y>189</y>
+      <w>81</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 gameCtrl_SM(game_ctrl : 
 game_controller*, ev : Event)
 
-layer=2</panel_attributes>
-    <additional_attributes>90.0;320.0;10.0;320.0;10.0;10.0;90.0;10.0</additional_attributes>
+layer=1</panel_attributes>
+    <additional_attributes>10.0;140.0;70.0;140.0;70.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>156</y>
-      <w>128</w>
-      <h>24</h>
+      <x>492</x>
+      <y>153</y>
+      <w>96</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 XF_popEvent(inISR : bool)</panel_attributes>
-    <additional_attributes>10.0;40.0;300.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>176</y>
-      <w>128</w>
-      <h>16</h>
+      <x>492</x>
+      <y>171</y>
+      <w>96</w>
+      <h>12</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
+    <panel_attributes>lt=.&gt;
 EV_BTN_PRESSED : Event</panel_attributes>
     <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>424</x>
-      <y>56</y>
-      <w>96</w>
-      <h>12</h>
+      <x>546</x>
+      <y>30</y>
+      <w>72</w>
+      <h>9</h>
     </coordinates>
-    <panel_attributes>_theGameController:Game_controller_</panel_attributes>
+    <panel_attributes>_game_controller:Game_controller_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
-      <y>64</y>
-      <w>12</w>
-      <h>920</h>
+      <x>579</x>
+      <y>36</y>
+      <w>9</w>
+      <h>690</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=0</panel_attributes>
@@ -373,22 +379,22 @@ layer=0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>352</y>
-      <w>148</w>
-      <h>16</h>
+      <x>693</x>
+      <y>252</y>
+      <w>111</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-startTimer(duration : uint16_t)</panel_attributes>
+startBtnTimer(time : uint16_t)</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>756</x>
-      <y>352</y>
-      <w>8</w>
-      <h>24</h>
+      <x>795</x>
+      <y>252</y>
+      <w>6</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>layer=2
 transparency=0</panel_attributes>
@@ -397,10 +403,10 @@ transparency=0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>368</y>
-      <w>412</w>
-      <h>12</h>
+      <x>492</x>
+      <y>264</y>
+      <w>309</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;1010.0;10.0</additional_attributes>
@@ -408,22 +414,22 @@ transparency=0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>452</y>
-      <w>128</w>
-      <h>24</h>
+      <x>492</x>
+      <y>333</y>
+      <w>96</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 XF_popEvent(inISR : bool)</panel_attributes>
-    <additional_attributes>10.0;40.0;300.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>472</y>
-      <w>128</w>
-      <h>16</h>
+      <x>492</x>
+      <y>342</y>
+      <w>96</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EV_BTN_PRESSED : Event</panel_attributes>
@@ -432,24 +438,24 @@ EV_BTN_PRESSED : Event</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>436</x>
-      <y>492</y>
-      <w>84</w>
-      <h>64</h>
+      <x>579</x>
+      <y>357</y>
+      <w>81</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 gameCtrl_SM(game_ctrl : 
 game_controller*, ev : Event)
 </panel_attributes>
-    <additional_attributes>90.0;140.0;10.0;140.0;10.0;10.0;90.0;10.0</additional_attributes>
+    <additional_attributes>10.0;140.0;70.0;140.0;70.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>560</y>
-      <w>416</w>
-      <h>16</h>
+      <x>492</x>
+      <y>408</y>
+      <w>312</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 btnCtrl_SM(btn_ctrl : Button_controller*, ev : Event)</panel_attributes>
@@ -458,10 +464,10 @@ btnCtrl_SM(btn_ctrl : Button_controller*, ev : Event)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>600</y>
-      <w>416</w>
-      <h>12</h>
+      <x>492</x>
+      <y>438</y>
+      <w>312</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;1020.0;10.0</additional_attributes>
@@ -469,10 +475,10 @@ btnCtrl_SM(btn_ctrl : Button_controller*, ev : Event)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>468</x>
-      <y>204</y>
-      <w>8</w>
-      <h>116</h>
+      <x>579</x>
+      <y>195</y>
+      <w>6</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=1</panel_attributes>
@@ -481,10 +487,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>468</x>
-      <y>500</y>
-      <w>8</w>
-      <h>44</h>
+      <x>579</x>
+      <y>363</y>
+      <w>6</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=1</panel_attributes>
@@ -493,10 +499,10 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>576</y>
-      <w>416</w>
-      <h>16</h>
+      <x>492</x>
+      <y>420</y>
+      <w>312</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 XF_pushEvent(EV_BTN_IS_PRESSED : Event, inISR : bool)</panel_attributes>
@@ -505,10 +511,10 @@ XF_pushEvent(EV_BTN_IS_PRESSED : Event, inISR : bool)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>756</x>
-      <y>572</y>
-      <w>8</w>
-      <h>28</h>
+      <x>795</x>
+      <y>417</y>
+      <w>6</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=2</panel_attributes>
@@ -517,37 +523,37 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>436</x>
-      <y>712</y>
+      <x>579</x>
+      <y>549</y>
       <w>84</w>
-      <h>136</h>
+      <h>75</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 gameCtrl_SM(game_ctrl : 
 game_controller*, ev : Event)
 
 layer=2</panel_attributes>
-    <additional_attributes>90.0;320.0;10.0;320.0;10.0;10.0;90.0;10.0</additional_attributes>
+    <additional_attributes>10.0;230.0;80.0;230.0;80.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>672</y>
-      <w>128</w>
-      <h>24</h>
+      <x>492</x>
+      <y>528</y>
+      <w>96</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 XF_popEvent(inISR : bool)</panel_attributes>
-    <additional_attributes>10.0;40.0;300.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>692</y>
-      <w>128</w>
-      <h>16</h>
+      <x>492</x>
+      <y>537</y>
+      <w>96</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EV_BTN_PRESSED : Event</panel_attributes>
@@ -556,13 +562,85 @@ EV_BTN_PRESSED : Event</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>468</x>
-      <y>720</y>
-      <w>8</w>
-      <h>116</h>
+      <x>579</x>
+      <y>555</y>
+      <w>6</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=1</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>126</y>
+      <w>69</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>halign=center
+valign=center
+after some time, the  loop of theGameController tries to pop an event if any is ready
+style=wordwrap
+bg=orange
+transparency=80</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>492</x>
+      <y>162</y>
+      <w>6</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>transparency=0
+layer=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>507</x>
+      <y>306</y>
+      <w>69</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>halign=center
+valign=center
+after some time, the  loop of theGameController tries to pop an event if any is ready
+style=wordwrap
+bg=orange
+transparency=80</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>495</y>
+      <w>69</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>halign=center
+valign=center
+after some time, the  loop of theGameController tries to pop an event if any is ready
+style=wordwrap
+bg=orange
+transparency=80</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>507</x>
+      <y>558</y>
+      <w>81</w>
+      <h>57</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+sleepMode() || wakeUp()</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;10.0;10.0;170.0;240.0;170.0</additional_attributes>
   </element>
 </diagram>

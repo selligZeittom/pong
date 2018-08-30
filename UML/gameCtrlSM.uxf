@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>9</zoom_level>
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>549</x>
-      <y>0</y>
-      <w>54</w>
-      <h>54</h>
+      <x>724</x>
+      <y>188</y>
+      <w>24</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1377</x>
-      <y>432</y>
-      <w>252</w>
-      <h>189</h>
+      <x>1092</x>
+      <y>380</y>
+      <w>112</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>ST_OFF
 valign=top
@@ -35,10 +35,10 @@ halign=left
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>567</x>
-      <y>18</y>
-      <w>27</w>
-      <h>81</h>
+      <x>732</x>
+      <y>196</y>
+      <w>12</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -46,14 +46,14 @@ halign=left
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>0</x>
-      <y>81</y>
-      <w>1188</w>
-      <h>801</h>
+      <x>124</x>
+      <y>224</y>
+      <w>884</w>
+      <h>496</h>
     </coordinates>
     <panel_attributes>ST_ON
-bg=blue
-transparency=90
+bg=green
+transparency=70
 layer=0
 valign=top
 --
@@ -63,10 +63,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1179</x>
-      <y>468</y>
-      <w>216</w>
-      <h>36</h>
+      <x>1004</x>
+      <y>396</y>
+      <w>96</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EV_BTN_IS_PRESSED</panel_attributes>
@@ -75,10 +75,10 @@ EV_BTN_IS_PRESSED</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1179</x>
-      <y>558</y>
-      <w>216</w>
-      <h>36</h>
+      <x>1004</x>
+      <y>436</y>
+      <w>96</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EV_BTN_IS_PRESSED</panel_attributes>
@@ -87,10 +87,10 @@ EV_BTN_IS_PRESSED</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>693</x>
-      <y>216</y>
-      <w>477</w>
-      <h>648</h>
+      <x>448</x>
+      <y>284</y>
+      <w>552</w>
+      <h>420</h>
     </coordinates>
     <panel_attributes>ST_ON_GAME
 valign=top
@@ -103,10 +103,10 @@ layer=1</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>9</x>
-      <y>216</y>
-      <w>540</w>
-      <h>648</h>
+      <x>132</x>
+      <y>284</y>
+      <w>240</w>
+      <h>288</h>
     </coordinates>
     <panel_attributes>ST_ON_MENU
 valign=top
@@ -119,34 +119,34 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
-      <y>378</y>
-      <w>171</w>
-      <h>36</h>
+      <x>368</x>
+      <y>356</y>
+      <w>88</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EV_GOTO_GAME</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
-      <y>684</y>
-      <w>171</w>
-      <h>36</h>
+      <x>368</x>
+      <y>492</y>
+      <w>88</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EV_GOTO_MENU</panel_attributes>
-    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>333</x>
-      <y>153</y>
-      <w>27</w>
-      <h>81</h>
+      <x>276</x>
+      <y>256</y>
+      <w>12</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -154,10 +154,10 @@ EV_GOTO_MENU</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>324</x>
-      <y>153</y>
-      <w>36</w>
-      <h>36</h>
+      <x>272</x>
+      <y>256</y>
+      <w>16</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -165,10 +165,10 @@ EV_GOTO_MENU</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>261</x>
-      <y>261</y>
-      <w>18</w>
-      <h>18</h>
+      <x>244</x>
+      <y>304</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=initial
 layer=2</panel_attributes>
@@ -177,10 +177,10 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>261</x>
-      <y>261</y>
-      <w>27</w>
-      <h>72</h>
+      <x>244</x>
+      <y>304</y>
+      <w>12</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 layer=3</panel_attributes>
@@ -189,10 +189,10 @@ layer=3</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>180</x>
-      <y>315</y>
-      <w>180</w>
-      <h>90</h>
+      <x>208</x>
+      <y>328</y>
+      <w>80</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>ST_ON_MENU_WAIT
 valign=top
@@ -208,10 +208,10 @@ transparency=0</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>324</x>
-      <y>459</y>
-      <w>189</w>
-      <h>90</h>
+      <x>272</x>
+      <y>392</y>
+      <w>84</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>ST_ON_MENU_LEVEL_SW
 valign=top
@@ -225,10 +225,10 @@ transparency=0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>306</x>
-      <y>396</y>
-      <w>180</w>
-      <h>81</h>
+      <x>264</x>
+      <y>364</y>
+      <w>80</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EV_MENU_LEVEL_SW
@@ -238,10 +238,10 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>288</x>
-      <y>396</y>
-      <w>54</w>
-      <h>126</h>
+      <x>256</x>
+      <y>364</y>
+      <w>24</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 layer=3</panel_attributes>
@@ -250,10 +250,10 @@ layer=3</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>36</x>
-      <y>459</y>
-      <w>189</w>
-      <h>90</h>
+      <x>144</x>
+      <y>392</y>
+      <w>84</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>ST_ON_MENU_CTRL_SW
 valign=top
@@ -267,10 +267,10 @@ transparency=0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>396</y>
-      <w>162</w>
-      <h>81</h>
+      <x>168</x>
+      <y>364</y>
+      <w>72</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EV_MENU_CTRL_SW
@@ -280,10 +280,10 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>396</y>
-      <w>54</w>
-      <h>126</h>
+      <x>224</x>
+      <y>364</y>
+      <w>24</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 layer=3</panel_attributes>
@@ -292,164 +292,342 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1062</x>
-      <y>1008</y>
-      <w>162</w>
-      <h>90</h>
+      <x>728</x>
+      <y>360</y>
+      <w>64</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EV_TIMEOUT_BALL</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0;160.0;50.0;160.0;80.0</additional_attributes>
+EV_TIMEOUT_BALL
+layer=3</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>927</x>
-      <y>927</y>
-      <w>180</w>
-      <h>90</h>
+      <x>692</x>
+      <y>324</y>
+      <w>80</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>ST_ON_GAME_RUN
 valign=top
 --
 /entry :
 - 
-layer=2
-transparency=0</panel_attributes>
+transparency=0
+layer=4</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>792</x>
-      <y>1080</y>
-      <w>180</w>
-      <h>90</h>
+      <x>564</x>
+      <y>412</y>
+      <w>80</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>ST_ON_GAME_
+    <panel_attributes>ST_ON_GAME_MOVE_X
 valign=top
 --
 /entry :
 - move user's racket
-layer=2
-transparency=0</panel_attributes>
+transparency=0
+layer=4</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1098</x>
-      <y>1080</y>
-      <w>225</w>
-      <h>90</h>
+      <x>684</x>
+      <y>412</y>
+      <w>100</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>ST_ON_GAME_TIMEOUT_BALL
 valign=top
 --
 /entry :
-- move ball
-- check collision
-layer=2
-transparency=0</panel_attributes>
+- check position compared to Y limits
+style=wordwrap
+transparency=0
+layer=2</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1197</x>
-      <y>1206</y>
-      <w>36</w>
-      <h>36</h>
+      <x>724</x>
+      <y>468</y>
+      <w>16</w>
+      <h>16</h>
     </coordinates>
-    <panel_attributes>type=decision</panel_attributes>
+    <panel_attributes>type=decision
+layer=2</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1206</x>
-      <y>1161</y>
-      <w>27</w>
-      <h>63</h>
+      <x>728</x>
+      <y>448</y>
+      <w>12</w>
+      <h>28</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;</panel_attributes>
+    <panel_attributes>lt=-&gt;
+layer=3</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1224</x>
-      <y>1206</y>
-      <w>171</w>
-      <h>36</h>
+      <x>728</x>
+      <y>480</y>
+      <w>56</w>
+      <h>116</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-[COLLISION == 1]</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+[OUT_OF_Y == 0]
+layer=3</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1206</x>
-      <y>1233</y>
-      <w>126</w>
-      <h>72</h>
+      <x>744</x>
+      <y>360</y>
+      <w>160</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-[COLLISION == 0]</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1098</x>
-      <y>954</y>
-      <w>423</w>
-      <h>144</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-EV_TIMEOUT_AI</panel_attributes>
-    <additional_attributes>10.0;20.0;450.0;20.0;450.0;140.0</additional_attributes>
+EV_TIMEOUT_AI
+layer=3</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;380.0;40.0;380.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1377</x>
-      <y>1080</y>
-      <w>252</w>
-      <h>90</h>
+      <x>844</x>
+      <y>416</y>
+      <w>112</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>ST_ON_GAME_TIMEOUT_AI
 valign=top
 --
 /entry :
-- move AI's racket
+- move AI's racket, depending to ball's X position
+style=wordwrap
 
-layer=2
-transparency=0</panel_attributes>
+transparency=0
+layer=4</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1494</x>
-      <y>1161</y>
-      <w>27</w>
-      <h>252</h>
+      <x>768</x>
+      <y>340</y>
+      <w>152</w>
+      <h>84</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+    <panel_attributes>lt=-&gt;
+layer=3</panel_attributes>
+    <additional_attributes>360.0;190.0;360.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>837</x>
-      <y>1008</y>
-      <w>162</w>
-      <h>90</h>
+      <x>604</x>
+      <y>360</y>
+      <w>120</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EV_MOVE_X</panel_attributes>
-    <additional_attributes>160.0;10.0;160.0;50.0;10.0;50.0;10.0;80.0</additional_attributes>
+EV_MOVE_X
+layer=3</panel_attributes>
+    <additional_attributes>280.0;10.0;280.0;40.0;10.0;40.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>468</y>
+      <w>108</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[OUT_OF_Y == 1]
+layer=3</panel_attributes>
+    <additional_attributes>250.0;20.0;10.0;20.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>576</x>
+      <y>504</y>
+      <w>108</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>ST_ON_GAME_CHECK_RACKET
+valign=top
+--
+/entry :
+- check if the ball is on a racket or no
+style=wordwrap
+transparency=0
+layer=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>620</x>
+      <y>556</y>
+      <w>16</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>type=decision
+layer=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>556</y>
+      <w>108</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[ON_THE_RACKET == 0]
+layer=3</panel_attributes>
+    <additional_attributes>250.0;20.0;10.0;20.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>556</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[ON_THE_RACKET == 1]
+layer=3</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0;220.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>540</y>
+      <w>12</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+layer=3</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>468</x>
+      <y>584</y>
+      <w>108</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>ST_ON_GAME_OVER
+valign=top
+--
+/entry :
+- reset the game
+- back to menu !
+style=wordwrap
+transparency=0
+layer=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>676</x>
+      <y>588</y>
+      <w>108</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>ST_ON_GAME_MOVE_BALL
+valign=top
+--
+/entry :
+- compute next coordinate :
+		* if X_LIMIT == 1 : new trajectory
+		* else : same trajectory
+- move ball
+- update screen
+style=wordwrap
+transparency=0
+layer=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>592</x>
+      <y>340</y>
+      <w>108</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+layer=3</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>520</x>
+      <y>640</y>
+      <w>8</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>type=final
+layer=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>620</y>
+      <w>12</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+layer=3</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>300</y>
+      <w>12</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+layer=5</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>728</x>
+      <y>300</y>
+      <w>8</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>type=initial
+layer=4</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
