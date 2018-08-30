@@ -22,7 +22,7 @@
     </coordinates>
     <panel_attributes>ST_BTN_UNPRESSED
 --
-/onEntry : nothing to do</panel_attributes>
+/entry : nothing to do</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -47,7 +47,7 @@ powerOn</panel_attributes>
     </coordinates>
     <panel_attributes>ST_BTN_WAITING
 --
-/onEntry : nothing to do</panel_attributes>
+/entry : nothing to do</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -72,7 +72,7 @@ EV_BTN_PRESSED</panel_attributes>
     </coordinates>
     <panel_attributes>ST_BTN_PRESSED
 --
-/onEntry : throw event button pressed !  </panel_attributes>
+/entry : throw event button pressed !  </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
