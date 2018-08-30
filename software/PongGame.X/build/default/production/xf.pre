@@ -4233,13 +4233,13 @@ void XF_init()
 int i;
 for (i=0; i<12; i++)
 {
-theXF.eventQueue[i] = 0;
+theXF.eventQueue[i] = (uint8_t) 0;
 }
 
 for (i=0; i<8; i++)
 {
-theXF.timerList[i].tm = 0;
-theXF.timerList[i].ev = 0;
+theXF.timerList[i].tm = (uint16_t) 0;
+theXF.timerList[i].ev = (uint8_t) 0;
 }
 theXF.in = 0;
 theXF.out = 0;
@@ -4251,7 +4251,7 @@ bool XF_pushEvent(Event ev, bool inISR)
 uint8_t temp;
 ENTERCRITICAL(inISR);
 
-temp = (theXF.in+1) % (uint8_t)sizeof(theXF.eventQueue);
+temp = (uint8_t)((theXF.in+1) % (uint8_t)sizeof(theXF.eventQueue));
 if(temp == theXF.out)
 {
 LEAVECRITICAL(inISR);
@@ -4275,7 +4275,7 @@ LEAVECRITICAL(inISR);
 return ev;
 }
 ev = theXF.eventQueue[theXF.out];
-theXF.out = (theXF.out + 1)%(uint8_t)sizeof(theXF.eventQueue);
+theXF.out = (uint8_t)((theXF.out + 1)%(uint8_t)sizeof(theXF.eventQueue));
 LEAVECRITICAL(inISR);
 return ev;
 }

@@ -27,13 +27,13 @@ void XF_init()
     int i;
     for (i=0; i<MAXEVENT; i++)
     {
-        theXF.eventQueue[i] = NULLEVENT;
+        theXF.eventQueue[i] = (uint8_t) NULLEVENT;
     }
 
     for (i=0; i<MAXTIMER; i++)
     {
-        theXF.timerList[i].tm = NULLTIMER;
-        theXF.timerList[i].ev = NULLEVENT;
+        theXF.timerList[i].tm = (uint16_t) NULLTIMER;
+        theXF.timerList[i].ev = (uint8_t) NULLEVENT;
     }
     theXF.in = 0;
     theXF.out = 0;
@@ -51,7 +51,7 @@ bool XF_pushEvent(Event ev, bool inISR)
   uint8_t temp;
     ENTERCRITICAL(inISR);
     
-    temp = (theXF.in+1) % (uint8_t)sizeof(theXF.eventQueue);
+    temp = (uint8_t)((theXF.in+1) % (uint8_t)sizeof(theXF.eventQueue));
     if(temp == theXF.out)
     {      
       LEAVECRITICAL(inISR);
@@ -80,7 +80,7 @@ Event XF_popEvent(bool inISR)
       return ev;
     }
     ev = theXF.eventQueue[theXF.out];
-    theXF.out = (theXF.out + 1)%(uint8_t)sizeof(theXF.eventQueue);
+    theXF.out = (uint8_t)((theXF.out + 1)%(uint8_t)sizeof(theXF.eventQueue));
     LEAVECRITICAL(inISR);
     return ev;    
 }

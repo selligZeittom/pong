@@ -4284,10 +4284,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd_highlevel.c: 484: bmpPtr = (BMP_STRUCT *)button->text;
 "484
 [e = _bmpPtr -> . *U _button 6 `*S7 ]
-[; ;lcd_highlevel.c: 485: yText = button->height / 2 + button->posY - (bmpPtr->biHeight / 2);
+[; ;lcd_highlevel.c: 485: yText = (uint16_t) (button->height / 2 + button->posY - (bmpPtr->biHeight / 2));
 "485
 [e = _yText -> - -> + / . *U _button 3 -> -> 2 `i `ui . *U _button 1 `ul / . *U _bmpPtr 7 -> -> -> 2 `i `l `ul `ui ]
-[; ;lcd_highlevel.c: 486: xText = button->width / 2 + button->posX - (bmpPtr->biWidth / 2);
+[; ;lcd_highlevel.c: 486: xText = (uint16_t) (button->width / 2 + button->posX - (bmpPtr->biWidth / 2));
 "486
 [e = _xText -> - -> + / . *U _button 2 -> -> 2 `i `ui . *U _button 0 `ul / . *U _bmpPtr 6 -> -> -> 2 `i `l `ul `ui ]
 [; ;lcd_highlevel.c: 487: LCD_Bitmap((const uint8_t *)bmpPtr,xText,yText);
@@ -4318,7 +4318,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd_highlevel.c: 497: tempChar = (uint8_t)((button->text[i]) - button->font->start_char);
 "497
 [e = _tempChar -> - -> *U + . *U _button 6 * -> _i `ux -> -> # *U . *U _button 6 `ui `ux `i -> . *U . *U _button 7 1 `i `uc ]
-[; ;lcd_highlevel.c: 498: width += button->font->descriptor[tempChar].width+2;
+[; ;lcd_highlevel.c: 498: width += (uint16_t)(button->font->descriptor[tempChar].width+2);
 "498
 [e =+ _width -> + -> . *U + . *U . *U _button 7 3 * -> _tempChar `ux -> -> # *U . *U . *U _button 7 3 `ui `ux 0 `i -> 2 `i `ui ]
 "499
@@ -4331,7 +4331,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "499
 }
 [; ;lcd_highlevel.c: 499: }
-[; ;lcd_highlevel.c: 500: xText = button->width / 2 + button->posX - (width / 2);
+[; ;lcd_highlevel.c: 500: xText = (uint16_t) (button->width / 2 + button->posX - (width / 2));
 "500
 [e = _xText - + / . *U _button 2 -> -> 2 `i `ui . *U _button 0 / _width -> -> 2 `i `ui ]
 [; ;lcd_highlevel.c: 501: LCD_DrawText(button->text, button->font,A_LEFT,
@@ -5062,7 +5062,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd_highlevel.c: 727: tempChar = (msg[i]) - font->start_char;
 "727
 [e = _tempChar -> - -> *U + _msg * -> _i `ux -> -> # *U _msg `ui `ux `i -> . *U _font 1 `i `c ]
-[; ;lcd_highlevel.c: 728: width += font->descriptor[tempChar].width+2;
+[; ;lcd_highlevel.c: 728: width += (uint8_t)(font->descriptor[tempChar].width+2);
 "728
 [e =+ _width -> + -> . *U + . *U _font 3 * -> _tempChar `x -> -> # *U . *U _font 3 `i `x 0 `i -> 2 `i `uc ]
 "729
@@ -5095,7 +5095,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd_highlevel.c: 735: {
 "735
 {
-[; ;lcd_highlevel.c: 736: posX = posX - width / 2;
+[; ;lcd_highlevel.c: 736: posX = (uint16_t)(posX - width / 2);
 "736
 [e = _posX - _posX -> / -> _width `i -> 2 `i `ui ]
 "737
@@ -5194,7 +5194,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 389 ]
 [; ;lcd_highlevel.c: 764: {
 {
-[; ;lcd_highlevel.c: 765: yOffset = offset + (y * ((width+7)/8));
+[; ;lcd_highlevel.c: 765: yOffset = (uint16_t)(offset + (y * ((width+7)/8)));
 "765
 [e = _yOffset + _offset -> * -> _y `i / + -> _width `i -> 7 `i -> 8 `i `ui ]
 [; ;lcd_highlevel.c: 766: for(x=0;x<width;x++)
@@ -5206,10 +5206,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 393 ]
 [; ;lcd_highlevel.c: 767: {
 {
-[; ;lcd_highlevel.c: 768: fontByte = font->bitmap[yOffset + (x/8)];
+[; ;lcd_highlevel.c: 768: fontByte = (uint8_t)(font->bitmap[yOffset + (x/8)]);
 "768
 [e = _fontByte *U + . *U _font 4 * -> + _yOffset -> / -> _x `i -> 8 `i `ui `ux -> -> # *U . *U _font 4 `ui `ux ]
-[; ;lcd_highlevel.c: 769: fontPixel = fontByte & (0x80 >> (x%8));
+[; ;lcd_highlevel.c: 769: fontPixel = (uint8_t)(fontByte & (0x80 >> (x%8)));
 "769
 [e = _fontPixel -> & -> _fontByte `i >> -> 128 `i % -> _x `i -> 8 `i `uc ]
 [; ;lcd_highlevel.c: 770: if(fontPixel != 0)
@@ -5335,13 +5335,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _color `ui ~T0 @X0 1 a ]
 [; ;lcd_highlevel.c: 801: uint16_t red,green,blue;
 [; ;lcd_highlevel.c: 802: uint16_t color;
-[; ;lcd_highlevel.c: 804: red = colorTableEntry[2] >> 3;
+[; ;lcd_highlevel.c: 804: red = (uint16_t)(colorTableEntry[2] >> 3);
 "804
 [e = _red -> >> -> *U + _colorTableEntry * -> -> 2 `i `x -> -> # *U _colorTableEntry `i `x `i -> 3 `i `ui ]
-[; ;lcd_highlevel.c: 805: green = colorTableEntry[1] >> 2;
+[; ;lcd_highlevel.c: 805: green = (uint16_t)(colorTableEntry[1] >> 2);
 "805
 [e = _green -> >> -> *U + _colorTableEntry * -> -> 1 `i `x -> -> # *U _colorTableEntry `i `x `i -> 2 `i `ui ]
-[; ;lcd_highlevel.c: 806: blue = colorTableEntry[0] >> 3;
+[; ;lcd_highlevel.c: 806: blue = (uint16_t)(colorTableEntry[0] >> 3);
 "806
 [e = _blue -> >> -> *U + _colorTableEntry * -> -> 0 `i `x -> -> # *U _colorTableEntry `i `x `i -> 3 `i `ui ]
 [; ;lcd_highlevel.c: 807: color = (red << 11) | (green << 5) | (blue << 0);
@@ -5772,7 +5772,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd_highlevel.c: 931: {
 "931
 {
-[; ;lcd_highlevel.c: 932: pixelCount = (pixelCount+1) & 0xFE;
+[; ;lcd_highlevel.c: 932: pixelCount = (uint8_t)((pixelCount+1) & 0xFE);
 "932
 [e = _pixelCount -> & + -> _pixelCount `i -> 1 `i -> 254 `i `uc ]
 [; ;lcd_highlevel.c: 933: bmpPtr+=pixelCount+2;

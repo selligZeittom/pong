@@ -8,6 +8,7 @@
       <itemPath>lcd_lowlevel.h</itemPath>
       <itemPath>tsc.h</itemPath>
       <itemPath>xf.h</itemPath>
+      <itemPath>Game_controller.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -23,6 +24,7 @@
       <itemPath>lcd_lowlevel.c</itemPath>
       <itemPath>tsc.c</itemPath>
       <itemPath>xf.c</itemPath>
+      <itemPath>Game_controller.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

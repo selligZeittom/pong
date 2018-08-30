@@ -482,8 +482,8 @@ void LCD_ButtonDraw(btn_t * button)
   if((button->text[0] == 'B')&&(button->text[1] == 'M'))
   {
     bmpPtr = (BMP_STRUCT *)button->text;
-    yText =  button->height / 2 + button->posY - (bmpPtr->biHeight / 2);
-    xText =   button->width / 2 + button->posX - (bmpPtr->biWidth / 2);
+    yText =  (uint16_t) (button->height / 2 + button->posY - (bmpPtr->biHeight / 2));
+    xText =   (uint16_t) (button->width / 2 + button->posX - (bmpPtr->biWidth / 2));
     LCD_Bitmap((const uint8_t *)bmpPtr,xText,yText);
   }
   //----------------------------------------------------------------------------
@@ -495,9 +495,9 @@ void LCD_ButtonDraw(btn_t * button)
     for(i=0;i<strlen(button->text);i++)
     {
       tempChar = (uint8_t)((button->text[i]) - button->font->start_char);      // get char of table
-      width += button->font->descriptor[tempChar].width+2;  // width of char
+      width += (uint16_t)(button->font->descriptor[tempChar].width+2);  // width of char
     }
-    xText =   button->width / 2 + button->posX - (width / 2);
+    xText =   (uint16_t) (button->width / 2 + button->posX - (width / 2));
     LCD_DrawText(button->text, button->font,A_LEFT,
           xText, yText, button->txtColor,  button->bgColor);
   }
@@ -725,7 +725,7 @@ void LCD_DrawText(const uint8_t * msg,const FONT_INFO * font, ALIGN align,
   for(i=0;i<strlen(msg);i++)
   {
     tempChar = (msg[i]) - font->start_char;      // get char of table
-    width += font->descriptor[tempChar].width+2;  // width of char
+    width += (uint8_t)(font->descriptor[tempChar].width+2);  // width of char
   }
   if(align == A_RIGHT)
   {
@@ -733,7 +733,7 @@ void LCD_DrawText(const uint8_t * msg,const FONT_INFO * font, ALIGN align,
   }
   else if (align == A_CENTER)
   {
-    posX = posX - width / 2;
+    posX = (uint16_t)(posX - width / 2);
   }
 
   do
@@ -762,11 +762,11 @@ void LCD_DrawText(const uint8_t * msg,const FONT_INFO * font, ALIGN align,
     //--------------------------------------------------------------------------
     for(y=0;y<font->height;y++)            // for the height
     {
-      yOffset = offset + (y * ((width+7)/8));
+      yOffset = (uint16_t)(offset + (y * ((width+7)/8)));
       for(x=0;x<width;x++)              // for the width
       {
-        fontByte = font->bitmap[yOffset + (x/8)];
-        fontPixel = fontByte & (0x80 >> (x%8)); // get pixel in char
+        fontByte = (uint8_t)(font->bitmap[yOffset + (x/8)]);
+        fontPixel = (uint8_t)(fontByte & (0x80 >> (x%8))); // get pixel in char
         if(fontPixel != 0)
         {
           LCD_Data(color>>8);
@@ -801,9 +801,9 @@ uint16_t RGB2LCD(uint8_t * colorTableEntry)
     uint16_t red,green,blue;            // three colors
     uint16_t color;                     // LCD color 16 bits
 
-    red = colorTableEntry[2] >> 3;      // get 5 bits red information
-    green = colorTableEntry[1] >> 2;    // get 6 bits green information
-    blue = colorTableEntry[0] >> 3;     // get 5 bits blue information
+    red = (uint16_t)(colorTableEntry[2] >> 3);      // get 5 bits red information
+    green = (uint16_t)(colorTableEntry[1] >> 2);    // get 6 bits green information
+    blue = (uint16_t)(colorTableEntry[0] >> 3);     // get 5 bits blue information
     color = (red << 11) | (green << 5) | (blue << 0); // concatene
     return color;
 }
@@ -929,7 +929,7 @@ uint8_t LCD_Bitmap(const uint8_t * bmpPtr, uint16_t posX, uint16_t posY)
           }
           if(pixelCount < 255)
           {
-            pixelCount = (pixelCount+1) & 0xFE; // to upper even (RLE defs)
+            pixelCount = (uint8_t)((pixelCount+1) & 0xFE); // to upper even (RLE defs)
             bmpPtr+=pixelCount+2;       // increment image pointer
           }
           else

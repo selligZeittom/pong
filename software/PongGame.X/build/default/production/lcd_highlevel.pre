@@ -4729,8 +4729,8 @@ LCD_DrawRect(x1, y1, x2, y2, 0, button->txtColor);
 if((button->text[0] == 'B')&&(button->text[1] == 'M'))
 {
 bmpPtr = (BMP_STRUCT *)button->text;
-yText = button->height / 2 + button->posY - (bmpPtr->biHeight / 2);
-xText = button->width / 2 + button->posX - (bmpPtr->biWidth / 2);
+yText = (uint16_t) (button->height / 2 + button->posY - (bmpPtr->biHeight / 2));
+xText = (uint16_t) (button->width / 2 + button->posX - (bmpPtr->biWidth / 2));
 LCD_Bitmap((const uint8_t *)bmpPtr,xText,yText);
 }
 
@@ -4742,9 +4742,9 @@ yText = (uint16_t) (button->height / 2 + button->posY - (button->font->height / 
 for(i=0;i<strlen(button->text);i++)
 {
 tempChar = (uint8_t)((button->text[i]) - button->font->start_char);
-width += button->font->descriptor[tempChar].width+2;
+width += (uint16_t)(button->font->descriptor[tempChar].width+2);
 }
-xText = button->width / 2 + button->posX - (width / 2);
+xText = (uint16_t) (button->width / 2 + button->posX - (width / 2));
 LCD_DrawText(button->text, button->font,A_LEFT,
 xText, yText, button->txtColor, button->bgColor);
 }
@@ -4937,7 +4937,7 @@ uint16_t posYEnd, posXEnd, yOffset;
 for(i=0;i<strlen(msg);i++)
 {
 tempChar = (msg[i]) - font->start_char;
-width += font->descriptor[tempChar].width+2;
+width += (uint8_t)(font->descriptor[tempChar].width+2);
 }
 if(align == A_RIGHT)
 {
@@ -4945,7 +4945,7 @@ posX = posX - width;
 }
 else if (align == A_CENTER)
 {
-posX = posX - width / 2;
+posX = (uint16_t)(posX - width / 2);
 }
 
 do
@@ -4974,11 +4974,11 @@ PORTA = 0x2C; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
 
 for(y=0;y<font->height;y++)
 {
-yOffset = offset + (y * ((width+7)/8));
+yOffset = (uint16_t)(offset + (y * ((width+7)/8)));
 for(x=0;x<width;x++)
 {
-fontByte = font->bitmap[yOffset + (x/8)];
-fontPixel = fontByte & (0x80 >> (x%8));
+fontByte = (uint8_t)(font->bitmap[yOffset + (x/8)]);
+fontPixel = (uint8_t)(fontByte & (0x80 >> (x%8)));
 if(fontPixel != 0)
 {
 PORTA = color>>8; LATB4 = 0; LATB4 = 1;;
@@ -5007,9 +5007,9 @@ uint16_t RGB2LCD(uint8_t * colorTableEntry)
 uint16_t red,green,blue;
 uint16_t color;
 
-red = colorTableEntry[2] >> 3;
-green = colorTableEntry[1] >> 2;
-blue = colorTableEntry[0] >> 3;
+red = (uint16_t)(colorTableEntry[2] >> 3);
+green = (uint16_t)(colorTableEntry[1] >> 2);
+blue = (uint16_t)(colorTableEntry[0] >> 3);
 color = (red << 11) | (green << 5) | (blue << 0);
 return color;
 }
@@ -5124,7 +5124,7 @@ PORTA = color; LATB4 = 0; LATB4 = 1;;
 }
 if(pixelCount < 255)
 {
-pixelCount = (pixelCount+1) & 0xFE;
+pixelCount = (uint8_t)((pixelCount+1) & 0xFE);
 bmpPtr+=pixelCount+2;
 }
 else
