@@ -1,0 +1,11 @@
+Added Pin To Net: NetName=GND Pin=T1-2
+Added Pin To Net: NetName=CTRL_GND Pin=T1-3
+Added Pin To Net: NetName=CTRL_GND Pin=T2-2
+Added Pin To Net: NetName=NetLCD1_34 Pin=T2-3
+Added Pin To Net: NetName=NetT1_1 Pin=T1-1
+Added Pin To Net: NetName=NetT1_1 Pin=U3-38
+Added Net: Name=NetT1_1
+Added Pin To Net: NetName=NetT2_1 Pin=T2-1
+Added Pin To Net: NetName=NetT2_1 Pin=U3-36
+Added Net: Name=NetT2_1
+Added Room: Name=PCBGame

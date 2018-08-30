@@ -1,9 +1,14 @@
-Output: Bill of Materials
-Type  : BOM
+Output: Gerber Files
+Type  : Gerber
 From  : Variant [[No Variations]] of Project [PCBGame.PrjPcb]
+   Generated File[PCBGame.GTL]
+   Generated File[PCBGame.GBL]
+   Generated File[PCBGame.RUL]
+   Generated File[PCBGame.EXTREP]
+   Generated File[PCBGame.REP]
 
 
-Files Generated   : 0
+Files Generated   : 5
 Documents Printed : 0
 
-Finished Output Generation At 15:25:04 On 28.08.2018
+Finished Output Generation At 11:27:05 On 30.08.2018

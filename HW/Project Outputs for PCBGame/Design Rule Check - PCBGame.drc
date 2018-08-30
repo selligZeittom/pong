@@ -1,0 +1,70 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\yan.michello\Documents\GitHub\pong\HW\PCBGame.PcbDoc
+Date     : 30.08.2018
+Time     : 09:50:19
+
+Processing Rule : Clearance Constraint (Gap=0.2mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=5.905mil) (Max=157.48mil) (Preferred=9.842mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=19.685mil) (Conductor Width=9.842mil) (Air Gap=9.842mil) (Entries=4) (Disabled)(All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=13.78mil) (Disabled)(All)
+Rule Violations :0
+
+Processing Rule : Acute Angle Constraint [Tracks Only] (Minimum=90.000) (All)
+   Violation between Acute Angle Constraint: (44.911 < 90.000) Between Track (1273.621mil,2635.826mil)(1314.961mil,2677.165mil) on Bottom Layer And Track (1273.621mil,2635.826mil)(1273.621mil,2698.819mil) on Bottom Layer (Angle = 44.911)
+   Violation between Acute Angle Constraint: (84.318 < 90.000) Between Track (1964.567mil,1456.693mil)(1992.126mil,1429.134mil) on Bottom Layer And Track (1999.606mil,1074.804mil)(1999.606mil,1421.653mil) on Bottom Layer (Angle = 84.318)
+   Violation between Acute Angle Constraint: (90.000 < 90.000) Between Track (1212.599mil,2137.795mil)(1212.599mil,2192.913mil) on Bottom Layer And Track (1212.599mil,2137.795mil)(1346.457mil,2137.795mil) on Bottom Layer (Angle = 90.000)
+   Violation between Acute Angle Constraint: (45.000 < 90.000) Between Track (1153.543mil,2399.607mil)(1172.245mil,2380.905mil) on Bottom Layer And Track (1154.527mil,2400.591mil)(1184.055mil,2400.591mil) on Bottom Layer (Angle = 45.000)
+   Violation between Acute Angle Constraint: (89.977 < 90.000) Between Track (1076.772mil,2399.607mil)(1153.543mil,2399.607mil) on Bottom Layer And Track (1153.543mil,2399.607mil)(1153.543mil,2413.386mil) on Bottom Layer (Angle = 89.977)
+   Violation between Acute Angle Constraint: (90.000 < 90.000) Between Track (1098.425mil,2192.913mil)(1212.599mil,2192.913mil) on Bottom Layer And Track (1212.599mil,2137.795mil)(1212.599mil,2192.913mil) on Bottom Layer (Angle = 90.000)
+   Violation between Acute Angle Constraint: (89.966 < 90.000) Between Track (1212.599mil,1803.15mil)(1216.535mil,1803.15mil) on Bottom Layer And Track (1212.599mil,1803.15mil)(1212.599mil,1937.008mil) on Bottom Layer (Angle = 89.966)
+   Violation between Acute Angle Constraint: (45.000 < 90.000) Between Track (3043.307mil,1011.811mil)(3043.307mil,1193.898mil) on Bottom Layer And Track (2997.047mil,1147.638mil)(3043.307mil,1193.898mil) on Bottom Layer (Angle = 45.000)
+   Violation between Acute Angle Constraint: (89.995 < 90.000) Between Track (1779.528mil,1000mil)(1779.528mil,1779.527mil) on Top Layer And Track (1779.528mil,1000mil)(2440.945mil,1000mil) on Top Layer (Angle = 89.995)
+   Violation between Acute Angle Constraint: (90.000 < 90.000) Between Track (1043.307mil,1122.047mil)(1259.842mil,905.512mil) on Bottom Layer And Track (1043.307mil,1122.047mil)(1240.158mil,1318.897mil) on Bottom Layer (Angle = 90.000)
+   Violation between Acute Angle Constraint: (90.000 < 90.000) Between Track (826.772mil,1338.582mil)(1043.307mil,1122.047mil) on Bottom Layer And Track (1043.307mil,1122.047mil)(1240.158mil,1318.897mil) on Bottom Layer (Angle = 90.000)
+   Violation between Acute Angle Constraint: (45.000 < 90.000) Between Track (1212.598mil,2488.189mil)(1212.598mil,2545.277mil) on Bottom Layer And Track (1214.565mil,2547.244mil)(1232.283mil,2529.526mil) on Bottom Layer (Angle = 45.000)
+   Violation between Acute Angle Constraint: (89.868 < 90.000) Between Track (1677.165mil,1783.465mil)(1677.165mil,1830.614mil) on Bottom Layer And Track (1681.102mil,1779.527mil)(1724.409mil,1779.527mil) on Bottom Layer (Angle = 89.868)
+Rule Violations :13
+
+Processing Rule : Hole Size Constraint (Min=5.905mil) (Max=118.11mil) (Disabled)(All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=9.842mil) (Disabled)(All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mil) (Disabled)(All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mil) (Disabled)(IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mil) (Disabled)(All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (Disabled)(All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (Disabled)(All)
+Rule Violations :0
+
+
+Violations Detected : 13
+Waived Violations : 0
+Time Elapsed        : 00:00:01
