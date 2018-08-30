@@ -1,0 +1,8 @@
+Change Component Comment : Designator=U1 Old Comment=IIS328DQ New Comment=Component_1
+Change Component Designator: OldDesignator=J2 NewDesignator=J1
+Change component parameters: Designator = "U1"; Footprint = "accelerometer"; UniqueID = "\CWDVPTWN"
+Change component parameters. Clean all parameters for all variants
+Change Net Name : Old Net Name=NetJ2_1 New Net Name=NetJ1_1
+Change Net Name : Old Net Name=NetJ2_4 New Net Name=NetJ1_4
+Change Net Name : Old Net Name=NetJ2_5 New Net Name=NetJ1_5
+Added Room: Name=PCBGame

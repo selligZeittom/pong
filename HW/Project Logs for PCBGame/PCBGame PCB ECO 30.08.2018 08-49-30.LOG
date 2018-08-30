@@ -1,0 +1,24 @@
+Change Component Designator: OldDesignator=C1 NewDesignator=C6
+Change Component Designator: OldDesignator=C2 NewDesignator=C7
+Change Component Designator: OldDesignator=C3 NewDesignator=C1
+Change Component Designator: OldDesignator=C4 NewDesignator=C2
+Change Component Designator: OldDesignator=C5 NewDesignator=C3
+Change Component Designator: OldDesignator=C6 NewDesignator=C4
+Change Component Designator: OldDesignator=C7 NewDesignator=C5
+Change Component Designator: OldDesignator=T1 NewDesignator=T2
+Change Component Designator: OldDesignator=T2 NewDesignator=T1
+Change component parameters: Designator = "T2"; Footprint = "SOT65P210X110-3N"; UniqueID = "\JJSQGVLH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Farnell"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "1758096"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "PMF370XN"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=VCC Pin=R1-2
+Change Net Name : Old Net Name=NetT1_1 New Net Name=NetT2_1
+Change Net Name : Old Net Name=NetT2_1 New Net Name=NetT1_1
+Added Member To Class: ClassName=PCBGame Member=Component LCD1 LCD-NHD-2.4-240320SF
+Added Member To Class: ClassName=PCBGame Member=Component R1 10k
+Added Room: Name=PCBGame

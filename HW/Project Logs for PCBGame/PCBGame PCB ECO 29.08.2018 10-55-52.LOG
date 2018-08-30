@@ -1,0 +1,54 @@
+Removed Pin From Net: NetName=GND Pin=T1-2
+Removed Pin From Net: NetName=CTRL_GND Pin=T1-3
+Removed Pin From Net: NetName=CTRL_GND Pin=T2-2
+Removed Pin From Net: NetName=NetLCD1_34 Pin=T2-3
+Change Component Footprint: Designator=T1 Old Footprint=SOT23 P0.95 C1.6x3.0 H1.3 New Footprint=SOT65P210X110-3N
+Change Component Footprint: Designator=T2 Old Footprint=SOT23 P0.95 C1.6x3.0 H1.3 New Footprint=SOT65P210X110-3N
+Change Component Designator: OldDesignator=J1 NewDesignator=J2
+Change component parameters: Designator = "T1"; Footprint = "SOT65P210X110-3N"; UniqueID = "\VRNOHVMX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "PMF370XN"; VariantName = "[No Variations]"
+Change component parameters: Designator = "T2"; Footprint = "SOT65P210X110-3N"; UniqueID = "\JNKDKJTT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "PMF370XN"; VariantName = "[No Variations]"
+Added Component: Designator=M1(Nut M3 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3"; VariantName = "[No Variations]"
+Added Component: Designator=M2(Screw Hex Socket M3X4 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3"; VariantName = "[No Variations]"
+Added Component: Designator=M3(Screw Hex Socket M3X4 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3"; VariantName = "[No Variations]"
+Added Component: Designator=M4(Nut M3 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3"; VariantName = "[No Variations]"
+Added Component: Designator=M5(Screw Hex Socket M3X4 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3"; VariantName = "[No Variations]"
+Added Component: Designator=M6(Screw Hex Socket M3X4 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3"; VariantName = "[No Variations]"
+Added Component: Designator=M7(Nut M3 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3"; VariantName = "[No Variations]"
+Added Component: Designator=M8(Nut M3 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=NetJ1_1 New Net Name=NetJ2_1
+Change Net Name : Old Net Name=NetJ1_4 New Net Name=NetJ2_4
+Change Net Name : Old Net Name=NetJ1_5 New Net Name=NetJ2_5
+Added Pin To Net: NetName=NetT1_G Pin=U3-38
+Added Net: Name=NetT1_G
+Added Pin To Net: NetName=NetT2_G Pin=U3-36
+Added Net: Name=NetT2_G
+Added Member To Class: ClassName=PCBGame Member=Component J2 FlatCable2x3
+Added Member To Class: ClassName=PCBGame Member=Component M1 M3
+Added Member To Class: ClassName=PCBGame Member=Component M2 M3
+Added Member To Class: ClassName=PCBGame Member=Component M3
+Added Member To Class: ClassName=PCBGame Member=Component M4 M3
+Added Member To Class: ClassName=PCBGame Member=Component M5 M3
+Added Member To Class: ClassName=PCBGame Member=Component M6 M3
+Added Member To Class: ClassName=PCBGame Member=Component M7 M3
+Added Member To Class: ClassName=PCBGame Member=Component M8 M3
+Added Room: Name=PCBGame
