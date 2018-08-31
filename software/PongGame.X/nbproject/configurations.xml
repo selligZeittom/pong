@@ -30,6 +30,14 @@
       <itemPath>Game_controller.c</itemPath>
       <itemPath>Acc_controller.c</itemPath>
       <itemPath>spi.c</itemPath>
+      <itemPath>PongGame.h</itemPath>
+      <itemPath>PongGame.c</itemPath>
+      <itemPath>Wall.h</itemPath>
+      <itemPath>Wall.c</itemPath>
+      <itemPath>Racket.h</itemPath>
+      <itemPath>Racket.c</itemPath>
+      <itemPath>Ball_manager.c</itemPath>
+      <itemPath>Ball_manager.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

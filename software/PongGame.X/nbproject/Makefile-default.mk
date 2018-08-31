@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=CONFIG_PIC18F46K20.c arialNarrow_12ptBitmaps.c arialRoundedMTBold18ptBitmaps.c lcd_highlevel.c lcd_lowlevel.c tsc.c xf.c Game_controller.c Acc_controller.c spi.c
+SOURCEFILES_QUOTED_IF_SPACED=CONFIG_PIC18F46K20.c arialNarrow_12ptBitmaps.c arialRoundedMTBold18ptBitmaps.c lcd_highlevel.c lcd_lowlevel.c tsc.c xf.c Game_controller.c Acc_controller.c spi.c PongGame.c Wall.c Racket.c Ball_manager.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/CONFIG_PIC18F46K20.p1 ${OBJECTDIR}/arialNarrow_12ptBitmaps.p1 ${OBJECTDIR}/arialRoundedMTBold18ptBitmaps.p1 ${OBJECTDIR}/lcd_highlevel.p1 ${OBJECTDIR}/lcd_lowlevel.p1 ${OBJECTDIR}/tsc.p1 ${OBJECTDIR}/xf.p1 ${OBJECTDIR}/Game_controller.p1 ${OBJECTDIR}/Acc_controller.p1 ${OBJECTDIR}/spi.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/CONFIG_PIC18F46K20.p1.d ${OBJECTDIR}/arialNarrow_12ptBitmaps.p1.d ${OBJECTDIR}/arialRoundedMTBold18ptBitmaps.p1.d ${OBJECTDIR}/lcd_highlevel.p1.d ${OBJECTDIR}/lcd_lowlevel.p1.d ${OBJECTDIR}/tsc.p1.d ${OBJECTDIR}/xf.p1.d ${OBJECTDIR}/Game_controller.p1.d ${OBJECTDIR}/Acc_controller.p1.d ${OBJECTDIR}/spi.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/CONFIG_PIC18F46K20.p1 ${OBJECTDIR}/arialNarrow_12ptBitmaps.p1 ${OBJECTDIR}/arialRoundedMTBold18ptBitmaps.p1 ${OBJECTDIR}/lcd_highlevel.p1 ${OBJECTDIR}/lcd_lowlevel.p1 ${OBJECTDIR}/tsc.p1 ${OBJECTDIR}/xf.p1 ${OBJECTDIR}/Game_controller.p1 ${OBJECTDIR}/Acc_controller.p1 ${OBJECTDIR}/spi.p1 ${OBJECTDIR}/PongGame.p1 ${OBJECTDIR}/Wall.p1 ${OBJECTDIR}/Racket.p1 ${OBJECTDIR}/Ball_manager.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/CONFIG_PIC18F46K20.p1.d ${OBJECTDIR}/arialNarrow_12ptBitmaps.p1.d ${OBJECTDIR}/arialRoundedMTBold18ptBitmaps.p1.d ${OBJECTDIR}/lcd_highlevel.p1.d ${OBJECTDIR}/lcd_lowlevel.p1.d ${OBJECTDIR}/tsc.p1.d ${OBJECTDIR}/xf.p1.d ${OBJECTDIR}/Game_controller.p1.d ${OBJECTDIR}/Acc_controller.p1.d ${OBJECTDIR}/spi.p1.d ${OBJECTDIR}/PongGame.p1.d ${OBJECTDIR}/Wall.p1.d ${OBJECTDIR}/Racket.p1.d ${OBJECTDIR}/Ball_manager.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/CONFIG_PIC18F46K20.p1 ${OBJECTDIR}/arialNarrow_12ptBitmaps.p1 ${OBJECTDIR}/arialRoundedMTBold18ptBitmaps.p1 ${OBJECTDIR}/lcd_highlevel.p1 ${OBJECTDIR}/lcd_lowlevel.p1 ${OBJECTDIR}/tsc.p1 ${OBJECTDIR}/xf.p1 ${OBJECTDIR}/Game_controller.p1 ${OBJECTDIR}/Acc_controller.p1 ${OBJECTDIR}/spi.p1
+OBJECTFILES=${OBJECTDIR}/CONFIG_PIC18F46K20.p1 ${OBJECTDIR}/arialNarrow_12ptBitmaps.p1 ${OBJECTDIR}/arialRoundedMTBold18ptBitmaps.p1 ${OBJECTDIR}/lcd_highlevel.p1 ${OBJECTDIR}/lcd_lowlevel.p1 ${OBJECTDIR}/tsc.p1 ${OBJECTDIR}/xf.p1 ${OBJECTDIR}/Game_controller.p1 ${OBJECTDIR}/Acc_controller.p1 ${OBJECTDIR}/spi.p1 ${OBJECTDIR}/PongGame.p1 ${OBJECTDIR}/Wall.p1 ${OBJECTDIR}/Racket.p1 ${OBJECTDIR}/Ball_manager.p1
 
 # Source Files
-SOURCEFILES=CONFIG_PIC18F46K20.c arialNarrow_12ptBitmaps.c arialRoundedMTBold18ptBitmaps.c lcd_highlevel.c lcd_lowlevel.c tsc.c xf.c Game_controller.c Acc_controller.c spi.c
+SOURCEFILES=CONFIG_PIC18F46K20.c arialNarrow_12ptBitmaps.c arialRoundedMTBold18ptBitmaps.c lcd_highlevel.c lcd_lowlevel.c tsc.c xf.c Game_controller.c Acc_controller.c spi.c PongGame.c Wall.c Racket.c Ball_manager.c
 
 
 CFLAGS=
@@ -173,6 +173,38 @@ ${OBJECTDIR}/spi.p1: spi.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/spi.d ${OBJECTDIR}/spi.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/spi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/PongGame.p1: PongGame.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/PongGame.p1.d 
+	@${RM} ${OBJECTDIR}/PongGame.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/PongGame.p1  PongGame.c 
+	@-${MV} ${OBJECTDIR}/PongGame.d ${OBJECTDIR}/PongGame.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/PongGame.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Wall.p1: Wall.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Wall.p1.d 
+	@${RM} ${OBJECTDIR}/Wall.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/Wall.p1  Wall.c 
+	@-${MV} ${OBJECTDIR}/Wall.d ${OBJECTDIR}/Wall.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Wall.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Racket.p1: Racket.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Racket.p1.d 
+	@${RM} ${OBJECTDIR}/Racket.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/Racket.p1  Racket.c 
+	@-${MV} ${OBJECTDIR}/Racket.d ${OBJECTDIR}/Racket.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Racket.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Ball_manager.p1: Ball_manager.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Ball_manager.p1.d 
+	@${RM} ${OBJECTDIR}/Ball_manager.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit3  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/Ball_manager.p1  Ball_manager.c 
+	@-${MV} ${OBJECTDIR}/Ball_manager.d ${OBJECTDIR}/Ball_manager.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Ball_manager.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/CONFIG_PIC18F46K20.p1: CONFIG_PIC18F46K20.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -253,6 +285,38 @@ ${OBJECTDIR}/spi.p1: spi.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/spi.p1  spi.c 
 	@-${MV} ${OBJECTDIR}/spi.d ${OBJECTDIR}/spi.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/spi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/PongGame.p1: PongGame.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/PongGame.p1.d 
+	@${RM} ${OBJECTDIR}/PongGame.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/PongGame.p1  PongGame.c 
+	@-${MV} ${OBJECTDIR}/PongGame.d ${OBJECTDIR}/PongGame.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/PongGame.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Wall.p1: Wall.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Wall.p1.d 
+	@${RM} ${OBJECTDIR}/Wall.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/Wall.p1  Wall.c 
+	@-${MV} ${OBJECTDIR}/Wall.d ${OBJECTDIR}/Wall.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Wall.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Racket.p1: Racket.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Racket.p1.d 
+	@${RM} ${OBJECTDIR}/Racket.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/Racket.p1  Racket.c 
+	@-${MV} ${OBJECTDIR}/Racket.d ${OBJECTDIR}/Racket.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Racket.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Ball_manager.p1: Ball_manager.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Ball_manager.p1.d 
+	@${RM} ${OBJECTDIR}/Ball_manager.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/Ball_manager.p1  Ball_manager.c 
+	@-${MV} ${OBJECTDIR}/Ball_manager.d ${OBJECTDIR}/Ball_manager.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Ball_manager.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
