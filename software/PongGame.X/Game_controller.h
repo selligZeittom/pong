@@ -18,8 +18,8 @@ typedef enum SM_MODE
 
 typedef enum SM_ON
 {
-    ST_ON_MENU,
-    ST_ON_GAME,
+    ST_MENU,
+    ST_GAME,
 } SM_ON;
 
 typedef enum SM_SCREEN
@@ -70,6 +70,8 @@ void init_Game_controller(Game_controller* gameCtrl);
 
 void state_machine_mode(Game_controller* gameCtrl, Event ev);
 void state_machine_on(Game_controller* gameCtrl, Event ev);
-void state_machine_game(Game_controller* gameCtrl, Event ev);
+void state_machine_screen(Game_controller* gameCtrl, Event ev);
+void state_machine_racket(Game_controller* gameCtrl, Event ev);
+void state_machine_ball(Game_controller* gameCtrl, Event ev);
 #endif	/* GAME_CONTROLLER_H */
 
