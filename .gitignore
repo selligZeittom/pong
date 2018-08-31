@@ -1,6 +1,5 @@
 
-software/PongGame.X/nbproject/configurations.xml
-software/PongGame.X/nbproject/Makefile-genesis.properties
-software/PongGame.X/nbproject/Makefile-variables.mk
-software/PongGame.X/nbproject/configurations.xml
-software/PongGame.X/nbproject/private/private.xml
+software/PongGame.X/nbproject/
+software/PongGame.X/dist/
+software/PongGame.X/debug/
+software/PongGame.X/default/
