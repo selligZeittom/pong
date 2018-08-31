@@ -70,18 +70,101 @@ typedef struct Game_controller
     SM_BALL sm_ball, old_sm_ball;
 }Game_controller;
 
-/*initialization
- * 
+/*initialisation
  * put the states machines in their starting state
  */
 void init_Game_controller(Game_controller* gameCtrl);
 
-
+/*
+ * process event of the mode ON - OFF state machine
+ */
 void state_machine_mode(Game_controller* gameCtrl, Event ev);
+
+/*
+ * process event of the ON state machine
+ */
 void state_machine_on(Game_controller* gameCtrl, Event ev);
+
+/*
+ * process event of the MENU state machine
+ */
 void state_machine_menu(Game_controller* gameCtrl, Event ev);
+
+/*
+ * process event of the SCREEN state machine
+ */
 void state_machine_screen(Game_controller* gameCtrl, Event ev);
+
+/*
+ * process event of the RACKET state machine
+ */
 void state_machine_racket(Game_controller* gameCtrl, Event ev);
+
+/*
+ * process event of the BALL state machine
+ */
 void state_machine_ball(Game_controller* gameCtrl, Event ev);
+
+/*
+ * display the menu
+ */
+void display_menu();
+
+/*
+ * switch the level setting
+ */
+void switch_level();
+
+/*
+ * switch control panel : tsc or accelerometer
+ */
+void switch_control();
+
+/*
+ * update the screen with the new logic values
+ */
+void update_screen();
+
+/*
+ * move AI's racket
+ */
+void move_AI_racket();
+
+/*
+ * move_user_racket
+ */
+void move_user_racket();
+
+/*
+ * check the Y position of the ball
+ */
+void check_Y_ball(uint16_t y_ball);
+
+/*
+ * check the X position of the ball, it should be on a racket...
+ */
+void check_X_ball(uint16_t x_ball, uint16_t x_racket);
+
+/*
+ * compute the new coordinates
+ * it depends on the trajectory of the ball and the wall on the side
+ */
+void compute_movement_ball(uint16_t x_ball);
+
+/*
+ * put the pic in sleep mode and all the peripherals
+ */
+void sleep_mode();
+
+/*
+ * wake up the pic ! 
+ */
+ void wake_up();
+ 
+/*
+ * reset the data of the game
+ */
+void reset_game();
+
 #endif	/* GAME_CONTROLLER_H */
 

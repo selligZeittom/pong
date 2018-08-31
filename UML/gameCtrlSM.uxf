@@ -28,7 +28,7 @@ fontsize=10
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1661</x>
+      <x>1650</x>
       <y>0</y>
       <w>66</w>
       <h>66</h>
@@ -39,7 +39,7 @@ fontsize=10
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>2673</x>
+      <x>2662</x>
       <y>528</y>
       <w>308</w>
       <h>231</h>
@@ -59,7 +59,7 @@ bg=red
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1683</x>
+      <x>1672</x>
       <y>22</y>
       <w>33</w>
       <h>99</h>
@@ -70,7 +70,7 @@ bg=red
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>11</x>
+      <x>0</x>
       <y>99</y>
       <w>2431</w>
       <h>1364</h>
@@ -87,7 +87,7 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2431</x>
+      <x>2420</x>
       <y>572</y>
       <w>264</w>
       <h>44</h>
@@ -99,7 +99,7 @@ EV_OFF</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2431</x>
+      <x>2420</x>
       <y>682</y>
       <w>264</w>
       <h>44</h>
@@ -111,7 +111,7 @@ EV_ON</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>902</x>
+      <x>891</x>
       <y>264</y>
       <w>1518</w>
       <h>1177</h>
@@ -127,7 +127,7 @@ layer=1</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>33</x>
+      <x>22</x>
       <y>264</y>
       <w>682</w>
       <h>495</h>
@@ -143,7 +143,7 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>704</x>
+      <x>693</x>
       <y>462</y>
       <w>220</w>
       <h>44</h>
@@ -155,7 +155,7 @@ EV_GAME</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>704</x>
+      <x>693</x>
       <y>616</y>
       <w>220</w>
       <h>44</h>
@@ -167,7 +167,7 @@ EV_MENU</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>429</x>
+      <x>418</x>
       <y>220</y>
       <w>33</w>
       <h>66</h>
@@ -178,7 +178,7 @@ EV_MENU</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>418</x>
+      <x>407</x>
       <y>187</y>
       <w>44</w>
       <h>44</h>
@@ -190,7 +190,7 @@ layer=2</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>341</x>
+      <x>330</x>
       <y>319</y>
       <w>22</w>
       <h>22</h>
@@ -202,7 +202,7 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>341</x>
+      <x>330</x>
       <y>319</y>
       <w>33</w>
       <h>88</h>
@@ -214,7 +214,7 @@ layer=3</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>242</x>
+      <x>231</x>
       <y>385</y>
       <w>220</w>
       <h>110</h>
@@ -233,7 +233,7 @@ transparency=0</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>418</x>
+      <x>407</x>
       <y>561</y>
       <w>231</w>
       <h>110</h>
@@ -250,7 +250,7 @@ transparency=0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
+      <x>385</x>
       <y>484</y>
       <w>176</w>
       <h>99</h>
@@ -263,7 +263,7 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>451</x>
+      <x>440</x>
       <y>429</y>
       <w>264</w>
       <h>154</h>
@@ -276,7 +276,7 @@ layer=3</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>66</x>
+      <x>55</x>
       <y>561</y>
       <w>231</w>
       <h>110</h>
@@ -293,7 +293,7 @@ transparency=0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>176</x>
+      <x>165</x>
       <y>484</y>
       <w>154</w>
       <h>99</h>
@@ -306,7 +306,7 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>110</x>
+      <x>99</x>
       <y>418</y>
       <w>154</w>
       <h>165</h>
@@ -319,7 +319,7 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1012</x>
+      <x>1001</x>
       <y>1056</y>
       <w>143</w>
       <h>165</h>
@@ -334,7 +334,7 @@ layer=3</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1067</x>
+      <x>1056</x>
       <y>968</y>
       <w>220</w>
       <h>110</h>
@@ -351,7 +351,7 @@ layer=4</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>924</x>
+      <x>913</x>
       <y>1199</y>
       <w>220</w>
       <h>110</h>
@@ -368,7 +368,7 @@ layer=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1210</x>
+      <x>1199</x>
       <y>1067</y>
       <w>154</w>
       <h>154</h>
@@ -383,7 +383,7 @@ layer=3</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1199</x>
+      <x>1188</x>
       <y>1199</y>
       <w>308</w>
       <h>110</h>
@@ -402,7 +402,7 @@ layer=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1166</x>
+      <x>1155</x>
       <y>913</y>
       <w>33</w>
       <h>77</h>
@@ -414,7 +414,7 @@ layer=5</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1166</x>
+      <x>1155</x>
       <y>902</y>
       <w>22</w>
       <h>22</h>
@@ -426,7 +426,7 @@ layer=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1287</x>
+      <x>1276</x>
       <y>506</y>
       <w>154</w>
       <h>176</h>
@@ -441,7 +441,7 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1276</x>
+      <x>1265</x>
       <y>1012</y>
       <w>275</w>
       <h>209</h>
@@ -454,7 +454,7 @@ layer=2</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1166</x>
+      <x>1155</x>
       <y>660</y>
       <w>242</w>
       <h>110</h>
@@ -473,7 +473,7 @@ layer=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1100</x>
+      <x>1089</x>
       <y>451</y>
       <w>165</w>
       <h>286</h>
@@ -486,7 +486,7 @@ layer=2</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1177</x>
+      <x>1166</x>
       <y>407</y>
       <w>220</w>
       <h>110</h>
@@ -503,7 +503,7 @@ layer=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1276</x>
+      <x>1265</x>
       <y>341</y>
       <w>33</w>
       <h>88</h>
@@ -515,7 +515,7 @@ layer=5</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1276</x>
+      <x>1265</x>
       <y>330</y>
       <w>22</w>
       <h>22</h>
@@ -527,7 +527,7 @@ layer=4</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>2046</x>
+      <x>2035</x>
       <y>385</y>
       <w>22</w>
       <h>22</h>
@@ -539,12 +539,12 @@ layer=4</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1947</x>
+      <x>1936</x>
       <y>462</y>
       <w>220</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>ST_ON_GAME_BALL_WAIT
+    <panel_attributes>ST__BALL_WAIT
 valign=top
 --
 /entry :
@@ -556,7 +556,7 @@ layer=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2046</x>
+      <x>2035</x>
       <y>396</y>
       <w>33</w>
       <h>88</h>
@@ -568,7 +568,7 @@ layer=5</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2046</x>
+      <x>2035</x>
       <y>561</y>
       <w>132</w>
       <h>121</h>
@@ -583,12 +583,12 @@ layer=3</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1925</x>
+      <x>1914</x>
       <y>660</y>
       <w>275</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>ST_ON_GAME_TIMEOUT_BALL
+    <panel_attributes>ST_BALL_CHECK_Y
 valign=top
 --
 /entry :
@@ -601,7 +601,7 @@ layer=2</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>2035</x>
+      <x>2024</x>
       <y>803</y>
       <w>44</w>
       <h>44</h>
@@ -613,7 +613,7 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2046</x>
+      <x>2035</x>
       <y>759</y>
       <w>33</w>
       <h>66</h>
@@ -625,7 +625,7 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1870</x>
+      <x>1859</x>
       <y>803</y>
       <w>187</w>
       <h>121</h>
@@ -640,12 +640,12 @@ layer=3</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1738</x>
+      <x>1727</x>
       <y>902</y>
       <w>297</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>ST_ON_GAME_CHECK_RACKET
+    <panel_attributes>ST_BALL_CHECK_X
 valign=top
 --
 /entry :
@@ -658,7 +658,7 @@ layer=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1815</x>
+      <x>1804</x>
       <y>1001</y>
       <w>33</w>
       <h>110</h>
@@ -670,7 +670,7 @@ layer=3</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1804</x>
+      <x>1793</x>
       <y>1089</y>
       <w>44</w>
       <h>44</h>
@@ -682,7 +682,7 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1837</x>
+      <x>1826</x>
       <y>1089</y>
       <w>209</w>
       <h>55</h>
@@ -697,7 +697,7 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1815</x>
+      <x>1804</x>
       <y>1122</y>
       <w>154</w>
       <h>88</h>
@@ -711,12 +711,12 @@ layer=3</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1727</x>
+      <x>1716</x>
       <y>1188</y>
       <w>297</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>ST_ON_GAME_OVER
+    <panel_attributes>ST_BALL_GAME_OVER
 valign=top
 --
 /entry :
@@ -730,12 +730,12 @@ layer=4</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>2024</x>
+      <x>2013</x>
       <y>1056</y>
       <w>297</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>ST_ON_GAME_MOVE_BALL
+    <panel_attributes>ST_BALL_MOVE
 valign=top
 --
 /entry :
@@ -751,7 +751,7 @@ layer=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2046</x>
+      <x>2035</x>
       <y>836</y>
       <w>143</w>
       <h>242</h>
@@ -766,7 +766,7 @@ layer=3</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1870</x>
+      <x>1859</x>
       <y>1331</y>
       <w>22</w>
       <h>22</h>
@@ -778,7 +778,7 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1870</x>
+      <x>1859</x>
       <y>1287</y>
       <w>33</w>
       <h>66</h>
@@ -790,7 +790,7 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>957</x>
+      <x>946</x>
       <y>1012</y>
       <w>165</w>
       <h>209</h>
@@ -803,7 +803,7 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1683</x>
+      <x>1672</x>
       <y>495</y>
       <w>286</w>
       <h>781</h>
@@ -816,7 +816,7 @@ layer=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1089</x>
+      <x>1078</x>
       <y>1298</y>
       <w>187</w>
       <h>77</h>
@@ -831,7 +831,7 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1045</x>
+      <x>1034</x>
       <y>1298</y>
       <w>275</w>
       <h>132</h>

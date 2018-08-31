@@ -2,36 +2,30 @@ Version 3.2 HI-TECH Software Intermediate Code
 "259 tsc.h
 [s S304 `uc 1 `uc 1 `ui 1 `ui 1 ]
 [n S304 . pressed released posX posY ]
-"8530 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
-[v _TRISC4 `Vb ~T0 @X0 0 e@31908 ]
-"7878
+"7878 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
 [v _LATC6 `Vb ~T0 @X0 0 e@31838 ]
 "8534
 [v _TRISC6 `Vb ~T0 @X0 0 e@31910 ]
 "8508
 [v _TRISB1 `Vb ~T0 @X0 0 e@31897 ]
-"8528
-[v _TRISC3 `Vb ~T0 @X0 0 e@31907 ]
-"8532
-[v _TRISC5 `Vb ~T0 @X0 0 e@31909 ]
-"7584
-[v _CKE `Vb ~T0 @X0 0 e@32318 ]
-"5401
-[v _SSPCON1 `Vuc ~T0 @X0 0 e@4038 ]
-"8342
-[v _SSPEN `Vb ~T0 @X0 0 e@32309 ]
 "296 tsc.h
 [v _TscWrite `(v ~T0 @X0 0 ef3`uc`uc`ul ]
 "307
 [v _TscRead `(v ~T0 @X0 0 ef3`uc`uc`*uc ]
-"7758 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
+"7584 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
+[v _CKE `Vb ~T0 @X0 0 e@32318 ]
+"7758
 [v _INT1IE `Vb ~T0 @X0 0 e@32643 ]
 "7782
 [v _INTEDG1 `Vb ~T0 @X0 0 e@32653 ]
+"8342
+[v _SSPEN `Vb ~T0 @X0 0 e@32309 ]
 "7872
 [v _LATC3 `Vb ~T0 @X0 0 e@31835 ]
 "7876
 [v _LATC5 `Vb ~T0 @X0 0 e@31837 ]
+"8530
+[v _TRISC4 `Vb ~T0 @X0 0 e@31908 ]
 "7874
 [v _LATC4 `Vb ~T0 @X0 0 e@31836 ]
 "5703
@@ -3234,66 +3228,48 @@ Version 3.2 HI-TECH Software Intermediate Code
 "24
 [v _temp8 `uc ~T0 @X0 -> 2 `i a ]
 [; ;tsc.c: 24: uint8_t temp8[2];
-[; ;tsc.c: 26: TRISC4 = 1;
+[; ;tsc.c: 26: LATC6 = 1;
 "26
-[e = _TRISC4 -> -> 1 `i `b ]
-[; ;tsc.c: 27: LATC6 = 1;
-"27
 [e = _LATC6 -> -> 1 `i `b ]
-[; ;tsc.c: 28: TRISC6 = 0;
-"28
+[; ;tsc.c: 27: TRISC6 = 0;
+"27
 [e = _TRISC6 -> -> 0 `i `b ]
-[; ;tsc.c: 29: TRISB1 = 1;
-"29
+[; ;tsc.c: 28: TRISB1 = 1;
+"28
 [e = _TRISB1 -> -> 1 `i `b ]
-[; ;tsc.c: 30: TRISC3 = 0;
+[; ;tsc.c: 30: RESTART_SPI:
 "30
-[e = _TRISC3 -> -> 0 `i `b ]
-[; ;tsc.c: 31: TRISC5 = 0;
-"31
-[e = _TRISC5 -> -> 0 `i `b ]
-[; ;tsc.c: 32: CKE = 0;
-"32
-[e = _CKE -> -> 0 `i `b ]
-[; ;tsc.c: 34: SSPCON1 = 0b00100010;
-"34
-[e = _SSPCON1 -> -> 34 `i `uc ]
-[; ;tsc.c: 35: SSPEN = 1;
-"35
-[e = _SSPEN -> -> 1 `i `b ]
-[; ;tsc.c: 36: RESTART_SPI:
-"36
 [e :U 308 ]
-[; ;tsc.c: 40: TscWrite (0x08, 1, 0 | 4);
-"40
+[; ;tsc.c: 34: TscWrite (0x08, 1, 0 | 4);
+"34
 [e ( _TscWrite (3 , , -> -> 8 `i `uc -> -> 1 `i `uc -> -> | -> 0 `i -> 4 `i `l `ul ]
-[; ;tsc.c: 41: TscRead(0x00,2,temp8);
-"41
+[; ;tsc.c: 35: TscRead(0x00,2,temp8);
+"35
 [e ( _TscRead (3 , , -> -> 0 `i `uc -> -> 2 `i `uc &U _temp8 ]
-[; ;tsc.c: 43: if(temp8[0] != 0x08)
-"43
+[; ;tsc.c: 37: if(temp8[0] != 0x08)
+"37
 [e $ ! != -> *U + &U _temp8 * -> -> -> 0 `i `ui `ux -> -> # *U &U _temp8 `ui `ux `i -> 8 `i 309  ]
+[; ;tsc.c: 38: {
+"38
+{
+[; ;tsc.c: 39: CKE = 1;
+"39
+[e = _CKE -> -> 1 `i `b ]
+[; ;tsc.c: 40: goto RESTART_SPI;
+"40
+[e $U 308  ]
+"42
+}
+[e :U 309 ]
+[; ;tsc.c: 42: }
+[; ;tsc.c: 43: if(temp8[1] != 0x11)
+"43
+[e $ ! != -> *U + &U _temp8 * -> -> -> 1 `i `ui `ux -> -> # *U &U _temp8 `ui `ux `i -> 17 `i 310  ]
 [; ;tsc.c: 44: {
 "44
 {
-[; ;tsc.c: 45: CKE = 1;
+[; ;tsc.c: 45: for(;;){}
 "45
-[e = _CKE -> -> 1 `i `b ]
-[; ;tsc.c: 46: goto RESTART_SPI;
-"46
-[e $U 308  ]
-"48
-}
-[e :U 309 ]
-[; ;tsc.c: 48: }
-[; ;tsc.c: 49: if(temp8[1] != 0x11)
-"49
-[e $ ! != -> *U + &U _temp8 * -> -> -> 1 `i `ui `ux -> -> # *U &U _temp8 `ui `ux `i -> 17 `i 310  ]
-[; ;tsc.c: 50: {
-"50
-{
-[; ;tsc.c: 51: for(;;){}
-"51
 {
 [e :U 311 ]
 {
@@ -3301,127 +3277,127 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 311  ]
 [e :U 312 ]
 }
-"52
+"46
 }
 [e :U 310 ]
-[; ;tsc.c: 52: }
-[; ;tsc.c: 54: TscWrite (0x40, 1, 0x01| 0x02);
-"54
+[; ;tsc.c: 46: }
+[; ;tsc.c: 48: TscWrite (0x40, 1, 0x01| 0x02);
+"48
 [e ( _TscWrite (3 , , -> -> 64 `i `uc -> -> 1 `i `uc -> -> | -> 1 `i -> 2 `i `l `ul ]
-[; ;tsc.c: 56: TscWrite (0x04, 1, 0x08 |
-[; ;tsc.c: 57: 0x04);
-"57
+[; ;tsc.c: 50: TscWrite (0x04, 1, 0x08 |
+[; ;tsc.c: 51: 0x04);
+"51
 [e ( _TscWrite (3 , , -> -> 4 `i `uc -> -> 1 `i `uc -> -> | -> 8 `i -> 4 `i `l `ul ]
-[; ;tsc.c: 59: TscWrite (0x0A, 1, 0x01 |
-[; ;tsc.c: 60: 0x02 |
-[; ;tsc.c: 61: 0x04);
-"61
+[; ;tsc.c: 53: TscWrite (0x0A, 1, 0x01 |
+[; ;tsc.c: 54: 0x02 |
+[; ;tsc.c: 55: 0x04);
+"55
 [e ( _TscWrite (3 , , -> -> 10 `i `uc -> -> 1 `i `uc -> -> | | -> 1 `i -> 2 `i -> 4 `i `l `ul ]
-[; ;tsc.c: 63: TscWrite (0x20, 1, ((0x6 & 0x7)
-[; ;tsc.c: 64: << 4 )|
-[; ;tsc.c: 65: 0x8);
-"65
+[; ;tsc.c: 57: TscWrite (0x20, 1, ((0x6 & 0x7)
+[; ;tsc.c: 58: << 4 )|
+[; ;tsc.c: 59: 0x8);
+"59
 [e ( _TscWrite (3 , , -> -> 32 `i `uc -> -> 1 `i `uc -> -> | << & -> 6 `i -> 7 `i -> 4 `i -> 8 `i `l `ul ]
-[; ;tsc.c: 67: TscWrite (0x21, 1, 0x0);
-"67
+[; ;tsc.c: 61: TscWrite (0x21, 1, 0x0);
+"61
 [e ( _TscWrite (3 , , -> -> 33 `i `uc -> -> 1 `i `uc -> -> -> 0 `i `l `ul ]
-[; ;tsc.c: 69: TscWrite (0x41, 1,
-[; ;tsc.c: 70: 0xC0 |
-[; ;tsc.c: 71: ((0x7 & 0x7) << 3)|
-[; ;tsc.c: 72: ((0x1 & 0x7)
-[; ;tsc.c: 73: << 0));
-"73
+[; ;tsc.c: 63: TscWrite (0x41, 1,
+[; ;tsc.c: 64: 0xC0 |
+[; ;tsc.c: 65: ((0x7 & 0x7) << 3)|
+[; ;tsc.c: 66: ((0x1 & 0x7)
+[; ;tsc.c: 67: << 0));
+"67
 [e ( _TscWrite (3 , , -> -> 65 `i `uc -> -> 1 `i `uc -> -> | | -> 192 `i << & -> 7 `i -> 7 `i -> 3 `i << & -> 1 `i -> 7 `i -> 0 `i `l `ul ]
-[; ;tsc.c: 75: TscWrite (0x4A, 1, 0x01);
-"75
+[; ;tsc.c: 69: TscWrite (0x4A, 1, 0x01);
+"69
 [e ( _TscWrite (3 , , -> -> 74 `i `uc -> -> 1 `i `uc -> -> -> 1 `i `l `ul ]
-[; ;tsc.c: 77: TscWrite (0x4B, 1, 0x01);
-"77
+[; ;tsc.c: 71: TscWrite (0x4B, 1, 0x01);
+"71
 [e ( _TscWrite (3 , , -> -> 75 `i `uc -> -> 1 `i `uc -> -> -> 1 `i `l `ul ]
-[; ;tsc.c: 79: TscWrite (0x4B, 1, 0x00);
-"79
+[; ;tsc.c: 73: TscWrite (0x4B, 1, 0x00);
+"73
 [e ( _TscWrite (3 , , -> -> 75 `i `uc -> -> 1 `i `uc -> -> -> 0 `i `l `ul ]
-[; ;tsc.c: 81: TscWrite (0x56, 1,
-[; ;tsc.c: 82: (0x07 * 0x7) << 0);
-"82
+[; ;tsc.c: 75: TscWrite (0x56, 1,
+[; ;tsc.c: 76: (0x07 * 0x7) << 0);
+"76
 [e ( _TscWrite (3 , , -> -> 86 `i `uc -> -> 1 `i `uc -> -> << * -> 7 `i -> 7 `i -> 0 `i `l `ul ]
-[; ;tsc.c: 84: TscWrite (0x58, 1, 0x01);
-"84
+[; ;tsc.c: 78: TscWrite (0x58, 1, 0x01);
+"78
 [e ( _TscWrite (3 , , -> -> 88 `i `uc -> -> 1 `i `uc -> -> -> 1 `i `l `ul ]
-[; ;tsc.c: 87: TscWrite (0x40, 1,0x01 |0x02);
-"87
+[; ;tsc.c: 81: TscWrite (0x40, 1,0x01 |0x02);
+"81
 [e ( _TscWrite (3 , , -> -> 64 `i `uc -> -> 1 `i `uc -> -> | -> 1 `i -> 2 `i `l `ul ]
-[; ;tsc.c: 89: TscWrite (0x0B, 1, 0xFF);
-"89
+[; ;tsc.c: 83: TscWrite (0x0B, 1, 0xFF);
+"83
 [e ( _TscWrite (3 , , -> -> 11 `i `uc -> -> 1 `i `uc -> -> -> 255 `i `l `ul ]
-[; ;tsc.c: 91: TscWrite (0x09, 1, 0x02|
-[; ;tsc.c: 92: 0x01);
-"92
+[; ;tsc.c: 85: TscWrite (0x09, 1, 0x02|
+[; ;tsc.c: 86: 0x01);
+"86
 [e ( _TscWrite (3 , , -> -> 9 `i `uc -> -> 1 `i `uc -> -> | -> 2 `i -> 1 `i `l `ul ]
-[; ;tsc.c: 93: INT1IE = 1;
-"93
+[; ;tsc.c: 87: INT1IE = 1;
+"87
 [e = _INT1IE -> -> 1 `i `b ]
-[; ;tsc.c: 94: INTEDG1 = 0;
-"94
+[; ;tsc.c: 88: INTEDG1 = 0;
+"88
 [e = _INTEDG1 -> -> 0 `i `b ]
-[; ;tsc.c: 95: }
-"95
+[; ;tsc.c: 89: }
+"89
 [e :UE 307 ]
 }
-"106
+"100
 [v _tscPowerOff `(v ~T0 @X0 1 ef ]
-"107
+"101
 {
-[; ;tsc.c: 106: void tscPowerOff(void)
-[; ;tsc.c: 107: {
+[; ;tsc.c: 100: void tscPowerOff(void)
+[; ;tsc.c: 101: {
 [e :U _tscPowerOff ]
 [f ]
-[; ;tsc.c: 108: SSPEN = 0;
-"108
+[; ;tsc.c: 102: SSPEN = 0;
+"102
 [e = _SSPEN -> -> 0 `i `b ]
-[; ;tsc.c: 109: LATC3 = 0;
-"109
+[; ;tsc.c: 103: LATC3 = 0;
+"103
 [e = _LATC3 -> -> 0 `i `b ]
-[; ;tsc.c: 110: LATC5 = 0;
-"110
+[; ;tsc.c: 104: LATC5 = 0;
+"104
 [e = _LATC5 -> -> 0 `i `b ]
-[; ;tsc.c: 111: TRISC4 = 0;
-"111
+[; ;tsc.c: 105: TRISC4 = 0;
+"105
 [e = _TRISC4 -> -> 0 `i `b ]
-[; ;tsc.c: 112: LATC4 = 0;
-"112
+[; ;tsc.c: 106: LATC4 = 0;
+"106
 [e = _LATC4 -> -> 0 `i `b ]
-[; ;tsc.c: 113: LATC6 = 0;
-"113
+[; ;tsc.c: 107: LATC6 = 0;
+"107
 [e = _LATC6 -> -> 0 `i `b ]
-[; ;tsc.c: 114: }
-"114
+[; ;tsc.c: 108: }
+"108
 [e :UE 314 ]
 }
-"124
+"118
 [v _TscWrite `(v ~T0 @X0 1 ef3`uc`uc`ul ]
-"125
+"119
 {
-[; ;tsc.c: 124: void TscWrite(uint8_t ucReg, uint8_t ucNum, uint32_t ulVal)
-[; ;tsc.c: 125: {
+[; ;tsc.c: 118: void TscWrite(uint8_t ucReg, uint8_t ucNum, uint32_t ulVal)
+[; ;tsc.c: 119: {
 [e :U _TscWrite ]
-"124
+"118
 [v _ucReg `uc ~T0 @X0 1 r1 ]
 [v _ucNum `uc ~T0 @X0 1 r2 ]
 [v _ulVal `ul ~T0 @X0 1 r3 ]
-"125
+"119
 [f ]
-[; ;tsc.c: 128: LATC6 = 0;
-"128
+[; ;tsc.c: 122: LATC6 = 0;
+"122
 [e = _LATC6 -> -> 0 `i `b ]
-[; ;tsc.c: 130: SSPBUF = (unsigned char)(ucReg & 0x7F);
-"130
+[; ;tsc.c: 124: SSPBUF = (unsigned char)(ucReg & 0x7F);
+"124
 [e = _SSPBUF -> & -> _ucReg `i -> 127 `i `uc ]
-[; ;tsc.c: 131: dummy = SSPBUF;
-"131
+[; ;tsc.c: 125: dummy = SSPBUF;
+"125
 [e = _dummy _SSPBUF ]
-[; ;tsc.c: 132: while(SSPIF==0){};
-"132
+[; ;tsc.c: 126: while(SSPIF==0){};
+"126
 [e $U 316  ]
 [e :U 317 ]
 {
@@ -3429,27 +3405,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 316 ]
 [e $ == -> _SSPIF `i -> 0 `i 317  ]
 [e :U 318 ]
-[; ;tsc.c: 133: SSPIF = 0;
-"133
+[; ;tsc.c: 127: SSPIF = 0;
+"127
 [e = _SSPIF -> -> 0 `i `b ]
-[; ;tsc.c: 134: (void)SSPBUF;
-"134
+[; ;tsc.c: 128: (void)SSPBUF;
+"128
 [e _SSPBUF ]
-[; ;tsc.c: 135: while(ucNum--)
-"135
+[; ;tsc.c: 129: while(ucNum--)
+"129
 [e $U 319  ]
 [e :U 320 ]
-[; ;tsc.c: 136: {
-"136
+[; ;tsc.c: 130: {
+"130
 {
-[; ;tsc.c: 137: SSPBUF = (ulVal & 0xFF);
-"137
+[; ;tsc.c: 131: SSPBUF = (ulVal & 0xFF);
+"131
 [e = _SSPBUF -> & _ulVal -> -> -> 255 `i `l `ul `uc ]
-[; ;tsc.c: 138: dummy = SSPBUF;
-"138
+[; ;tsc.c: 132: dummy = SSPBUF;
+"132
 [e = _dummy _SSPBUF ]
-[; ;tsc.c: 139: while(SSPIF==0){};
-"139
+[; ;tsc.c: 133: while(SSPIF==0){};
+"133
 [e $U 322  ]
 [e :U 323 ]
 {
@@ -3457,53 +3433,53 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 322 ]
 [e $ == -> _SSPIF `i -> 0 `i 323  ]
 [e :U 324 ]
-[; ;tsc.c: 140: SSPIF = 0;
-"140
+[; ;tsc.c: 134: SSPIF = 0;
+"134
 [e = _SSPIF -> -> 0 `i `b ]
-[; ;tsc.c: 141: ulVal >>= 8;
-"141
+[; ;tsc.c: 135: ulVal >>= 8;
+"135
 [e =>> _ulVal -> 8 `i ]
-[; ;tsc.c: 142: (void)SSPBUF;
-"142
+[; ;tsc.c: 136: (void)SSPBUF;
+"136
 [e _SSPBUF ]
-"143
+"137
 }
 [e :U 319 ]
-"135
+"129
 [e $ != -> -- _ucNum -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 320  ]
 [e :U 321 ]
-[; ;tsc.c: 143: }
-[; ;tsc.c: 144: LATC6 = 1;
-"144
+[; ;tsc.c: 137: }
+[; ;tsc.c: 138: LATC6 = 1;
+"138
 [e = _LATC6 -> -> 1 `i `b ]
-[; ;tsc.c: 145: }
-"145
+[; ;tsc.c: 139: }
+"139
 [e :UE 315 ]
 }
-"155
+"149
 [v _TscRead `(v ~T0 @X0 1 ef3`uc`uc`*uc ]
-"156
+"150
 {
-[; ;tsc.c: 155: void TscRead(uint8_t ucReg, uint8_t ucNum, uint8_t* pucBuffer)
-[; ;tsc.c: 156: {
+[; ;tsc.c: 149: void TscRead(uint8_t ucReg, uint8_t ucNum, uint8_t* pucBuffer)
+[; ;tsc.c: 150: {
 [e :U _TscRead ]
-"155
+"149
 [v _ucReg `uc ~T0 @X0 1 r1 ]
 [v _ucNum `uc ~T0 @X0 1 r2 ]
 [v _pucBuffer `*uc ~T0 @X0 1 r3 ]
-"156
+"150
 [f ]
-[; ;tsc.c: 158: LATC6 = 0;
-"158
+[; ;tsc.c: 152: LATC6 = 0;
+"152
 [e = _LATC6 -> -> 0 `i `b ]
-[; ;tsc.c: 159: SSPBUF = (unsigned char)(ucReg | 0x80);
-"159
+[; ;tsc.c: 153: SSPBUF = (unsigned char)(ucReg | 0x80);
+"153
 [e = _SSPBUF -> | -> _ucReg `i -> 128 `i `uc ]
-[; ;tsc.c: 160: dummy = SSPBUF;
-"160
+[; ;tsc.c: 154: dummy = SSPBUF;
+"154
 [e = _dummy _SSPBUF ]
-[; ;tsc.c: 161: while(SSPIF==0){};
-"161
+[; ;tsc.c: 155: while(SSPIF==0){};
+"155
 [e $U 326  ]
 [e :U 327 ]
 {
@@ -3511,27 +3487,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 326 ]
 [e $ == -> _SSPIF `i -> 0 `i 327  ]
 [e :U 328 ]
-[; ;tsc.c: 162: SSPIF = 0;
-"162
+[; ;tsc.c: 156: SSPIF = 0;
+"156
 [e = _SSPIF -> -> 0 `i `b ]
-[; ;tsc.c: 163: (void)SSPBUF;
-"163
+[; ;tsc.c: 157: (void)SSPBUF;
+"157
 [e _SSPBUF ]
-[; ;tsc.c: 164: while(ucNum--)
-"164
+[; ;tsc.c: 158: while(ucNum--)
+"158
 [e $U 329  ]
 [e :U 330 ]
-[; ;tsc.c: 165: {
-"165
+[; ;tsc.c: 159: {
+"159
 {
-[; ;tsc.c: 166: SSPBUF = 0xFF;
-"166
+[; ;tsc.c: 160: SSPBUF = 0xFF;
+"160
 [e = _SSPBUF -> -> 255 `i `uc ]
-[; ;tsc.c: 167: dummy = SSPBUF;
-"167
+[; ;tsc.c: 161: dummy = SSPBUF;
+"161
 [e = _dummy _SSPBUF ]
-[; ;tsc.c: 168: while(SSPIF==0){};
-"168
+[; ;tsc.c: 162: while(SSPIF==0){};
+"162
 [e $U 332  ]
 [e :U 333 ]
 {
@@ -3539,316 +3515,316 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 332 ]
 [e $ == -> _SSPIF `i -> 0 `i 333  ]
 [e :U 334 ]
-[; ;tsc.c: 169: SSPIF = 0;
-"169
+[; ;tsc.c: 163: SSPIF = 0;
+"163
 [e = _SSPIF -> -> 0 `i `b ]
-[; ;tsc.c: 170: * pucBuffer = SSPBUF;
-"170
+[; ;tsc.c: 164: * pucBuffer = SSPBUF;
+"164
 [e = *U _pucBuffer _SSPBUF ]
-[; ;tsc.c: 171: pucBuffer++;
-"171
+[; ;tsc.c: 165: pucBuffer++;
+"165
 [e ++ _pucBuffer * -> -> 1 `i `x -> -> # *U _pucBuffer `i `x ]
-"172
+"166
 }
 [e :U 329 ]
-"164
+"158
 [e $ != -> -- _ucNum -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 330  ]
 [e :U 331 ]
-[; ;tsc.c: 172: }
-[; ;tsc.c: 173: LATC6 = 1;
-"173
+[; ;tsc.c: 166: }
+[; ;tsc.c: 167: LATC6 = 1;
+"167
 [e = _LATC6 -> -> 1 `i `b ]
-[; ;tsc.c: 174: }
-"174
+[; ;tsc.c: 168: }
+"168
 [e :UE 325 ]
 }
-"182
+"176
 [v _TscUpdate `(v ~T0 @X0 1 ef ]
-"183
+"177
 {
-[; ;tsc.c: 182: void TscUpdate(void)
-[; ;tsc.c: 183: {
+[; ;tsc.c: 176: void TscUpdate(void)
+[; ;tsc.c: 177: {
 [e :U _TscUpdate ]
 [f ]
-"184
+"178
 [v _intStat `uc ~T0 @X0 1 a ]
-"185
+"179
 [v _tempTbl `uc ~T0 @X0 -> 2 `i a ]
-"186
+"180
 [v _xPos `l ~T0 @X0 1 a ]
 [v _yPos `l ~T0 @X0 1 a ]
-[; ;tsc.c: 184: uint8_t intStat;
-[; ;tsc.c: 185: uint8_t tempTbl[2];
-[; ;tsc.c: 186: int32_t xPos, yPos;
-[; ;tsc.c: 188: TscRead(0x0B, 1, &intStat);
-"188
+[; ;tsc.c: 178: uint8_t intStat;
+[; ;tsc.c: 179: uint8_t tempTbl[2];
+[; ;tsc.c: 180: int32_t xPos, yPos;
+[; ;tsc.c: 182: TscRead(0x0B, 1, &intStat);
+"182
 [e ( _TscRead (3 , , -> -> 11 `i `uc -> -> 1 `i `uc &U _intStat ]
-[; ;tsc.c: 189: if(intStat & 0x01)
-"189
+[; ;tsc.c: 183: if(intStat & 0x01)
+"183
 [e $ ! != & -> _intStat `i -> 1 `i -> 0 `i 336  ]
+[; ;tsc.c: 184: {
+"184
+{
+[; ;tsc.c: 185: TscRead(0x40, 1, tempTbl);
+"185
+[e ( _TscRead (3 , , -> -> 64 `i `uc -> -> 1 `i `uc &U _tempTbl ]
+[; ;tsc.c: 186: if(tempTbl[0] & 0x80)
+"186
+[e $ ! != & -> *U + &U _tempTbl * -> -> -> 0 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `i -> 128 `i -> 0 `i 337  ]
+[; ;tsc.c: 187: {
+"187
+{
+"188
+}
+[; ;tsc.c: 188: }
+[e $U 338  ]
+"189
+[e :U 337 ]
+[; ;tsc.c: 189: else
 [; ;tsc.c: 190: {
 "190
 {
-[; ;tsc.c: 191: TscRead(0x40, 1, tempTbl);
+[; ;tsc.c: 191: tsc.released = 1;
 "191
-[e ( _TscRead (3 , , -> -> 64 `i `uc -> -> 1 `i `uc &U _tempTbl ]
-[; ;tsc.c: 192: if(tempTbl[0] & 0x80)
-"192
-[e $ ! != & -> *U + &U _tempTbl * -> -> -> 0 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `i -> 128 `i -> 0 `i 337  ]
-[; ;tsc.c: 193: {
-"193
-{
-"194
-}
-[; ;tsc.c: 194: }
-[e $U 338  ]
-"195
-[e :U 337 ]
-[; ;tsc.c: 195: else
-[; ;tsc.c: 196: {
-"196
-{
-[; ;tsc.c: 197: tsc.released = 1;
-"197
 [e = . _tsc 1 -> -> 1 `i `uc ]
-[; ;tsc.c: 198: tsc.pressed = 0;
-"198
+[; ;tsc.c: 192: tsc.pressed = 0;
+"192
 [e = . _tsc 0 -> -> 0 `i `uc ]
-"199
+"193
 }
 [e :U 338 ]
-"200
+"194
 }
 [e :U 336 ]
-[; ;tsc.c: 199: }
-[; ;tsc.c: 200: }
-[; ;tsc.c: 201: TscRead(0x4B, 1, tempTbl);
-"201
+[; ;tsc.c: 193: }
+[; ;tsc.c: 194: }
+[; ;tsc.c: 195: TscRead(0x4B, 1, tempTbl);
+"195
 [e ( _TscRead (3 , , -> -> 75 `i `uc -> -> 1 `i `uc &U _tempTbl ]
-[; ;tsc.c: 202: if((intStat & 0x02)||(tempTbl[0] == 0x10))
-"202
+[; ;tsc.c: 196: if((intStat & 0x02)||(tempTbl[0] == 0x10))
+"196
 [e $ ! || != & -> _intStat `i -> 2 `i -> 0 `i == -> *U + &U _tempTbl * -> -> -> 0 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `i -> 16 `i 339  ]
-[; ;tsc.c: 203: {
-"203
+[; ;tsc.c: 197: {
+"197
 {
-[; ;tsc.c: 204: tsc.pressed = 1;
-"204
+[; ;tsc.c: 198: tsc.pressed = 1;
+"198
 [e = . _tsc 0 -> -> 1 `i `uc ]
-[; ;tsc.c: 205: tsc.released = 0;
-"205
+[; ;tsc.c: 199: tsc.released = 0;
+"199
 [e = . _tsc 1 -> -> 0 `i `uc ]
-[; ;tsc.c: 213: TscRead(0x4D, 2, tempTbl);
-"213
+[; ;tsc.c: 207: TscRead(0x4D, 2, tempTbl);
+"207
 [e ( _TscRead (3 , , -> -> 77 `i `uc -> -> 2 `i `uc &U _tempTbl ]
-[; ;tsc.c: 214: xPos = ((uint16_t)tempTbl[0] << 8) | tempTbl[1];
-"214
+[; ;tsc.c: 208: xPos = ((uint16_t)tempTbl[0] << 8) | tempTbl[1];
+"208
 [e = _xPos -> | << -> *U + &U _tempTbl * -> -> -> 0 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `ui -> 8 `i -> *U + &U _tempTbl * -> -> -> 1 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `ui `l ]
-[; ;tsc.c: 215: TscRead(0x4F, 2, tempTbl);
-"215
+[; ;tsc.c: 209: TscRead(0x4F, 2, tempTbl);
+"209
 [e ( _TscRead (3 , , -> -> 79 `i `uc -> -> 2 `i `uc &U _tempTbl ]
-[; ;tsc.c: 216: yPos = ((uint16_t)tempTbl[0] << 8) | tempTbl[1];
-"216
+[; ;tsc.c: 210: yPos = ((uint16_t)tempTbl[0] << 8) | tempTbl[1];
+"210
 [e = _yPos -> | << -> *U + &U _tempTbl * -> -> -> 0 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `ui -> 8 `i -> *U + &U _tempTbl * -> -> -> 1 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `ui `l ]
-[; ;tsc.c: 218: tsc.posY = (uint16_t)(((yPos *(320-1)) / (280L-3800L))-(((320-1) * 3800L) / (280L-3800L)));
-"218
+[; ;tsc.c: 212: tsc.posY = (uint16_t)(((yPos *(320-1)) / (280L-3800L))-(((320-1) * 3800L) / (280L-3800L)));
+"212
 [e = . _tsc 3 -> - / * _yPos -> - -> 320 `i -> 1 `i `l - -> 280 `l -> 3800 `l / * -> - -> 320 `i -> 1 `i `l -> 3800 `l - -> 280 `l -> 3800 `l `ui ]
-[; ;tsc.c: 219: tsc.posX = (uint16_t)(((xPos *(240-1)) / (3800L-380L))-(((240-1) * 380L) / (3800L-380L)));
-"219
+[; ;tsc.c: 213: tsc.posX = (uint16_t)(((xPos *(240-1)) / (3800L-380L))-(((240-1) * 380L) / (3800L-380L)));
+"213
 [e = . _tsc 2 -> - / * _xPos -> - -> 240 `i -> 1 `i `l - -> 3800 `l -> 380 `l / * -> - -> 240 `i -> 1 `i `l -> 380 `l - -> 3800 `l -> 380 `l `ui ]
-"222
+"216
 }
 [e :U 339 ]
-[; ;tsc.c: 222: }
-[; ;tsc.c: 223: TscWrite(0x0B, 1, 0xFF);
-"223
+[; ;tsc.c: 216: }
+[; ;tsc.c: 217: TscWrite(0x0B, 1, 0xFF);
+"217
 [e ( _TscWrite (3 , , -> -> 11 `i `uc -> -> 1 `i `uc -> -> -> 255 `i `l `ul ]
-[; ;tsc.c: 224: }
-"224
+[; ;tsc.c: 218: }
+"218
 [e :UE 335 ]
 }
-"232
+"226
 [v _TSC_ButtonExecute `(v ~T0 @X0 1 ef2`*S302`uc ]
-"233
+"227
 {
-[; ;tsc.c: 232: void TSC_ButtonExecute(btn_t * button, uint8_t index)
-[; ;tsc.c: 233: {
+[; ;tsc.c: 226: void TSC_ButtonExecute(btn_t * button, uint8_t index)
+[; ;tsc.c: 227: {
 [e :U _TSC_ButtonExecute ]
-"232
+"226
 [v _button `*S302 ~T0 @X0 1 r1 ]
 [v _index `uc ~T0 @X0 1 r2 ]
-"233
+"227
 [f ]
-[; ;tsc.c: 234: if(tsc.pressed == 1)
-"234
+[; ;tsc.c: 228: if(tsc.pressed == 1)
+"228
 [e $ ! == -> . _tsc 0 `i -> 1 `i 341  ]
-[; ;tsc.c: 235: {
-"235
+[; ;tsc.c: 229: {
+"229
 {
-[; ;tsc.c: 236: if(LCD_InButton(button,tsc.posX,tsc.posY) == 1)
-"236
+[; ;tsc.c: 230: if(LCD_InButton(button,tsc.posX,tsc.posY) == 1)
+"230
 [e $ ! == -> ( _LCD_InButton (3 , , _button . _tsc 2 . _tsc 3 `i -> 1 `i 342  ]
-[; ;tsc.c: 238: {
-"238
+[; ;tsc.c: 232: {
+"232
 {
-[; ;tsc.c: 239: if(button->fpPress != (0))
-"239
+[; ;tsc.c: 233: if(button->fpPress != (0))
+"233
 [e $ ! != . *U _button 9 -> -> 0 `i `*F3349 343  ]
-[; ;tsc.c: 240: button->fpPress(button->index);
-"240
+[; ;tsc.c: 234: button->fpPress(button->index);
+"234
 [e ( *U . *U _button 9 (1 . *U _button 12 ]
 [e :U 343 ]
-"241
+"235
 }
 [e :U 342 ]
-[; ;tsc.c: 241: }
-[; ;tsc.c: 242: if(button->pressed == 0)
-"242
+[; ;tsc.c: 235: }
+[; ;tsc.c: 236: if(button->pressed == 0)
+"236
 [e $ ! == -> . *U _button 8 `i -> 0 `i 344  ]
-[; ;tsc.c: 243: {
-"243
+[; ;tsc.c: 237: {
+"237
 {
-[; ;tsc.c: 244: if(LCD_InButton(button,tsc.posX,tsc.posY) == 1)
-"244
+[; ;tsc.c: 238: if(LCD_InButton(button,tsc.posX,tsc.posY) == 1)
+"238
 [e $ ! == -> ( _LCD_InButton (3 , , _button . _tsc 2 . _tsc 3 `i -> 1 `i 345  ]
-[; ;tsc.c: 245: {
-"245
+[; ;tsc.c: 239: {
+"239
 {
-[; ;tsc.c: 246: button->pressed = 1;
-"246
+[; ;tsc.c: 240: button->pressed = 1;
+"240
 [e = . *U _button 8 -> -> 1 `i `uc ]
-[; ;tsc.c: 247: LCD_ButtonUpdate(button);
-"247
+[; ;tsc.c: 241: LCD_ButtonUpdate(button);
+"241
 [e ( _LCD_ButtonUpdate (1 _button ]
-"249
+"243
 }
 [e :U 345 ]
-"250
+"244
 }
-[; ;tsc.c: 249: }
-[; ;tsc.c: 250: }
+[; ;tsc.c: 243: }
+[; ;tsc.c: 244: }
 [e $U 346  ]
-"251
+"245
 [e :U 344 ]
-[; ;tsc.c: 251: else
-[; ;tsc.c: 252: {
-"252
+[; ;tsc.c: 245: else
+[; ;tsc.c: 246: {
+"246
 {
-[; ;tsc.c: 253: if(LCD_InButton(button,tsc.posX,tsc.posY) == 0)
-"253
+[; ;tsc.c: 247: if(LCD_InButton(button,tsc.posX,tsc.posY) == 0)
+"247
 [e $ ! == -> ( _LCD_InButton (3 , , _button . _tsc 2 . _tsc 3 `i -> 0 `i 347  ]
-[; ;tsc.c: 254: {
-"254
+[; ;tsc.c: 248: {
+"248
 {
-[; ;tsc.c: 255: if(button->fpOut != (0))
-"255
+[; ;tsc.c: 249: if(button->fpOut != (0))
+"249
 [e $ ! != . *U _button 11 -> -> 0 `i `*F3355 348  ]
-[; ;tsc.c: 256: button->fpOut(button->index);
-"256
+[; ;tsc.c: 250: button->fpOut(button->index);
+"250
 [e ( *U . *U _button 11 (1 . *U _button 12 ]
 [e :U 348 ]
-[; ;tsc.c: 257: button->pressed = 0;
-"257
+[; ;tsc.c: 251: button->pressed = 0;
+"251
 [e = . *U _button 8 -> -> 0 `i `uc ]
-[; ;tsc.c: 258: LCD_ButtonUpdate(button);
-"258
+[; ;tsc.c: 252: LCD_ButtonUpdate(button);
+"252
 [e ( _LCD_ButtonUpdate (1 _button ]
-"259
+"253
 }
 [e :U 347 ]
-"260
+"254
 }
 [e :U 346 ]
-"261
+"255
 }
 [e :U 341 ]
-[; ;tsc.c: 259: }
-[; ;tsc.c: 260: }
-[; ;tsc.c: 261: }
-[; ;tsc.c: 262: if(tsc.released == 1)
-"262
+[; ;tsc.c: 253: }
+[; ;tsc.c: 254: }
+[; ;tsc.c: 255: }
+[; ;tsc.c: 256: if(tsc.released == 1)
+"256
 [e $ ! == -> . _tsc 1 `i -> 1 `i 349  ]
-[; ;tsc.c: 263: {
-"263
+[; ;tsc.c: 257: {
+"257
 {
-[; ;tsc.c: 264: if(LCD_InButton(button,tsc.posX,tsc.posY) == 1)
-"264
+[; ;tsc.c: 258: if(LCD_InButton(button,tsc.posX,tsc.posY) == 1)
+"258
 [e $ ! == -> ( _LCD_InButton (3 , , _button . _tsc 2 . _tsc 3 `i -> 1 `i 350  ]
-[; ;tsc.c: 265: {
-"265
+[; ;tsc.c: 259: {
+"259
 {
-[; ;tsc.c: 266: tsc.released = 0;
-"266
+[; ;tsc.c: 260: tsc.released = 0;
+"260
 [e = . _tsc 1 -> -> 0 `i `uc ]
-[; ;tsc.c: 267: button->pressed = 0;
-"267
+[; ;tsc.c: 261: button->pressed = 0;
+"261
 [e = . *U _button 8 -> -> 0 `i `uc ]
-[; ;tsc.c: 268: LCD_ButtonUpdate(button);
-"268
+[; ;tsc.c: 262: LCD_ButtonUpdate(button);
+"262
 [e ( _LCD_ButtonUpdate (1 _button ]
-[; ;tsc.c: 269: if(button->fpReleased != (0))
-"269
+[; ;tsc.c: 263: if(button->fpReleased != (0))
+"263
 [e $ ! != . *U _button 10 -> -> 0 `i `*F3352 351  ]
-[; ;tsc.c: 270: button->fpReleased(button->index);
-"270
+[; ;tsc.c: 264: button->fpReleased(button->index);
+"264
 [e ( *U . *U _button 10 (1 . *U _button 12 ]
 [e :U 351 ]
-"273
+"267
 }
 [e :U 350 ]
-"274
+"268
 }
 [e :U 349 ]
-[; ;tsc.c: 273: }
-[; ;tsc.c: 274: }
-[; ;tsc.c: 275: }
-"275
+[; ;tsc.c: 267: }
+[; ;tsc.c: 268: }
+[; ;tsc.c: 269: }
+"269
 [e :UE 340 ]
 }
-"283
+"277
 [v _TSC_SliderExecute `(v ~T0 @X0 1 ef1`*S303 ]
-"284
+"278
 {
-[; ;tsc.c: 283: void TSC_SliderExecute(sld_t * slider)
-[; ;tsc.c: 284: {
+[; ;tsc.c: 277: void TSC_SliderExecute(sld_t * slider)
+[; ;tsc.c: 278: {
 [e :U _TSC_SliderExecute ]
-"283
+"277
 [v _slider `*S303 ~T0 @X0 1 r1 ]
-"284
+"278
 [f ]
-[; ;tsc.c: 285: if(tsc.pressed == 1)
-"285
+[; ;tsc.c: 279: if(tsc.pressed == 1)
+"279
 [e $ ! == -> . _tsc 0 `i -> 1 `i 353  ]
-[; ;tsc.c: 286: {
-"286
+[; ;tsc.c: 280: {
+"280
 {
-[; ;tsc.c: 287: if(LCD_InSlider(slider,tsc.posX,tsc.posY) == 1)
-"287
+[; ;tsc.c: 281: if(LCD_InSlider(slider,tsc.posX,tsc.posY) == 1)
+"281
 [e $ ! == -> ( _LCD_InSlider (3 , , _slider . _tsc 2 . _tsc 3 `i -> 1 `i 354  ]
-[; ;tsc.c: 289: {
-"289
+[; ;tsc.c: 283: {
+"283
 {
-[; ;tsc.c: 290: slider->value = ((tsc.posX - slider->posX) * slider->steps)/ slider->width;
-"290
+[; ;tsc.c: 284: slider->value = ((tsc.posX - slider->posX) * slider->steps)/ slider->width;
+"284
 [e = . *U _slider 9 / * - . _tsc 2 . *U _slider 0 . *U _slider 11 . *U _slider 2 ]
-[; ;tsc.c: 291: LCD_SliderUpdate(slider);
-"291
+[; ;tsc.c: 285: LCD_SliderUpdate(slider);
+"285
 [e ( _LCD_SliderUpdate (1 _slider ]
-[; ;tsc.c: 292: if(slider->fpPress != (0))
-"292
+[; ;tsc.c: 286: if(slider->fpPress != (0))
+"286
 [e $ ! != . *U _slider 12 -> -> 0 `i `*F3372 355  ]
-[; ;tsc.c: 293: slider->fpPress();
-"293
+[; ;tsc.c: 287: slider->fpPress();
+"287
 [e ( *U . *U _slider 12 ..  ]
 [e :U 355 ]
-"294
+"288
 }
 [e :U 354 ]
-"295
+"289
 }
 [e :U 353 ]
-[; ;tsc.c: 294: }
-[; ;tsc.c: 295: }
-[; ;tsc.c: 296: }
-"296
+[; ;tsc.c: 288: }
+[; ;tsc.c: 289: }
+[; ;tsc.c: 290: }
+"290
 [e :UE 352 ]
 }

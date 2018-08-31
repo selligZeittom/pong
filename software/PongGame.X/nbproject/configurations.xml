@@ -11,6 +11,7 @@
       <itemPath>Game_controller.h</itemPath>
       <itemPath>Acc_controller.h</itemPath>
       <itemPath>spi.h</itemPath>
+      <itemPath>GlobalVariables.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
