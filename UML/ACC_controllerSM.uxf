@@ -4,8 +4,8 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>430</x>
-      <y>70</y>
+      <x>550</x>
+      <y>160</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -15,12 +15,12 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>340</x>
-      <y>140</y>
+      <x>460</x>
+      <y>230</y>
       <w>210</w>
       <h>80</h>
     </coordinates>
-    <panel_attributes>ST_TSC_WAIT
+    <panel_attributes>ST_ACC_WAIT
 --
 /entry : nothing to do</panel_attributes>
     <additional_attributes/>
@@ -28,8 +28,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
-      <y>70</y>
+      <x>550</x>
+      <y>160</y>
       <w>30</w>
       <h>90</h>
     </coordinates>
@@ -39,38 +39,38 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>340</x>
-      <y>340</y>
+      <x>460</x>
+      <y>430</y>
       <w>210</w>
       <h>80</h>
     </coordinates>
-    <panel_attributes>ST_TSC_UPDATE
+    <panel_attributes>ST_ACC_UPDATE
 --
-/entry : TSC_update()</panel_attributes>
+/entry : ACC_update()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>510</x>
-      <y>210</y>
+      <x>630</x>
+      <y>300</y>
       <w>150</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EV_TIMEOUT_TSC</panel_attributes>
+EV_TIMEOUT_ACC</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>160</y>
+      <x>400</x>
+      <y>250</y>
       <w>170</w>
       <h>230</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EV_GOTO_TSC_WAIT</panel_attributes>
+EV_GOTO_ACC_WAIT</panel_attributes>
     <additional_attributes>60.0;210.0;10.0;210.0;10.0;10.0;60.0;10.0</additional_attributes>
   </element>
 </diagram>
