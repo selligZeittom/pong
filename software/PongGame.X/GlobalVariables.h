@@ -19,10 +19,6 @@ const Event EV_BTN_GOTO_WAIT = 2;
 const Event EV_TIMEOUT_TSC = 10;
 const Event EV_GOTO_TSC_WAIT = 11;
 
-//events for the accelerometer state machine
-const Event EV_TIMEOUT_ACC = 10;
-const Event EV_GOTO_ACC_WAIT = 11;
-
 //events for the mode state machine
 const Event EV_ON = 20;
 const Event EV_OFF = 21;
@@ -47,7 +43,15 @@ const Event EV_GOTO_RACKET_WAIT = 62;
 
 //events for the mode Game ball state machine
 const Event EV_TIMEOUT_BALL = 70;
-const Event EV_
+const Event EV_CHECK_RACKET = 71;
+const Event EV_MOVE = 72;
+const Event EV_GAME_OVER = 73;
+const Event EV_GOTO_BALL_WAIT = 74;
+
+
+//events for the accelerometer state machine
+const Event EV_TIMEOUT_ACC = 80;
+const Event EV_GOTO_ACC_WAIT = 81;
 
 
 #endif	/* GLOBALVARIABLES_H */

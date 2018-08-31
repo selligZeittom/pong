@@ -10,6 +10,10 @@ void init_Game_controller(Game_controller* gameCtrl)
     gameCtrl->sm_on = ST_MENU;
     gameCtrl->old_sm_on = gameCtrl->sm_on;
 
+    //init the state machine menu
+    gameCtrl->sm_menu = ST_MENU_WAIT;
+    gameCtrl->old_sm_menu = gameCtrl->sm_menu;
+
     //init the state machine for the screen update
     gameCtrl->sm_screen = ST_SCREEN_WAIT;
     gameCtrl->old_sm_screen = gameCtrl->sm_screen;
@@ -22,6 +26,7 @@ void init_Game_controller(Game_controller* gameCtrl)
     gameCtrl->sm_ball = ST_BALL_WAIT;
     gameCtrl->old_sm_ball = gameCtrl->old_sm_ball;
 }
+
 void state_machine_mode(Game_controller* gameCtrl, Event ev)
 {
     //Store the old state
@@ -30,13 +35,13 @@ void state_machine_mode(Game_controller* gameCtrl, Event ev)
     switch (gameCtrl->sm_mode)
     {
         case ST_OFF:
-            if(ev == EV_BTN_IS_PRESSED)
+            if(ev == EV_ON)
             {
                 gameCtrl->sm_mode = ST_ON;
             }
             break;
         case ST_ON:
-            if(ev == EV_BTN_IS_PRESSED)
+            if(ev == EV_OFF)
             {
                 gameCtrl->sm_mode = ST_OFF;
             }
@@ -45,18 +50,27 @@ void state_machine_mode(Game_controller* gameCtrl, Event ev)
             break;
     }
 }
+
 void state_machine_on(Game_controller* gameCtrl, Event ev)
 {
     
 }
+
+void state_machine_menu(Game_controller* gameCtrl, Event ev)
+{
+    
+}
+
 void state_machine_screen(Game_controller* gameCtrl, Event ev)
 {
     
 }
+
 void state_machine_racket(Game_controller* gameCtrl, Event ev)
 {
     
 }
+
 void state_machine_ball(Game_controller* gameCtrl, Event ev)
 {
     

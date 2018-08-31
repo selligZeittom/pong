@@ -9,6 +9,7 @@
 #define	GAME_CONTROLLER_H
 
 #include "xf.h"
+#include "GlobalVariables.h"
 
 typedef enum SM_MODE
 {
@@ -21,6 +22,13 @@ typedef enum SM_ON
     ST_MENU,
     ST_GAME,
 } SM_ON;
+
+typedef enum SM_MENU
+{
+    ST_MENU_WAIT,
+    ST_MENU_CTRL_SW,
+    ST_MENU_LEVEL_SW,
+} SM_MENU;
 
 typedef enum SM_SCREEN
 {
@@ -56,6 +64,7 @@ typedef struct Game_controller
 {
     SM_MODE sm_mode, old_sm_mode;
     SM_ON sm_on, old_sm_on;
+    SM_MENU sm_menu, old_sm_menu;
     SM_SCREEN sm_screen, old_sm_screen;
     SM_RACKET sm_racket, old_sm_racket;
     SM_BALL sm_ball, old_sm_ball;
@@ -70,6 +79,7 @@ void init_Game_controller(Game_controller* gameCtrl);
 
 void state_machine_mode(Game_controller* gameCtrl, Event ev);
 void state_machine_on(Game_controller* gameCtrl, Event ev);
+void state_machine_menu(Game_controller* gameCtrl, Event ev);
 void state_machine_screen(Game_controller* gameCtrl, Event ev);
 void state_machine_racket(Game_controller* gameCtrl, Event ev);
 void state_machine_ball(Game_controller* gameCtrl, Event ev);
