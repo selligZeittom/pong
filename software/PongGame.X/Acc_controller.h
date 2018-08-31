@@ -35,12 +35,22 @@ typedef struct Accelerometer        // accelerometer structure
 //-----------------------------------------------------------------
 #define nCS_ACC                 LATC7
 #define DIR_nCS_ACC             TRISC7
+#define DIR_INT_ACC             TRISB2
 
 //-----------------------------------------------------------------
 // SPI bit
 //-----------------------------------------------------------------
 #define READbit                 1
 #define MnSbit                  0
+
+/******************************************************************************/
+/* FUNCTION : tscInit                                                         */
+/* INPUT		: -                                                   */
+/* OUTPUT		: -                                                   */
+/******************************************************************************/
+/* COMMENTS     : Initialise Accelerometer                            */
+/******************************************************************************/
+void AccInit(void);
 
 #endif	/* ACC_CONTROLLER_H */
 

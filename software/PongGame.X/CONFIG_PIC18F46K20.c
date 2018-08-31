@@ -59,6 +59,9 @@
 // CONFIG7H
 #pragma config EBTRB = OFF      // Boot Block Table Read Protection bit (Boot Block (000000-0007FFh) not protected from table reads executed in other blocks)
 
+// Our F_clk is running at 64 MHz as we are using high speed
+#define _XTAL_FREQ 64000000L
+
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 

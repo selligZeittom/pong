@@ -31,7 +31,7 @@ RESTART_SPI:
   //----------------------------------------------------------------------------
   // software initialisation
   //----------------------------------------------------------------------------
-  TscWrite (STMPE811_SPI_CFG, 1, STMPE811_SPI_MODE_0 | STMPE811_AUTO_INCR);
+  TscWrite (STMPE811_SPI_CFG, 1, STMPE811_SPI_MODE_3 | STMPE811_AUTO_INCR);
   TscRead(STMPE811_CHIP_ID,2,temp8);  // read chip ID
 
   if(temp8[0] != 0x08)      // if not good -> big problem

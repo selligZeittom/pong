@@ -13,8 +13,8 @@
 /*----------------------------------------------------------------------------*/
 /* choose one of the three choices                                            */
 /******************************************************************************/
-//#define  DISPLAY_NHD NHD_24_CF   // 2.4 " display (controller ST7789S)
-#define  DISPLAY_NHD NHD_24_SF    // 2.4 " display (controller ILI9163)
+#define  DISPLAY_NHD NHD_24_CF   // 2.4 " display (controller ST7789S)
+//#define  DISPLAY_NHD NHD_24_SF    // 2.4 " display (controller ILI9163)
 //#define  DISPLAY_NHD   18   // 1.8 " display (controller ILI9341)
 /******************************************************************************/
 /* Display direction choice                                                   */
@@ -25,9 +25,9 @@
 /* the normal direction means the connector is to the left (or to the top)    */
 /******************************************************************************/
 //#define HORIZONTAL_NORMAL
-//#define HORIZONTAL_INVERTED
+#define HORIZONTAL_INVERTED
 //#define VERTICAL_NORMAL
-#define VERTICAL_INVERTED
+//#define VERTICAL_INVERTED
 
 #ifdef HORIZONTAL_NORMAL
 #if (DISPLAY_NHD == NHD_24_SF)
