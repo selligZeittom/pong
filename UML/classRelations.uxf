@@ -4,7 +4,7 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>729</x>
+      <x>666</x>
       <y>261</y>
       <w>144</w>
       <h>90</h>
@@ -18,7 +18,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>450</x>
+      <x>387</x>
       <y>261</y>
       <w>198</w>
       <h>153</h>
@@ -39,7 +39,7 @@ bg=green</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>198</x>
+      <x>135</x>
       <y>63</y>
       <w>153</w>
       <h>99</h>
@@ -55,35 +55,39 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>198</x>
+      <x>135</x>
       <y>189</y>
       <w>153</w>
       <h>99</h>
     </coordinates>
-    <panel_attributes>TS_controller
+    <panel_attributes>
+
+TS_controller
 halign=center
-valign=center
+valign=top
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>198</x>
+      <x>135</x>
       <y>324</y>
       <w>153</w>
-      <h>99</h>
+      <h>108</h>
     </coordinates>
-    <panel_attributes>Acc_controller
+    <panel_attributes>
+
+Acc_controller
 halign=center
-valign=center
+valign=top
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
+      <x>279</x>
       <y>99</y>
       <w>126</w>
       <h>198</h>
@@ -95,7 +99,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
+      <x>279</x>
       <y>225</y>
       <w>126</w>
       <h>90</h>
@@ -106,7 +110,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
+      <x>279</x>
       <y>306</y>
       <w>126</w>
       <h>81</h>
@@ -117,8 +121,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>198</x>
-      <y>450</y>
+      <x>135</x>
+      <y>477</y>
       <w>153</w>
       <h>81</h>
     </coordinates>
@@ -131,18 +135,18 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
+      <x>279</x>
       <y>324</y>
       <w>126</w>
-      <h>180</h>
+      <h>207</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;180.0;70.0;180.0;70.0;10.0;120.0;10.0</additional_attributes>
+    <additional_attributes>10.0;210.0;70.0;210.0;70.0;10.0;120.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>639</x>
+      <x>576</x>
       <y>297</y>
       <w>108</w>
       <h>27</h>
@@ -153,7 +157,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>927</x>
+      <x>864</x>
       <y>126</y>
       <w>144</w>
       <h>90</h>
@@ -167,7 +171,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>927</x>
+      <x>864</x>
       <y>261</y>
       <w>144</w>
       <h>90</h>
@@ -181,7 +185,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>927</x>
+      <x>864</x>
       <y>396</y>
       <w>144</w>
       <h>90</h>
@@ -195,7 +199,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>864</x>
+      <x>801</x>
       <y>297</y>
       <w>81</w>
       <h>36</h>
@@ -207,7 +211,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>837</x>
+      <x>774</x>
       <y>162</y>
       <w>108</w>
       <h>117</h>
@@ -219,7 +223,7 @@ m2=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>837</x>
+      <x>774</x>
       <y>342</y>
       <w>108</w>
       <h>126</h>
@@ -231,7 +235,7 @@ m2=1</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>198</x>
+      <x>135</x>
       <y>585</y>
       <w>873</w>
       <h>90</h>
@@ -246,7 +250,7 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>558</x>
+      <x>495</x>
       <y>720</y>
       <w>153</w>
       <h>90</h>
@@ -260,7 +264,7 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
+      <x>567</x>
       <y>666</y>
       <w>99</w>
       <h>72</h>
@@ -272,7 +276,7 @@ throws events</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>216</x>
+      <x>153</x>
       <y>117</y>
       <w>117</w>
       <h>36</h>
@@ -288,7 +292,7 @@ transparency=40</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>486</x>
+      <x>423</x>
       <y>315</y>
       <w>117</w>
       <h>36</h>
@@ -304,7 +308,7 @@ transparency=40</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>126</x>
+      <x>63</x>
       <y>153</y>
       <w>171</w>
       <h>513</h>
@@ -316,7 +320,7 @@ throws events</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
+      <x>477</x>
       <y>405</y>
       <w>99</w>
       <h>198</h>
@@ -328,13 +332,57 @@ throws events</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>144</x>
-      <y>279</y>
+      <x>81</x>
+      <y>270</y>
       <w>153</w>
-      <h>369</h>
+      <h>378</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 throws events</panel_attributes>
-    <additional_attributes>150.0;10.0;150.0;30.0;10.0;30.0;10.0;390.0;60.0;390.0</additional_attributes>
+    <additional_attributes>150.0;10.0;150.0;40.0;10.0;40.0;10.0;400.0;60.0;400.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>153</x>
+      <y>387</y>
+      <w>117</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>reacts to events
+valign=center
+halign=center
+bg=magenta
+layer=1
+transparency=40</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>153</x>
+      <y>243</y>
+      <w>117</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>reacts to events
+valign=center
+halign=center
+bg=magenta
+layer=1
+transparency=40</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>99</x>
+      <y>423</y>
+      <w>135</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+throws events</panel_attributes>
+    <additional_attributes>130.0;10.0;130.0;40.0;10.0;40.0;10.0;200.0;40.0;200.0</additional_attributes>
   </element>
 </diagram>

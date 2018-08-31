@@ -17,7 +17,7 @@
 #define INTF_TSC                INT1IF
 #define INTEDG_TSC              INTEDG1
 //*****************************************************************************
-// TSC measures resluts
+// TSC measures results
 // The measures on max and min values have to be here.
 // These are used to convert from TSC coordiantes to LCD pixel coordinates
 //*****************************************************************************
