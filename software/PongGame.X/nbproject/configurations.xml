@@ -9,6 +9,8 @@
       <itemPath>tsc.h</itemPath>
       <itemPath>xf.h</itemPath>
       <itemPath>Game_controller.h</itemPath>
+      <itemPath>Acc_controller.h</itemPath>
+      <itemPath>spi.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -25,6 +27,8 @@
       <itemPath>tsc.c</itemPath>
       <itemPath>xf.c</itemPath>
       <itemPath>Game_controller.c</itemPath>
+      <itemPath>Acc_controller.c</itemPath>
+      <itemPath>spi.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -45,7 +49,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.45</languageToolchainVersion>
+        <languageToolchainVersion>1.42</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>

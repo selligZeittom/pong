@@ -23,16 +23,10 @@ void TscInit(void)
 {
   uint8_t temp8[2];
 
-  TRISC4 = 1;               // MISO for SPI is input
   nCS_TSC = 1;              // tsc controller chip select
   DIR_nCS_TSC = 0;          // set CS as output
   DIR_INT_TSC = 1;
-  TRISC3 = 0;               // clock for SPI is output
-  TRISC5 = 0;               // MOSI for SPI is output
-  CKE = 0;                  // mode of data transfer
   //CKP1 = 1;                  // used with tsc controller
-  SSPCON1 = 0b00100010;     // SSPEN & CKP & speed select (fosc/64) 1MHz
-  SSPEN = 1;                // enable SPI
 RESTART_SPI:
   //----------------------------------------------------------------------------
   // software initialisation
