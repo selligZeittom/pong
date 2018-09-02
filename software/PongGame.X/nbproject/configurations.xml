@@ -12,6 +12,8 @@
       <itemPath>Acc_controller.h</itemPath>
       <itemPath>spi.h</itemPath>
       <itemPath>GlobalVariables.h</itemPath>
+      <itemPath>TS_controller.h</itemPath>
+      <itemPath>Btn_controller.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -38,6 +40,8 @@
       <itemPath>Racket.c</itemPath>
       <itemPath>Ball_manager.c</itemPath>
       <itemPath>Ball_manager.h</itemPath>
+      <itemPath>TS_controller.c</itemPath>
+      <itemPath>Btn_controller.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

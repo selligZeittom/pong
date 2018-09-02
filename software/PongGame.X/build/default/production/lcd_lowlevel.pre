@@ -4232,14 +4232,14 @@ uint16_t color;
 PORTA = 0x2A; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
 PORTA = posX>>8; LATB4 = 0; LATB4 = 1;;
 PORTA = posX; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1) >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1); LATB4 = 0; LATB4 = 1;;
+PORTA = (320-1) >> 8; LATB4 = 0; LATB4 = 1;;
+PORTA = (320-1); LATB4 = 0; LATB4 = 1;;
 
 PORTA = 0x2B; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
 PORTA = posY>>8; LATB4 = 0; LATB4 = 1;;
 PORTA = posY; LATB4 = 0; LATB4 = 1;;
-PORTA = (320-1) >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = (320-1); LATB4 = 0; LATB4 = 1;;
+PORTA = (240-1) >> 8; LATB4 = 0; LATB4 = 1;;
+PORTA = (240-1); LATB4 = 0; LATB4 = 1;;
 
 PORTA = 0x2E; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
 TRISA = 0xFF;

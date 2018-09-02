@@ -11,6 +11,7 @@
 #include <xc.h>             // XC8 General Include File
 #include <stdint.h>         // usage of standard types
 #include <stdbool.h>        // usage of boolean types
+#include "xf.h"
 
 typedef struct Accelerometer        // accelerometer structure
 {
@@ -18,6 +19,19 @@ typedef struct Accelerometer        // accelerometer structure
     int16_t yAcc;               // value of acceleration in Y
     int16_t zAcc;               // value of acceleration in Z
 } Accelerometer;
+
+//states for the accelerometer's machine
+typedef enum SM_ACC
+{
+    ST_ACC_WAIT,
+    ST_ACC_UPDATE,
+} SM_ACC;
+
+//structure for the double switch pattern
+typedef struct Acc_controller
+{
+    SM_ACC sm_acc, old_sm_acc;
+}Acc_controller;
 
 //-----------------------------------------------------------------
 // Accelerometer Registers
@@ -44,13 +58,23 @@ typedef struct Accelerometer        // accelerometer structure
 #define MnSbit                  0
 
 /******************************************************************************/
-/* FUNCTION : tscInit                                                         */
+/* FUNCTION : accInit                                                         */
 /* INPUT		: -                                                   */
 /* OUTPUT		: -                                                   */
 /******************************************************************************/
 /* COMMENTS     : Initialise Accelerometer                            */
 /******************************************************************************/
-void AccInit(void);
+void AccInit(Acc_controller* accCtrl);
+
+/*
+ * process events for the accelerometer
+ */
+void state_machine_accelerometer(Acc_controller* accCtrl, Event ev);
+
+/*
+ * read new values for accelerometer
+ */
+ void acc_update();
 
 #endif	/* ACC_CONTROLLER_H */
 

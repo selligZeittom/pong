@@ -4317,61 +4317,61 @@ SM_RACKET sm_racket, old_sm_racket;
 SM_BALL sm_ball, old_sm_ball;
 }Game_controller;
 
-# 77
+# 76
 void init_Game_controller(Game_controller* gameCtrl);
 
-# 82
+# 81
 void state_machine_mode(Game_controller* gameCtrl, Event ev);
 
-# 87
+# 86
 void state_machine_on(Game_controller* gameCtrl, Event ev);
 
-# 92
+# 91
 void state_machine_menu(Game_controller* gameCtrl, Event ev);
 
-# 97
+# 96
 void state_machine_screen(Game_controller* gameCtrl, Event ev);
 
-# 102
+# 101
 void state_machine_racket(Game_controller* gameCtrl, Event ev);
 
-# 107
+# 106
 void state_machine_ball(Game_controller* gameCtrl, Event ev);
 
-# 112
+# 111
 void display_menu();
 
-# 117
+# 116
 void switch_level();
 
-# 122
+# 121
 void switch_control();
 
-# 127
+# 126
 void update_screen();
 
-# 132
+# 131
 void move_AI_racket();
 
-# 137
+# 136
 void move_user_racket();
 
-# 142
+# 141
 void check_Y_ball(uint16_t y_ball);
 
-# 147
+# 146
 void check_X_ball(uint16_t x_ball, uint16_t x_racket);
 
-# 153
+# 152
 void compute_movement_ball(uint16_t x_ball);
 
-# 158
+# 157
 void sleep_mode();
 
-# 163
+# 162
 void wake_up();
 
-# 168
+# 167
 void reset_game();
 
 # 7 "Game_controller.c"

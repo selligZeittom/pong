@@ -3170,14 +3170,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _PORTA -> _posX `uc ]
 [e = _LATB4 -> -> 0 `i `b ]
 [e = _LATB4 -> -> 1 `i `b ]
-[; ;lcd_lowlevel.c: 73: PORTA = (240-1) >> 8; LATB4 = 0; LATB4 = 1;;
+[; ;lcd_lowlevel.c: 73: PORTA = (320-1) >> 8; LATB4 = 0; LATB4 = 1;;
 "73
-[e = _PORTA -> >> - -> 240 `i -> 1 `i -> 8 `i `uc ]
+[e = _PORTA -> >> - -> 320 `i -> 1 `i -> 8 `i `uc ]
 [e = _LATB4 -> -> 0 `i `b ]
 [e = _LATB4 -> -> 1 `i `b ]
-[; ;lcd_lowlevel.c: 74: PORTA = (240-1); LATB4 = 0; LATB4 = 1;;
+[; ;lcd_lowlevel.c: 74: PORTA = (320-1); LATB4 = 0; LATB4 = 1;;
 "74
-[e = _PORTA -> - -> 240 `i -> 1 `i `uc ]
+[e = _PORTA -> - -> 320 `i -> 1 `i `uc ]
 [e = _LATB4 -> -> 0 `i `b ]
 [e = _LATB4 -> -> 1 `i `b ]
 [; ;lcd_lowlevel.c: 76: PORTA = 0x2B; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
@@ -3197,14 +3197,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _PORTA -> _posY `uc ]
 [e = _LATB4 -> -> 0 `i `b ]
 [e = _LATB4 -> -> 1 `i `b ]
-[; ;lcd_lowlevel.c: 79: PORTA = (320-1) >> 8; LATB4 = 0; LATB4 = 1;;
+[; ;lcd_lowlevel.c: 79: PORTA = (240-1) >> 8; LATB4 = 0; LATB4 = 1;;
 "79
-[e = _PORTA -> >> - -> 320 `i -> 1 `i -> 8 `i `uc ]
+[e = _PORTA -> >> - -> 240 `i -> 1 `i -> 8 `i `uc ]
 [e = _LATB4 -> -> 0 `i `b ]
 [e = _LATB4 -> -> 1 `i `b ]
-[; ;lcd_lowlevel.c: 80: PORTA = (320-1); LATB4 = 0; LATB4 = 1;;
+[; ;lcd_lowlevel.c: 80: PORTA = (240-1); LATB4 = 0; LATB4 = 1;;
 "80
-[e = _PORTA -> - -> 320 `i -> 1 `i `uc ]
+[e = _PORTA -> - -> 240 `i -> 1 `i `uc ]
 [e = _LATB4 -> -> 0 `i `b ]
 [e = _LATB4 -> -> 1 `i `b ]
 [; ;lcd_lowlevel.c: 82: PORTA = 0x2E; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;

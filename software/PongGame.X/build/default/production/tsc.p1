@@ -3240,9 +3240,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tsc.c: 30: RESTART_SPI:
 "30
 [e :U 308 ]
-[; ;tsc.c: 34: TscWrite (0x08, 1, 0 | 4);
+[; ;tsc.c: 34: TscWrite (0x08, 1, 3 | 4);
 "34
-[e ( _TscWrite (3 , , -> -> 8 `i `uc -> -> 1 `i `uc -> -> | -> 0 `i -> 4 `i `l `ul ]
+[e ( _TscWrite (3 , , -> -> 8 `i `uc -> -> 1 `i `uc -> -> | -> 3 `i -> 4 `i `l `ul ]
 [; ;tsc.c: 35: TscRead(0x00,2,temp8);
 "35
 [e ( _TscRead (3 , , -> -> 0 `i `uc -> -> 2 `i `uc &U _temp8 ]
@@ -3613,24 +3613,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tsc.c: 199: tsc.released = 0;
 "199
 [e = . _tsc 1 -> -> 0 `i `uc ]
-[; ;tsc.c: 207: TscRead(0x4D, 2, tempTbl);
-"207
+[; ;tsc.c: 201: TscRead(0x4D, 2, tempTbl);
+"201
 [e ( _TscRead (3 , , -> -> 77 `i `uc -> -> 2 `i `uc &U _tempTbl ]
-[; ;tsc.c: 208: xPos = ((uint16_t)tempTbl[0] << 8) | tempTbl[1];
-"208
-[e = _xPos -> | << -> *U + &U _tempTbl * -> -> -> 0 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `ui -> 8 `i -> *U + &U _tempTbl * -> -> -> 1 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `ui `l ]
-[; ;tsc.c: 209: TscRead(0x4F, 2, tempTbl);
-"209
-[e ( _TscRead (3 , , -> -> 79 `i `uc -> -> 2 `i `uc &U _tempTbl ]
-[; ;tsc.c: 210: yPos = ((uint16_t)tempTbl[0] << 8) | tempTbl[1];
-"210
+[; ;tsc.c: 202: yPos = ((uint16_t)tempTbl[0] << 8) | tempTbl[1];
+"202
 [e = _yPos -> | << -> *U + &U _tempTbl * -> -> -> 0 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `ui -> 8 `i -> *U + &U _tempTbl * -> -> -> 1 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `ui `l ]
-[; ;tsc.c: 212: tsc.posY = (uint16_t)(((yPos *(320-1)) / (280L-3800L))-(((320-1) * 3800L) / (280L-3800L)));
+[; ;tsc.c: 203: TscRead(0x4F, 2, tempTbl);
+"203
+[e ( _TscRead (3 , , -> -> 79 `i `uc -> -> 2 `i `uc &U _tempTbl ]
+[; ;tsc.c: 204: xPos = ((uint16_t)tempTbl[0] << 8) | tempTbl[1];
+"204
+[e = _xPos -> | << -> *U + &U _tempTbl * -> -> -> 0 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `ui -> 8 `i -> *U + &U _tempTbl * -> -> -> 1 `i `ui `ux -> -> # *U &U _tempTbl `ui `ux `ui `l ]
+[; ;tsc.c: 212: tsc.posY = (uint16_t)(((yPos *(240-1)) / (3800L-300L))-(((240-1) * 300L) / (3800L-300L)));
 "212
-[e = . _tsc 3 -> - / * _yPos -> - -> 320 `i -> 1 `i `l - -> 280 `l -> 3800 `l / * -> - -> 320 `i -> 1 `i `l -> 3800 `l - -> 280 `l -> 3800 `l `ui ]
-[; ;tsc.c: 213: tsc.posX = (uint16_t)(((xPos *(240-1)) / (3800L-380L))-(((240-1) * 380L) / (3800L-380L)));
+[e = . _tsc 3 -> - / * _yPos -> - -> 240 `i -> 1 `i `l - -> 3800 `l -> 300 `l / * -> - -> 240 `i -> 1 `i `l -> 300 `l - -> 3800 `l -> 300 `l `ui ]
+[; ;tsc.c: 213: tsc.posX = (uint16_t)(((xPos *(320-1)) / (3800L-380L))-(((320-1) * 380L) / (3800L-380L)));
 "213
-[e = . _tsc 2 -> - / * _xPos -> - -> 240 `i -> 1 `i `l - -> 3800 `l -> 380 `l / * -> - -> 240 `i -> 1 `i `l -> 380 `l - -> 3800 `l -> 380 `l `ui ]
+[e = . _tsc 2 -> - / * _xPos -> - -> 320 `i -> 1 `i `l - -> 3800 `l -> 380 `l / * -> - -> 320 `i -> 1 `i `l -> 380 `l - -> 3800 `l -> 380 `l `ui ]
 "216
 }
 [e :U 339 ]

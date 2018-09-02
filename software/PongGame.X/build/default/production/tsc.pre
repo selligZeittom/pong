@@ -4473,7 +4473,7 @@ RESTART_SPI:
 
 
 
-TscWrite (0x08, 1, 0 | 4);
+TscWrite (0x08, 1, 3 | 4);
 TscRead(0x00,2,temp8);
 
 if(temp8[0] != 0x08)
@@ -4613,14 +4613,14 @@ if((intStat & 0x02)||(tempTbl[0] == 0x10))
 tsc.pressed = 1;
 tsc.released = 0;
 
-# 207
 TscRead(0x4D, 2, tempTbl);
-xPos = ((uint16_t)tempTbl[0] << 8) | tempTbl[1];
-TscRead(0x4F, 2, tempTbl);
 yPos = ((uint16_t)tempTbl[0] << 8) | tempTbl[1];
+TscRead(0x4F, 2, tempTbl);
+xPos = ((uint16_t)tempTbl[0] << 8) | tempTbl[1];
 
-tsc.posY = (uint16_t)(((yPos *(320-1)) / (280L-3800L))-(((320-1) * 3800L) / (280L-3800L)));
-tsc.posX = (uint16_t)(((xPos *(240-1)) / (3800L-380L))-(((240-1) * 380L) / (3800L-380L)));
+# 212
+tsc.posY = (uint16_t)(((yPos *(240-1)) / (3800L-300L))-(((240-1) * 300L) / (3800L-300L)));
+tsc.posX = (uint16_t)(((xPos *(320-1)) / (3800L-380L))-(((320-1) * 380L) / (3800L-380L)));
 
 
 }
