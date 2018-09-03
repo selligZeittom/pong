@@ -7,15 +7,18 @@
 
 #ifndef TS_CONTROLLER_H
 #define	TS_CONTROLLER_H
-
+#include <xc.h>             // XC8 General Include File
+#include <stdint.h>         // usage of standard types
+#include <stdbool.h>        // usage of boolean types
 #include "xf.h"
+#include "GlobalVariables.h"
 
 //define states of the machine
 typedef enum SM_TSC
 {
     ST_TSC_WAIT,
     ST_TSC_UPDATE,
-};
+}SM_TSC;
 
 //controller for the double switch pattern
 typedef struct TS_controller

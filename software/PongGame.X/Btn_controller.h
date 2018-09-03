@@ -8,7 +8,11 @@
 #ifndef BTN_CONTROLLER_H
 #define	BTN_CONTROLLER_H
 
+#include <xc.h>             // XC8 General Include File
+#include <stdint.h>         // usage of standard types
+#include <stdbool.h>        // usage of boolean types
 #include "xf.h"
+#include "GlobalVariables.h"
 
 typedef enum SM_BTN
 {
@@ -16,12 +20,12 @@ typedef enum SM_BTN
     ST_BTN_PRESSED,
     ST_BTN_CONFIRMED,
             
-};
+}SM_BTN;
 
 typedef struct Btn_controller
 {
     SM_BTN sm_btn, old_sm_btn;
-};
+}Btn_controller;
 
 /*
  * init the state machine

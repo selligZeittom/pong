@@ -8,6 +8,9 @@
 #ifndef GAME_CONTROLLER_H
 #define	GAME_CONTROLLER_H
 
+#include <xc.h>             // XC8 General Include File
+#include <stdint.h>         // usage of standard types
+#include <stdbool.h>        // usage of boolean types
 #include "xf.h"
 #include "GlobalVariables.h"
 
