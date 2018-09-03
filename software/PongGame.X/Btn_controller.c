@@ -1,4 +1,5 @@
 #include "Btn_controller.h"
+#include "GlobalVariables.h"
 
 /*
  * init the state machine
@@ -59,6 +60,8 @@ void state_machine_btn(Btn_controller* btnCtrl, Event ev)
             break;
         case ST_BTN_CONFIRMED:
             //throw event
+            Event btnConfirmed = EV_BTN_TIMEOUT;
+            XF_pushEvent(btnConfirmed, false);
             break;
         default:
             break;
@@ -71,5 +74,5 @@ void state_machine_btn(Btn_controller* btnCtrl, Event ev)
  */
 void launch_timer()
 {
-
+    XF_scheduleTimer()
 }

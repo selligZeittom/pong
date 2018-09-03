@@ -14,6 +14,9 @@
       <itemPath>GlobalVariables.h</itemPath>
       <itemPath>TS_controller.h</itemPath>
       <itemPath>Btn_controller.h</itemPath>
+      <itemPath>Ball_manager.h</itemPath>
+      <itemPath>PongGame.h</itemPath>
+      <itemPath>Racket.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -32,14 +35,9 @@
       <itemPath>Game_controller.c</itemPath>
       <itemPath>Acc_controller.c</itemPath>
       <itemPath>spi.c</itemPath>
-      <itemPath>PongGame.h</itemPath>
       <itemPath>PongGame.c</itemPath>
-      <itemPath>Wall.h</itemPath>
-      <itemPath>Wall.c</itemPath>
-      <itemPath>Racket.h</itemPath>
       <itemPath>Racket.c</itemPath>
       <itemPath>Ball_manager.c</itemPath>
-      <itemPath>Ball_manager.h</itemPath>
       <itemPath>TS_controller.c</itemPath>
       <itemPath>Btn_controller.c</itemPath>
     </logicalFolder>

@@ -53,6 +53,8 @@ const Event EV_GOTO_BALL_WAIT = 74;
 const Event EV_TIMEOUT_ACC = 80;
 const Event EV_GOTO_ACC_WAIT = 81;
 
+//
+
 
 #endif	/* GLOBALVARIABLES_H */
 
