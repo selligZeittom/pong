@@ -1,11 +1,20 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "8 Btn_controller.c
+<<<<<<< HEAD
 [c E3264 0 1 2 .. ]
 [n E3264 SM_BTN ST_BTN_WAITING ST_BTN_PRESSED ST_BTN_CONFIRMED  ]
 "21 Btn_controller.h
 [s S300 `E3264 1 `E3264 1 ]
 [n S300 Btn_controller sm_btn old_sm_btn ]
 "39
+=======
+[c E3293 0 1 2 .. ]
+[n E3293 SM_BTN ST_BTN_WAITING ST_BTN_PRESSED ST_BTN_CONFIRMED  ]
+"22 Btn_controller.h
+[s S300 `E3293 1 `E3293 1 ]
+[n S300 Btn_controller sm_btn old_sm_btn ]
+"40
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _launch_timer `(v ~T0 @X0 0 ef ]
 "59 xf.h
 [v _XF_pushEvent `(uc ~T0 @X0 0 ef2`uc`uc ]
@@ -15,7 +24,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f46k20.h: 50: extern volatile unsigned char SSPMSK @ 0xF77;
+<<<<<<< HEAD
 "52 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+=======
+"52 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;pic18f46k20.h: 52: asm("SSPMSK equ 0F77h");
 [; <" SSPMSK equ 0F77h ;# ">
 [; ;pic18f46k20.h: 55: typedef union {
@@ -2975,6 +2988,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
+<<<<<<< HEAD
 [; ;stdint.h: 38: typedef signed long int int32_t;
 [; ;stdint.h: 45: typedef unsigned char uint8_t;
 [; ;stdint.h: 51: typedef unsigned int uint16_t;
@@ -2995,6 +3009,34 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 217: typedef uint32_t uintmax_t;
 [; ;stdint.h: 222: typedef int16_t intptr_t;
 [; ;stdint.h: 227: typedef uint16_t uintptr_t;
+=======
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;xf.h: 18: typedef uint8_t Event;
 [; ;xf.h: 19: typedef uint16_t Time;
@@ -3017,6 +3059,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xf.h: 75: TimerID XF_scheduleTimer(Time tm, Event ev, bool inISR);
 [; ;xf.h: 83: void XF_unscheduleTimer(TimerID id, bool inISR);
 [; ;xf.h: 90: void XF_decrementAndQueueTimers();
+<<<<<<< HEAD
 [; ;Btn_controller.h: 13: typedef enum SM_BTN
 [; ;Btn_controller.h: 14: {
 [; ;Btn_controller.h: 15: ST_BTN_WAITING,
@@ -3030,6 +3073,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Btn_controller.h: 29: void init_btn_controller(Btn_controller* btnCtrl);
 [; ;Btn_controller.h: 34: void state_machine_btn(Btn_controller* btnCtrl, Event ev);
 [; ;Btn_controller.h: 39: void launch_timer();
+=======
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "14 GlobalVariables.h
 [v _EV_BTN_PRESSED `Cuc ~T0 @X0 1 e ]
 [i _EV_BTN_PRESSED
@@ -3061,6 +3106,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;GlobalVariables.h: 20: const Event EV_GOTO_TSC_WAIT = 11;
 "23
+<<<<<<< HEAD
 [v _EV_ON `Cuc ~T0 @X0 1 e ]
 [i _EV_ON
 -> -> 20 `i `uc
@@ -3073,107 +3119,212 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;GlobalVariables.h: 24: const Event EV_OFF = 21;
 "27
+=======
+[v _EV_POWER `Cuc ~T0 @X0 1 e ]
+[i _EV_POWER
+-> -> 20 `i `uc
+]
+[; ;GlobalVariables.h: 23: const Event EV_POWER = 20;
+"26
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GAME `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME
 -> -> 30 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 27: const Event EV_GAME = 30;
 "28
+=======
+[; ;GlobalVariables.h: 26: const Event EV_GAME = 30;
+"27
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_MENU `Cuc ~T0 @X0 1 e ]
 [i _EV_MENU
 -> -> 31 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 28: const Event EV_MENU = 31;
 "31
+=======
+[; ;GlobalVariables.h: 27: const Event EV_MENU = 31;
+"30
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_LEVEL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_LEVEL_SW
 -> -> 40 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 31: const Event EV_LEVEL_SW = 40;
 "32
+=======
+[; ;GlobalVariables.h: 30: const Event EV_LEVEL_SW = 40;
+"31
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_CTRL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_CTRL_SW
 -> -> 41 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 32: const Event EV_CTRL_SW = 41;
 "33
+=======
+[; ;GlobalVariables.h: 31: const Event EV_CTRL_SW = 41;
+"32
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_MENU_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_MENU_WAIT
 -> -> 42 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 33: const Event EV_GOTO_MENU_WAIT = 42;
 "36
+=======
+[; ;GlobalVariables.h: 32: const Event EV_GOTO_MENU_WAIT = 42;
+"35
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_SCREEN `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_SCREEN
 -> -> 50 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 36: const Event EV_TIMEOUT_SCREEN = 50;
 "37
+=======
+[; ;GlobalVariables.h: 35: const Event EV_TIMEOUT_SCREEN = 50;
+"36
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_SCREEN_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_SCREEN_WAIT
 -> -> 51 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 37: const Event EV_GOTO_SCREEN_WAIT = 51;
 "40
+=======
+[; ;GlobalVariables.h: 36: const Event EV_GOTO_SCREEN_WAIT = 51;
+"39
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_AI `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_AI
 -> -> 60 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_AI = 60;
 "41
+=======
+[; ;GlobalVariables.h: 39: const Event EV_TIMEOUT_AI = 60;
+"40
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_USER `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_USER
 -> -> 61 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 41: const Event EV_TIMEOUT_USER = 61;
 "42
+=======
+[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_USER = 61;
+"41
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_RACKET_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_RACKET_WAIT
 -> -> 62 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 42: const Event EV_GOTO_RACKET_WAIT = 62;
 "45
+=======
+[; ;GlobalVariables.h: 41: const Event EV_GOTO_RACKET_WAIT = 62;
+"44
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_BALL `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_BALL
 -> -> 70 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 45: const Event EV_TIMEOUT_BALL = 70;
 "46
+=======
+[; ;GlobalVariables.h: 44: const Event EV_TIMEOUT_BALL = 70;
+"45
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_CHECK_RACKET `Cuc ~T0 @X0 1 e ]
 [i _EV_CHECK_RACKET
 -> -> 71 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 46: const Event EV_CHECK_RACKET = 71;
 "47
+=======
+[; ;GlobalVariables.h: 45: const Event EV_CHECK_RACKET = 71;
+"46
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_MOVE `Cuc ~T0 @X0 1 e ]
 [i _EV_MOVE
 -> -> 72 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 47: const Event EV_MOVE = 72;
 "48
+=======
+[; ;GlobalVariables.h: 46: const Event EV_MOVE = 72;
+"47
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GAME_OVER `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME_OVER
 -> -> 73 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 48: const Event EV_GAME_OVER = 73;
 "49
+=======
+[; ;GlobalVariables.h: 47: const Event EV_GAME_OVER = 73;
+"48
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_BALL_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_BALL_WAIT
 -> -> 74 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 49: const Event EV_GOTO_BALL_WAIT = 74;
 "53
+=======
+[; ;GlobalVariables.h: 48: const Event EV_GOTO_BALL_WAIT = 74;
+"52
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_ACC `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_ACC
 -> -> 80 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 53: const Event EV_TIMEOUT_ACC = 80;
 "54
+=======
+[; ;GlobalVariables.h: 52: const Event EV_TIMEOUT_ACC = 80;
+"53
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_ACC_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_ACC_WAIT
 -> -> 81 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 54: const Event EV_GOTO_ACC_WAIT = 81;
+=======
+[; ;GlobalVariables.h: 53: const Event EV_GOTO_ACC_WAIT = 81;
+[; ;Btn_controller.h: 14: typedef enum SM_BTN
+[; ;Btn_controller.h: 15: {
+[; ;Btn_controller.h: 16: ST_BTN_WAITING,
+[; ;Btn_controller.h: 17: ST_BTN_PRESSED,
+[; ;Btn_controller.h: 18: ST_BTN_CONFIRMED,
+[; ;Btn_controller.h: 20: }SM_BTN;
+[; ;Btn_controller.h: 22: typedef struct Btn_controller
+[; ;Btn_controller.h: 23: {
+[; ;Btn_controller.h: 24: SM_BTN sm_btn, old_sm_btn;
+[; ;Btn_controller.h: 25: }Btn_controller;
+[; ;Btn_controller.h: 30: void init_btn_controller(Btn_controller* btnCtrl);
+[; ;Btn_controller.h: 35: void state_machine_btn(Btn_controller* btnCtrl, Event ev);
+[; ;Btn_controller.h: 40: void launch_timer();
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "7 Btn_controller.c
 [v _init_btn_controller `(v ~T0 @X0 1 ef1`*S300 ]
 "8
@@ -3187,7 +3338,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;Btn_controller.c: 10: btnCtrl->sm_btn = ST_BTN_WAITING;
 "10
+<<<<<<< HEAD
 [e = . *U _btnCtrl 0 . `E3264 0 ]
+=======
+[e = . *U _btnCtrl 0 . `E3293 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;Btn_controller.c: 11: btnCtrl->old_sm_btn = btnCtrl->sm_btn;
 "11
 [e = . *U _btnCtrl 1 . *U _btnCtrl 0 ]
@@ -3225,7 +3380,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Btn_controller.c: 28: btnCtrl->sm_btn = ST_BTN_WAITING;
 "28
+<<<<<<< HEAD
 [e = . *U _btnCtrl 0 . `E3264 0 ]
+=======
+[e = . *U _btnCtrl 0 . `E3293 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "29
 }
 [e :U 306 ]
@@ -3244,7 +3403,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Btn_controller.c: 36: btnCtrl->sm_btn = ST_BTN_CONFIRMED;
 "36
+<<<<<<< HEAD
 [e = . *U _btnCtrl 0 . `E3264 2 ]
+=======
+[e = . *U _btnCtrl 0 . `E3293 2 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "37
 }
 [e :U 308 ]
@@ -3263,7 +3426,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Btn_controller.c: 43: btnCtrl->sm_btn = ST_BTN_WAITING;
 "43
+<<<<<<< HEAD
 [e = . *U _btnCtrl 0 . `E3264 0 ]
+=======
+[e = . *U _btnCtrl 0 . `E3293 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "44
 }
 [e :U 310 ]
@@ -3283,9 +3450,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 303  ]
 "23
 [e :U 304 ]
+<<<<<<< HEAD
 [e [\ . *U _btnCtrl 0 , $ . `E3264 0 305
  , $ . `E3264 1 307
  , $ . `E3264 2 309
+=======
+[e [\ . *U _btnCtrl 0 , $ . `E3293 0 305
+ , $ . `E3293 1 307
+ , $ . `E3293 2 309
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  311 ]
 "48
 [e :U 303 ]
@@ -3317,9 +3490,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Btn_controller.c: 61: case ST_BTN_CONFIRMED:
 "61
 [e :U 317 ]
+<<<<<<< HEAD
 [; ;Btn_controller.c: 63: XF_pushEvent(EV_BTN_TIMEOUT, 0);
 "63
 [e ( _XF_pushEvent (2 , _EV_BTN_TIMEOUT -> -> 0 `i `uc ]
+=======
+[; ;Btn_controller.c: 63: XF_pushEvent(EV_POWER, 0);
+"63
+[e ( _XF_pushEvent (2 , _EV_POWER -> -> 0 `i `uc ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;Btn_controller.c: 64: break;
 "64
 [e $U 313  ]
@@ -3335,9 +3514,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 313  ]
 "53
 [e :U 314 ]
+<<<<<<< HEAD
 [e [\ . *U _btnCtrl 0 , $ . `E3264 0 315
  , $ . `E3264 1 316
  , $ . `E3264 2 317
+=======
+[e [\ . *U _btnCtrl 0 , $ . `E3293 0 315
+ , $ . `E3293 1 316
+ , $ . `E3293 2 317
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  318 ]
 "67
 [e :U 313 ]

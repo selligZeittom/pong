@@ -1,9 +1,16 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "7 TS_controller.c
+<<<<<<< HEAD
 [c E3288 0 1 .. ]
 [n E3288 SM_TSC ST_TSC_WAIT ST_TSC_UPDATE  ]
 "22 TS_controller.h
 [s S300 `E3288 1 `E3288 1 ]
+=======
+[c E3293 0 1 .. ]
+[n E3293 SM_TSC ST_TSC_WAIT ST_TSC_UPDATE  ]
+"22 TS_controller.h
+[s S300 `E3293 1 `E3293 1 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [n S300 TS_controller sm_tsc old_sm_tsc ]
 "40
 [v _tsc_update `(v ~T0 @X0 0 ef ]
@@ -11,7 +18,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f46k20.h: 50: extern volatile unsigned char SSPMSK @ 0xF77;
+<<<<<<< HEAD
 "52 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+=======
+"52 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;pic18f46k20.h: 52: asm("SSPMSK equ 0F77h");
 [; <" SSPMSK equ 0F77h ;# ">
 [; ;pic18f46k20.h: 55: typedef union {
@@ -2971,6 +2982,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
+<<<<<<< HEAD
 [; ;stdint.h: 38: typedef signed long int int32_t;
 [; ;stdint.h: 45: typedef unsigned char uint8_t;
 [; ;stdint.h: 51: typedef unsigned int uint16_t;
@@ -2991,6 +3003,34 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 217: typedef uint32_t uintmax_t;
 [; ;stdint.h: 222: typedef int16_t intptr_t;
 [; ;stdint.h: 227: typedef uint16_t uintptr_t;
+=======
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;xf.h: 18: typedef uint8_t Event;
 [; ;xf.h: 19: typedef uint16_t Time;
@@ -3044,6 +3084,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;GlobalVariables.h: 20: const Event EV_GOTO_TSC_WAIT = 11;
 "23
+<<<<<<< HEAD
 [v _EV_ON `Cuc ~T0 @X0 1 e ]
 [i _EV_ON
 -> -> 20 `i `uc
@@ -3056,107 +3097,199 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;GlobalVariables.h: 24: const Event EV_OFF = 21;
 "27
+=======
+[v _EV_POWER `Cuc ~T0 @X0 1 e ]
+[i _EV_POWER
+-> -> 20 `i `uc
+]
+[; ;GlobalVariables.h: 23: const Event EV_POWER = 20;
+"26
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GAME `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME
 -> -> 30 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 27: const Event EV_GAME = 30;
 "28
+=======
+[; ;GlobalVariables.h: 26: const Event EV_GAME = 30;
+"27
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_MENU `Cuc ~T0 @X0 1 e ]
 [i _EV_MENU
 -> -> 31 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 28: const Event EV_MENU = 31;
 "31
+=======
+[; ;GlobalVariables.h: 27: const Event EV_MENU = 31;
+"30
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_LEVEL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_LEVEL_SW
 -> -> 40 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 31: const Event EV_LEVEL_SW = 40;
 "32
+=======
+[; ;GlobalVariables.h: 30: const Event EV_LEVEL_SW = 40;
+"31
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_CTRL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_CTRL_SW
 -> -> 41 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 32: const Event EV_CTRL_SW = 41;
 "33
+=======
+[; ;GlobalVariables.h: 31: const Event EV_CTRL_SW = 41;
+"32
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_MENU_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_MENU_WAIT
 -> -> 42 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 33: const Event EV_GOTO_MENU_WAIT = 42;
 "36
+=======
+[; ;GlobalVariables.h: 32: const Event EV_GOTO_MENU_WAIT = 42;
+"35
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_SCREEN `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_SCREEN
 -> -> 50 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 36: const Event EV_TIMEOUT_SCREEN = 50;
 "37
+=======
+[; ;GlobalVariables.h: 35: const Event EV_TIMEOUT_SCREEN = 50;
+"36
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_SCREEN_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_SCREEN_WAIT
 -> -> 51 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 37: const Event EV_GOTO_SCREEN_WAIT = 51;
 "40
+=======
+[; ;GlobalVariables.h: 36: const Event EV_GOTO_SCREEN_WAIT = 51;
+"39
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_AI `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_AI
 -> -> 60 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_AI = 60;
 "41
+=======
+[; ;GlobalVariables.h: 39: const Event EV_TIMEOUT_AI = 60;
+"40
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_USER `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_USER
 -> -> 61 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 41: const Event EV_TIMEOUT_USER = 61;
 "42
+=======
+[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_USER = 61;
+"41
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_RACKET_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_RACKET_WAIT
 -> -> 62 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 42: const Event EV_GOTO_RACKET_WAIT = 62;
 "45
+=======
+[; ;GlobalVariables.h: 41: const Event EV_GOTO_RACKET_WAIT = 62;
+"44
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_BALL `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_BALL
 -> -> 70 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 45: const Event EV_TIMEOUT_BALL = 70;
 "46
+=======
+[; ;GlobalVariables.h: 44: const Event EV_TIMEOUT_BALL = 70;
+"45
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_CHECK_RACKET `Cuc ~T0 @X0 1 e ]
 [i _EV_CHECK_RACKET
 -> -> 71 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 46: const Event EV_CHECK_RACKET = 71;
 "47
+=======
+[; ;GlobalVariables.h: 45: const Event EV_CHECK_RACKET = 71;
+"46
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_MOVE `Cuc ~T0 @X0 1 e ]
 [i _EV_MOVE
 -> -> 72 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 47: const Event EV_MOVE = 72;
 "48
+=======
+[; ;GlobalVariables.h: 46: const Event EV_MOVE = 72;
+"47
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GAME_OVER `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME_OVER
 -> -> 73 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 48: const Event EV_GAME_OVER = 73;
 "49
+=======
+[; ;GlobalVariables.h: 47: const Event EV_GAME_OVER = 73;
+"48
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_BALL_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_BALL_WAIT
 -> -> 74 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 49: const Event EV_GOTO_BALL_WAIT = 74;
 "53
+=======
+[; ;GlobalVariables.h: 48: const Event EV_GOTO_BALL_WAIT = 74;
+"52
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_ACC `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_ACC
 -> -> 80 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 53: const Event EV_TIMEOUT_ACC = 80;
 "54
+=======
+[; ;GlobalVariables.h: 52: const Event EV_TIMEOUT_ACC = 80;
+"53
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_ACC_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_ACC_WAIT
 -> -> 81 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 54: const Event EV_GOTO_ACC_WAIT = 81;
+=======
+[; ;GlobalVariables.h: 53: const Event EV_GOTO_ACC_WAIT = 81;
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;TS_controller.h: 15: typedef enum SM_TSC
 [; ;TS_controller.h: 16: {
 [; ;TS_controller.h: 17: ST_TSC_WAIT,
@@ -3182,7 +3315,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;TS_controller.c: 9: tsCtrl->sm_tsc = ST_TSC_WAIT;
 "9
+<<<<<<< HEAD
 [e = . *U _tsCtrl 0 . `E3288 0 ]
+=======
+[e = . *U _tsCtrl 0 . `E3293 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;TS_controller.c: 10: tsCtrl->old_sm_tsc = tsCtrl->sm_tsc;
 "10
 [e = . *U _tsCtrl 1 . *U _tsCtrl 0 ]
@@ -3220,7 +3357,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;TS_controller.c: 26: tsCtrl->sm_tsc = ST_TSC_UPDATE;
 "26
+<<<<<<< HEAD
 [e = . *U _tsCtrl 0 . `E3288 1 ]
+=======
+[e = . *U _tsCtrl 0 . `E3293 1 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "27
 }
 [e :U 306 ]
@@ -3239,7 +3380,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;TS_controller.c: 32: tsCtrl->sm_tsc = ST_TSC_WAIT;
 "32
+<<<<<<< HEAD
 [e = . *U _tsCtrl 0 . `E3288 0 ]
+=======
+[e = . *U _tsCtrl 0 . `E3293 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "33
 }
 [e :U 308 ]
@@ -3259,8 +3404,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 303  ]
 "22
 [e :U 304 ]
+<<<<<<< HEAD
 [e [\ . *U _tsCtrl 0 , $ . `E3288 0 305
  , $ . `E3288 1 307
+=======
+[e [\ . *U _tsCtrl 0 , $ . `E3293 0 305
+ , $ . `E3293 1 307
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  309 ]
 "37
 [e :U 303 ]
@@ -3301,8 +3451,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 311  ]
 "42
 [e :U 312 ]
+<<<<<<< HEAD
 [e [\ . *U _tsCtrl 0 , $ . `E3288 0 313
  , $ . `E3288 1 314
+=======
+[e [\ . *U _tsCtrl 0 , $ . `E3293 0 313
+ , $ . `E3293 1 314
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  315 ]
 "52
 [e :U 311 ]

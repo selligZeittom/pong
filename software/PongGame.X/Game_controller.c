@@ -44,14 +44,14 @@ void state_machine_mode(Game_controller* gameCtrl, Event ev)
     {
     case ST_OFF:
         //from OFF to ON
-        if(ev == EV_ON)
+        if(ev == EV_POWER)
         {
             gameCtrl->sm_mode = ST_ON;
         }
         break;
     case ST_ON:
         //from OFN to OFF
-        if(ev == EV_OFF)
+        if(ev == EV_POWER)
         {
             gameCtrl->sm_mode = ST_OFF;
         }
@@ -377,7 +377,11 @@ void state_machine_ball(Game_controller* gameCtrl, Event ev)
 
         case ST_BALL_CHECK_X:
             //compare rackets's X pos to ball's X pos
+<<<<<<< HEAD
          //   check_X_ball();
+=======
+//            check_X_ball();
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
             break;
 
         case ST_BALL_MOVE:

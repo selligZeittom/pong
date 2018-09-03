@@ -1,5 +1,9 @@
 Version 3.2 HI-TECH Software Intermediate Code
+<<<<<<< HEAD
 "8530 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+=======
+"8530 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _TRISC4 `Vb ~T0 @X0 0 e@31908 ]
 "8528
 [v _TRISC3 `Vb ~T0 @X0 0 e@31907 ]
@@ -15,7 +19,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f46k20.h: 50: extern volatile unsigned char SSPMSK @ 0xF77;
+<<<<<<< HEAD
 "52 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+=======
+"52 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;pic18f46k20.h: 52: asm("SSPMSK equ 0F77h");
 [; <" SSPMSK equ 0F77h ;# ">
 [; ;pic18f46k20.h: 55: typedef union {
@@ -2975,6 +2983,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
+<<<<<<< HEAD
 [; ;stdint.h: 38: typedef signed long int int32_t;
 [; ;stdint.h: 45: typedef unsigned char uint8_t;
 [; ;stdint.h: 51: typedef unsigned int uint16_t;
@@ -2995,6 +3004,34 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 217: typedef uint32_t uintmax_t;
 [; ;stdint.h: 222: typedef int16_t intptr_t;
 [; ;stdint.h: 227: typedef uint16_t uintptr_t;
+=======
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);

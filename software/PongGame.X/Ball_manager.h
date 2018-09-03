@@ -8,9 +8,13 @@
 #ifndef BALL_MANAGER_H
 #define	BALL_MANAGER_H
 
+<<<<<<< HEAD
 #include <xc.h>             // XC8 General Include File
 #include <stdint.h>         // usage of standard types
 #include <stdbool.h>        // usage of boolean types
+=======
+#include <stdint.h>
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 
 typedef struct Ball
 {

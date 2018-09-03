@@ -1,17 +1,29 @@
 
 # 1 "Acc_controller.c"
 
+<<<<<<< HEAD
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\htc.h"
+=======
+# 26 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\htc.h"
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
 
 
+<<<<<<< HEAD
 # 13 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\xc8debug.h"
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
 # 50 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h"
+=======
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\xc8debug.h"
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+
+# 50 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h"
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 extern volatile unsigned char SSPMSK @ 0xF77;
 
 asm("SSPMSK equ 0F77h");
@@ -4062,7 +4074,11 @@ extern volatile __bit nWR @ (((unsigned) &PORTE)*8) + 1;
 
 extern volatile __bit nWRITE @ (((unsigned) &SSPSTAT)*8) + 2;
 
+<<<<<<< HEAD
 # 18 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18.h"
+=======
+# 18 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18.h"
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
 __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
 
@@ -4089,12 +4105,17 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
+<<<<<<< HEAD
 # 13 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\stdint.h"
+=======
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdint.h"
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 typedef signed char int8_t;
 
 # 20
 typedef signed int int16_t;
 
+<<<<<<< HEAD
 # 38
 typedef signed long int int32_t;
 
@@ -4144,6 +4165,75 @@ typedef unsigned int uint_fast16_t;
 typedef unsigned long int uint_fast32_t;
 
 # 212
+=======
+# 28
+typedef signed short long int int24_t;
+
+# 36
+typedef signed long int int32_t;
+
+# 43
+typedef unsigned char uint8_t;
+
+# 49
+typedef unsigned int uint16_t;
+
+# 56
+typedef unsigned short long int uint24_t;
+
+# 63
+typedef unsigned long int uint32_t;
+
+# 71
+typedef signed char int_least8_t;
+
+# 78
+typedef signed int int_least16_t;
+
+# 90
+typedef signed short long int int_least24_t;
+
+# 98
+typedef signed long int int_least32_t;
+
+# 105
+typedef unsigned char uint_least8_t;
+
+# 111
+typedef unsigned int uint_least16_t;
+
+# 121
+typedef unsigned short long int uint_least24_t;
+
+# 128
+typedef unsigned long int uint_least32_t;
+
+# 137
+typedef signed char int_fast8_t;
+
+# 144
+typedef signed int int_fast16_t;
+
+# 156
+typedef signed short long int int_fast24_t;
+
+# 164
+typedef signed long int int_fast32_t;
+
+# 171
+typedef unsigned char uint_fast8_t;
+
+# 177
+typedef unsigned int uint_fast16_t;
+
+# 187
+typedef unsigned short long int uint_fast24_t;
+
+# 194
+typedef unsigned long int uint_fast32_t;
+
+# 200
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 typedef int32_t intmax_t;
 
 
@@ -4161,7 +4251,11 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
+<<<<<<< HEAD
 # 12 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\stdbool.h"
+=======
+# 12 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdbool.h"
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 typedef unsigned char bool;
 
 # 18 "xf.h"
@@ -4203,6 +4297,7 @@ void XF_unscheduleTimer(TimerID id, bool inISR);
 # 90
 void XF_decrementAndQueueTimers();
 
+<<<<<<< HEAD
 # 16 "Acc_controller.h"
 typedef struct Accelerometer
 {
@@ -4233,6 +4328,8 @@ void state_machine_accelerometer(Acc_controller* accCtrl, Event ev);
 # 77
 void acc_update();
 
+=======
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 # 14 "GlobalVariables.h"
 const Event EV_BTN_PRESSED = 0;
 const Event EV_BTN_TIMEOUT = 1;
@@ -4243,8 +4340,12 @@ const Event EV_TIMEOUT_TSC = 10;
 const Event EV_GOTO_TSC_WAIT = 11;
 
 
+<<<<<<< HEAD
 const Event EV_ON = 20;
 const Event EV_OFF = 21;
+=======
+const Event EV_POWER = 20;
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 
 
 const Event EV_GAME = 30;
@@ -4276,6 +4377,39 @@ const Event EV_GOTO_BALL_WAIT = 74;
 const Event EV_TIMEOUT_ACC = 80;
 const Event EV_GOTO_ACC_WAIT = 81;
 
+<<<<<<< HEAD
+=======
+# 17 "Acc_controller.h"
+typedef struct Accelerometer
+{
+int16_t xAcc;
+int16_t yAcc;
+int16_t zAcc;
+} Accelerometer;
+
+
+typedef enum SM_ACC
+{
+ST_ACC_WAIT,
+ST_ACC_UPDATE,
+} SM_ACC;
+
+
+typedef struct Acc_controller
+{
+SM_ACC sm_acc, old_sm_acc;
+}Acc_controller;
+
+# 68
+void AccInit(Acc_controller* accCtrl);
+
+# 73
+void state_machine_accelerometer(Acc_controller* accCtrl, Event ev);
+
+# 78
+void acc_update();
+
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 # 14 "Game_controller.h"
 typedef enum SM_MODE
 {

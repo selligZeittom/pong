@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/yan.michello/Documents/GitHub/pong/software/PongGame.X/lcd_highlevel.h</file>
             <file>file:/C:/Users/yan.michello/Documents/GitHub/pong/software/PongGame.X/Acc_controller.h</file>
             <file>file:/C:/Users/yan.michello/Documents/GitHub/pong/software/PongGame.X/spi.c</file>
@@ -15,6 +16,19 @@
             <file>file:/C:/Users/yan.michello/Documents/GitHub/pong/software/PongGame.X/tsc.c</file>
             <file>file:/C:/Users/yan.michello/Documents/GitHub/pong/software/PongGame.X/spi.h</file>
             <file>file:/C:/Users/yan.michello/Documents/GitHub/pong/software/PongGame.X/main.c</file>
+=======
+            <file>file:/C:/Users/Gilles%20Mottiez/Desktop/summerSchool/pong/software/PongGame.X/TS_controller.h</file>
+            <file>file:/C:/Users/Gilles%20Mottiez/Desktop/summerSchool/pong/software/PongGame.X/Btn_controller.c</file>
+            <file>file:/C:/Users/Gilles%20Mottiez/Desktop/summerSchool/pong/software/PongGame.X/Game_controller.c</file>
+            <file>file:/C:/Users/Gilles%20Mottiez/Desktop/summerSchool/pong/software/PongGame.X/Ball_manager.h</file>
+            <file>file:/C:/Users/Gilles%20Mottiez/Desktop/summerSchool/pong/software/PongGame.X/main.c</file>
+            <file>file:/C:/Users/Gilles%20Mottiez/Desktop/summerSchool/pong/software/PongGame.X/TS_controller.c</file>
+            <file>file:/C:/Users/Gilles%20Mottiez/Desktop/summerSchool/pong/software/PongGame.X/GlobalVariables.h</file>
+            <file>file:/C:/Users/Gilles%20Mottiez/Desktop/summerSchool/pong/software/PongGame.X/Acc_controller.c</file>
+            <file>file:/C:/Users/Gilles%20Mottiez/Desktop/summerSchool/pong/software/PongGame.X/Game_controller.h</file>
+            <file>file:/C:/Users/Gilles%20Mottiez/Desktop/summerSchool/pong/software/PongGame.X/Btn_controller.h</file>
+            <file>file:/C:/Users/Gilles%20Mottiez/Desktop/summerSchool/pong/software/PongGame.X/Acc_controller.h</file>
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
         </group>
     </open-files>
 </project-private>

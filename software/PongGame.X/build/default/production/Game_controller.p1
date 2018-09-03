@@ -1,5 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "8 Game_controller.c
+<<<<<<< HEAD
 [c E3288 0 1 .. ]
 [n E3288 SM_MODE ST_ON ST_OFF  ]
 [c E3292 0 1 .. ]
@@ -14,6 +15,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n E3310 SM_BALL ST_BALL_WAIT ST_BALL_CHECK_Y ST_BALL_CHECK_X ST_BALL_MOVE ST_BALL_GAME_OVER  ]
 "63 Game_controller.h
 [s S300 `E3288 1 `E3288 1 `E3292 1 `E3292 1 `E3296 1 `E3296 1 `E3301 1 `E3301 1 `E3305 1 `E3305 1 `E3310 1 `E3310 1 ]
+=======
+[c E3293 0 1 .. ]
+[n E3293 SM_MODE ST_ON ST_OFF  ]
+[c E3297 0 1 .. ]
+[n E3297 SM_ON ST_MENU ST_GAME  ]
+[c E3301 0 1 2 .. ]
+[n E3301 SM_MENU ST_MENU_WAIT ST_MENU_CTRL_SW ST_MENU_LEVEL_SW  ]
+[c E3306 0 1 .. ]
+[n E3306 SM_SCREEN ST_SCREEN_WAIT ST_SCREEN_UPDATE  ]
+[c E3310 0 1 2 .. ]
+[n E3310 SM_RACKET ST_RACKET_WAIT ST_RACKET_USER ST_RACKET_AI  ]
+[c E3315 0 1 2 3 4 .. ]
+[n E3315 SM_BALL ST_BALL_WAIT ST_BALL_CHECK_Y ST_BALL_CHECK_X ST_BALL_MOVE ST_BALL_GAME_OVER  ]
+"63 Game_controller.h
+[s S300 `E3293 1 `E3293 1 `E3297 1 `E3297 1 `E3301 1 `E3301 1 `E3306 1 `E3306 1 `E3310 1 `E3310 1 `E3315 1 `E3315 1 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [n S300 Game_controller sm_mode old_sm_mode sm_on old_sm_on sm_menu old_sm_menu sm_screen old_sm_screen sm_racket old_sm_racket sm_ball old_sm_ball ]
 "157
 [v _sleep_mode `(v ~T0 @X0 0 ef ]
@@ -37,7 +54,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f46k20.h: 50: extern volatile unsigned char SSPMSK @ 0xF77;
+<<<<<<< HEAD
 "52 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+=======
+"52 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;pic18f46k20.h: 52: asm("SSPMSK equ 0F77h");
 [; <" SSPMSK equ 0F77h ;# ">
 [; ;pic18f46k20.h: 55: typedef union {
@@ -2997,6 +3018,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
+<<<<<<< HEAD
 [; ;stdint.h: 38: typedef signed long int int32_t;
 [; ;stdint.h: 45: typedef unsigned char uint8_t;
 [; ;stdint.h: 51: typedef unsigned int uint16_t;
@@ -3017,6 +3039,34 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 217: typedef uint32_t uintmax_t;
 [; ;stdint.h: 222: typedef int16_t intptr_t;
 [; ;stdint.h: 227: typedef uint16_t uintptr_t;
+=======
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;xf.h: 18: typedef uint8_t Event;
 [; ;xf.h: 19: typedef uint16_t Time;
@@ -3070,6 +3120,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;GlobalVariables.h: 20: const Event EV_GOTO_TSC_WAIT = 11;
 "23
+<<<<<<< HEAD
 [v _EV_ON `Cuc ~T0 @X0 1 e ]
 [i _EV_ON
 -> -> 20 `i `uc
@@ -3082,107 +3133,199 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;GlobalVariables.h: 24: const Event EV_OFF = 21;
 "27
+=======
+[v _EV_POWER `Cuc ~T0 @X0 1 e ]
+[i _EV_POWER
+-> -> 20 `i `uc
+]
+[; ;GlobalVariables.h: 23: const Event EV_POWER = 20;
+"26
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GAME `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME
 -> -> 30 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 27: const Event EV_GAME = 30;
 "28
+=======
+[; ;GlobalVariables.h: 26: const Event EV_GAME = 30;
+"27
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_MENU `Cuc ~T0 @X0 1 e ]
 [i _EV_MENU
 -> -> 31 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 28: const Event EV_MENU = 31;
 "31
+=======
+[; ;GlobalVariables.h: 27: const Event EV_MENU = 31;
+"30
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_LEVEL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_LEVEL_SW
 -> -> 40 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 31: const Event EV_LEVEL_SW = 40;
 "32
+=======
+[; ;GlobalVariables.h: 30: const Event EV_LEVEL_SW = 40;
+"31
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_CTRL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_CTRL_SW
 -> -> 41 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 32: const Event EV_CTRL_SW = 41;
 "33
+=======
+[; ;GlobalVariables.h: 31: const Event EV_CTRL_SW = 41;
+"32
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_MENU_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_MENU_WAIT
 -> -> 42 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 33: const Event EV_GOTO_MENU_WAIT = 42;
 "36
+=======
+[; ;GlobalVariables.h: 32: const Event EV_GOTO_MENU_WAIT = 42;
+"35
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_SCREEN `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_SCREEN
 -> -> 50 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 36: const Event EV_TIMEOUT_SCREEN = 50;
 "37
+=======
+[; ;GlobalVariables.h: 35: const Event EV_TIMEOUT_SCREEN = 50;
+"36
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_SCREEN_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_SCREEN_WAIT
 -> -> 51 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 37: const Event EV_GOTO_SCREEN_WAIT = 51;
 "40
+=======
+[; ;GlobalVariables.h: 36: const Event EV_GOTO_SCREEN_WAIT = 51;
+"39
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_AI `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_AI
 -> -> 60 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_AI = 60;
 "41
+=======
+[; ;GlobalVariables.h: 39: const Event EV_TIMEOUT_AI = 60;
+"40
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_USER `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_USER
 -> -> 61 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 41: const Event EV_TIMEOUT_USER = 61;
 "42
+=======
+[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_USER = 61;
+"41
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_RACKET_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_RACKET_WAIT
 -> -> 62 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 42: const Event EV_GOTO_RACKET_WAIT = 62;
 "45
+=======
+[; ;GlobalVariables.h: 41: const Event EV_GOTO_RACKET_WAIT = 62;
+"44
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_BALL `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_BALL
 -> -> 70 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 45: const Event EV_TIMEOUT_BALL = 70;
 "46
+=======
+[; ;GlobalVariables.h: 44: const Event EV_TIMEOUT_BALL = 70;
+"45
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_CHECK_RACKET `Cuc ~T0 @X0 1 e ]
 [i _EV_CHECK_RACKET
 -> -> 71 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 46: const Event EV_CHECK_RACKET = 71;
 "47
+=======
+[; ;GlobalVariables.h: 45: const Event EV_CHECK_RACKET = 71;
+"46
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_MOVE `Cuc ~T0 @X0 1 e ]
 [i _EV_MOVE
 -> -> 72 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 47: const Event EV_MOVE = 72;
 "48
+=======
+[; ;GlobalVariables.h: 46: const Event EV_MOVE = 72;
+"47
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GAME_OVER `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME_OVER
 -> -> 73 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 48: const Event EV_GAME_OVER = 73;
 "49
+=======
+[; ;GlobalVariables.h: 47: const Event EV_GAME_OVER = 73;
+"48
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_BALL_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_BALL_WAIT
 -> -> 74 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 49: const Event EV_GOTO_BALL_WAIT = 74;
 "53
+=======
+[; ;GlobalVariables.h: 48: const Event EV_GOTO_BALL_WAIT = 74;
+"52
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_TIMEOUT_ACC `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_ACC
 -> -> 80 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 53: const Event EV_TIMEOUT_ACC = 80;
 "54
+=======
+[; ;GlobalVariables.h: 52: const Event EV_TIMEOUT_ACC = 80;
+"53
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [v _EV_GOTO_ACC_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_ACC_WAIT
 -> -> 81 `i `uc
 ]
+<<<<<<< HEAD
 [; ;GlobalVariables.h: 54: const Event EV_GOTO_ACC_WAIT = 81;
+=======
+[; ;GlobalVariables.h: 53: const Event EV_GOTO_ACC_WAIT = 81;
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;Game_controller.h: 14: typedef enum SM_MODE
 [; ;Game_controller.h: 15: {
 [; ;Game_controller.h: 16: ST_ON,
@@ -3259,37 +3402,61 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;Game_controller.c: 10: gameCtrl->sm_mode = ST_ON;
 "10
+<<<<<<< HEAD
 [e = . *U _gameCtrl 0 . `E3288 0 ]
+=======
+[e = . *U _gameCtrl 0 . `E3293 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;Game_controller.c: 11: gameCtrl->old_sm_mode = gameCtrl->sm_mode;
 "11
 [e = . *U _gameCtrl 1 . *U _gameCtrl 0 ]
 [; ;Game_controller.c: 14: gameCtrl->sm_on = ST_MENU;
 "14
+<<<<<<< HEAD
 [e = . *U _gameCtrl 2 . `E3292 0 ]
+=======
+[e = . *U _gameCtrl 2 . `E3297 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;Game_controller.c: 15: gameCtrl->old_sm_on = gameCtrl->sm_on;
 "15
 [e = . *U _gameCtrl 3 . *U _gameCtrl 2 ]
 [; ;Game_controller.c: 18: gameCtrl->sm_menu = ST_MENU_WAIT;
 "18
+<<<<<<< HEAD
 [e = . *U _gameCtrl 4 . `E3296 0 ]
+=======
+[e = . *U _gameCtrl 4 . `E3301 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;Game_controller.c: 19: gameCtrl->old_sm_menu = gameCtrl->sm_menu;
 "19
 [e = . *U _gameCtrl 5 . *U _gameCtrl 4 ]
 [; ;Game_controller.c: 22: gameCtrl->sm_screen = ST_SCREEN_WAIT;
 "22
+<<<<<<< HEAD
 [e = . *U _gameCtrl 6 . `E3301 0 ]
+=======
+[e = . *U _gameCtrl 6 . `E3306 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;Game_controller.c: 23: gameCtrl->old_sm_screen = gameCtrl->sm_screen;
 "23
 [e = . *U _gameCtrl 7 . *U _gameCtrl 6 ]
 [; ;Game_controller.c: 26: gameCtrl->sm_racket = ST_RACKET_WAIT;
 "26
+<<<<<<< HEAD
 [e = . *U _gameCtrl 8 . `E3305 0 ]
+=======
+[e = . *U _gameCtrl 8 . `E3310 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;Game_controller.c: 27: gameCtrl->old_sm_racket = gameCtrl->sm_racket;
 "27
 [e = . *U _gameCtrl 9 . *U _gameCtrl 8 ]
 [; ;Game_controller.c: 30: gameCtrl->sm_ball = ST_BALL_WAIT;
 "30
+<<<<<<< HEAD
 [e = . *U _gameCtrl 10 . `E3310 0 ]
+=======
+[e = . *U _gameCtrl 10 . `E3315 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;Game_controller.c: 31: gameCtrl->old_sm_ball = gameCtrl->old_sm_ball;
 "31
 [e = . *U _gameCtrl 11 . *U _gameCtrl 11 ]
@@ -3321,15 +3488,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Game_controller.c: 45: case ST_OFF:
 "45
 [e :U 305 ]
+<<<<<<< HEAD
 [; ;Game_controller.c: 47: if(ev == EV_ON)
 "47
 [e $ ! == -> _ev `i -> _EV_ON `i 306  ]
+=======
+[; ;Game_controller.c: 47: if(ev == EV_POWER)
+"47
+[e $ ! == -> _ev `i -> _EV_POWER `i 306  ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;Game_controller.c: 48: {
 "48
 {
 [; ;Game_controller.c: 49: gameCtrl->sm_mode = ST_ON;
 "49
+<<<<<<< HEAD
 [e = . *U _gameCtrl 0 . `E3288 0 ]
+=======
+[e = . *U _gameCtrl 0 . `E3293 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "50
 }
 [e :U 306 ]
@@ -3340,15 +3517,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Game_controller.c: 52: case ST_ON:
 "52
 [e :U 307 ]
+<<<<<<< HEAD
 [; ;Game_controller.c: 54: if(ev == EV_OFF)
 "54
 [e $ ! == -> _ev `i -> _EV_OFF `i 308  ]
+=======
+[; ;Game_controller.c: 54: if(ev == EV_POWER)
+"54
+[e $ ! == -> _ev `i -> _EV_POWER `i 308  ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 [; ;Game_controller.c: 55: {
 "55
 {
 [; ;Game_controller.c: 56: gameCtrl->sm_mode = ST_OFF;
 "56
+<<<<<<< HEAD
 [e = . *U _gameCtrl 0 . `E3288 1 ]
+=======
+[e = . *U _gameCtrl 0 . `E3293 1 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "57
 }
 [e :U 308 ]
@@ -3368,8 +3555,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 303  ]
 "43
 [e :U 304 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 0 , $ . `E3288 1 305
  , $ . `E3288 0 307
+=======
+[e [\ . *U _gameCtrl 0 , $ . `E3293 1 305
+ , $ . `E3293 0 307
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  309 ]
 "61
 [e :U 303 ]
@@ -3415,8 +3607,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 311  ]
 "66
 [e :U 312 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 0 , $ . `E3288 1 313
  , $ . `E3288 0 314
+=======
+[e [\ . *U _gameCtrl 0 , $ . `E3293 1 313
+ , $ . `E3293 0 314
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  315 ]
 "78
 [e :U 311 ]
@@ -3458,7 +3655,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 95: gameCtrl->sm_on = ST_GAME;
 "95
+<<<<<<< HEAD
 [e = . *U _gameCtrl 2 . `E3292 1 ]
+=======
+[e = . *U _gameCtrl 2 . `E3297 1 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "96
 }
 [e :U 320 ]
@@ -3477,7 +3678,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 102: gameCtrl->sm_on = ST_MENU;
 "102
+<<<<<<< HEAD
 [e = . *U _gameCtrl 2 . `E3292 0 ]
+=======
+[e = . *U _gameCtrl 2 . `E3297 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "103
 }
 [e :U 322 ]
@@ -3497,8 +3702,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 317  ]
 "90
 [e :U 318 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 2 , $ . `E3292 0 319
  , $ . `E3292 1 321
+=======
+[e [\ . *U _gameCtrl 2 , $ . `E3297 0 319
+ , $ . `E3297 1 321
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  323 ]
 "107
 [e :U 317 ]
@@ -3539,8 +3749,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 325  ]
 "112
 [e :U 326 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 2 , $ . `E3292 0 327
  , $ . `E3292 1 328
+=======
+[e [\ . *U _gameCtrl 2 , $ . `E3297 0 327
+ , $ . `E3297 1 328
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  329 ]
 "122
 [e :U 325 ]
@@ -3582,7 +3797,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 139: gameCtrl->sm_menu = ST_MENU_LEVEL_SW;
 "139
+<<<<<<< HEAD
 [e = . *U _gameCtrl 4 . `E3296 2 ]
+=======
+[e = . *U _gameCtrl 4 . `E3301 2 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "140
 }
 [e :U 334 ]
@@ -3595,7 +3814,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 145: gameCtrl->sm_menu = ST_MENU_CTRL_SW;
 "145
+<<<<<<< HEAD
 [e = . *U _gameCtrl 4 . `E3296 1 ]
+=======
+[e = . *U _gameCtrl 4 . `E3301 1 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "146
 }
 [e :U 335 ]
@@ -3614,7 +3837,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 153: gameCtrl->sm_menu = ST_MENU_WAIT;
 "153
+<<<<<<< HEAD
 [e = . *U _gameCtrl 4 . `E3296 0 ]
+=======
+[e = . *U _gameCtrl 4 . `E3301 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "154
 }
 [e :U 337 ]
@@ -3633,7 +3860,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 160: gameCtrl->sm_menu = ST_MENU_WAIT;
 "160
+<<<<<<< HEAD
 [e = . *U _gameCtrl 4 . `E3296 0 ]
+=======
+[e = . *U _gameCtrl 4 . `E3301 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "161
 }
 [e :U 339 ]
@@ -3653,9 +3884,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 331  ]
 "134
 [e :U 332 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 4 , $ . `E3296 0 333
  , $ . `E3296 1 336
  , $ . `E3296 2 338
+=======
+[e [\ . *U _gameCtrl 4 , $ . `E3301 0 333
+ , $ . `E3301 1 336
+ , $ . `E3301 2 338
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  340 ]
 "165
 [e :U 331 ]
@@ -3708,9 +3945,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 342  ]
 "170
 [e :U 343 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 4 , $ . `E3296 0 344
  , $ . `E3296 1 345
  , $ . `E3296 2 346
+=======
+[e [\ . *U _gameCtrl 4 , $ . `E3301 0 344
+ , $ . `E3301 1 345
+ , $ . `E3301 2 346
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  347 ]
 "186
 [e :U 342 ]
@@ -3752,7 +3995,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 203: gameCtrl->sm_screen == ST_SCREEN_UPDATE;
 "203
+<<<<<<< HEAD
 [e == -> . *U _gameCtrl 6 `i -> . `E3301 1 `i ]
+=======
+[e == -> . *U _gameCtrl 6 `i -> . `E3306 1 `i ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "204
 }
 [e :U 352 ]
@@ -3771,7 +4018,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 210: gameCtrl->sm_screen = ST_SCREEN_WAIT;
 "210
+<<<<<<< HEAD
 [e = . *U _gameCtrl 6 . `E3301 0 ]
+=======
+[e = . *U _gameCtrl 6 . `E3306 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "211
 }
 [e :U 354 ]
@@ -3791,8 +4042,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 349  ]
 "198
 [e :U 350 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 6 , $ . `E3301 0 351
  , $ . `E3301 1 353
+=======
+[e [\ . *U _gameCtrl 6 , $ . `E3306 0 351
+ , $ . `E3306 1 353
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  355 ]
 "215
 [e :U 349 ]
@@ -3833,8 +4089,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 357  ]
 "220
 [e :U 358 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 6 , $ . `E3301 0 359
  , $ . `E3301 1 360
+=======
+[e [\ . *U _gameCtrl 6 , $ . `E3306 0 359
+ , $ . `E3306 1 360
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  361 ]
 "230
 [e :U 357 ]
@@ -3876,7 +4137,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 247: gameCtrl->sm_racket = ST_RACKET_AI;
 "247
+<<<<<<< HEAD
 [e = . *U _gameCtrl 8 . `E3305 2 ]
+=======
+[e = . *U _gameCtrl 8 . `E3310 2 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "248
 }
 [e :U 366 ]
@@ -3889,7 +4154,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 253: gameCtrl->sm_racket = ST_RACKET_USER;
 "253
+<<<<<<< HEAD
 [e = . *U _gameCtrl 8 . `E3305 1 ]
+=======
+[e = . *U _gameCtrl 8 . `E3310 1 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "254
 }
 [e :U 367 ]
@@ -3908,7 +4177,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 260: gameCtrl->sm_racket = ST_RACKET_WAIT;
 "260
+<<<<<<< HEAD
 [e = . *U _gameCtrl 8 . `E3305 0 ]
+=======
+[e = . *U _gameCtrl 8 . `E3310 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "261
 }
 [e :U 369 ]
@@ -3927,7 +4200,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 267: gameCtrl->sm_racket = ST_RACKET_WAIT;
 "267
+<<<<<<< HEAD
 [e = . *U _gameCtrl 8 . `E3305 0 ]
+=======
+[e = . *U _gameCtrl 8 . `E3310 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "268
 }
 [e :U 371 ]
@@ -3947,9 +4224,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 363  ]
 "242
 [e :U 364 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 8 , $ . `E3305 0 365
  , $ . `E3305 1 368
  , $ . `E3305 2 370
+=======
+[e [\ . *U _gameCtrl 8 , $ . `E3310 0 365
+ , $ . `E3310 1 368
+ , $ . `E3310 2 370
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  372 ]
 "272
 [e :U 363 ]
@@ -3999,9 +4282,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 374  ]
 "277
 [e :U 375 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 8 , $ . `E3305 0 376
  , $ . `E3305 1 377
  , $ . `E3305 2 378
+=======
+[e [\ . *U _gameCtrl 8 , $ . `E3310 0 376
+ , $ . `E3310 1 377
+ , $ . `E3310 2 378
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  379 ]
 "291
 [e :U 374 ]
@@ -4043,7 +4332,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 308: gameCtrl->sm_ball = ST_BALL_CHECK_Y;
 "308
+<<<<<<< HEAD
 [e = . *U _gameCtrl 10 . `E3310 1 ]
+=======
+[e = . *U _gameCtrl 10 . `E3315 1 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "309
 }
 [e :U 384 ]
@@ -4062,7 +4355,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 318: gameCtrl->sm_ball = ST_BALL_CHECK_X;
 "318
+<<<<<<< HEAD
 [e = . *U _gameCtrl 10 . `E3310 2 ]
+=======
+[e = . *U _gameCtrl 10 . `E3315 2 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "319
 }
 [e :U 386 ]
@@ -4075,7 +4372,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 326: gameCtrl->sm_ball = ST_BALL_MOVE;
 "326
+<<<<<<< HEAD
 [e = . *U _gameCtrl 10 . `E3310 3 ]
+=======
+[e = . *U _gameCtrl 10 . `E3315 3 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "327
 }
 [e :U 387 ]
@@ -4094,7 +4395,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 334: gameCtrl->sm_ball = ST_BALL_GAME_OVER;
 "334
+<<<<<<< HEAD
 [e = . *U _gameCtrl 10 . `E3310 4 ]
+=======
+[e = . *U _gameCtrl 10 . `E3315 4 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "335
 }
 [e :U 389 ]
@@ -4107,7 +4412,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 340: gameCtrl->sm_ball = ST_BALL_MOVE;
 "340
+<<<<<<< HEAD
 [e = . *U _gameCtrl 10 . `E3310 3 ]
+=======
+[e = . *U _gameCtrl 10 . `E3315 3 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "341
 }
 [e :U 390 ]
@@ -4126,7 +4435,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 348: gameCtrl->sm_ball = ST_BALL_WAIT;
 "348
+<<<<<<< HEAD
 [e = . *U _gameCtrl 10 . `E3310 0 ]
+=======
+[e = . *U _gameCtrl 10 . `E3315 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "349
 }
 [e :U 392 ]
@@ -4145,7 +4458,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 356: gameCtrl->sm_ball = ST_BALL_WAIT;
 "356
+<<<<<<< HEAD
 [e = . *U _gameCtrl 10 . `E3310 0 ]
+=======
+[e = . *U _gameCtrl 10 . `E3315 0 ]
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
 "358
 }
 [e :U 394 ]
@@ -4165,11 +4482,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 381  ]
 "303
 [e :U 382 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 10 , $ . `E3310 0 383
  , $ . `E3310 1 385
  , $ . `E3310 2 388
  , $ . `E3310 3 391
  , $ . `E3310 4 393
+=======
+[e [\ . *U _gameCtrl 10 , $ . `E3315 0 383
+ , $ . `E3315 1 385
+ , $ . `E3315 2 388
+ , $ . `E3315 3 391
+ , $ . `E3315 4 393
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  395 ]
 "363
 [e :U 381 ]
@@ -4228,11 +4553,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 397  ]
 "368
 [e :U 398 ]
+<<<<<<< HEAD
 [e [\ . *U _gameCtrl 10 , $ . `E3310 0 399
  , $ . `E3310 1 400
  , $ . `E3310 2 401
  , $ . `E3310 3 402
  , $ . `E3310 4 403
+=======
+[e [\ . *U _gameCtrl 10 , $ . `E3315 0 399
+ , $ . `E3315 1 400
+ , $ . `E3315 2 401
+ , $ . `E3315 3 402
+ , $ . `E3315 4 403
+>>>>>>> 0d52df8508ab487233c548aa8fe700e523652f20
  404 ]
 "395
 [e :U 397 ]

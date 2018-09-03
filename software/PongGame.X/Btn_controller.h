@@ -9,6 +9,7 @@
 #define	BTN_CONTROLLER_H
 
 #include "xf.h"
+#include "GlobalVariables.h"
 
 typedef enum SM_BTN
 {
