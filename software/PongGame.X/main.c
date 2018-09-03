@@ -48,6 +48,18 @@ void initTimer2(void){
     TMR2ON = 1;
 }
 
+void initTimer0_XF(void)
+{
+    T08BIT = 0; //timer0 as 16 bits
+    PSA = 0; //prescaler nEnalble
+    //T0PS = 1; //prescaler value = 4
+    
+    GIE = 1;
+    PEIE = 1;
+    TMR0IE = 1;
+    TMR0IF = 1;
+}
+
 void main(void) {
     IRCF0 = 1;
     IRCF1 = 1;

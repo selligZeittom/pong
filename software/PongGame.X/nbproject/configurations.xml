@@ -41,6 +41,7 @@
       <itemPath>TS_controller.c</itemPath>
       <itemPath>Btn_controller.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>Interrupt.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

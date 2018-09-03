@@ -1,9 +1,9 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "8 Btn_controller.c
-[c E3294 0 1 2 .. ]
-[n E3294 SM_BTN ST_BTN_WAITING ST_BTN_PRESSED ST_BTN_CONFIRMED  ]
+[c E3293 0 1 2 .. ]
+[n E3293 SM_BTN ST_BTN_WAITING ST_BTN_PRESSED ST_BTN_CONFIRMED  ]
 "25 Btn_controller.h
-[s S300 `E3294 1 `E3294 1 ]
+[s S300 `E3293 1 `E3293 1 ]
 [n S300 Btn_controller sm_btn old_sm_btn ]
 "43
 [v _launch_timer `(v ~T0 @X0 0 ef ]
@@ -3054,119 +3054,113 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;GlobalVariables.h: 20: const Event EV_GOTO_TSC_WAIT = 11;
 "23
-[v _EV_ON `Cuc ~T0 @X0 1 e ]
-[i _EV_ON
+[v _EV_POWER `Cuc ~T0 @X0 1 e ]
+[i _EV_POWER
 -> -> 20 `i `uc
 ]
-[; ;GlobalVariables.h: 23: const Event EV_ON = 20;
-"24
-[v _EV_OFF `Cuc ~T0 @X0 1 e ]
-[i _EV_OFF
--> -> 21 `i `uc
-]
-[; ;GlobalVariables.h: 24: const Event EV_OFF = 21;
-"27
+[; ;GlobalVariables.h: 23: const Event EV_POWER = 20;
+"26
 [v _EV_GAME `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME
 -> -> 30 `i `uc
 ]
-[; ;GlobalVariables.h: 27: const Event EV_GAME = 30;
-"28
+[; ;GlobalVariables.h: 26: const Event EV_GAME = 30;
+"27
 [v _EV_MENU `Cuc ~T0 @X0 1 e ]
 [i _EV_MENU
 -> -> 31 `i `uc
 ]
-[; ;GlobalVariables.h: 28: const Event EV_MENU = 31;
-"31
+[; ;GlobalVariables.h: 27: const Event EV_MENU = 31;
+"30
 [v _EV_LEVEL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_LEVEL_SW
 -> -> 40 `i `uc
 ]
-[; ;GlobalVariables.h: 31: const Event EV_LEVEL_SW = 40;
-"32
+[; ;GlobalVariables.h: 30: const Event EV_LEVEL_SW = 40;
+"31
 [v _EV_CTRL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_CTRL_SW
 -> -> 41 `i `uc
 ]
-[; ;GlobalVariables.h: 32: const Event EV_CTRL_SW = 41;
-"33
+[; ;GlobalVariables.h: 31: const Event EV_CTRL_SW = 41;
+"32
 [v _EV_GOTO_MENU_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_MENU_WAIT
 -> -> 42 `i `uc
 ]
-[; ;GlobalVariables.h: 33: const Event EV_GOTO_MENU_WAIT = 42;
-"36
+[; ;GlobalVariables.h: 32: const Event EV_GOTO_MENU_WAIT = 42;
+"35
 [v _EV_TIMEOUT_SCREEN `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_SCREEN
 -> -> 50 `i `uc
 ]
-[; ;GlobalVariables.h: 36: const Event EV_TIMEOUT_SCREEN = 50;
-"37
+[; ;GlobalVariables.h: 35: const Event EV_TIMEOUT_SCREEN = 50;
+"36
 [v _EV_GOTO_SCREEN_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_SCREEN_WAIT
 -> -> 51 `i `uc
 ]
-[; ;GlobalVariables.h: 37: const Event EV_GOTO_SCREEN_WAIT = 51;
-"40
+[; ;GlobalVariables.h: 36: const Event EV_GOTO_SCREEN_WAIT = 51;
+"39
 [v _EV_TIMEOUT_AI `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_AI
 -> -> 60 `i `uc
 ]
-[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_AI = 60;
-"41
+[; ;GlobalVariables.h: 39: const Event EV_TIMEOUT_AI = 60;
+"40
 [v _EV_TIMEOUT_USER `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_USER
 -> -> 61 `i `uc
 ]
-[; ;GlobalVariables.h: 41: const Event EV_TIMEOUT_USER = 61;
-"42
+[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_USER = 61;
+"41
 [v _EV_GOTO_RACKET_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_RACKET_WAIT
 -> -> 62 `i `uc
 ]
-[; ;GlobalVariables.h: 42: const Event EV_GOTO_RACKET_WAIT = 62;
-"45
+[; ;GlobalVariables.h: 41: const Event EV_GOTO_RACKET_WAIT = 62;
+"44
 [v _EV_TIMEOUT_BALL `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_BALL
 -> -> 70 `i `uc
 ]
-[; ;GlobalVariables.h: 45: const Event EV_TIMEOUT_BALL = 70;
-"46
+[; ;GlobalVariables.h: 44: const Event EV_TIMEOUT_BALL = 70;
+"45
 [v _EV_CHECK_RACKET `Cuc ~T0 @X0 1 e ]
 [i _EV_CHECK_RACKET
 -> -> 71 `i `uc
 ]
-[; ;GlobalVariables.h: 46: const Event EV_CHECK_RACKET = 71;
-"47
+[; ;GlobalVariables.h: 45: const Event EV_CHECK_RACKET = 71;
+"46
 [v _EV_MOVE `Cuc ~T0 @X0 1 e ]
 [i _EV_MOVE
 -> -> 72 `i `uc
 ]
-[; ;GlobalVariables.h: 47: const Event EV_MOVE = 72;
-"48
+[; ;GlobalVariables.h: 46: const Event EV_MOVE = 72;
+"47
 [v _EV_GAME_OVER `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME_OVER
 -> -> 73 `i `uc
 ]
-[; ;GlobalVariables.h: 48: const Event EV_GAME_OVER = 73;
-"49
+[; ;GlobalVariables.h: 47: const Event EV_GAME_OVER = 73;
+"48
 [v _EV_GOTO_BALL_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_BALL_WAIT
 -> -> 74 `i `uc
 ]
-[; ;GlobalVariables.h: 49: const Event EV_GOTO_BALL_WAIT = 74;
-"53
+[; ;GlobalVariables.h: 48: const Event EV_GOTO_BALL_WAIT = 74;
+"52
 [v _EV_TIMEOUT_ACC `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_ACC
 -> -> 80 `i `uc
 ]
-[; ;GlobalVariables.h: 53: const Event EV_TIMEOUT_ACC = 80;
-"54
+[; ;GlobalVariables.h: 52: const Event EV_TIMEOUT_ACC = 80;
+"53
 [v _EV_GOTO_ACC_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_ACC_WAIT
 -> -> 81 `i `uc
 ]
-[; ;GlobalVariables.h: 54: const Event EV_GOTO_ACC_WAIT = 81;
+[; ;GlobalVariables.h: 53: const Event EV_GOTO_ACC_WAIT = 81;
 [; ;Btn_controller.h: 17: typedef enum SM_BTN
 [; ;Btn_controller.h: 18: {
 [; ;Btn_controller.h: 19: ST_BTN_WAITING,
@@ -3193,7 +3187,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;Btn_controller.c: 10: btnCtrl->sm_btn = ST_BTN_WAITING;
 "10
-[e = . *U _btnCtrl 0 . `E3294 0 ]
+[e = . *U _btnCtrl 0 . `E3293 0 ]
 [; ;Btn_controller.c: 11: btnCtrl->old_sm_btn = btnCtrl->sm_btn;
 "11
 [e = . *U _btnCtrl 1 . *U _btnCtrl 0 ]
@@ -3231,7 +3225,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Btn_controller.c: 28: btnCtrl->sm_btn = ST_BTN_WAITING;
 "28
-[e = . *U _btnCtrl 0 . `E3294 0 ]
+[e = . *U _btnCtrl 0 . `E3293 0 ]
 "29
 }
 [e :U 306 ]
@@ -3250,7 +3244,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Btn_controller.c: 36: btnCtrl->sm_btn = ST_BTN_CONFIRMED;
 "36
-[e = . *U _btnCtrl 0 . `E3294 2 ]
+[e = . *U _btnCtrl 0 . `E3293 2 ]
 "37
 }
 [e :U 308 ]
@@ -3269,7 +3263,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Btn_controller.c: 43: btnCtrl->sm_btn = ST_BTN_WAITING;
 "43
-[e = . *U _btnCtrl 0 . `E3294 0 ]
+[e = . *U _btnCtrl 0 . `E3293 0 ]
 "44
 }
 [e :U 310 ]
@@ -3289,9 +3283,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 303  ]
 "23
 [e :U 304 ]
-[e [\ . *U _btnCtrl 0 , $ . `E3294 0 305
- , $ . `E3294 1 307
- , $ . `E3294 2 309
+[e [\ . *U _btnCtrl 0 , $ . `E3293 0 305
+ , $ . `E3293 1 307
+ , $ . `E3293 2 309
  311 ]
 "48
 [e :U 303 ]
@@ -3323,9 +3317,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Btn_controller.c: 61: case ST_BTN_CONFIRMED:
 "61
 [e :U 317 ]
-[; ;Btn_controller.c: 63: XF_pushEvent(EV_BTN_TIMEOUT, 0);
+[; ;Btn_controller.c: 63: XF_pushEvent(EV_POWER, 0);
 "63
-[e ( _XF_pushEvent (2 , _EV_BTN_TIMEOUT -> -> 0 `i `uc ]
+[e ( _XF_pushEvent (2 , _EV_POWER -> -> 0 `i `uc ]
 [; ;Btn_controller.c: 64: break;
 "64
 [e $U 313  ]
@@ -3341,9 +3335,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 313  ]
 "53
 [e :U 314 ]
-[e [\ . *U _btnCtrl 0 , $ . `E3294 0 315
- , $ . `E3294 1 316
- , $ . `E3294 2 317
+[e [\ . *U _btnCtrl 0 , $ . `E3293 0 315
+ , $ . `E3293 1 316
+ , $ . `E3293 2 317
  318 ]
 "67
 [e :U 313 ]

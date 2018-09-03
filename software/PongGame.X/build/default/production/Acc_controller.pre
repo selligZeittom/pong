@@ -4231,8 +4231,7 @@ const Event EV_TIMEOUT_TSC = 10;
 const Event EV_GOTO_TSC_WAIT = 11;
 
 
-const Event EV_ON = 20;
-const Event EV_OFF = 21;
+const Event EV_POWER = 20;
 
 
 const Event EV_GAME = 30;
@@ -4450,6 +4449,9 @@ break;
 case ST_ACC_UPDATE:
 
 acc_update();
+
+
+XF_pushEvent(EV_GOTO_ACC_WAIT, 0);
 break;
 default:
 break;
@@ -4457,7 +4459,7 @@ break;
 }
 }
 
-# 71
+# 74
 void acc_update()
 {
 

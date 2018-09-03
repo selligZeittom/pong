@@ -1,5 +1,7 @@
 #include <xc.h>
 
+#include "xf.h"
+
 
 void interrupt high_isr(void) {
 
@@ -13,6 +15,14 @@ void interrupt high_isr(void) {
     else if(INT0IF == 1){
         LATD0 = !LATD0;
         INT0IF = 0;
+    }
+    
+    if (TMR0IE == 1 && TMR0IF == 1)
+    {
+        //clear flag
+        TMR0IF = 0;
+        
+        XF_decrementAndQueueTimers();
     }
 }
 

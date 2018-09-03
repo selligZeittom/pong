@@ -1,12 +1,14 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "7 TS_controller.c
-[c E3294 0 1 .. ]
-[n E3294 SM_TSC ST_TSC_WAIT ST_TSC_UPDATE  ]
+[c E3293 0 1 .. ]
+[n E3293 SM_TSC ST_TSC_WAIT ST_TSC_UPDATE  ]
 "24 TS_controller.h
-[s S300 `E3294 1 `E3294 1 ]
+[s S300 `E3293 1 `E3293 1 ]
 [n S300 TS_controller sm_tsc old_sm_tsc ]
 "42
 [v _tsc_update `(v ~T0 @X0 0 ef ]
+"59 xf.h
+[v _XF_pushEvent `(uc ~T0 @X0 0 ef2`uc`uc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3050,119 +3052,113 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;GlobalVariables.h: 20: const Event EV_GOTO_TSC_WAIT = 11;
 "23
-[v _EV_ON `Cuc ~T0 @X0 1 e ]
-[i _EV_ON
+[v _EV_POWER `Cuc ~T0 @X0 1 e ]
+[i _EV_POWER
 -> -> 20 `i `uc
 ]
-[; ;GlobalVariables.h: 23: const Event EV_ON = 20;
-"24
-[v _EV_OFF `Cuc ~T0 @X0 1 e ]
-[i _EV_OFF
--> -> 21 `i `uc
-]
-[; ;GlobalVariables.h: 24: const Event EV_OFF = 21;
-"27
+[; ;GlobalVariables.h: 23: const Event EV_POWER = 20;
+"26
 [v _EV_GAME `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME
 -> -> 30 `i `uc
 ]
-[; ;GlobalVariables.h: 27: const Event EV_GAME = 30;
-"28
+[; ;GlobalVariables.h: 26: const Event EV_GAME = 30;
+"27
 [v _EV_MENU `Cuc ~T0 @X0 1 e ]
 [i _EV_MENU
 -> -> 31 `i `uc
 ]
-[; ;GlobalVariables.h: 28: const Event EV_MENU = 31;
-"31
+[; ;GlobalVariables.h: 27: const Event EV_MENU = 31;
+"30
 [v _EV_LEVEL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_LEVEL_SW
 -> -> 40 `i `uc
 ]
-[; ;GlobalVariables.h: 31: const Event EV_LEVEL_SW = 40;
-"32
+[; ;GlobalVariables.h: 30: const Event EV_LEVEL_SW = 40;
+"31
 [v _EV_CTRL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_CTRL_SW
 -> -> 41 `i `uc
 ]
-[; ;GlobalVariables.h: 32: const Event EV_CTRL_SW = 41;
-"33
+[; ;GlobalVariables.h: 31: const Event EV_CTRL_SW = 41;
+"32
 [v _EV_GOTO_MENU_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_MENU_WAIT
 -> -> 42 `i `uc
 ]
-[; ;GlobalVariables.h: 33: const Event EV_GOTO_MENU_WAIT = 42;
-"36
+[; ;GlobalVariables.h: 32: const Event EV_GOTO_MENU_WAIT = 42;
+"35
 [v _EV_TIMEOUT_SCREEN `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_SCREEN
 -> -> 50 `i `uc
 ]
-[; ;GlobalVariables.h: 36: const Event EV_TIMEOUT_SCREEN = 50;
-"37
+[; ;GlobalVariables.h: 35: const Event EV_TIMEOUT_SCREEN = 50;
+"36
 [v _EV_GOTO_SCREEN_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_SCREEN_WAIT
 -> -> 51 `i `uc
 ]
-[; ;GlobalVariables.h: 37: const Event EV_GOTO_SCREEN_WAIT = 51;
-"40
+[; ;GlobalVariables.h: 36: const Event EV_GOTO_SCREEN_WAIT = 51;
+"39
 [v _EV_TIMEOUT_AI `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_AI
 -> -> 60 `i `uc
 ]
-[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_AI = 60;
-"41
+[; ;GlobalVariables.h: 39: const Event EV_TIMEOUT_AI = 60;
+"40
 [v _EV_TIMEOUT_USER `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_USER
 -> -> 61 `i `uc
 ]
-[; ;GlobalVariables.h: 41: const Event EV_TIMEOUT_USER = 61;
-"42
+[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_USER = 61;
+"41
 [v _EV_GOTO_RACKET_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_RACKET_WAIT
 -> -> 62 `i `uc
 ]
-[; ;GlobalVariables.h: 42: const Event EV_GOTO_RACKET_WAIT = 62;
-"45
+[; ;GlobalVariables.h: 41: const Event EV_GOTO_RACKET_WAIT = 62;
+"44
 [v _EV_TIMEOUT_BALL `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_BALL
 -> -> 70 `i `uc
 ]
-[; ;GlobalVariables.h: 45: const Event EV_TIMEOUT_BALL = 70;
-"46
+[; ;GlobalVariables.h: 44: const Event EV_TIMEOUT_BALL = 70;
+"45
 [v _EV_CHECK_RACKET `Cuc ~T0 @X0 1 e ]
 [i _EV_CHECK_RACKET
 -> -> 71 `i `uc
 ]
-[; ;GlobalVariables.h: 46: const Event EV_CHECK_RACKET = 71;
-"47
+[; ;GlobalVariables.h: 45: const Event EV_CHECK_RACKET = 71;
+"46
 [v _EV_MOVE `Cuc ~T0 @X0 1 e ]
 [i _EV_MOVE
 -> -> 72 `i `uc
 ]
-[; ;GlobalVariables.h: 47: const Event EV_MOVE = 72;
-"48
+[; ;GlobalVariables.h: 46: const Event EV_MOVE = 72;
+"47
 [v _EV_GAME_OVER `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME_OVER
 -> -> 73 `i `uc
 ]
-[; ;GlobalVariables.h: 48: const Event EV_GAME_OVER = 73;
-"49
+[; ;GlobalVariables.h: 47: const Event EV_GAME_OVER = 73;
+"48
 [v _EV_GOTO_BALL_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_BALL_WAIT
 -> -> 74 `i `uc
 ]
-[; ;GlobalVariables.h: 49: const Event EV_GOTO_BALL_WAIT = 74;
-"53
+[; ;GlobalVariables.h: 48: const Event EV_GOTO_BALL_WAIT = 74;
+"52
 [v _EV_TIMEOUT_ACC `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_ACC
 -> -> 80 `i `uc
 ]
-[; ;GlobalVariables.h: 53: const Event EV_TIMEOUT_ACC = 80;
-"54
+[; ;GlobalVariables.h: 52: const Event EV_TIMEOUT_ACC = 80;
+"53
 [v _EV_GOTO_ACC_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_ACC_WAIT
 -> -> 81 `i `uc
 ]
-[; ;GlobalVariables.h: 54: const Event EV_GOTO_ACC_WAIT = 81;
+[; ;GlobalVariables.h: 53: const Event EV_GOTO_ACC_WAIT = 81;
 [; ;TS_controller.h: 17: typedef enum SM_TSC
 [; ;TS_controller.h: 18: {
 [; ;TS_controller.h: 19: ST_TSC_WAIT,
@@ -3188,7 +3184,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;TS_controller.c: 9: tsCtrl->sm_tsc = ST_TSC_WAIT;
 "9
-[e = . *U _tsCtrl 0 . `E3294 0 ]
+[e = . *U _tsCtrl 0 . `E3293 0 ]
 [; ;TS_controller.c: 10: tsCtrl->old_sm_tsc = tsCtrl->sm_tsc;
 "10
 [e = . *U _tsCtrl 1 . *U _tsCtrl 0 ]
@@ -3226,7 +3222,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;TS_controller.c: 26: tsCtrl->sm_tsc = ST_TSC_UPDATE;
 "26
-[e = . *U _tsCtrl 0 . `E3294 1 ]
+[e = . *U _tsCtrl 0 . `E3293 1 ]
 "27
 }
 [e :U 306 ]
@@ -3245,7 +3241,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;TS_controller.c: 32: tsCtrl->sm_tsc = ST_TSC_WAIT;
 "32
-[e = . *U _tsCtrl 0 . `E3294 0 ]
+[e = . *U _tsCtrl 0 . `E3293 0 ]
 "33
 }
 [e :U 308 ]
@@ -3265,8 +3261,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 303  ]
 "22
 [e :U 304 ]
-[e [\ . *U _tsCtrl 0 , $ . `E3294 0 305
- , $ . `E3294 1 307
+[e [\ . *U _tsCtrl 0 , $ . `E3293 0 305
+ , $ . `E3293 1 307
  309 ]
 "37
 [e :U 303 ]
@@ -3292,43 +3288,46 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;TS_controller.c: 48: tsc_update();
 "48
 [e ( _tsc_update ..  ]
-[; ;TS_controller.c: 49: break;
-"49
-[e $U 311  ]
-[; ;TS_controller.c: 50: default:
-"50
-[e :U 315 ]
-[; ;TS_controller.c: 51: break;
+[; ;TS_controller.c: 51: XF_pushEvent(EV_GOTO_TSC_WAIT, 0);
 "51
-[e $U 311  ]
+[e ( _XF_pushEvent (2 , _EV_GOTO_TSC_WAIT -> -> 0 `i `uc ]
+[; ;TS_controller.c: 52: break;
 "52
+[e $U 311  ]
+[; ;TS_controller.c: 53: default:
+"53
+[e :U 315 ]
+[; ;TS_controller.c: 54: break;
+"54
+[e $U 311  ]
+"55
 }
-[; ;TS_controller.c: 52: }
+[; ;TS_controller.c: 55: }
 [e $U 311  ]
 "42
 [e :U 312 ]
-[e [\ . *U _tsCtrl 0 , $ . `E3294 0 313
- , $ . `E3294 1 314
+[e [\ . *U _tsCtrl 0 , $ . `E3293 0 313
+ , $ . `E3293 1 314
  315 ]
-"52
+"55
 [e :U 311 ]
-"53
+"56
 }
 [e :U 310 ]
-[; ;TS_controller.c: 53: }
-[; ;TS_controller.c: 54: }
-"54
+[; ;TS_controller.c: 56: }
+[; ;TS_controller.c: 57: }
+"57
 [e :UE 302 ]
 }
-"59
+"62
 [v _tsc_update `(v ~T0 @X0 1 ef ]
-"60
+"63
 {
-[; ;TS_controller.c: 59: void tsc_update()
-[; ;TS_controller.c: 60: {
+[; ;TS_controller.c: 62: void tsc_update()
+[; ;TS_controller.c: 63: {
 [e :U _tsc_update ]
 [f ]
-[; ;TS_controller.c: 62: }
-"62
+[; ;TS_controller.c: 65: }
+"65
 [e :UE 316 ]
 }

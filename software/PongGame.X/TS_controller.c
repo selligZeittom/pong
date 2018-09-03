@@ -46,6 +46,9 @@ void state_machine_tsc(TS_controller* tsCtrl, Event ev)
         case ST_TSC_UPDATE:
             //go and get the new values of the tsc
             tsc_update();
+            
+            //throw event to go back to wait mode
+            XF_pushEvent(EV_GOTO_TSC_WAIT, false);
             break;
         default:
             break;

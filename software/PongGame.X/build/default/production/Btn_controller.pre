@@ -4231,8 +4231,7 @@ const Event EV_TIMEOUT_TSC = 10;
 const Event EV_GOTO_TSC_WAIT = 11;
 
 
-const Event EV_ON = 20;
-const Event EV_OFF = 21;
+const Event EV_POWER = 20;
 
 
 const Event EV_GAME = 30;
@@ -4342,7 +4341,7 @@ launch_timer();
 break;
 case ST_BTN_CONFIRMED:
 
-XF_pushEvent(EV_BTN_TIMEOUT, 0);
+XF_pushEvent(EV_POWER, 0);
 break;
 default:
 break;

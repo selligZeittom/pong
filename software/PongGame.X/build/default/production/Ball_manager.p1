@@ -3042,119 +3042,113 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;GlobalVariables.h: 20: const Event EV_GOTO_TSC_WAIT = 11;
 "23
-[v _EV_ON `Cuc ~T0 @X0 1 e ]
-[i _EV_ON
+[v _EV_POWER `Cuc ~T0 @X0 1 e ]
+[i _EV_POWER
 -> -> 20 `i `uc
 ]
-[; ;GlobalVariables.h: 23: const Event EV_ON = 20;
-"24
-[v _EV_OFF `Cuc ~T0 @X0 1 e ]
-[i _EV_OFF
--> -> 21 `i `uc
-]
-[; ;GlobalVariables.h: 24: const Event EV_OFF = 21;
-"27
+[; ;GlobalVariables.h: 23: const Event EV_POWER = 20;
+"26
 [v _EV_GAME `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME
 -> -> 30 `i `uc
 ]
-[; ;GlobalVariables.h: 27: const Event EV_GAME = 30;
-"28
+[; ;GlobalVariables.h: 26: const Event EV_GAME = 30;
+"27
 [v _EV_MENU `Cuc ~T0 @X0 1 e ]
 [i _EV_MENU
 -> -> 31 `i `uc
 ]
-[; ;GlobalVariables.h: 28: const Event EV_MENU = 31;
-"31
+[; ;GlobalVariables.h: 27: const Event EV_MENU = 31;
+"30
 [v _EV_LEVEL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_LEVEL_SW
 -> -> 40 `i `uc
 ]
-[; ;GlobalVariables.h: 31: const Event EV_LEVEL_SW = 40;
-"32
+[; ;GlobalVariables.h: 30: const Event EV_LEVEL_SW = 40;
+"31
 [v _EV_CTRL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_CTRL_SW
 -> -> 41 `i `uc
 ]
-[; ;GlobalVariables.h: 32: const Event EV_CTRL_SW = 41;
-"33
+[; ;GlobalVariables.h: 31: const Event EV_CTRL_SW = 41;
+"32
 [v _EV_GOTO_MENU_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_MENU_WAIT
 -> -> 42 `i `uc
 ]
-[; ;GlobalVariables.h: 33: const Event EV_GOTO_MENU_WAIT = 42;
-"36
+[; ;GlobalVariables.h: 32: const Event EV_GOTO_MENU_WAIT = 42;
+"35
 [v _EV_TIMEOUT_SCREEN `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_SCREEN
 -> -> 50 `i `uc
 ]
-[; ;GlobalVariables.h: 36: const Event EV_TIMEOUT_SCREEN = 50;
-"37
+[; ;GlobalVariables.h: 35: const Event EV_TIMEOUT_SCREEN = 50;
+"36
 [v _EV_GOTO_SCREEN_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_SCREEN_WAIT
 -> -> 51 `i `uc
 ]
-[; ;GlobalVariables.h: 37: const Event EV_GOTO_SCREEN_WAIT = 51;
-"40
+[; ;GlobalVariables.h: 36: const Event EV_GOTO_SCREEN_WAIT = 51;
+"39
 [v _EV_TIMEOUT_AI `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_AI
 -> -> 60 `i `uc
 ]
-[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_AI = 60;
-"41
+[; ;GlobalVariables.h: 39: const Event EV_TIMEOUT_AI = 60;
+"40
 [v _EV_TIMEOUT_USER `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_USER
 -> -> 61 `i `uc
 ]
-[; ;GlobalVariables.h: 41: const Event EV_TIMEOUT_USER = 61;
-"42
+[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_USER = 61;
+"41
 [v _EV_GOTO_RACKET_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_RACKET_WAIT
 -> -> 62 `i `uc
 ]
-[; ;GlobalVariables.h: 42: const Event EV_GOTO_RACKET_WAIT = 62;
-"45
+[; ;GlobalVariables.h: 41: const Event EV_GOTO_RACKET_WAIT = 62;
+"44
 [v _EV_TIMEOUT_BALL `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_BALL
 -> -> 70 `i `uc
 ]
-[; ;GlobalVariables.h: 45: const Event EV_TIMEOUT_BALL = 70;
-"46
+[; ;GlobalVariables.h: 44: const Event EV_TIMEOUT_BALL = 70;
+"45
 [v _EV_CHECK_RACKET `Cuc ~T0 @X0 1 e ]
 [i _EV_CHECK_RACKET
 -> -> 71 `i `uc
 ]
-[; ;GlobalVariables.h: 46: const Event EV_CHECK_RACKET = 71;
-"47
+[; ;GlobalVariables.h: 45: const Event EV_CHECK_RACKET = 71;
+"46
 [v _EV_MOVE `Cuc ~T0 @X0 1 e ]
 [i _EV_MOVE
 -> -> 72 `i `uc
 ]
-[; ;GlobalVariables.h: 47: const Event EV_MOVE = 72;
-"48
+[; ;GlobalVariables.h: 46: const Event EV_MOVE = 72;
+"47
 [v _EV_GAME_OVER `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME_OVER
 -> -> 73 `i `uc
 ]
-[; ;GlobalVariables.h: 48: const Event EV_GAME_OVER = 73;
-"49
+[; ;GlobalVariables.h: 47: const Event EV_GAME_OVER = 73;
+"48
 [v _EV_GOTO_BALL_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_BALL_WAIT
 -> -> 74 `i `uc
 ]
-[; ;GlobalVariables.h: 49: const Event EV_GOTO_BALL_WAIT = 74;
-"53
+[; ;GlobalVariables.h: 48: const Event EV_GOTO_BALL_WAIT = 74;
+"52
 [v _EV_TIMEOUT_ACC `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_ACC
 -> -> 80 `i `uc
 ]
-[; ;GlobalVariables.h: 53: const Event EV_TIMEOUT_ACC = 80;
-"54
+[; ;GlobalVariables.h: 52: const Event EV_TIMEOUT_ACC = 80;
+"53
 [v _EV_GOTO_ACC_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_ACC_WAIT
 -> -> 81 `i `uc
 ]
-[; ;GlobalVariables.h: 54: const Event EV_GOTO_ACC_WAIT = 81;
+[; ;GlobalVariables.h: 53: const Event EV_GOTO_ACC_WAIT = 81;
 [; ;Ball_manager.h: 16: typedef struct Ball
 [; ;Ball_manager.h: 17: {
 [; ;Ball_manager.h: 18: uint16_t xPos, yPos;

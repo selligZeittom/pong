@@ -1,19 +1,19 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "8 Game_controller.c
-[c E3294 0 1 .. ]
-[n E3294 SM_MODE ST_ON ST_OFF  ]
-[c E3298 0 1 .. ]
-[n E3298 SM_ON ST_MENU ST_GAME  ]
-[c E3302 0 1 2 .. ]
-[n E3302 SM_MENU ST_MENU_WAIT ST_MENU_CTRL_SW ST_MENU_LEVEL_SW  ]
-[c E3307 0 1 .. ]
-[n E3307 SM_SCREEN ST_SCREEN_WAIT ST_SCREEN_UPDATE  ]
-[c E3311 0 1 2 .. ]
-[n E3311 SM_RACKET ST_RACKET_WAIT ST_RACKET_USER ST_RACKET_AI  ]
-[c E3316 0 1 2 3 4 .. ]
-[n E3316 SM_BALL ST_BALL_WAIT ST_BALL_CHECK_Y ST_BALL_CHECK_X ST_BALL_MOVE ST_BALL_GAME_OVER  ]
+[c E3293 0 1 .. ]
+[n E3293 SM_MODE ST_ON ST_OFF  ]
+[c E3297 0 1 .. ]
+[n E3297 SM_ON ST_MENU ST_GAME  ]
+[c E3301 0 1 2 .. ]
+[n E3301 SM_MENU ST_MENU_WAIT ST_MENU_CTRL_SW ST_MENU_LEVEL_SW  ]
+[c E3306 0 1 .. ]
+[n E3306 SM_SCREEN ST_SCREEN_WAIT ST_SCREEN_UPDATE  ]
+[c E3310 0 1 2 .. ]
+[n E3310 SM_RACKET ST_RACKET_WAIT ST_RACKET_USER ST_RACKET_AI  ]
+[c E3315 0 1 2 3 4 .. ]
+[n E3315 SM_BALL ST_BALL_WAIT ST_BALL_CHECK_Y ST_BALL_CHECK_X ST_BALL_MOVE ST_BALL_GAME_OVER  ]
 "66 Game_controller.h
-[s S300 `E3294 1 `E3294 1 `E3298 1 `E3298 1 `E3302 1 `E3302 1 `E3307 1 `E3307 1 `E3311 1 `E3311 1 `E3316 1 `E3316 1 ]
+[s S300 `E3293 1 `E3293 1 `E3297 1 `E3297 1 `E3301 1 `E3301 1 `E3306 1 `E3306 1 `E3310 1 `E3310 1 `E3315 1 `E3315 1 ]
 [n S300 Game_controller sm_mode old_sm_mode sm_on old_sm_on sm_menu old_sm_menu sm_screen old_sm_screen sm_racket old_sm_racket sm_ball old_sm_ball ]
 "160
 [v _sleep_mode `(v ~T0 @X0 0 ef ]
@@ -3076,119 +3076,113 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;GlobalVariables.h: 20: const Event EV_GOTO_TSC_WAIT = 11;
 "23
-[v _EV_ON `Cuc ~T0 @X0 1 e ]
-[i _EV_ON
+[v _EV_POWER `Cuc ~T0 @X0 1 e ]
+[i _EV_POWER
 -> -> 20 `i `uc
 ]
-[; ;GlobalVariables.h: 23: const Event EV_ON = 20;
-"24
-[v _EV_OFF `Cuc ~T0 @X0 1 e ]
-[i _EV_OFF
--> -> 21 `i `uc
-]
-[; ;GlobalVariables.h: 24: const Event EV_OFF = 21;
-"27
+[; ;GlobalVariables.h: 23: const Event EV_POWER = 20;
+"26
 [v _EV_GAME `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME
 -> -> 30 `i `uc
 ]
-[; ;GlobalVariables.h: 27: const Event EV_GAME = 30;
-"28
+[; ;GlobalVariables.h: 26: const Event EV_GAME = 30;
+"27
 [v _EV_MENU `Cuc ~T0 @X0 1 e ]
 [i _EV_MENU
 -> -> 31 `i `uc
 ]
-[; ;GlobalVariables.h: 28: const Event EV_MENU = 31;
-"31
+[; ;GlobalVariables.h: 27: const Event EV_MENU = 31;
+"30
 [v _EV_LEVEL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_LEVEL_SW
 -> -> 40 `i `uc
 ]
-[; ;GlobalVariables.h: 31: const Event EV_LEVEL_SW = 40;
-"32
+[; ;GlobalVariables.h: 30: const Event EV_LEVEL_SW = 40;
+"31
 [v _EV_CTRL_SW `Cuc ~T0 @X0 1 e ]
 [i _EV_CTRL_SW
 -> -> 41 `i `uc
 ]
-[; ;GlobalVariables.h: 32: const Event EV_CTRL_SW = 41;
-"33
+[; ;GlobalVariables.h: 31: const Event EV_CTRL_SW = 41;
+"32
 [v _EV_GOTO_MENU_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_MENU_WAIT
 -> -> 42 `i `uc
 ]
-[; ;GlobalVariables.h: 33: const Event EV_GOTO_MENU_WAIT = 42;
-"36
+[; ;GlobalVariables.h: 32: const Event EV_GOTO_MENU_WAIT = 42;
+"35
 [v _EV_TIMEOUT_SCREEN `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_SCREEN
 -> -> 50 `i `uc
 ]
-[; ;GlobalVariables.h: 36: const Event EV_TIMEOUT_SCREEN = 50;
-"37
+[; ;GlobalVariables.h: 35: const Event EV_TIMEOUT_SCREEN = 50;
+"36
 [v _EV_GOTO_SCREEN_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_SCREEN_WAIT
 -> -> 51 `i `uc
 ]
-[; ;GlobalVariables.h: 37: const Event EV_GOTO_SCREEN_WAIT = 51;
-"40
+[; ;GlobalVariables.h: 36: const Event EV_GOTO_SCREEN_WAIT = 51;
+"39
 [v _EV_TIMEOUT_AI `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_AI
 -> -> 60 `i `uc
 ]
-[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_AI = 60;
-"41
+[; ;GlobalVariables.h: 39: const Event EV_TIMEOUT_AI = 60;
+"40
 [v _EV_TIMEOUT_USER `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_USER
 -> -> 61 `i `uc
 ]
-[; ;GlobalVariables.h: 41: const Event EV_TIMEOUT_USER = 61;
-"42
+[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_USER = 61;
+"41
 [v _EV_GOTO_RACKET_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_RACKET_WAIT
 -> -> 62 `i `uc
 ]
-[; ;GlobalVariables.h: 42: const Event EV_GOTO_RACKET_WAIT = 62;
-"45
+[; ;GlobalVariables.h: 41: const Event EV_GOTO_RACKET_WAIT = 62;
+"44
 [v _EV_TIMEOUT_BALL `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_BALL
 -> -> 70 `i `uc
 ]
-[; ;GlobalVariables.h: 45: const Event EV_TIMEOUT_BALL = 70;
-"46
+[; ;GlobalVariables.h: 44: const Event EV_TIMEOUT_BALL = 70;
+"45
 [v _EV_CHECK_RACKET `Cuc ~T0 @X0 1 e ]
 [i _EV_CHECK_RACKET
 -> -> 71 `i `uc
 ]
-[; ;GlobalVariables.h: 46: const Event EV_CHECK_RACKET = 71;
-"47
+[; ;GlobalVariables.h: 45: const Event EV_CHECK_RACKET = 71;
+"46
 [v _EV_MOVE `Cuc ~T0 @X0 1 e ]
 [i _EV_MOVE
 -> -> 72 `i `uc
 ]
-[; ;GlobalVariables.h: 47: const Event EV_MOVE = 72;
-"48
+[; ;GlobalVariables.h: 46: const Event EV_MOVE = 72;
+"47
 [v _EV_GAME_OVER `Cuc ~T0 @X0 1 e ]
 [i _EV_GAME_OVER
 -> -> 73 `i `uc
 ]
-[; ;GlobalVariables.h: 48: const Event EV_GAME_OVER = 73;
-"49
+[; ;GlobalVariables.h: 47: const Event EV_GAME_OVER = 73;
+"48
 [v _EV_GOTO_BALL_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_BALL_WAIT
 -> -> 74 `i `uc
 ]
-[; ;GlobalVariables.h: 49: const Event EV_GOTO_BALL_WAIT = 74;
-"53
+[; ;GlobalVariables.h: 48: const Event EV_GOTO_BALL_WAIT = 74;
+"52
 [v _EV_TIMEOUT_ACC `Cuc ~T0 @X0 1 e ]
 [i _EV_TIMEOUT_ACC
 -> -> 80 `i `uc
 ]
-[; ;GlobalVariables.h: 53: const Event EV_TIMEOUT_ACC = 80;
-"54
+[; ;GlobalVariables.h: 52: const Event EV_TIMEOUT_ACC = 80;
+"53
 [v _EV_GOTO_ACC_WAIT `Cuc ~T0 @X0 1 e ]
 [i _EV_GOTO_ACC_WAIT
 -> -> 81 `i `uc
 ]
-[; ;GlobalVariables.h: 54: const Event EV_GOTO_ACC_WAIT = 81;
+[; ;GlobalVariables.h: 53: const Event EV_GOTO_ACC_WAIT = 81;
 [; ;Game_controller.h: 17: typedef enum SM_MODE
 [; ;Game_controller.h: 18: {
 [; ;Game_controller.h: 19: ST_ON,
@@ -3265,37 +3259,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;Game_controller.c: 10: gameCtrl->sm_mode = ST_ON;
 "10
-[e = . *U _gameCtrl 0 . `E3294 0 ]
+[e = . *U _gameCtrl 0 . `E3293 0 ]
 [; ;Game_controller.c: 11: gameCtrl->old_sm_mode = gameCtrl->sm_mode;
 "11
 [e = . *U _gameCtrl 1 . *U _gameCtrl 0 ]
 [; ;Game_controller.c: 14: gameCtrl->sm_on = ST_MENU;
 "14
-[e = . *U _gameCtrl 2 . `E3298 0 ]
+[e = . *U _gameCtrl 2 . `E3297 0 ]
 [; ;Game_controller.c: 15: gameCtrl->old_sm_on = gameCtrl->sm_on;
 "15
 [e = . *U _gameCtrl 3 . *U _gameCtrl 2 ]
 [; ;Game_controller.c: 18: gameCtrl->sm_menu = ST_MENU_WAIT;
 "18
-[e = . *U _gameCtrl 4 . `E3302 0 ]
+[e = . *U _gameCtrl 4 . `E3301 0 ]
 [; ;Game_controller.c: 19: gameCtrl->old_sm_menu = gameCtrl->sm_menu;
 "19
 [e = . *U _gameCtrl 5 . *U _gameCtrl 4 ]
 [; ;Game_controller.c: 22: gameCtrl->sm_screen = ST_SCREEN_WAIT;
 "22
-[e = . *U _gameCtrl 6 . `E3307 0 ]
+[e = . *U _gameCtrl 6 . `E3306 0 ]
 [; ;Game_controller.c: 23: gameCtrl->old_sm_screen = gameCtrl->sm_screen;
 "23
 [e = . *U _gameCtrl 7 . *U _gameCtrl 6 ]
 [; ;Game_controller.c: 26: gameCtrl->sm_racket = ST_RACKET_WAIT;
 "26
-[e = . *U _gameCtrl 8 . `E3311 0 ]
+[e = . *U _gameCtrl 8 . `E3310 0 ]
 [; ;Game_controller.c: 27: gameCtrl->old_sm_racket = gameCtrl->sm_racket;
 "27
 [e = . *U _gameCtrl 9 . *U _gameCtrl 8 ]
 [; ;Game_controller.c: 30: gameCtrl->sm_ball = ST_BALL_WAIT;
 "30
-[e = . *U _gameCtrl 10 . `E3316 0 ]
+[e = . *U _gameCtrl 10 . `E3315 0 ]
 [; ;Game_controller.c: 31: gameCtrl->old_sm_ball = gameCtrl->old_sm_ball;
 "31
 [e = . *U _gameCtrl 11 . *U _gameCtrl 11 ]
@@ -3327,15 +3321,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Game_controller.c: 45: case ST_OFF:
 "45
 [e :U 305 ]
-[; ;Game_controller.c: 47: if(ev == EV_ON)
+[; ;Game_controller.c: 47: if(ev == EV_POWER)
 "47
-[e $ ! == -> _ev `i -> _EV_ON `i 306  ]
+[e $ ! == -> _ev `i -> _EV_POWER `i 306  ]
 [; ;Game_controller.c: 48: {
 "48
 {
 [; ;Game_controller.c: 49: gameCtrl->sm_mode = ST_ON;
 "49
-[e = . *U _gameCtrl 0 . `E3294 0 ]
+[e = . *U _gameCtrl 0 . `E3293 0 ]
 "50
 }
 [e :U 306 ]
@@ -3346,15 +3340,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Game_controller.c: 52: case ST_ON:
 "52
 [e :U 307 ]
-[; ;Game_controller.c: 54: if(ev == EV_OFF)
+[; ;Game_controller.c: 54: if(ev == EV_POWER)
 "54
-[e $ ! == -> _ev `i -> _EV_OFF `i 308  ]
+[e $ ! == -> _ev `i -> _EV_POWER `i 308  ]
 [; ;Game_controller.c: 55: {
 "55
 {
 [; ;Game_controller.c: 56: gameCtrl->sm_mode = ST_OFF;
 "56
-[e = . *U _gameCtrl 0 . `E3294 1 ]
+[e = . *U _gameCtrl 0 . `E3293 1 ]
 "57
 }
 [e :U 308 ]
@@ -3374,8 +3368,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 303  ]
 "43
 [e :U 304 ]
-[e [\ . *U _gameCtrl 0 , $ . `E3294 1 305
- , $ . `E3294 0 307
+[e [\ . *U _gameCtrl 0 , $ . `E3293 1 305
+ , $ . `E3293 0 307
  309 ]
 "61
 [e :U 303 ]
@@ -3421,8 +3415,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 311  ]
 "66
 [e :U 312 ]
-[e [\ . *U _gameCtrl 0 , $ . `E3294 1 313
- , $ . `E3294 0 314
+[e [\ . *U _gameCtrl 0 , $ . `E3293 1 313
+ , $ . `E3293 0 314
  315 ]
 "78
 [e :U 311 ]
@@ -3464,7 +3458,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 95: gameCtrl->sm_on = ST_GAME;
 "95
-[e = . *U _gameCtrl 2 . `E3298 1 ]
+[e = . *U _gameCtrl 2 . `E3297 1 ]
 "96
 }
 [e :U 320 ]
@@ -3483,7 +3477,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 102: gameCtrl->sm_on = ST_MENU;
 "102
-[e = . *U _gameCtrl 2 . `E3298 0 ]
+[e = . *U _gameCtrl 2 . `E3297 0 ]
 "103
 }
 [e :U 322 ]
@@ -3503,8 +3497,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 317  ]
 "90
 [e :U 318 ]
-[e [\ . *U _gameCtrl 2 , $ . `E3298 0 319
- , $ . `E3298 1 321
+[e [\ . *U _gameCtrl 2 , $ . `E3297 0 319
+ , $ . `E3297 1 321
  323 ]
 "107
 [e :U 317 ]
@@ -3545,8 +3539,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 325  ]
 "112
 [e :U 326 ]
-[e [\ . *U _gameCtrl 2 , $ . `E3298 0 327
- , $ . `E3298 1 328
+[e [\ . *U _gameCtrl 2 , $ . `E3297 0 327
+ , $ . `E3297 1 328
  329 ]
 "122
 [e :U 325 ]
@@ -3588,7 +3582,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 139: gameCtrl->sm_menu = ST_MENU_LEVEL_SW;
 "139
-[e = . *U _gameCtrl 4 . `E3302 2 ]
+[e = . *U _gameCtrl 4 . `E3301 2 ]
 "140
 }
 [e :U 334 ]
@@ -3601,7 +3595,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 145: gameCtrl->sm_menu = ST_MENU_CTRL_SW;
 "145
-[e = . *U _gameCtrl 4 . `E3302 1 ]
+[e = . *U _gameCtrl 4 . `E3301 1 ]
 "146
 }
 [e :U 335 ]
@@ -3620,7 +3614,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 153: gameCtrl->sm_menu = ST_MENU_WAIT;
 "153
-[e = . *U _gameCtrl 4 . `E3302 0 ]
+[e = . *U _gameCtrl 4 . `E3301 0 ]
 "154
 }
 [e :U 337 ]
@@ -3639,7 +3633,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 160: gameCtrl->sm_menu = ST_MENU_WAIT;
 "160
-[e = . *U _gameCtrl 4 . `E3302 0 ]
+[e = . *U _gameCtrl 4 . `E3301 0 ]
 "161
 }
 [e :U 339 ]
@@ -3659,9 +3653,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 331  ]
 "134
 [e :U 332 ]
-[e [\ . *U _gameCtrl 4 , $ . `E3302 0 333
- , $ . `E3302 1 336
- , $ . `E3302 2 338
+[e [\ . *U _gameCtrl 4 , $ . `E3301 0 333
+ , $ . `E3301 1 336
+ , $ . `E3301 2 338
  340 ]
 "165
 [e :U 331 ]
@@ -3714,9 +3708,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 342  ]
 "170
 [e :U 343 ]
-[e [\ . *U _gameCtrl 4 , $ . `E3302 0 344
- , $ . `E3302 1 345
- , $ . `E3302 2 346
+[e [\ . *U _gameCtrl 4 , $ . `E3301 0 344
+ , $ . `E3301 1 345
+ , $ . `E3301 2 346
  347 ]
 "186
 [e :U 342 ]
@@ -3758,7 +3752,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 203: gameCtrl->sm_screen == ST_SCREEN_UPDATE;
 "203
-[e == -> . *U _gameCtrl 6 `i -> . `E3307 1 `i ]
+[e == -> . *U _gameCtrl 6 `i -> . `E3306 1 `i ]
 "204
 }
 [e :U 352 ]
@@ -3777,7 +3771,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 210: gameCtrl->sm_screen = ST_SCREEN_WAIT;
 "210
-[e = . *U _gameCtrl 6 . `E3307 0 ]
+[e = . *U _gameCtrl 6 . `E3306 0 ]
 "211
 }
 [e :U 354 ]
@@ -3797,8 +3791,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 349  ]
 "198
 [e :U 350 ]
-[e [\ . *U _gameCtrl 6 , $ . `E3307 0 351
- , $ . `E3307 1 353
+[e [\ . *U _gameCtrl 6 , $ . `E3306 0 351
+ , $ . `E3306 1 353
  355 ]
 "215
 [e :U 349 ]
@@ -3839,8 +3833,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 357  ]
 "220
 [e :U 358 ]
-[e [\ . *U _gameCtrl 6 , $ . `E3307 0 359
- , $ . `E3307 1 360
+[e [\ . *U _gameCtrl 6 , $ . `E3306 0 359
+ , $ . `E3306 1 360
  361 ]
 "230
 [e :U 357 ]
@@ -3882,7 +3876,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 247: gameCtrl->sm_racket = ST_RACKET_AI;
 "247
-[e = . *U _gameCtrl 8 . `E3311 2 ]
+[e = . *U _gameCtrl 8 . `E3310 2 ]
 "248
 }
 [e :U 366 ]
@@ -3895,7 +3889,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 253: gameCtrl->sm_racket = ST_RACKET_USER;
 "253
-[e = . *U _gameCtrl 8 . `E3311 1 ]
+[e = . *U _gameCtrl 8 . `E3310 1 ]
 "254
 }
 [e :U 367 ]
@@ -3914,7 +3908,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 260: gameCtrl->sm_racket = ST_RACKET_WAIT;
 "260
-[e = . *U _gameCtrl 8 . `E3311 0 ]
+[e = . *U _gameCtrl 8 . `E3310 0 ]
 "261
 }
 [e :U 369 ]
@@ -3933,7 +3927,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 267: gameCtrl->sm_racket = ST_RACKET_WAIT;
 "267
-[e = . *U _gameCtrl 8 . `E3311 0 ]
+[e = . *U _gameCtrl 8 . `E3310 0 ]
 "268
 }
 [e :U 371 ]
@@ -3953,9 +3947,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 363  ]
 "242
 [e :U 364 ]
-[e [\ . *U _gameCtrl 8 , $ . `E3311 0 365
- , $ . `E3311 1 368
- , $ . `E3311 2 370
+[e [\ . *U _gameCtrl 8 , $ . `E3310 0 365
+ , $ . `E3310 1 368
+ , $ . `E3310 2 370
  372 ]
 "272
 [e :U 363 ]
@@ -4005,9 +3999,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 374  ]
 "277
 [e :U 375 ]
-[e [\ . *U _gameCtrl 8 , $ . `E3311 0 376
- , $ . `E3311 1 377
- , $ . `E3311 2 378
+[e [\ . *U _gameCtrl 8 , $ . `E3310 0 376
+ , $ . `E3310 1 377
+ , $ . `E3310 2 378
  379 ]
 "291
 [e :U 374 ]
@@ -4049,7 +4043,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 308: gameCtrl->sm_ball = ST_BALL_CHECK_Y;
 "308
-[e = . *U _gameCtrl 10 . `E3316 1 ]
+[e = . *U _gameCtrl 10 . `E3315 1 ]
 "309
 }
 [e :U 384 ]
@@ -4068,7 +4062,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 318: gameCtrl->sm_ball = ST_BALL_CHECK_X;
 "318
-[e = . *U _gameCtrl 10 . `E3316 2 ]
+[e = . *U _gameCtrl 10 . `E3315 2 ]
 "319
 }
 [e :U 386 ]
@@ -4081,7 +4075,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 326: gameCtrl->sm_ball = ST_BALL_MOVE;
 "326
-[e = . *U _gameCtrl 10 . `E3316 3 ]
+[e = . *U _gameCtrl 10 . `E3315 3 ]
 "327
 }
 [e :U 387 ]
@@ -4100,7 +4094,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 334: gameCtrl->sm_ball = ST_BALL_GAME_OVER;
 "334
-[e = . *U _gameCtrl 10 . `E3316 4 ]
+[e = . *U _gameCtrl 10 . `E3315 4 ]
 "335
 }
 [e :U 389 ]
@@ -4113,7 +4107,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 340: gameCtrl->sm_ball = ST_BALL_MOVE;
 "340
-[e = . *U _gameCtrl 10 . `E3316 3 ]
+[e = . *U _gameCtrl 10 . `E3315 3 ]
 "341
 }
 [e :U 390 ]
@@ -4132,7 +4126,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 348: gameCtrl->sm_ball = ST_BALL_WAIT;
 "348
-[e = . *U _gameCtrl 10 . `E3316 0 ]
+[e = . *U _gameCtrl 10 . `E3315 0 ]
 "349
 }
 [e :U 392 ]
@@ -4151,7 +4145,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;Game_controller.c: 356: gameCtrl->sm_ball = ST_BALL_WAIT;
 "356
-[e = . *U _gameCtrl 10 . `E3316 0 ]
+[e = . *U _gameCtrl 10 . `E3315 0 ]
 "358
 }
 [e :U 394 ]
@@ -4171,11 +4165,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 381  ]
 "303
 [e :U 382 ]
-[e [\ . *U _gameCtrl 10 , $ . `E3316 0 383
- , $ . `E3316 1 385
- , $ . `E3316 2 388
- , $ . `E3316 3 391
- , $ . `E3316 4 393
+[e [\ . *U _gameCtrl 10 , $ . `E3315 0 383
+ , $ . `E3315 1 385
+ , $ . `E3315 2 388
+ , $ . `E3315 3 391
+ , $ . `E3315 4 393
  395 ]
 "363
 [e :U 381 ]
@@ -4234,11 +4228,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 397  ]
 "368
 [e :U 398 ]
-[e [\ . *U _gameCtrl 10 , $ . `E3316 0 399
- , $ . `E3316 1 400
- , $ . `E3316 2 401
- , $ . `E3316 3 402
- , $ . `E3316 4 403
+[e [\ . *U _gameCtrl 10 , $ . `E3315 0 399
+ , $ . `E3315 1 400
+ , $ . `E3315 2 401
+ , $ . `E3315 3 402
+ , $ . `E3315 4 403
  404 ]
 "395
 [e :U 397 ]

@@ -58,6 +58,9 @@ void state_machine_accelerometer(Acc_controller* accCtrl, Event ev)
         case ST_ACC_UPDATE:
             //get the new values from the register of the accelerometer
             acc_update();
+            
+            //throw event to go back in wait mode
+            XF_pushEvent(EV_GOTO_ACC_WAIT, false);
             break;
         default:
             break;
