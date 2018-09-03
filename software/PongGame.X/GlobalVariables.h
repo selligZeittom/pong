@@ -20,7 +20,8 @@ const Event EV_TIMEOUT_TSC = 10;
 const Event EV_GOTO_TSC_WAIT = 11;
 
 //events for the mode state machine
-const Event EV_POWER = 20;
+const Event EV_ON = 20;
+const Event EV_OFF = 21;
 
 //events for the mode ON state machine
 const Event EV_GAME = 30;

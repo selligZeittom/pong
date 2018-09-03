@@ -71,7 +71,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f46k20.h: 50: extern volatile unsigned char SSPMSK @ 0xF77;
-"52 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+"52 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
 [; ;pic18f46k20.h: 52: asm("SSPMSK equ 0F77h");
 [; <" SSPMSK equ 0F77h ;# ">
 [; ;pic18f46k20.h: 55: typedef union {

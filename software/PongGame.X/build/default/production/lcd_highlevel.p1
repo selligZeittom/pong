@@ -1,24 +1,24 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "261 lcd_lowlevel.h
 [v _LCD_Lowlevel_Init `(v ~T0 @X0 0 ef ]
-"550 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+"550 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
 [v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
 "7868
 [v _LATC1 `Vb ~T0 @X0 0 e@31833 ]
 "7858
 [v _LATB4 `Vb ~T0 @X0 0 e@31828 ]
-[v F3582 `(v ~T0 @X0 1 tf1`ul ]
-"164 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18.h
-[v __delay `JF3582 ~T0 @X0 0 e ]
+[v F3588 `(v ~T0 @X0 1 tf1`ul ]
+"164 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18.h
+[v __delay `JF3588 ~T0 @X0 0 e ]
 [p i __delay ]
-"8526 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+"8526 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
 [v _TRISC2 `Vb ~T0 @X0 0 e@31906 ]
 "7870
 [v _LATC2 `Vb ~T0 @X0 0 e@31834 ]
-[v F335 `(v ~T0 @X0 0 tf ]
-[v F297 `(v ~T0 @X0 0 tf ]
+[v F341 `(v ~T0 @X0 0 tf ]
+[v F303 `(v ~T0 @X0 0 tf ]
 "108 lcd_highlevel.h
-[s S9 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `uc 1 `ui 1 `ui 1 `ui 1 `*F297 1 ]
+[s S9 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `uc 1 `ui 1 `ui 1 `ui 1 `*F303 1 ]
 [n S9 . posX posY width height sldColor bgColor borderColor cursorWidth pressed value oldValue steps fpPress ]
 "256
 [v _LCD_DrawRect `(v ~T0 @X0 0 ef6`ui`ui`ui`ui`uc`ui ]
@@ -28,14 +28,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 "15
 [s S6 `uc 1 `uc 1 `uc 1 `*CS5 1 `*Cuc 1 ]
 [n S6 . height start_char end_char descriptor bitmap ]
-[v F310 `(v ~T0 @X0 0 tf1`uc ]
-[v F313 `(v ~T0 @X0 0 tf1`uc ]
 [v F316 `(v ~T0 @X0 0 tf1`uc ]
-[v F274 `(v ~T0 @X0 0 tf1`uc ]
-[v F277 `(v ~T0 @X0 0 tf1`uc ]
+[v F319 `(v ~T0 @X0 0 tf1`uc ]
+[v F322 `(v ~T0 @X0 0 tf1`uc ]
 [v F280 `(v ~T0 @X0 0 tf1`uc ]
+[v F283 `(v ~T0 @X0 0 tf1`uc ]
+[v F286 `(v ~T0 @X0 0 tf1`uc ]
 "88
-[s S8 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `*Cuc 1 `*S6 1 `uc 1 `*F274 1 `*F277 1 `*F280 1 `uc 1 ]
+[s S8 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `*Cuc 1 `*S6 1 `uc 1 `*F280 1 `*F283 1 `*F286 1 `uc 1 ]
 [n S8 . posX posY width height txtColor bgColor text font pressed fpPress fpReleased fpOut index ]
 "271 lcd_lowlevel.h
 [v _LCD_Read `(ui ~T0 @X0 0 ef2`ui`ui ]
@@ -44,35 +44,41 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S7 . bfType bfSize bfRvd1 bfRvd2 bfOffBits biSize biWidth biHeight biPlanes biBitCount biCompression biSizeImage biXPelsPerMeter biYPelsPerMeter biClrUsed biClrImportant ]
 "295
 [v _LCD_Bitmap `(uc ~T0 @X0 0 ef3`*Cuc`ui`ui ]
-"56 C:\Program Files (x86)\Microchip\xc8\v1.42\include\string.h
+"56 C:\Program Files (x86)\Microchip\xc8\v1.45\include\string.h
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "502 lcd_highlevel.c
-[c E240 0 1 2 .. ]
-[n E240 . A_LEFT A_RIGHT A_CENTER  ]
+[c E246 0 1 2 .. ]
+[n E246 . A_LEFT A_RIGHT A_CENTER  ]
 "271 lcd_highlevel.h
-[v _LCD_DrawText `(v ~T0 @X0 0 ef7`*Cuc`*CS6`E240`ui`ui`ui`ui ]
+[v _LCD_DrawText `(v ~T0 @X0 0 ef7`*Cuc`*CS6`E246`ui`ui`ui`ui ]
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
-[; ;stdint.h: 38: typedef signed long int int32_t;
-[; ;stdint.h: 45: typedef unsigned char uint8_t;
-[; ;stdint.h: 51: typedef unsigned int uint16_t;
-[; ;stdint.h: 67: typedef unsigned long int uint32_t;
-[; ;stdint.h: 75: typedef signed char int_least8_t;
-[; ;stdint.h: 82: typedef signed int int_least16_t;
-[; ;stdint.h: 104: typedef signed long int int_least32_t;
-[; ;stdint.h: 111: typedef unsigned char uint_least8_t;
-[; ;stdint.h: 117: typedef unsigned int uint_least16_t;
-[; ;stdint.h: 136: typedef unsigned long int uint_least32_t;
-[; ;stdint.h: 145: typedef signed char int_fast8_t;
-[; ;stdint.h: 152: typedef signed int int_fast16_t;
-[; ;stdint.h: 174: typedef signed long int int_fast32_t;
-[; ;stdint.h: 181: typedef unsigned char uint_fast8_t;
-[; ;stdint.h: 187: typedef unsigned int uint_fast16_t;
-[; ;stdint.h: 206: typedef unsigned long int uint_fast32_t;
-[; ;stdint.h: 212: typedef int32_t intmax_t;
-[; ;stdint.h: 217: typedef uint32_t uintmax_t;
-[; ;stdint.h: 222: typedef int16_t intptr_t;
-[; ;stdint.h: 227: typedef uint16_t uintptr_t;
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdlib.h: 7: typedef unsigned short wchar_t;
 [; ;stdlib.h: 15: typedef struct {
@@ -253,7 +259,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;pic18f46k20.h: 50: extern volatile unsigned char SSPMSK @ 0xF77;
-"52 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+"52 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f46k20.h
 [; ;pic18f46k20.h: 52: asm("SSPMSK equ 0F77h");
 [; <" SSPMSK equ 0F77h ;# ">
 [; ;pic18f46k20.h: 55: typedef union {
@@ -3888,7 +3894,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 318 ]
 }
 "291
-[v _LCD_SliderCreate `(v ~T0 @X0 1 ef11`ui`ui`ui`ui`ui`ui`ui`ui`ui`*F335`*S9 ]
+[v _LCD_SliderCreate `(v ~T0 @X0 1 ef11`ui`ui`ui`ui`ui`ui`ui`ui`ui`*F341`*S9 ]
 "298
 {
 [; ;lcd_highlevel.c: 291: void LCD_SliderCreate(uint16_t posX, uint16_t posY,
@@ -3914,9 +3920,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _cursorWidth `ui ~T0 @X0 1 r8 ]
 "295
 [v _steps `ui ~T0 @X0 1 r9 ]
-[v F3617 `(v ~T0 @X0 0 tf ]
+[v F3623 `(v ~T0 @X0 0 tf ]
 "296
-[v _fpPress `*F3617 ~T0 @X0 1 r10 ]
+[v _fpPress `*F3623 ~T0 @X0 1 r10 ]
 "297
 [v _slider `*S9 ~T0 @X0 1 r11 ]
 "298
@@ -4126,7 +4132,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 325 ]
 }
 "396
-[v _LCD_ButtonCreate `(v ~T0 @X0 1 ef13`ui`ui`ui`ui`ui`ui`*Cuc`*S6`*F310`*F313`*F316`*S8`uc ]
+[v _LCD_ButtonCreate `(v ~T0 @X0 1 ef13`ui`ui`ui`ui`ui`ui`*Cuc`*S6`*F316`*F319`*F322`*S8`uc ]
 "403
 {
 [; ;lcd_highlevel.c: 396: void LCD_ButtonCreate(uint16_t posX, uint16_t posY,
@@ -4150,13 +4156,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "399
 [v _textOrBmp `*Cuc ~T0 @X0 1 r7 ]
 [v _font `*S6 ~T0 @X0 1 r8 ]
-[v F3638 `(v ~T0 @X0 0 tf1`uc ]
-"400
-[v _fpPress `*F3638 ~T0 @X0 1 r9 ]
-[v F3641 `(v ~T0 @X0 0 tf1`uc ]
-[v _fpReleased `*F3641 ~T0 @X0 1 r10 ]
 [v F3644 `(v ~T0 @X0 0 tf1`uc ]
-[v _fpOut `*F3644 ~T0 @X0 1 r11 ]
+"400
+[v _fpPress `*F3644 ~T0 @X0 1 r9 ]
+[v F3647 `(v ~T0 @X0 0 tf1`uc ]
+[v _fpReleased `*F3647 ~T0 @X0 1 r10 ]
+[v F3650 `(v ~T0 @X0 0 tf1`uc ]
+[v _fpOut `*F3650 ~T0 @X0 1 r11 ]
 "401
 [v _button `*S8 ~T0 @X0 1 r12 ]
 "402
@@ -4419,7 +4425,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd_highlevel.c: 501: LCD_DrawText(button->text, button->font,A_LEFT,
 [; ;lcd_highlevel.c: 502: xText, yText, button->txtColor, button->bgColor);
 "502
-[e ( _LCD_DrawText (4 , , , , , , . *U _button 6 -> . *U _button 7 `*CS6 . `E240 0 _xText _yText . *U _button 4 . *U _button 5 ]
+[e ( _LCD_DrawText (4 , , , , , , . *U _button 6 -> . *U _button 7 `*CS6 . `E246 0 _xText _yText . *U _button 4 . *U _button 5 ]
 "503
 }
 [e :U 334 ]
@@ -5090,7 +5096,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 349 ]
 }
 "713
-[v _LCD_DrawText `(v ~T0 @X0 1 ef7`*Cuc`*CS6`E240`ui`ui`ui`ui ]
+[v _LCD_DrawText `(v ~T0 @X0 1 ef7`*Cuc`*CS6`E246`ui`ui`ui`ui ]
 "715
 {
 [; ;lcd_highlevel.c: 713: void LCD_DrawText(const uint8_t * msg,const FONT_INFO * font, ALIGN align,
@@ -5100,7 +5106,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "713
 [v _msg `*Cuc ~T0 @X0 1 r1 ]
 [v _font `*CS6 ~T0 @X0 1 r2 ]
-[v _align `E240 ~T0 @X0 1 r3 ]
+[v _align `E246 ~T0 @X0 1 r3 ]
 "714
 [v _posX `ui ~T0 @X0 1 r4 ]
 [v _posY `ui ~T0 @X0 1 r5 ]
@@ -5159,7 +5165,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;lcd_highlevel.c: 729: }
 [; ;lcd_highlevel.c: 730: if(align == A_RIGHT)
 "730
-[e $ ! == -> _align `i -> . `E240 1 `i 383  ]
+[e $ ! == -> _align `i -> . `E246 1 `i 383  ]
 [; ;lcd_highlevel.c: 731: {
 "731
 {
@@ -5173,7 +5179,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "734
 [e :U 383 ]
 [; ;lcd_highlevel.c: 734: else if (align == A_CENTER)
-[e $ ! == -> _align `i -> . `E240 2 `i 385  ]
+[e $ ! == -> _align `i -> . `E246 2 `i 385  ]
 [; ;lcd_highlevel.c: 735: {
 "735
 {

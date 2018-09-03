@@ -12,7 +12,6 @@
 #include <stdint.h>         // usage of standard types
 #include <stdbool.h>        // usage of boolean types
 #include "xf.h"
-#include "GlobalVariables.h"
 
 typedef struct Accelerometer        // accelerometer structure
 {
