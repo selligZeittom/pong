@@ -9,13 +9,14 @@
 #define	TS_CONTROLLER_H
 
 #include "xf.h"
+#include "GlobalVariables.h"
 
 //define states of the machine
 typedef enum SM_TSC
 {
     ST_TSC_WAIT,
     ST_TSC_UPDATE,
-};
+}SM_TSC;
 
 //controller for the double switch pattern
 typedef struct TS_controller

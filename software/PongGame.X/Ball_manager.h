@@ -8,6 +8,8 @@
 #ifndef BALL_MANAGER_H
 #define	BALL_MANAGER_H
 
+#include <stdint.h>
+
 typedef struct Ball
 {
     uint16_t xPos, yPos;

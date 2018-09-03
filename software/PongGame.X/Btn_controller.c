@@ -60,8 +60,7 @@ void state_machine_btn(Btn_controller* btnCtrl, Event ev)
             break;
         case ST_BTN_CONFIRMED:
             //throw event
-            Event btnConfirmed = EV_BTN_TIMEOUT;
-            XF_pushEvent(btnConfirmed, false);
+            XF_pushEvent(EV_POWER, false);
             break;
         default:
             break;
@@ -70,9 +69,9 @@ void state_machine_btn(Btn_controller* btnCtrl, Event ev)
 }
 
 /*
- * start the timer to avoid any rebound
+ * start the timer to avoid any rebound : 20ms
  */
 void launch_timer()
 {
-    XF_scheduleTimer()
+    XF_scheduleTimer(2, EV_BTN_TIMEOUT, false);
 }

@@ -1,5 +1,5 @@
 
-# 1 "Game_controller.c"
+# 1 "Acc_controller.c"
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -4263,6 +4263,36 @@ const Event EV_GOTO_BALL_WAIT = 74;
 const Event EV_TIMEOUT_ACC = 80;
 const Event EV_GOTO_ACC_WAIT = 81;
 
+# 17 "Acc_controller.h"
+typedef struct Accelerometer
+{
+int16_t xAcc;
+int16_t yAcc;
+int16_t zAcc;
+} Accelerometer;
+
+
+typedef enum SM_ACC
+{
+ST_ACC_WAIT,
+ST_ACC_UPDATE,
+} SM_ACC;
+
+
+typedef struct Acc_controller
+{
+SM_ACC sm_acc, old_sm_acc;
+}Acc_controller;
+
+# 68
+void AccInit(Acc_controller* accCtrl);
+
+# 73
+void state_machine_accelerometer(Acc_controller* accCtrl, Event ev);
+
+# 78
+void acc_update();
+
 # 14 "Game_controller.h"
 typedef enum SM_MODE
 {
@@ -4373,55 +4403,36 @@ void wake_up();
 # 167
 void reset_game();
 
-# 7 "Game_controller.c"
-void init_Game_controller(Game_controller* gameCtrl)
+# 14 "Acc_controller.c"
+void AccInit(Acc_controller* accCtrl)
 {
 
-gameCtrl->sm_mode = ST_ON;
-gameCtrl->old_sm_mode = gameCtrl->sm_mode;
+accCtrl->sm_acc = ST_ACC_WAIT;
+accCtrl->old_sm_acc = accCtrl->sm_acc;
 
-
-gameCtrl->sm_on = ST_MENU;
-gameCtrl->old_sm_on = gameCtrl->sm_on;
-
-
-gameCtrl->sm_menu = ST_MENU_WAIT;
-gameCtrl->old_sm_menu = gameCtrl->sm_menu;
-
-
-gameCtrl->sm_screen = ST_SCREEN_WAIT;
-gameCtrl->old_sm_screen = gameCtrl->sm_screen;
-
-
-gameCtrl->sm_racket = ST_RACKET_WAIT;
-gameCtrl->old_sm_racket = gameCtrl->sm_racket;
-
-
-gameCtrl->sm_ball = ST_BALL_WAIT;
-gameCtrl->old_sm_ball = gameCtrl->old_sm_ball;
+LATC7 = 1;
+TRISC7 = 0 ;
+TRISB2 = 1 ;
 }
 
-# 37
-void state_machine_mode(Game_controller* gameCtrl, Event ev)
+# 28
+void state_machine_accelerometer(Acc_controller* accCtrl, Event ev)
 {
 
-gameCtrl->old_sm_mode = gameCtrl->sm_mode;
+accCtrl->old_sm_acc = accCtrl->sm_acc;
 
 
-switch (gameCtrl->sm_mode)
+switch (accCtrl->sm_acc) {
+case ST_ACC_WAIT:
+if(ev == EV_TIMEOUT_ACC)
 {
-case ST_OFF:
-
-if(ev == EV_POWER)
-{
-gameCtrl->sm_mode = ST_ON;
+accCtrl->sm_acc = ST_ACC_UPDATE;
 }
 break;
-case ST_ON:
-
-if(ev == EV_POWER)
+case ST_ACC_UPDATE:
+if(ev == EV_GOTO_ACC_WAIT)
 {
-gameCtrl->sm_mode = ST_OFF;
+accCtrl->sm_acc = ST_ACC_WAIT;
 }
 break;
 default:
@@ -4429,17 +4440,15 @@ break;
 }
 
 
-if(gameCtrl->sm_mode != gameCtrl->old_sm_on)
+if(accCtrl->sm_acc != accCtrl->old_sm_acc)
 {
-switch (gameCtrl->sm_mode)
-{
-case ST_OFF:
+switch (accCtrl->sm_acc) {
+case ST_ACC_WAIT:
 
-sleep_mode();
 break;
-case ST_ON:
+case ST_ACC_UPDATE:
 
-wake_up();
+acc_update();
 break;
 default:
 break;
@@ -4447,378 +4456,8 @@ break;
 }
 }
 
-# 85
-void state_machine_on(Game_controller* gameCtrl, Event ev)
-{
-
-gameCtrl->old_sm_on = gameCtrl->sm_on;
-
-switch (gameCtrl->sm_on) {
-case ST_MENU:
-
-if(ev == EV_GAME)
-{
-gameCtrl->sm_on = ST_GAME;
-}
-break;
-case ST_GAME:
-
-if(ev == EV_MENU)
-{
-gameCtrl->sm_on = ST_MENU;
-}
-break;
-default:
-break;
-}
-
-
-if(gameCtrl->sm_on != gameCtrl->old_sm_on)
-{
-switch (gameCtrl->sm_on) {
-case ST_MENU:
-
-display_menu();
-break;
-case ST_GAME:
-
-break;
-default:
-break;
-}
-}
-}
-
-# 129
-void state_machine_menu(Game_controller* gameCtrl, Event ev)
-{
-
-gameCtrl->old_sm_menu = gameCtrl->sm_menu;
-
-switch (gameCtrl->sm_menu) {
-case ST_MENU_WAIT:
-
-if(ev == EV_LEVEL_SW)
-{
-gameCtrl->sm_menu = ST_MENU_LEVEL_SW;
-}
-
-
-if(ev == EV_CTRL_SW)
-{
-gameCtrl->sm_menu = ST_MENU_CTRL_SW;
-}
-break;
-
-case ST_MENU_CTRL_SW:
-
-if(ev == EV_GOTO_MENU_WAIT)
-{
-gameCtrl->sm_menu = ST_MENU_WAIT;
-}
-break;
-case ST_MENU_LEVEL_SW:
-
-if(ev == EV_GOTO_MENU_WAIT)
-{
-gameCtrl->sm_menu = ST_MENU_WAIT;
-}
-break;
-default:
-break;
-}
-
-
-if(gameCtrl->sm_menu != gameCtrl->old_sm_menu)
-{
-switch (gameCtrl->sm_menu) {
-case ST_MENU_WAIT:
-
-display_menu();
-break;
-
-case ST_MENU_CTRL_SW:
-
-switch_control();
-break;
-case ST_MENU_LEVEL_SW:
-
-switch_level();
-break;
-default:
-break;
-}
-}
-}
-
-# 193
-void state_machine_screen(Game_controller* gameCtrl, Event ev)
-{
-
-gameCtrl->old_sm_screen = gameCtrl->sm_screen;
-
-switch (gameCtrl->sm_screen) {
-case ST_SCREEN_WAIT:
-
-if(ev == EV_TIMEOUT_SCREEN)
-{
-gameCtrl->sm_screen == ST_SCREEN_UPDATE;
-}
-break;
-case ST_SCREEN_UPDATE:
-
-if(ev == EV_GOTO_SCREEN_WAIT)
-{
-gameCtrl->sm_screen = ST_SCREEN_WAIT;
-}
-break;
-default:
-break;
-}
-
-
-if(gameCtrl->sm_screen != gameCtrl->old_sm_screen)
-{
-switch (gameCtrl->sm_screen) {
-case ST_SCREEN_WAIT:
-
-break;
-case ST_SCREEN_UPDATE:
-
-update_screen();
-break;
-default:
-break;
-}
-}
-}
-
-# 237
-void state_machine_racket(Game_controller* gameCtrl, Event ev)
-{
-
-gameCtrl->old_sm_racket = gameCtrl->sm_racket;
-
-switch (gameCtrl->sm_racket) {
-case ST_RACKET_WAIT:
-
-if(ev == EV_TIMEOUT_AI)
-{
-gameCtrl->sm_racket = ST_RACKET_AI;
-}
-
-
-if(ev == EV_TIMEOUT_USER)
-{
-gameCtrl->sm_racket = ST_RACKET_USER;
-}
-break;
-case ST_RACKET_USER:
-
-if(ev == EV_GOTO_RACKET_WAIT)
-{
-gameCtrl->sm_racket = ST_RACKET_WAIT;
-}
-break;
-case ST_RACKET_AI:
-
-if(ev == EV_GOTO_RACKET_WAIT)
-{
-gameCtrl->sm_racket = ST_RACKET_WAIT;
-}
-break;
-default:
-break;
-}
-
-
-if(gameCtrl->sm_racket != gameCtrl->old_sm_racket)
-{
-switch (gameCtrl->sm_racket) {
-case ST_RACKET_WAIT:
-
-break;
-case ST_RACKET_USER:
-
-move_user_racket();
-break;
-case ST_RACKET_AI:
-
-move_AI_racket();
-break;
-default:
-break;
-}
-}
-}
-
-# 298
-void state_machine_ball(Game_controller* gameCtrl, Event ev)
-{
-
-gameCtrl->old_sm_ball = gameCtrl->sm_ball;
-
-switch (gameCtrl->sm_ball) {
-case ST_BALL_WAIT:
-
-if(ev == EV_TIMEOUT_BALL)
-{
-gameCtrl->sm_ball = ST_BALL_CHECK_Y;
-}
-break;
-
-case ST_BALL_CHECK_Y:
-
-# 316
-if(ev == EV_CHECK_RACKET)
-{
-gameCtrl->sm_ball = ST_BALL_CHECK_X;
-}
-
-# 324
-if(ev == EV_MOVE)
-{
-gameCtrl->sm_ball = ST_BALL_MOVE;
-}
-break;
-
-case ST_BALL_CHECK_X:
-
-if(ev == EV_GAME_OVER)
-{
-gameCtrl->sm_ball = ST_BALL_GAME_OVER;
-}
-
-
-if(ev == EV_MOVE)
-{
-gameCtrl->sm_ball = ST_BALL_MOVE;
-}
-break;
-
-case ST_BALL_MOVE:
-
-if(ev == EV_GOTO_BALL_WAIT)
-{
-gameCtrl->sm_ball = ST_BALL_WAIT;
-}
-break;
-
-case ST_BALL_GAME_OVER:
-
-if(ev == EV_MENU)
-{
-gameCtrl->sm_ball = ST_BALL_WAIT;
-
-}
-break;
-
-default:
-break;
-}
-
-
-if(gameCtrl->sm_ball != gameCtrl->old_sm_ball)
-{
-switch (gameCtrl->sm_ball) {
-case ST_BALL_WAIT:
-
-break;
-
-case ST_BALL_CHECK_Y:
-
-
-break;
-
-case ST_BALL_CHECK_X:
-
-
-break;
-
-case ST_BALL_MOVE:
-
-
-break;
-
-case ST_BALL_GAME_OVER:
-
-reset_game();
-break;
-
-default:
-break;
-}
-}
-}
-
-# 402
-void display_menu()
-{
-
-}
-
-# 410
-void switch_level()
-{
-
-}
-
-# 418
-void switch_control()
-{
-
-}
-
-# 426
-void update_screen()
-{
-
-}
-
-# 434
-void move_AI_racket()
-{
-
-}
-
-# 442
-void move_user_racket()
-{
-
-}
-
-# 450
-void check_Y_ball(uint16_t y_ball)
-{
-
-}
-
-# 458
-void check_X_ball(uint16_t x_ball, uint16_t x_racket)
-{
-
-}
-
-# 467
-void compute_movement_ball(uint16_t x_ball)
-{
-
-}
-
-# 475
-void sleep_mode()
-{
-
-}
-
-# 483
-void wake_up()
-{
-
-}
-
-# 491
-void reset_game()
+# 71
+void acc_update()
 {
 
 }
