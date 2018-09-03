@@ -1,72 +1,12 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"7 CONFIG_PIC18F46K20.c
-[p x FOSC=INTIO67 ]
-"8
-[p x FCMEN=OFF ]
-"9
-[p x IESO=OFF ]
-"12
-[p x PWRT=ON ]
-"13
-[p x BOREN=OFF ]
-"14
-[p x BORV=22 ]
-"17
-[p x WDTEN=OFF ]
-"18
-[p x WDTPS=1 ]
-"21
-[p x CCP2MX=PORTC ]
-"22
-[p x PBADEN=OFF ]
-"23
-[p x LPT1OSC=OFF ]
-"24
-[p x HFOFST=ON ]
-"25
-[p x MCLRE=ON ]
-"28
-[p x STVREN=ON ]
-"29
-[p x LVP=OFF ]
-"30
-[p x XINST=OFF ]
-"33
-[p x CP0=OFF ]
-"34
-[p x CP1=OFF ]
-"35
-[p x CP2=OFF ]
-"36
-[p x CP3=OFF ]
-"39
-[p x CPB=OFF ]
+"7 TS_controller.c
+[c E3288 0 1 .. ]
+[n E3288 SM_TSC ST_TSC_WAIT ST_TSC_UPDATE  ]
+"22 TS_controller.h
+[s S300 `E3288 1 `E3288 1 ]
+[n S300 TS_controller sm_tsc old_sm_tsc ]
 "40
-[p x CPD=OFF ]
-"43
-[p x WRT0=OFF ]
-"44
-[p x WRT1=OFF ]
-"45
-[p x WRT2=OFF ]
-"46
-[p x WRT3=OFF ]
-"49
-[p x WRTC=OFF ]
-"50
-[p x WRTB=OFF ]
-"51
-[p x WRTD=OFF ]
-"54
-[p x EBTR0=OFF ]
-"55
-[p x EBTR1=OFF ]
-"56
-[p x EBTR2=OFF ]
-"57
-[p x EBTR3=OFF ]
-"60
-[p x EBTRB=OFF ]
+[v _tsc_update `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3029,3 +2969,360 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 38: typedef signed long int int32_t;
+[; ;stdint.h: 45: typedef unsigned char uint8_t;
+[; ;stdint.h: 51: typedef unsigned int uint16_t;
+[; ;stdint.h: 67: typedef unsigned long int uint32_t;
+[; ;stdint.h: 75: typedef signed char int_least8_t;
+[; ;stdint.h: 82: typedef signed int int_least16_t;
+[; ;stdint.h: 104: typedef signed long int int_least32_t;
+[; ;stdint.h: 111: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 117: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 136: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 145: typedef signed char int_fast8_t;
+[; ;stdint.h: 152: typedef signed int int_fast16_t;
+[; ;stdint.h: 174: typedef signed long int int_fast32_t;
+[; ;stdint.h: 181: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 187: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 206: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 212: typedef int32_t intmax_t;
+[; ;stdint.h: 217: typedef uint32_t uintmax_t;
+[; ;stdint.h: 222: typedef int16_t intptr_t;
+[; ;stdint.h: 227: typedef uint16_t uintptr_t;
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;xf.h: 18: typedef uint8_t Event;
+[; ;xf.h: 19: typedef uint16_t Time;
+[; ;xf.h: 20: typedef uint8_t TimerID;
+[; ;xf.h: 23: typedef struct Timer
+[; ;xf.h: 24: {
+[; ;xf.h: 25: Time tm;
+[; ;xf.h: 26: Event ev;
+[; ;xf.h: 27: } Timer;
+[; ;xf.h: 37: typedef struct XF
+[; ;xf.h: 38: {
+[; ;xf.h: 39: Timer timerList[8];
+[; ;xf.h: 40: Event eventQueue[12];
+[; ;xf.h: 41: uint8_t in;
+[; ;xf.h: 42: uint8_t out;
+[; ;xf.h: 43: } XF;
+[; ;xf.h: 51: void XF_init();
+[; ;xf.h: 59: bool XF_pushEvent(Event ev, bool inISR);
+[; ;xf.h: 66: Event XF_popEvent(bool inISR);
+[; ;xf.h: 75: TimerID XF_scheduleTimer(Time tm, Event ev, bool inISR);
+[; ;xf.h: 83: void XF_unscheduleTimer(TimerID id, bool inISR);
+[; ;xf.h: 90: void XF_decrementAndQueueTimers();
+"14 GlobalVariables.h
+[v _EV_BTN_PRESSED `Cuc ~T0 @X0 1 e ]
+[i _EV_BTN_PRESSED
+-> -> 0 `i `uc
+]
+[; ;GlobalVariables.h: 14: const Event EV_BTN_PRESSED = 0;
+"15
+[v _EV_BTN_TIMEOUT `Cuc ~T0 @X0 1 e ]
+[i _EV_BTN_TIMEOUT
+-> -> 1 `i `uc
+]
+[; ;GlobalVariables.h: 15: const Event EV_BTN_TIMEOUT = 1;
+"16
+[v _EV_BTN_GOTO_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_BTN_GOTO_WAIT
+-> -> 2 `i `uc
+]
+[; ;GlobalVariables.h: 16: const Event EV_BTN_GOTO_WAIT = 2;
+"19
+[v _EV_TIMEOUT_TSC `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_TSC
+-> -> 10 `i `uc
+]
+[; ;GlobalVariables.h: 19: const Event EV_TIMEOUT_TSC = 10;
+"20
+[v _EV_GOTO_TSC_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_TSC_WAIT
+-> -> 11 `i `uc
+]
+[; ;GlobalVariables.h: 20: const Event EV_GOTO_TSC_WAIT = 11;
+"23
+[v _EV_ON `Cuc ~T0 @X0 1 e ]
+[i _EV_ON
+-> -> 20 `i `uc
+]
+[; ;GlobalVariables.h: 23: const Event EV_ON = 20;
+"24
+[v _EV_OFF `Cuc ~T0 @X0 1 e ]
+[i _EV_OFF
+-> -> 21 `i `uc
+]
+[; ;GlobalVariables.h: 24: const Event EV_OFF = 21;
+"27
+[v _EV_GAME `Cuc ~T0 @X0 1 e ]
+[i _EV_GAME
+-> -> 30 `i `uc
+]
+[; ;GlobalVariables.h: 27: const Event EV_GAME = 30;
+"28
+[v _EV_MENU `Cuc ~T0 @X0 1 e ]
+[i _EV_MENU
+-> -> 31 `i `uc
+]
+[; ;GlobalVariables.h: 28: const Event EV_MENU = 31;
+"31
+[v _EV_LEVEL_SW `Cuc ~T0 @X0 1 e ]
+[i _EV_LEVEL_SW
+-> -> 40 `i `uc
+]
+[; ;GlobalVariables.h: 31: const Event EV_LEVEL_SW = 40;
+"32
+[v _EV_CTRL_SW `Cuc ~T0 @X0 1 e ]
+[i _EV_CTRL_SW
+-> -> 41 `i `uc
+]
+[; ;GlobalVariables.h: 32: const Event EV_CTRL_SW = 41;
+"33
+[v _EV_GOTO_MENU_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_MENU_WAIT
+-> -> 42 `i `uc
+]
+[; ;GlobalVariables.h: 33: const Event EV_GOTO_MENU_WAIT = 42;
+"36
+[v _EV_TIMEOUT_SCREEN `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_SCREEN
+-> -> 50 `i `uc
+]
+[; ;GlobalVariables.h: 36: const Event EV_TIMEOUT_SCREEN = 50;
+"37
+[v _EV_GOTO_SCREEN_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_SCREEN_WAIT
+-> -> 51 `i `uc
+]
+[; ;GlobalVariables.h: 37: const Event EV_GOTO_SCREEN_WAIT = 51;
+"40
+[v _EV_TIMEOUT_AI `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_AI
+-> -> 60 `i `uc
+]
+[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_AI = 60;
+"41
+[v _EV_TIMEOUT_USER `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_USER
+-> -> 61 `i `uc
+]
+[; ;GlobalVariables.h: 41: const Event EV_TIMEOUT_USER = 61;
+"42
+[v _EV_GOTO_RACKET_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_RACKET_WAIT
+-> -> 62 `i `uc
+]
+[; ;GlobalVariables.h: 42: const Event EV_GOTO_RACKET_WAIT = 62;
+"45
+[v _EV_TIMEOUT_BALL `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_BALL
+-> -> 70 `i `uc
+]
+[; ;GlobalVariables.h: 45: const Event EV_TIMEOUT_BALL = 70;
+"46
+[v _EV_CHECK_RACKET `Cuc ~T0 @X0 1 e ]
+[i _EV_CHECK_RACKET
+-> -> 71 `i `uc
+]
+[; ;GlobalVariables.h: 46: const Event EV_CHECK_RACKET = 71;
+"47
+[v _EV_MOVE `Cuc ~T0 @X0 1 e ]
+[i _EV_MOVE
+-> -> 72 `i `uc
+]
+[; ;GlobalVariables.h: 47: const Event EV_MOVE = 72;
+"48
+[v _EV_GAME_OVER `Cuc ~T0 @X0 1 e ]
+[i _EV_GAME_OVER
+-> -> 73 `i `uc
+]
+[; ;GlobalVariables.h: 48: const Event EV_GAME_OVER = 73;
+"49
+[v _EV_GOTO_BALL_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_BALL_WAIT
+-> -> 74 `i `uc
+]
+[; ;GlobalVariables.h: 49: const Event EV_GOTO_BALL_WAIT = 74;
+"53
+[v _EV_TIMEOUT_ACC `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_ACC
+-> -> 80 `i `uc
+]
+[; ;GlobalVariables.h: 53: const Event EV_TIMEOUT_ACC = 80;
+"54
+[v _EV_GOTO_ACC_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_ACC_WAIT
+-> -> 81 `i `uc
+]
+[; ;GlobalVariables.h: 54: const Event EV_GOTO_ACC_WAIT = 81;
+[; ;TS_controller.h: 15: typedef enum SM_TSC
+[; ;TS_controller.h: 16: {
+[; ;TS_controller.h: 17: ST_TSC_WAIT,
+[; ;TS_controller.h: 18: ST_TSC_UPDATE,
+[; ;TS_controller.h: 19: }SM_TSC;
+[; ;TS_controller.h: 22: typedef struct TS_controller
+[; ;TS_controller.h: 23: {
+[; ;TS_controller.h: 24: SM_TSC sm_tsc, old_sm_tsc;
+[; ;TS_controller.h: 25: } TS_controller;
+[; ;TS_controller.h: 30: void init_tsc_controller(TS_controller* tsCtrl);
+[; ;TS_controller.h: 35: void state_machine_tsc(TS_controller* tsCtrl, Event ev);
+[; ;TS_controller.h: 40: void tsc_update();
+"6 TS_controller.c
+[v _init_tsc_controller `(v ~T0 @X0 1 ef1`*S300 ]
+"7
+{
+[; ;TS_controller.c: 6: void init_tsc_controller(TS_controller* tsCtrl)
+[; ;TS_controller.c: 7: {
+[e :U _init_tsc_controller ]
+"6
+[v _tsCtrl `*S300 ~T0 @X0 1 r1 ]
+"7
+[f ]
+[; ;TS_controller.c: 9: tsCtrl->sm_tsc = ST_TSC_WAIT;
+"9
+[e = . *U _tsCtrl 0 . `E3288 0 ]
+[; ;TS_controller.c: 10: tsCtrl->old_sm_tsc = tsCtrl->sm_tsc;
+"10
+[e = . *U _tsCtrl 1 . *U _tsCtrl 0 ]
+[; ;TS_controller.c: 11: }
+"11
+[e :UE 301 ]
+}
+"16
+[v _state_machine_tsc `(v ~T0 @X0 1 ef2`*S300`uc ]
+"17
+{
+[; ;TS_controller.c: 16: void state_machine_tsc(TS_controller* tsCtrl, Event ev)
+[; ;TS_controller.c: 17: {
+[e :U _state_machine_tsc ]
+"16
+[v _tsCtrl `*S300 ~T0 @X0 1 r1 ]
+[v _ev `uc ~T0 @X0 1 r2 ]
+"17
+[f ]
+[; ;TS_controller.c: 19: tsCtrl->old_sm_tsc = tsCtrl->sm_tsc;
+"19
+[e = . *U _tsCtrl 1 . *U _tsCtrl 0 ]
+[; ;TS_controller.c: 22: switch (tsCtrl->sm_tsc) {
+"22
+[e $U 304  ]
+{
+[; ;TS_controller.c: 23: case ST_TSC_WAIT:
+"23
+[e :U 305 ]
+[; ;TS_controller.c: 24: if(ev == EV_TIMEOUT_TSC)
+"24
+[e $ ! == -> _ev `i -> _EV_TIMEOUT_TSC `i 306  ]
+[; ;TS_controller.c: 25: {
+"25
+{
+[; ;TS_controller.c: 26: tsCtrl->sm_tsc = ST_TSC_UPDATE;
+"26
+[e = . *U _tsCtrl 0 . `E3288 1 ]
+"27
+}
+[e :U 306 ]
+[; ;TS_controller.c: 27: }
+[; ;TS_controller.c: 28: break;
+"28
+[e $U 303  ]
+[; ;TS_controller.c: 29: case ST_TSC_UPDATE:
+"29
+[e :U 307 ]
+[; ;TS_controller.c: 30: if(ev == EV_GOTO_TSC_WAIT)
+"30
+[e $ ! == -> _ev `i -> _EV_GOTO_TSC_WAIT `i 308  ]
+[; ;TS_controller.c: 31: {
+"31
+{
+[; ;TS_controller.c: 32: tsCtrl->sm_tsc = ST_TSC_WAIT;
+"32
+[e = . *U _tsCtrl 0 . `E3288 0 ]
+"33
+}
+[e :U 308 ]
+[; ;TS_controller.c: 33: }
+[; ;TS_controller.c: 34: break;
+"34
+[e $U 303  ]
+[; ;TS_controller.c: 35: default:
+"35
+[e :U 309 ]
+[; ;TS_controller.c: 36: break;
+"36
+[e $U 303  ]
+"37
+}
+[; ;TS_controller.c: 37: }
+[e $U 303  ]
+"22
+[e :U 304 ]
+[e [\ . *U _tsCtrl 0 , $ . `E3288 0 305
+ , $ . `E3288 1 307
+ 309 ]
+"37
+[e :U 303 ]
+[; ;TS_controller.c: 40: if(tsCtrl->sm_tsc != tsCtrl->old_sm_tsc)
+"40
+[e $ ! != -> . *U _tsCtrl 0 `i -> . *U _tsCtrl 1 `i 310  ]
+[; ;TS_controller.c: 41: {
+"41
+{
+[; ;TS_controller.c: 42: switch (tsCtrl->sm_tsc) {
+"42
+[e $U 312  ]
+{
+[; ;TS_controller.c: 43: case ST_TSC_WAIT:
+"43
+[e :U 313 ]
+[; ;TS_controller.c: 45: break;
+"45
+[e $U 311  ]
+[; ;TS_controller.c: 46: case ST_TSC_UPDATE:
+"46
+[e :U 314 ]
+[; ;TS_controller.c: 48: tsc_update();
+"48
+[e ( _tsc_update ..  ]
+[; ;TS_controller.c: 49: break;
+"49
+[e $U 311  ]
+[; ;TS_controller.c: 50: default:
+"50
+[e :U 315 ]
+[; ;TS_controller.c: 51: break;
+"51
+[e $U 311  ]
+"52
+}
+[; ;TS_controller.c: 52: }
+[e $U 311  ]
+"42
+[e :U 312 ]
+[e [\ . *U _tsCtrl 0 , $ . `E3288 0 313
+ , $ . `E3288 1 314
+ 315 ]
+"52
+[e :U 311 ]
+"53
+}
+[e :U 310 ]
+[; ;TS_controller.c: 53: }
+[; ;TS_controller.c: 54: }
+"54
+[e :UE 302 ]
+}
+"59
+[v _tsc_update `(v ~T0 @X0 1 ef ]
+"60
+{
+[; ;TS_controller.c: 59: void tsc_update()
+[; ;TS_controller.c: 60: {
+[e :U _tsc_update ]
+[f ]
+[; ;TS_controller.c: 62: }
+"62
+[e :UE 316 ]
+}

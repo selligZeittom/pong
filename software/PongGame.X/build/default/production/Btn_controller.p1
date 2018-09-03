@@ -1,72 +1,16 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"7 CONFIG_PIC18F46K20.c
-[p x FOSC=INTIO67 ]
-"8
-[p x FCMEN=OFF ]
-"9
-[p x IESO=OFF ]
-"12
-[p x PWRT=ON ]
-"13
-[p x BOREN=OFF ]
-"14
-[p x BORV=22 ]
-"17
-[p x WDTEN=OFF ]
-"18
-[p x WDTPS=1 ]
-"21
-[p x CCP2MX=PORTC ]
-"22
-[p x PBADEN=OFF ]
-"23
-[p x LPT1OSC=OFF ]
-"24
-[p x HFOFST=ON ]
-"25
-[p x MCLRE=ON ]
-"28
-[p x STVREN=ON ]
-"29
-[p x LVP=OFF ]
-"30
-[p x XINST=OFF ]
-"33
-[p x CP0=OFF ]
-"34
-[p x CP1=OFF ]
-"35
-[p x CP2=OFF ]
-"36
-[p x CP3=OFF ]
+"8 Btn_controller.c
+[c E3264 0 1 2 .. ]
+[n E3264 SM_BTN ST_BTN_WAITING ST_BTN_PRESSED ST_BTN_CONFIRMED  ]
+"21 Btn_controller.h
+[s S300 `E3264 1 `E3264 1 ]
+[n S300 Btn_controller sm_btn old_sm_btn ]
 "39
-[p x CPB=OFF ]
-"40
-[p x CPD=OFF ]
-"43
-[p x WRT0=OFF ]
-"44
-[p x WRT1=OFF ]
-"45
-[p x WRT2=OFF ]
-"46
-[p x WRT3=OFF ]
-"49
-[p x WRTC=OFF ]
-"50
-[p x WRTB=OFF ]
-"51
-[p x WRTD=OFF ]
-"54
-[p x EBTR0=OFF ]
-"55
-[p x EBTR1=OFF ]
-"56
-[p x EBTR2=OFF ]
-"57
-[p x EBTR3=OFF ]
-"60
-[p x EBTRB=OFF ]
+[v _launch_timer `(v ~T0 @X0 0 ef ]
+"59 xf.h
+[v _XF_pushEvent `(uc ~T0 @X0 0 ef2`uc`uc ]
+"75
+[v _XF_scheduleTimer `(uc ~T0 @X0 0 ef3`ui`uc`uc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3029,3 +2973,394 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 38: typedef signed long int int32_t;
+[; ;stdint.h: 45: typedef unsigned char uint8_t;
+[; ;stdint.h: 51: typedef unsigned int uint16_t;
+[; ;stdint.h: 67: typedef unsigned long int uint32_t;
+[; ;stdint.h: 75: typedef signed char int_least8_t;
+[; ;stdint.h: 82: typedef signed int int_least16_t;
+[; ;stdint.h: 104: typedef signed long int int_least32_t;
+[; ;stdint.h: 111: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 117: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 136: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 145: typedef signed char int_fast8_t;
+[; ;stdint.h: 152: typedef signed int int_fast16_t;
+[; ;stdint.h: 174: typedef signed long int int_fast32_t;
+[; ;stdint.h: 181: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 187: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 206: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 212: typedef int32_t intmax_t;
+[; ;stdint.h: 217: typedef uint32_t uintmax_t;
+[; ;stdint.h: 222: typedef int16_t intptr_t;
+[; ;stdint.h: 227: typedef uint16_t uintptr_t;
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;xf.h: 18: typedef uint8_t Event;
+[; ;xf.h: 19: typedef uint16_t Time;
+[; ;xf.h: 20: typedef uint8_t TimerID;
+[; ;xf.h: 23: typedef struct Timer
+[; ;xf.h: 24: {
+[; ;xf.h: 25: Time tm;
+[; ;xf.h: 26: Event ev;
+[; ;xf.h: 27: } Timer;
+[; ;xf.h: 37: typedef struct XF
+[; ;xf.h: 38: {
+[; ;xf.h: 39: Timer timerList[8];
+[; ;xf.h: 40: Event eventQueue[12];
+[; ;xf.h: 41: uint8_t in;
+[; ;xf.h: 42: uint8_t out;
+[; ;xf.h: 43: } XF;
+[; ;xf.h: 51: void XF_init();
+[; ;xf.h: 59: bool XF_pushEvent(Event ev, bool inISR);
+[; ;xf.h: 66: Event XF_popEvent(bool inISR);
+[; ;xf.h: 75: TimerID XF_scheduleTimer(Time tm, Event ev, bool inISR);
+[; ;xf.h: 83: void XF_unscheduleTimer(TimerID id, bool inISR);
+[; ;xf.h: 90: void XF_decrementAndQueueTimers();
+[; ;Btn_controller.h: 13: typedef enum SM_BTN
+[; ;Btn_controller.h: 14: {
+[; ;Btn_controller.h: 15: ST_BTN_WAITING,
+[; ;Btn_controller.h: 16: ST_BTN_PRESSED,
+[; ;Btn_controller.h: 17: ST_BTN_CONFIRMED,
+[; ;Btn_controller.h: 19: }SM_BTN;
+[; ;Btn_controller.h: 21: typedef struct Btn_controller
+[; ;Btn_controller.h: 22: {
+[; ;Btn_controller.h: 23: SM_BTN sm_btn, old_sm_btn;
+[; ;Btn_controller.h: 24: }Btn_controller;
+[; ;Btn_controller.h: 29: void init_btn_controller(Btn_controller* btnCtrl);
+[; ;Btn_controller.h: 34: void state_machine_btn(Btn_controller* btnCtrl, Event ev);
+[; ;Btn_controller.h: 39: void launch_timer();
+"14 GlobalVariables.h
+[v _EV_BTN_PRESSED `Cuc ~T0 @X0 1 e ]
+[i _EV_BTN_PRESSED
+-> -> 0 `i `uc
+]
+[; ;GlobalVariables.h: 14: const Event EV_BTN_PRESSED = 0;
+"15
+[v _EV_BTN_TIMEOUT `Cuc ~T0 @X0 1 e ]
+[i _EV_BTN_TIMEOUT
+-> -> 1 `i `uc
+]
+[; ;GlobalVariables.h: 15: const Event EV_BTN_TIMEOUT = 1;
+"16
+[v _EV_BTN_GOTO_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_BTN_GOTO_WAIT
+-> -> 2 `i `uc
+]
+[; ;GlobalVariables.h: 16: const Event EV_BTN_GOTO_WAIT = 2;
+"19
+[v _EV_TIMEOUT_TSC `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_TSC
+-> -> 10 `i `uc
+]
+[; ;GlobalVariables.h: 19: const Event EV_TIMEOUT_TSC = 10;
+"20
+[v _EV_GOTO_TSC_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_TSC_WAIT
+-> -> 11 `i `uc
+]
+[; ;GlobalVariables.h: 20: const Event EV_GOTO_TSC_WAIT = 11;
+"23
+[v _EV_ON `Cuc ~T0 @X0 1 e ]
+[i _EV_ON
+-> -> 20 `i `uc
+]
+[; ;GlobalVariables.h: 23: const Event EV_ON = 20;
+"24
+[v _EV_OFF `Cuc ~T0 @X0 1 e ]
+[i _EV_OFF
+-> -> 21 `i `uc
+]
+[; ;GlobalVariables.h: 24: const Event EV_OFF = 21;
+"27
+[v _EV_GAME `Cuc ~T0 @X0 1 e ]
+[i _EV_GAME
+-> -> 30 `i `uc
+]
+[; ;GlobalVariables.h: 27: const Event EV_GAME = 30;
+"28
+[v _EV_MENU `Cuc ~T0 @X0 1 e ]
+[i _EV_MENU
+-> -> 31 `i `uc
+]
+[; ;GlobalVariables.h: 28: const Event EV_MENU = 31;
+"31
+[v _EV_LEVEL_SW `Cuc ~T0 @X0 1 e ]
+[i _EV_LEVEL_SW
+-> -> 40 `i `uc
+]
+[; ;GlobalVariables.h: 31: const Event EV_LEVEL_SW = 40;
+"32
+[v _EV_CTRL_SW `Cuc ~T0 @X0 1 e ]
+[i _EV_CTRL_SW
+-> -> 41 `i `uc
+]
+[; ;GlobalVariables.h: 32: const Event EV_CTRL_SW = 41;
+"33
+[v _EV_GOTO_MENU_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_MENU_WAIT
+-> -> 42 `i `uc
+]
+[; ;GlobalVariables.h: 33: const Event EV_GOTO_MENU_WAIT = 42;
+"36
+[v _EV_TIMEOUT_SCREEN `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_SCREEN
+-> -> 50 `i `uc
+]
+[; ;GlobalVariables.h: 36: const Event EV_TIMEOUT_SCREEN = 50;
+"37
+[v _EV_GOTO_SCREEN_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_SCREEN_WAIT
+-> -> 51 `i `uc
+]
+[; ;GlobalVariables.h: 37: const Event EV_GOTO_SCREEN_WAIT = 51;
+"40
+[v _EV_TIMEOUT_AI `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_AI
+-> -> 60 `i `uc
+]
+[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_AI = 60;
+"41
+[v _EV_TIMEOUT_USER `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_USER
+-> -> 61 `i `uc
+]
+[; ;GlobalVariables.h: 41: const Event EV_TIMEOUT_USER = 61;
+"42
+[v _EV_GOTO_RACKET_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_RACKET_WAIT
+-> -> 62 `i `uc
+]
+[; ;GlobalVariables.h: 42: const Event EV_GOTO_RACKET_WAIT = 62;
+"45
+[v _EV_TIMEOUT_BALL `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_BALL
+-> -> 70 `i `uc
+]
+[; ;GlobalVariables.h: 45: const Event EV_TIMEOUT_BALL = 70;
+"46
+[v _EV_CHECK_RACKET `Cuc ~T0 @X0 1 e ]
+[i _EV_CHECK_RACKET
+-> -> 71 `i `uc
+]
+[; ;GlobalVariables.h: 46: const Event EV_CHECK_RACKET = 71;
+"47
+[v _EV_MOVE `Cuc ~T0 @X0 1 e ]
+[i _EV_MOVE
+-> -> 72 `i `uc
+]
+[; ;GlobalVariables.h: 47: const Event EV_MOVE = 72;
+"48
+[v _EV_GAME_OVER `Cuc ~T0 @X0 1 e ]
+[i _EV_GAME_OVER
+-> -> 73 `i `uc
+]
+[; ;GlobalVariables.h: 48: const Event EV_GAME_OVER = 73;
+"49
+[v _EV_GOTO_BALL_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_BALL_WAIT
+-> -> 74 `i `uc
+]
+[; ;GlobalVariables.h: 49: const Event EV_GOTO_BALL_WAIT = 74;
+"53
+[v _EV_TIMEOUT_ACC `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_ACC
+-> -> 80 `i `uc
+]
+[; ;GlobalVariables.h: 53: const Event EV_TIMEOUT_ACC = 80;
+"54
+[v _EV_GOTO_ACC_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_ACC_WAIT
+-> -> 81 `i `uc
+]
+[; ;GlobalVariables.h: 54: const Event EV_GOTO_ACC_WAIT = 81;
+"7 Btn_controller.c
+[v _init_btn_controller `(v ~T0 @X0 1 ef1`*S300 ]
+"8
+{
+[; ;Btn_controller.c: 7: void init_btn_controller(Btn_controller* btnCtrl)
+[; ;Btn_controller.c: 8: {
+[e :U _init_btn_controller ]
+"7
+[v _btnCtrl `*S300 ~T0 @X0 1 r1 ]
+"8
+[f ]
+[; ;Btn_controller.c: 10: btnCtrl->sm_btn = ST_BTN_WAITING;
+"10
+[e = . *U _btnCtrl 0 . `E3264 0 ]
+[; ;Btn_controller.c: 11: btnCtrl->old_sm_btn = btnCtrl->sm_btn;
+"11
+[e = . *U _btnCtrl 1 . *U _btnCtrl 0 ]
+[; ;Btn_controller.c: 12: }
+"12
+[e :UE 301 ]
+}
+"17
+[v _state_machine_btn `(v ~T0 @X0 1 ef2`*S300`uc ]
+"18
+{
+[; ;Btn_controller.c: 17: void state_machine_btn(Btn_controller* btnCtrl, Event ev)
+[; ;Btn_controller.c: 18: {
+[e :U _state_machine_btn ]
+"17
+[v _btnCtrl `*S300 ~T0 @X0 1 r1 ]
+[v _ev `uc ~T0 @X0 1 r2 ]
+"18
+[f ]
+[; ;Btn_controller.c: 20: btnCtrl->old_sm_btn = btnCtrl->sm_btn;
+"20
+[e = . *U _btnCtrl 1 . *U _btnCtrl 0 ]
+[; ;Btn_controller.c: 23: switch (btnCtrl->sm_btn) {
+"23
+[e $U 304  ]
+{
+[; ;Btn_controller.c: 25: case ST_BTN_WAITING:
+"25
+[e :U 305 ]
+[; ;Btn_controller.c: 26: if(ev == EV_BTN_PRESSED)
+"26
+[e $ ! == -> _ev `i -> _EV_BTN_PRESSED `i 306  ]
+[; ;Btn_controller.c: 27: {
+"27
+{
+[; ;Btn_controller.c: 28: btnCtrl->sm_btn = ST_BTN_WAITING;
+"28
+[e = . *U _btnCtrl 0 . `E3264 0 ]
+"29
+}
+[e :U 306 ]
+[; ;Btn_controller.c: 29: }
+[; ;Btn_controller.c: 30: break;
+"30
+[e $U 303  ]
+[; ;Btn_controller.c: 33: case ST_BTN_PRESSED:
+"33
+[e :U 307 ]
+[; ;Btn_controller.c: 34: if(ev == EV_BTN_TIMEOUT)
+"34
+[e $ ! == -> _ev `i -> _EV_BTN_TIMEOUT `i 308  ]
+[; ;Btn_controller.c: 35: {
+"35
+{
+[; ;Btn_controller.c: 36: btnCtrl->sm_btn = ST_BTN_CONFIRMED;
+"36
+[e = . *U _btnCtrl 0 . `E3264 2 ]
+"37
+}
+[e :U 308 ]
+[; ;Btn_controller.c: 37: }
+[; ;Btn_controller.c: 38: break;
+"38
+[e $U 303  ]
+[; ;Btn_controller.c: 40: case ST_BTN_CONFIRMED:
+"40
+[e :U 309 ]
+[; ;Btn_controller.c: 41: if(ev == EV_BTN_GOTO_WAIT)
+"41
+[e $ ! == -> _ev `i -> _EV_BTN_GOTO_WAIT `i 310  ]
+[; ;Btn_controller.c: 42: {
+"42
+{
+[; ;Btn_controller.c: 43: btnCtrl->sm_btn = ST_BTN_WAITING;
+"43
+[e = . *U _btnCtrl 0 . `E3264 0 ]
+"44
+}
+[e :U 310 ]
+[; ;Btn_controller.c: 44: }
+[; ;Btn_controller.c: 45: break;
+"45
+[e $U 303  ]
+[; ;Btn_controller.c: 46: default:
+"46
+[e :U 311 ]
+[; ;Btn_controller.c: 47: break;
+"47
+[e $U 303  ]
+"48
+}
+[; ;Btn_controller.c: 48: }
+[e $U 303  ]
+"23
+[e :U 304 ]
+[e [\ . *U _btnCtrl 0 , $ . `E3264 0 305
+ , $ . `E3264 1 307
+ , $ . `E3264 2 309
+ 311 ]
+"48
+[e :U 303 ]
+[; ;Btn_controller.c: 51: if(btnCtrl->old_sm_btn != btnCtrl->sm_btn)
+"51
+[e $ ! != -> . *U _btnCtrl 1 `i -> . *U _btnCtrl 0 `i 312  ]
+[; ;Btn_controller.c: 52: {
+"52
+{
+[; ;Btn_controller.c: 53: switch (btnCtrl->sm_btn) {
+"53
+[e $U 314  ]
+{
+[; ;Btn_controller.c: 54: case ST_BTN_WAITING:
+"54
+[e :U 315 ]
+[; ;Btn_controller.c: 56: break;
+"56
+[e $U 313  ]
+[; ;Btn_controller.c: 57: case ST_BTN_PRESSED:
+"57
+[e :U 316 ]
+[; ;Btn_controller.c: 59: launch_timer();
+"59
+[e ( _launch_timer ..  ]
+[; ;Btn_controller.c: 60: break;
+"60
+[e $U 313  ]
+[; ;Btn_controller.c: 61: case ST_BTN_CONFIRMED:
+"61
+[e :U 317 ]
+[; ;Btn_controller.c: 63: XF_pushEvent(EV_BTN_TIMEOUT, 0);
+"63
+[e ( _XF_pushEvent (2 , _EV_BTN_TIMEOUT -> -> 0 `i `uc ]
+[; ;Btn_controller.c: 64: break;
+"64
+[e $U 313  ]
+[; ;Btn_controller.c: 65: default:
+"65
+[e :U 318 ]
+[; ;Btn_controller.c: 66: break;
+"66
+[e $U 313  ]
+"67
+}
+[; ;Btn_controller.c: 67: }
+[e $U 313  ]
+"53
+[e :U 314 ]
+[e [\ . *U _btnCtrl 0 , $ . `E3264 0 315
+ , $ . `E3264 1 316
+ , $ . `E3264 2 317
+ 318 ]
+"67
+[e :U 313 ]
+"68
+}
+[e :U 312 ]
+[; ;Btn_controller.c: 68: }
+[; ;Btn_controller.c: 69: }
+"69
+[e :UE 302 ]
+}
+"74
+[v _launch_timer `(v ~T0 @X0 1 ef ]
+"75
+{
+[; ;Btn_controller.c: 74: void launch_timer()
+[; ;Btn_controller.c: 75: {
+[e :U _launch_timer ]
+[f ]
+[; ;Btn_controller.c: 76: XF_scheduleTimer(2, EV_BTN_TIMEOUT, 0);
+"76
+[e ( _XF_scheduleTimer (3 , , -> -> 2 `i `ui _EV_BTN_TIMEOUT -> -> 0 `i `uc ]
+[; ;Btn_controller.c: 77: }
+"77
+[e :UE 319 ]
+}

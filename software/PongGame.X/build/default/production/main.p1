@@ -1,72 +1,70 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"7 CONFIG_PIC18F46K20.c
-[p x FOSC=INTIO67 ]
-"8
-[p x FCMEN=OFF ]
-"9
-[p x IESO=OFF ]
-"12
-[p x PWRT=ON ]
-"13
-[p x BOREN=OFF ]
-"14
-[p x BORV=22 ]
-"17
-[p x WDTEN=OFF ]
-"18
-[p x WDTPS=1 ]
-"21
-[p x CCP2MX=PORTC ]
-"22
-[p x PBADEN=OFF ]
-"23
-[p x LPT1OSC=OFF ]
-"24
-[p x HFOFST=ON ]
-"25
-[p x MCLRE=ON ]
-"28
-[p x STVREN=ON ]
-"29
-[p x LVP=OFF ]
-"30
-[p x XINST=OFF ]
-"33
-[p x CP0=OFF ]
-"34
-[p x CP1=OFF ]
-"35
-[p x CP2=OFF ]
-"36
-[p x CP3=OFF ]
-"39
-[p x CPB=OFF ]
-"40
-[p x CPD=OFF ]
-"43
-[p x WRT0=OFF ]
-"44
-[p x WRT1=OFF ]
-"45
-[p x WRT2=OFF ]
-"46
-[p x WRT3=OFF ]
-"49
-[p x WRTC=OFF ]
-"50
-[p x WRTB=OFF ]
-"51
-[p x WRTD=OFF ]
-"54
-[p x EBTR0=OFF ]
-"55
-[p x EBTR1=OFF ]
-"56
-[p x EBTR2=OFF ]
-"57
-[p x EBTR3=OFF ]
-"60
-[p x EBTRB=OFF ]
+"8112 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+[v _PLLEN `Vb ~T0 @X0 0 e@31966 ]
+"6453
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"9 lcd_highlevel.h
+[s S298 `uc 1 `ui 1 ]
+[n S298 . width offset ]
+"15
+[s S299 `uc 1 `uc 1 `uc 1 `*CS298 1 `*Cuc 1 ]
+[n S299 . height start_char end_char descriptor bitmap ]
+[v F3284 `(v ~T0 @X0 0 tf1`uc ]
+[v F3287 `(v ~T0 @X0 0 tf1`uc ]
+[v F3290 `(v ~T0 @X0 0 tf1`uc ]
+"88
+[s S301 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `ui 1 `*Cuc 1 `*S299 1 `uc 1 `*F3284 1 `*F3287 1 `*F3290 1 `uc 1 ]
+[n S301 . posX posY width height txtColor bgColor text font pressed fpPress fpReleased fpOut index ]
+[v F3320 `(v ~T0 @X0 0 tf1`uc ]
+[v F3323 `(v ~T0 @X0 0 tf1`uc ]
+[v F3326 `(v ~T0 @X0 0 tf1`uc ]
+"138
+[v _LCD_ButtonCreate `(v ~T0 @X0 0 ef13`ui`ui`ui`ui`ui`ui`*Cuc`*S299`*F3320`*F3323`*F3326`*S301`uc ]
+"153
+[v _LCD_ButtonDraw `(v ~T0 @X0 0 ef1`*S301 ]
+"7748 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+[v _INT0IE `Vb ~T0 @X0 0 e@32660 ]
+"7780
+[v _INTEDG0 `Vb ~T0 @X0 0 e@32654 ]
+"7700
+[v _GIE `Vb ~T0 @X0 0 e@32663 ]
+"8100
+[v _PEIE `Vb ~T0 @X0 0 e@32662 ]
+"5781
+[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
+"5891
+[v _TMR2 `Vuc ~T0 @X0 0 e@4044 ]
+"8472
+[v _TMR2IF `Vb ~T0 @X0 0 e@31985 ]
+"8470
+[v _TMR2IE `Vb ~T0 @X0 0 e@31977 ]
+"8476
+[v _TMR2ON `Vb ~T0 @X0 0 e@32338 ]
+[p mainexit ]
+"7800
+[v _IRCF0 `Vb ~T0 @X0 0 e@32412 ]
+"7802
+[v _IRCF1 `Vb ~T0 @X0 0 e@32413 ]
+"7804
+[v _IRCF2 `Vb ~T0 @X0 0 e@32414 ]
+"35 spi.h
+[v _SPIInit `(v ~T0 @X0 0 ef ]
+"275 tsc.h
+[v _TscInit `(v ~T0 @X0 0 ef ]
+"224 lcd_highlevel.h
+[v _LCD_Init `(v ~T0 @X0 0 ef ]
+"8538 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h
+[v _TRISD0 `Vb ~T0 @X0 0 e@31912 ]
+"7882
+[v _LATD0 `Vb ~T0 @X0 0 e@31840 ]
+"8526
+[v _TRISC2 `Vb ~T0 @X0 0 e@31906 ]
+"7870
+[v _LATC2 `Vb ~T0 @X0 0 e@31834 ]
+"8546
+[v _TRISD4 `Vb ~T0 @X0 0 e@31916 ]
+"7890
+[v _LATD4 `Vb ~T0 @X0 0 e@31844 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3029,3 +3027,330 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 38: typedef signed long int int32_t;
+[; ;stdint.h: 45: typedef unsigned char uint8_t;
+[; ;stdint.h: 51: typedef unsigned int uint16_t;
+[; ;stdint.h: 67: typedef unsigned long int uint32_t;
+[; ;stdint.h: 75: typedef signed char int_least8_t;
+[; ;stdint.h: 82: typedef signed int int_least16_t;
+[; ;stdint.h: 104: typedef signed long int int_least32_t;
+[; ;stdint.h: 111: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 117: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 136: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 145: typedef signed char int_fast8_t;
+[; ;stdint.h: 152: typedef signed int int_fast16_t;
+[; ;stdint.h: 174: typedef signed long int int_fast32_t;
+[; ;stdint.h: 181: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 187: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 206: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 212: typedef int32_t intmax_t;
+[; ;stdint.h: 217: typedef uint32_t uintmax_t;
+[; ;stdint.h: 222: typedef int16_t intptr_t;
+[; ;stdint.h: 227: typedef uint16_t uintptr_t;
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;spi.h: 35: void SPIInit(void);
+[; ;lcd_highlevel.h: 8: typedef struct
+[; ;lcd_highlevel.h: 9: {
+[; ;lcd_highlevel.h: 10: uint8_t width;
+[; ;lcd_highlevel.h: 11: uint16_t offset;
+[; ;lcd_highlevel.h: 12: }FONT_CHAR_INFO;
+[; ;lcd_highlevel.h: 14: typedef struct
+[; ;lcd_highlevel.h: 15: {
+[; ;lcd_highlevel.h: 16: uint8_t height;
+[; ;lcd_highlevel.h: 17: uint8_t start_char;
+[; ;lcd_highlevel.h: 18: uint8_t end_char;
+[; ;lcd_highlevel.h: 19: const FONT_CHAR_INFO * descriptor;
+[; ;lcd_highlevel.h: 20: const uint8_t * bitmap;
+[; ;lcd_highlevel.h: 22: }FONT_INFO;
+[; ;lcd_highlevel.h: 50: typedef enum
+[; ;lcd_highlevel.h: 51: {
+[; ;lcd_highlevel.h: 52: A_LEFT,
+[; ;lcd_highlevel.h: 53: A_RIGHT,
+[; ;lcd_highlevel.h: 54: A_CENTER
+[; ;lcd_highlevel.h: 55: }ALIGN;
+[; ;lcd_highlevel.h: 64: typedef struct
+[; ;lcd_highlevel.h: 65: {
+[; ;lcd_highlevel.h: 66: uint16_t bfType;
+[; ;lcd_highlevel.h: 67: uint32_t bfSize;
+[; ;lcd_highlevel.h: 68: uint16_t bfRvd1;
+[; ;lcd_highlevel.h: 69: uint16_t bfRvd2;
+[; ;lcd_highlevel.h: 70: uint32_t bfOffBits;
+[; ;lcd_highlevel.h: 71: uint32_t biSize;
+[; ;lcd_highlevel.h: 72: uint32_t biWidth;
+[; ;lcd_highlevel.h: 73: uint32_t biHeight;
+[; ;lcd_highlevel.h: 74: uint16_t biPlanes;
+[; ;lcd_highlevel.h: 75: uint16_t biBitCount;
+[; ;lcd_highlevel.h: 76: uint32_t biCompression;
+[; ;lcd_highlevel.h: 77: uint32_t biSizeImage;
+[; ;lcd_highlevel.h: 78: uint32_t biXPelsPerMeter;
+[; ;lcd_highlevel.h: 79: uint32_t biYPelsPerMeter;
+[; ;lcd_highlevel.h: 80: uint32_t biClrUsed;
+[; ;lcd_highlevel.h: 81: uint32_t biClrImportant;
+[; ;lcd_highlevel.h: 82: }BMP_STRUCT;
+[; ;lcd_highlevel.h: 87: typedef struct
+[; ;lcd_highlevel.h: 88: {
+[; ;lcd_highlevel.h: 89: uint16_t posX;
+[; ;lcd_highlevel.h: 90: uint16_t posY;
+[; ;lcd_highlevel.h: 91: uint16_t width;
+[; ;lcd_highlevel.h: 92: uint16_t height;
+[; ;lcd_highlevel.h: 93: uint16_t txtColor;
+[; ;lcd_highlevel.h: 94: uint16_t bgColor;
+[; ;lcd_highlevel.h: 95: const uint8_t *text;
+[; ;lcd_highlevel.h: 96: FONT_INFO * font;
+[; ;lcd_highlevel.h: 97: uint8_t pressed;
+[; ;lcd_highlevel.h: 98: void (*fpPress)(uint8_t);
+[; ;lcd_highlevel.h: 99: void (*fpReleased)(uint8_t);
+[; ;lcd_highlevel.h: 100: void (*fpOut)(uint8_t);
+[; ;lcd_highlevel.h: 101: uint8_t index;
+[; ;lcd_highlevel.h: 102: }btn_t;
+[; ;lcd_highlevel.h: 107: typedef struct
+[; ;lcd_highlevel.h: 108: {
+[; ;lcd_highlevel.h: 109: uint16_t posX;
+[; ;lcd_highlevel.h: 110: uint16_t posY;
+[; ;lcd_highlevel.h: 111: uint16_t width;
+[; ;lcd_highlevel.h: 112: uint16_t height;
+[; ;lcd_highlevel.h: 113: uint16_t sldColor;
+[; ;lcd_highlevel.h: 114: uint16_t bgColor;
+[; ;lcd_highlevel.h: 115: uint16_t borderColor;
+[; ;lcd_highlevel.h: 116: uint16_t cursorWidth;
+[; ;lcd_highlevel.h: 117: uint8_t pressed;
+[; ;lcd_highlevel.h: 118: uint16_t value;
+[; ;lcd_highlevel.h: 119: uint16_t oldValue;
+[; ;lcd_highlevel.h: 120: uint16_t steps;
+[; ;lcd_highlevel.h: 121: void (*fpPress)();
+[; ;lcd_highlevel.h: 122: }sld_t;
+[; ;lcd_highlevel.h: 138: void LCD_ButtonCreate(uint16_t posX, uint16_t posY,
+[; ;lcd_highlevel.h: 139: uint16_t width, uint16_t height,
+[; ;lcd_highlevel.h: 140: uint16_t txtColor, uint16_t bgColor,
+[; ;lcd_highlevel.h: 141: const uint8_t * textOrBmp, FONT_INFO * font,
+[; ;lcd_highlevel.h: 142: void (*fpPress)(uint8_t), void (* fpReleased)(uint8_t), void (* fpOut)(uint8_t),
+[; ;lcd_highlevel.h: 143: btn_t * button,
+[; ;lcd_highlevel.h: 144: uint8_t index);
+[; ;lcd_highlevel.h: 153: void LCD_ButtonDraw(btn_t * button);
+[; ;lcd_highlevel.h: 161: void LCD_ButtonUpdate(btn_t * button);
+[; ;lcd_highlevel.h: 175: void LCD_SliderCreate(uint16_t posX, uint16_t posY,
+[; ;lcd_highlevel.h: 176: uint16_t width, uint16_t height,
+[; ;lcd_highlevel.h: 177: uint16_t sldColor, uint16_t bgColor, uint16_t borderColor,
+[; ;lcd_highlevel.h: 178: uint16_t cursorWidth,
+[; ;lcd_highlevel.h: 179: uint16_t steps,
+[; ;lcd_highlevel.h: 180: void (* fpPress)(),
+[; ;lcd_highlevel.h: 181: sld_t * slider);
+[; ;lcd_highlevel.h: 189: void LCD_SliderUpdate(sld_t * slider);
+[; ;lcd_highlevel.h: 197: void LCD_SliderDraw(sld_t * slider);
+[; ;lcd_highlevel.h: 206: uint8_t LCD_InSlider(sld_t * slider, uint16_t posX, uint16_t posY);
+[; ;lcd_highlevel.h: 215: uint8_t LCD_InButton(btn_t * button, uint16_t posX, uint16_t posY);
+[; ;lcd_highlevel.h: 224: void LCD_Init(void);
+[; ;lcd_highlevel.h: 233: void LCD_Fill(uint16_t color);
+[; ;lcd_highlevel.h: 241: void LCD_SetPixel(uint16_t posX,uint16_t posY, uint16_t color);
+[; ;lcd_highlevel.h: 256: void LCD_DrawRect(uint16_t posX1,uint16_t posY1, uint16_t posX2,
+[; ;lcd_highlevel.h: 257: uint16_t posY2,uint8_t fill,uint16_t color);
+[; ;lcd_highlevel.h: 271: void LCD_DrawText(const uint8_t * msg,const FONT_INFO * font, ALIGN align,
+[; ;lcd_highlevel.h: 272: uint16_t posX, uint16_t posY, uint16_t color, uint16_t bg_color);
+[; ;lcd_highlevel.h: 281: uint16_t RGB2LCD(uint8_t * colorTableEntry);
+[; ;lcd_highlevel.h: 295: uint8_t LCD_Bitmap(const uint8_t * bmpPtr, uint16_t posX, uint16_t posY);
+[; ;lcd_lowlevel.h: 252: void LCD_PowerOff(void);
+[; ;lcd_lowlevel.h: 261: void LCD_Lowlevel_Init(void);
+[; ;lcd_lowlevel.h: 271: uint16_t LCD_Read(uint16_t posX, uint16_t posY);
+[; ;tsc.h: 258: typedef struct
+[; ;tsc.h: 259: {
+[; ;tsc.h: 260: uint8_t pressed;
+[; ;tsc.h: 261: uint8_t released;
+[; ;tsc.h: 262: uint16_t posX;
+[; ;tsc.h: 263: uint16_t posY;
+[; ;tsc.h: 264: }tsc_t;
+[; ;tsc.h: 266: extern tsc_t tsc;
+[; ;tsc.h: 275: void TscInit(void);
+[; ;tsc.h: 286: void tscPowerOff(void);
+[; ;tsc.h: 296: void TscWrite(unsigned char ucReg, unsigned char ucNum,
+[; ;tsc.h: 297: unsigned long ulVal);
+[; ;tsc.h: 307: void TscRead(unsigned char ucReg, unsigned char ucNum,
+[; ;tsc.h: 308: unsigned char* pucBuffer);
+[; ;tsc.h: 316: void TscUpdate(void);
+[; ;tsc.h: 324: void TSC_ButtonExecute(btn_t * button, uint8_t index);
+[; ;tsc.h: 332: void TSC_SliderExecute(sld_t * slider);
+[; ;lcd_highlevel.h: 8: typedef struct
+[; ;lcd_highlevel.h: 9: {
+[; ;lcd_highlevel.h: 10: uint8_t width;
+[; ;lcd_highlevel.h: 11: uint16_t offset;
+[; ;lcd_highlevel.h: 12: }FONT_CHAR_INFO;
+[; ;lcd_highlevel.h: 14: typedef struct
+[; ;lcd_highlevel.h: 15: {
+[; ;lcd_highlevel.h: 16: uint8_t height;
+[; ;lcd_highlevel.h: 17: uint8_t start_char;
+[; ;lcd_highlevel.h: 18: uint8_t end_char;
+[; ;lcd_highlevel.h: 19: const FONT_CHAR_INFO * descriptor;
+[; ;lcd_highlevel.h: 20: const uint8_t * bitmap;
+[; ;lcd_highlevel.h: 22: }FONT_INFO;
+[; ;lcd_lowlevel.h: 252: void LCD_PowerOff(void);
+[; ;lcd_lowlevel.h: 261: void LCD_Lowlevel_Init(void);
+[; ;lcd_lowlevel.h: 271: uint16_t LCD_Read(uint16_t posX, uint16_t posY);
+"15 main.c
+[v _enable_high_speed `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 15: void enable_high_speed() {
+[e :U _enable_high_speed ]
+[f ]
+[; ;main.c: 16: PLLEN = 1;
+"16
+[e = _PLLEN -> -> 1 `i `b ]
+[; ;main.c: 17: OSCCON = 0b01110000;
+"17
+[e = _OSCCON -> -> 112 `i `uc ]
+[; ;main.c: 20: }
+"20
+[e :UE 306 ]
+}
+"22
+[v _createPlayButton `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 22: void createPlayButton(void){
+[e :U _createPlayButton ]
+[f ]
+"23
+[v _rightButton `S301 ~T0 @X0 1 a ]
+"24
+[v _leftButton `S301 ~T0 @X0 1 a ]
+"26
+[v _l `uc ~T0 @X0 1 a ]
+[; ;main.c: 23: btn_t rightButton;
+[; ;main.c: 24: btn_t leftButton;
+[; ;main.c: 26: uint8_t l = 0x4C;
+[e = _l -> -> 76 `i `uc ]
+[; ;main.c: 28: LCD_ButtonCreate(0,0,50,50,0b0000000000000000,0b1111111111111111,&l,0,0,0,0,&leftButton,0);
+"28
+[e ( _LCD_ButtonCreate (4 , , , , , , , , , , , , -> -> 0 `i `ui -> -> 0 `i `ui -> -> 50 `i `ui -> -> 50 `i `ui -> -> 0 `i `ui -> 65535 `ui -> &U _l `*Cuc -> -> 0 `i `*S299 -> -> 0 `i `*F3320 -> -> 0 `i `*F3323 -> -> 0 `i `*F3326 &U _leftButton -> -> 0 `i `uc ]
+[; ;main.c: 29: LCD_ButtonDraw(&leftButton);
+"29
+[e ( _LCD_ButtonDraw (1 &U _leftButton ]
+[; ;main.c: 31: }
+"31
+[e :UE 307 ]
+}
+"33
+[v _initPhysicButton `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 33: void initPhysicButton(void){
+[e :U _initPhysicButton ]
+[f ]
+[; ;main.c: 34: INT0IE = 1;
+"34
+[e = _INT0IE -> -> 1 `i `b ]
+[; ;main.c: 35: INTEDG0 = 0;
+"35
+[e = _INTEDG0 -> -> 0 `i `b ]
+[; ;main.c: 36: GIE = 1;
+"36
+[e = _GIE -> -> 1 `i `b ]
+[; ;main.c: 37: PEIE = 1;
+"37
+[e = _PEIE -> -> 1 `i `b ]
+[; ;main.c: 39: }
+"39
+[e :UE 308 ]
+}
+"41
+[v _initTimer2 `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 41: void initTimer2(void){
+[e :U _initTimer2 ]
+[f ]
+[; ;main.c: 42: PR2 = 255;
+"42
+[e = _PR2 -> -> 255 `i `uc ]
+[; ;main.c: 43: TMR2 = 0;
+"43
+[e = _TMR2 -> -> 0 `i `uc ]
+[; ;main.c: 44: TMR2IF = 0;
+"44
+[e = _TMR2IF -> -> 0 `i `b ]
+[; ;main.c: 45: GIE = 1;
+"45
+[e = _GIE -> -> 1 `i `b ]
+[; ;main.c: 46: PEIE = 1;
+"46
+[e = _PEIE -> -> 1 `i `b ]
+[; ;main.c: 47: TMR2IE = 1;
+"47
+[e = _TMR2IE -> -> 1 `i `b ]
+[; ;main.c: 48: TMR2ON = 1;
+"48
+[e = _TMR2ON -> -> 1 `i `b ]
+[; ;main.c: 49: }
+"49
+[e :UE 309 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"51
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 51: void main(void) {
+[e :U _main ]
+[f ]
+[; ;main.c: 54: IRCF0 = 1;
+"54
+[e = _IRCF0 -> -> 1 `i `b ]
+[; ;main.c: 55: IRCF1 = 1;
+"55
+[e = _IRCF1 -> -> 1 `i `b ]
+[; ;main.c: 56: IRCF2 = 1;
+"56
+[e = _IRCF2 -> -> 1 `i `b ]
+[; ;main.c: 59: enable_high_speed();
+"59
+[e ( _enable_high_speed ..  ]
+[; ;main.c: 60: SPIInit();
+"60
+[e ( _SPIInit ..  ]
+[; ;main.c: 61: TscInit();
+"61
+[e ( _TscInit ..  ]
+[; ;main.c: 62: LCD_Init();
+"62
+[e ( _LCD_Init ..  ]
+[; ;main.c: 63: initTimer2();
+"63
+[e ( _initTimer2 ..  ]
+[; ;main.c: 64: initPhysicButton();
+"64
+[e ( _initPhysicButton ..  ]
+[; ;main.c: 65: createPlayButton();
+"65
+[e ( _createPlayButton ..  ]
+[; ;main.c: 69: TRISD0 = 0;
+"69
+[e = _TRISD0 -> -> 0 `i `b ]
+[; ;main.c: 70: LATD0 = 1;
+"70
+[e = _LATD0 -> -> 1 `i `b ]
+[; ;main.c: 71: TRISC2 = 0;
+"71
+[e = _TRISC2 -> -> 0 `i `b ]
+[; ;main.c: 72: LATC2 = 1;
+"72
+[e = _LATC2 -> -> 1 `i `b ]
+[; ;main.c: 76: TRISD4 = 0;
+"76
+[e = _TRISD4 -> -> 0 `i `b ]
+[; ;main.c: 77: LATD4 = 1;
+"77
+[e = _LATD4 -> -> 1 `i `b ]
+[; ;main.c: 80: while(1){
+"80
+[e :U 312 ]
+{
+"84
+}
+[e :U 311 ]
+"80
+[e $U 312  ]
+[e :U 313 ]
+[; ;main.c: 84: }
+[; ;main.c: 86: return;
+"86
+[e $UE 310  ]
+[; ;main.c: 87: }
+"87
+[e :UE 310 ]
+}

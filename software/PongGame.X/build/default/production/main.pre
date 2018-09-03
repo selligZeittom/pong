@@ -1,336 +1,15 @@
 
-# 1 "lcd_highlevel.c"
-
-# 13 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\stdint.h"
-typedef signed char int8_t;
-
-# 20
-typedef signed int int16_t;
-
-# 38
-typedef signed long int int32_t;
-
-# 45
-typedef unsigned char uint8_t;
-
-# 51
-typedef unsigned int uint16_t;
-
-# 67
-typedef unsigned long int uint32_t;
-
-# 75
-typedef signed char int_least8_t;
-
-# 82
-typedef signed int int_least16_t;
-
-# 104
-typedef signed long int int_least32_t;
-
-# 111
-typedef unsigned char uint_least8_t;
-
-# 117
-typedef unsigned int uint_least16_t;
-
-# 136
-typedef unsigned long int uint_least32_t;
-
-# 145
-typedef signed char int_fast8_t;
-
-# 152
-typedef signed int int_fast16_t;
-
-# 174
-typedef signed long int int_fast32_t;
-
-# 181
-typedef unsigned char uint_fast8_t;
-
-# 187
-typedef unsigned int uint_fast16_t;
-
-# 206
-typedef unsigned long int uint_fast32_t;
-
-# 212
-typedef int32_t intmax_t;
-
-
-
-
-typedef uint32_t uintmax_t;
-
-
-
-
-typedef int16_t intptr_t;
-
-
-
-
-typedef uint16_t uintptr_t;
-
-# 4 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\__size_t.h"
-typedef unsigned size_t;
-
-# 7 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\stdlib.h"
-typedef unsigned short wchar_t;
-
-# 15
-typedef struct {
-int rem;
-int quot;
-} div_t;
-typedef struct {
-unsigned rem;
-unsigned quot;
-} udiv_t;
-typedef struct {
-long quot;
-long rem;
-} ldiv_t;
-typedef struct {
-unsigned long quot;
-unsigned long rem;
-} uldiv_t;
-
-# 53
-extern double atof(const char *);
-extern double strtod(const char *, const char **);
-extern int atoi(const char *);
-extern unsigned xtoi(const char *);
-extern long atol(const char *);
-extern long strtol(const char *, char **, int);
-
-extern int rand(void);
-extern void srand(unsigned int);
-extern void * calloc(size_t, size_t);
-extern div_t div(int numer, int denom);
-extern udiv_t udiv(unsigned numer, unsigned denom);
-extern ldiv_t ldiv(long numer, long denom);
-extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-extern unsigned int _rotl(unsigned int value, unsigned int shift);
-extern unsigned int _rotr(unsigned int value, unsigned int shift);
-
-
-
-
-extern void * malloc(size_t);
-extern void free(void *);
-extern void * realloc(void *, size_t);
-
-
-# 13 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\xc8debug.h"
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-
-# 86 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\stdlib.h"
-extern int atexit(void (*)(void));
-extern char * getenv(const char *);
-extern char ** environ;
-extern int system(char *);
-extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-extern int abs(int);
-extern long labs(long);
-
-extern char * itoa(char * buf, int val, int base);
-extern char * utoa(char * buf, unsigned val, int base);
-
-
-
-
-extern char * ltoa(char * buf, long val, int base);
-extern char * ultoa(char * buf, unsigned long val, int base);
-
-extern char * ftoa(float f, int * status);
-
-# 14 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\string.h"
-extern void * memcpy(void *, const void *, size_t);
-extern void * memmove(void *, const void *, size_t);
-extern void * memset(void *, int, size_t);
-
-# 36
-extern char * strcat(char *, const char *);
-extern char * strcpy(char *, const char *);
-extern char * strncat(char *, const char *, size_t);
-extern char * strncpy(char *, const char *, size_t);
-extern char * strdup(const char *);
-extern char * strtok(char *, const char *);
-
-
-extern int memcmp(const void *, const void *, size_t);
-extern int strcmp(const char *, const char *);
-extern int stricmp(const char *, const char *);
-extern int strncmp(const char *, const char *, size_t);
-extern int strnicmp(const char *, const char *, size_t);
-extern void * memchr(const void *, int, size_t);
-extern size_t strcspn(const char *, const char *);
-extern char * strpbrk(const char *, const char *);
-extern size_t strspn(const char *, const char *);
-extern char * strstr(const char *, const char *);
-extern char * stristr(const char *, const char *);
-extern char * strerror(int);
-extern size_t strlen(const char *);
-extern char * strchr(const char *, int);
-extern char * strichr(const char *, int);
-extern char * strrchr(const char *, int);
-extern char * strrichr(const char *, int);
-
-# 8 "lcd_highlevel.h"
-typedef struct
-{
-uint8_t width;
-uint16_t offset;
-}FONT_CHAR_INFO;
-
-typedef struct
-{
-uint8_t height;
-uint8_t start_char;
-uint8_t end_char;
-const FONT_CHAR_INFO * descriptor;
-const uint8_t * bitmap;
-
-}FONT_INFO;
-
-# 50
-typedef enum
-{
-A_LEFT,
-A_RIGHT,
-A_CENTER
-}ALIGN;
-
-# 64
-typedef struct
-{
-uint16_t bfType;
-uint32_t bfSize;
-uint16_t bfRvd1;
-uint16_t bfRvd2;
-uint32_t bfOffBits;
-uint32_t biSize;
-uint32_t biWidth;
-uint32_t biHeight;
-uint16_t biPlanes;
-uint16_t biBitCount;
-uint32_t biCompression;
-uint32_t biSizeImage;
-uint32_t biXPelsPerMeter;
-uint32_t biYPelsPerMeter;
-uint32_t biClrUsed;
-uint32_t biClrImportant;
-}BMP_STRUCT;
-
-
-
-
-typedef struct
-{
-uint16_t posX;
-uint16_t posY;
-uint16_t width;
-uint16_t height;
-uint16_t txtColor;
-uint16_t bgColor;
-const uint8_t *text;
-FONT_INFO * font;
-uint8_t pressed;
-void (*fpPress)(uint8_t);
-void (*fpReleased)(uint8_t);
-void (*fpOut)(uint8_t);
-uint8_t index;
-}btn_t;
-
-
-
-
-typedef struct
-{
-uint16_t posX;
-uint16_t posY;
-uint16_t width;
-uint16_t height;
-uint16_t sldColor;
-uint16_t bgColor;
-uint16_t borderColor;
-uint16_t cursorWidth;
-uint8_t pressed;
-uint16_t value;
-uint16_t oldValue;
-uint16_t steps;
-void (*fpPress)();
-}sld_t;
-
-# 138
-void LCD_ButtonCreate(uint16_t posX, uint16_t posY,
-uint16_t width, uint16_t height,
-uint16_t txtColor, uint16_t bgColor,
-const uint8_t * textOrBmp, FONT_INFO * font,
-void (*fpPress)(uint8_t), void (* fpReleased)(uint8_t), void (* fpOut)(uint8_t),
-btn_t * button,
-uint8_t index);
-
-# 153
-void LCD_ButtonDraw(btn_t * button);
-
-# 161
-void LCD_ButtonUpdate(btn_t * button);
-
-# 175
-void LCD_SliderCreate(uint16_t posX, uint16_t posY,
-uint16_t width, uint16_t height,
-uint16_t sldColor, uint16_t bgColor, uint16_t borderColor,
-uint16_t cursorWidth,
-uint16_t steps,
-void (* fpPress)(),
-sld_t * slider);
-
-# 189
-void LCD_SliderUpdate(sld_t * slider);
-
-# 197
-void LCD_SliderDraw(sld_t * slider);
-
-# 206
-uint8_t LCD_InSlider(sld_t * slider, uint16_t posX, uint16_t posY);
-
-# 215
-uint8_t LCD_InButton(btn_t * button, uint16_t posX, uint16_t posY);
-
-# 224
-void LCD_Init(void);
-
-# 233
-void LCD_Fill(uint16_t color);
-
-# 241
-void LCD_SetPixel(uint16_t posX,uint16_t posY, uint16_t color);
-
-# 256
-void LCD_DrawRect(uint16_t posX1,uint16_t posY1, uint16_t posX2,
-uint16_t posY2,uint8_t fill,uint16_t color);
-
-# 271
-void LCD_DrawText(const uint8_t * msg,const FONT_INFO * font, ALIGN align,
-uint16_t posX, uint16_t posY, uint16_t color, uint16_t bg_color);
-
-# 281
-uint16_t RGB2LCD(uint8_t * colorTableEntry);
-
-# 295
-uint8_t LCD_Bitmap(const uint8_t * bmpPtr, uint16_t posX, uint16_t posY);
+# 1 "main.c"
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
+
+
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\xc8debug.h"
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
 
 # 50 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic18f46k20.h"
 extern volatile unsigned char SSPMSK @ 0xF77;
@@ -4410,6 +4089,229 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\stdint.h"
+typedef signed char int8_t;
+
+# 20
+typedef signed int int16_t;
+
+# 38
+typedef signed long int int32_t;
+
+# 45
+typedef unsigned char uint8_t;
+
+# 51
+typedef unsigned int uint16_t;
+
+# 67
+typedef unsigned long int uint32_t;
+
+# 75
+typedef signed char int_least8_t;
+
+# 82
+typedef signed int int_least16_t;
+
+# 104
+typedef signed long int int_least32_t;
+
+# 111
+typedef unsigned char uint_least8_t;
+
+# 117
+typedef unsigned int uint_least16_t;
+
+# 136
+typedef unsigned long int uint_least32_t;
+
+# 145
+typedef signed char int_fast8_t;
+
+# 152
+typedef signed int int_fast16_t;
+
+# 174
+typedef signed long int int_fast32_t;
+
+# 181
+typedef unsigned char uint_fast8_t;
+
+# 187
+typedef unsigned int uint_fast16_t;
+
+# 206
+typedef unsigned long int uint_fast32_t;
+
+# 212
+typedef int32_t intmax_t;
+
+
+
+
+typedef uint32_t uintmax_t;
+
+
+
+
+typedef int16_t intptr_t;
+
+
+
+
+typedef uint16_t uintptr_t;
+
+# 12 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\stdbool.h"
+typedef unsigned char bool;
+
+# 35 "spi.h"
+void SPIInit(void);
+
+# 8 "lcd_highlevel.h"
+typedef struct
+{
+uint8_t width;
+uint16_t offset;
+}FONT_CHAR_INFO;
+
+typedef struct
+{
+uint8_t height;
+uint8_t start_char;
+uint8_t end_char;
+const FONT_CHAR_INFO * descriptor;
+const uint8_t * bitmap;
+
+}FONT_INFO;
+
+# 50
+typedef enum
+{
+A_LEFT,
+A_RIGHT,
+A_CENTER
+}ALIGN;
+
+# 64
+typedef struct
+{
+uint16_t bfType;
+uint32_t bfSize;
+uint16_t bfRvd1;
+uint16_t bfRvd2;
+uint32_t bfOffBits;
+uint32_t biSize;
+uint32_t biWidth;
+uint32_t biHeight;
+uint16_t biPlanes;
+uint16_t biBitCount;
+uint32_t biCompression;
+uint32_t biSizeImage;
+uint32_t biXPelsPerMeter;
+uint32_t biYPelsPerMeter;
+uint32_t biClrUsed;
+uint32_t biClrImportant;
+}BMP_STRUCT;
+
+
+
+
+typedef struct
+{
+uint16_t posX;
+uint16_t posY;
+uint16_t width;
+uint16_t height;
+uint16_t txtColor;
+uint16_t bgColor;
+const uint8_t *text;
+FONT_INFO * font;
+uint8_t pressed;
+void (*fpPress)(uint8_t);
+void (*fpReleased)(uint8_t);
+void (*fpOut)(uint8_t);
+uint8_t index;
+}btn_t;
+
+
+
+
+typedef struct
+{
+uint16_t posX;
+uint16_t posY;
+uint16_t width;
+uint16_t height;
+uint16_t sldColor;
+uint16_t bgColor;
+uint16_t borderColor;
+uint16_t cursorWidth;
+uint8_t pressed;
+uint16_t value;
+uint16_t oldValue;
+uint16_t steps;
+void (*fpPress)();
+}sld_t;
+
+# 138
+void LCD_ButtonCreate(uint16_t posX, uint16_t posY,
+uint16_t width, uint16_t height,
+uint16_t txtColor, uint16_t bgColor,
+const uint8_t * textOrBmp, FONT_INFO * font,
+void (*fpPress)(uint8_t), void (* fpReleased)(uint8_t), void (* fpOut)(uint8_t),
+btn_t * button,
+uint8_t index);
+
+# 153
+void LCD_ButtonDraw(btn_t * button);
+
+# 161
+void LCD_ButtonUpdate(btn_t * button);
+
+# 175
+void LCD_SliderCreate(uint16_t posX, uint16_t posY,
+uint16_t width, uint16_t height,
+uint16_t sldColor, uint16_t bgColor, uint16_t borderColor,
+uint16_t cursorWidth,
+uint16_t steps,
+void (* fpPress)(),
+sld_t * slider);
+
+# 189
+void LCD_SliderUpdate(sld_t * slider);
+
+# 197
+void LCD_SliderDraw(sld_t * slider);
+
+# 206
+uint8_t LCD_InSlider(sld_t * slider, uint16_t posX, uint16_t posY);
+
+# 215
+uint8_t LCD_InButton(btn_t * button, uint16_t posX, uint16_t posY);
+
+# 224
+void LCD_Init(void);
+
+# 233
+void LCD_Fill(uint16_t color);
+
+# 241
+void LCD_SetPixel(uint16_t posX,uint16_t posY, uint16_t color);
+
+# 256
+void LCD_DrawRect(uint16_t posX1,uint16_t posY1, uint16_t posX2,
+uint16_t posY2,uint8_t fill,uint16_t color);
+
+# 271
+void LCD_DrawText(const uint8_t * msg,const FONT_INFO * font, ALIGN align,
+uint16_t posX, uint16_t posY, uint16_t color, uint16_t bg_color);
+
+# 281
+uint16_t RGB2LCD(uint8_t * colorTableEntry);
+
+# 295
+uint8_t LCD_Bitmap(const uint8_t * bmpPtr, uint16_t posX, uint16_t posY);
+
 # 252 "lcd_lowlevel.h"
 void LCD_PowerOff(void);
 
@@ -4419,737 +4321,137 @@ void LCD_Lowlevel_Init(void);
 # 271
 uint16_t LCD_Read(uint16_t posX, uint16_t posY);
 
-# 20 "lcd_highlevel.c"
-void LCD_Init(void)
+# 258 "tsc.h"
+typedef struct
 {
-uint8_t i;
+uint8_t pressed;
+uint8_t released;
+uint16_t posX;
+uint16_t posY;
+}tsc_t;
 
-# 86
-LCD_Lowlevel_Init();
-PORTA = 0x11; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-for(i=0;i<10;i++)
+extern tsc_t tsc;
+
+# 275
+void TscInit(void);
+
+# 286
+void tscPowerOff(void);
+
+# 296
+void TscWrite(unsigned char ucReg, unsigned char ucNum,
+unsigned long ulVal);
+
+# 307
+void TscRead(unsigned char ucReg, unsigned char ucNum,
+unsigned char* pucBuffer);
+
+# 316
+void TscUpdate(void);
+
+# 324
+void TSC_ButtonExecute(btn_t * button, uint8_t index);
+
+# 332
+void TSC_SliderExecute(sld_t * slider);
+
+# 8 "lcd_highlevel.h"
+typedef struct
 {
-_delay((unsigned long)((10)*(64000000L/4000.0)));
-}
-PORTA = 0x36; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0b10100000; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x3A; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x55; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xB2; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x0C; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x0C; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x33; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x33; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xB7; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x35; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xBB; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x2B; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xC0; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x2C; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xC2; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x01; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xFF; LATB4 = 0; LATB4 = 1;;
-PORTA = 0XC3; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x11; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xC4; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x20; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xC6; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x09; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xD0; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0xA4; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xA1; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xE0; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0xD0; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x00; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x05; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x0E; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x15; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x0D; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x37; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x43; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x47; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x09; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x15; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x12; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x16; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x19; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xE1; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0xD0; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x00; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x05; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x0D; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x0C; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x06; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x2D; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x44; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x40; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x0E; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x1C; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x18; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x16; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x19; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x2A; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x00; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x00; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x00; LATB4 = 0; LATB4 = 1;;
-PORTA = 0xEF; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x2B; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x00; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x00; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x01; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x3F; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x26; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x01; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x29; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-TRISC2 = 0;
-LATC2 = 0;
-
-# 207
-}
-
-# 218
-void LCD_Fill(uint16_t color)
-{
-uint16_t column;
-uint16_t page;
-uint8_t colorH, colorL;
-colorH = color >> 8;
-colorL = color;
-
-PORTA = 0x2A; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x00; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x00; LATB4 = 0; LATB4 = 1;;
-PORTA = (320-1) >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = (320-1); LATB4 = 0; LATB4 = 1;;
-
-PORTA = 0x2B; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = 0x00; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x00; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1) >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1); LATB4 = 0; LATB4 = 1;;
-
-PORTA = 0x2C; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-for(column=0; column<240; column++)
-{
-for(page=0; page<320; page++)
-{
-PORTA = colorH;
-LATB4 = 0;
-LATB4 = 1;
-PORTA = colorL;
-LATB4 = 0;
-LATB4 = 1;
-}
-}
-}
-
-# 259
-void LCD_SetPixel(uint16_t posX,uint16_t posY, uint16_t color)
-{
-
-PORTA = 0x2A; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posX>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX; LATB4 = 0; LATB4 = 1;;
-PORTA = (320-1) >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = (320-1); LATB4 = 0; LATB4 = 1;;
-
-PORTA = 0x2B; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posY>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posY; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1) >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1); LATB4 = 0; LATB4 = 1;;
-
-PORTA = 0x2C; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = color>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = color; LATB4 = 0; LATB4 = 1;;
-}
-
-# 291
-void LCD_SliderCreate(uint16_t posX, uint16_t posY,
-uint16_t width, uint16_t height,
-uint16_t sldColor, uint16_t bgColor, uint16_t borderColor,
-uint16_t cursorWidth,
-uint16_t steps,
-void (* fpPress)(),
-sld_t * slider)
-{
-slider->posX = posX;
-slider->posY = posY;
-slider->height = height;
-slider->width = width;
-slider->sldColor = sldColor;
-slider->bgColor = bgColor;
-slider->borderColor = borderColor;
-slider->cursorWidth = cursorWidth;
-slider->fpPress = fpPress;
-slider->steps = steps;
-slider->value = 0;
-slider->oldValue = 0;
-}
-
-# 319
-void LCD_SliderUpdate(sld_t * slider)
-{
-uint16_t x1,x2,y1,y2;
-
-
-
-if(slider->cursorWidth != 0)
-{
-x1 = slider->posX + 1 + (((slider->width-slider->cursorWidth) * slider->oldValue)/ slider->steps);
-x2 = x1 + slider->cursorWidth-2;
-y1 = slider->posY + 2;
-y2 = slider->posY + slider->height - 2;
-}
-else
-{
-x1 = slider->posX + 1;
-x2 = slider->posX - 1 + ((slider->width * slider->oldValue)/ slider->steps);
-y1 = slider->posY + 2;
-y2 = slider->posY + slider->height - 2;
-}
-LCD_DrawRect(x1,
-y1,
-x2,
-y2,
-1, slider->bgColor);
-slider->oldValue = slider->value;
-
-
-if(slider->cursorWidth == 0)
-{
-x1 = slider->posX + 1;
-x2 = slider->posX - 1 + ((slider->width * slider->value)/ slider->steps);
-y1 = slider->posY + 2;
-y2 = slider->posY + slider->height - 2;
-}
-
-
-else
-{
-x1 = slider->posX + 1 + (((slider->width-slider->cursorWidth) * slider->value)/ slider->steps);
-x2 = x1 + slider->cursorWidth-2;
-y1 = slider->posY + 2;
-y2 = slider->posY + slider->height - 2;
-}
-LCD_DrawRect(x1, y1, x2, y2, 1, slider->sldColor);
-}
-
-# 371
-void LCD_SliderDraw(sld_t * slider)
-{
-uint16_t x1,x2,y1,y2;
-
-x1 = slider->posX;
-x2 = slider->posX + slider->width;
-y1 = slider->posY;
-y2 = slider->posY + slider->height;
-LCD_DrawRect(x1, y1, x2, y2, 1, slider->bgColor);
-LCD_DrawRect(x1, y1, x2, y2, 0, slider->borderColor);
-LCD_SliderUpdate(slider);
-}
-
-# 396
-void LCD_ButtonCreate(uint16_t posX, uint16_t posY,
-uint16_t width, uint16_t height,
-uint16_t txtColor, uint16_t bgColor,
-const uint8_t * textOrBmp, FONT_INFO * font,
-void (*fpPress)(uint8_t), void (* fpReleased)(uint8_t), void (* fpOut)(uint8_t),
-btn_t * button,
-uint8_t index)
-{
-button->posX = posX;
-button->posY = posY;
-button->height = height;
-button->width = width;
-button->txtColor = txtColor;
-button->bgColor = bgColor;
-button->text = textOrBmp;
-button->font = font;
-button->fpPress = fpPress;
-button->fpReleased = fpReleased;
-button->fpOut = fpOut;
-button->index = index;
-button->pressed = 0;
-}
-
-# 425
-void LCD_ButtonUpdate(btn_t * button)
-{
-uint16_t x1,x2,y1,y2;
-uint16_t colorOut, colorIn;
-
-x1 = button->posX;
-x2 = button->posX + button->width;
-y1 = button->posY;
-y2 = button->posY + button->height;
-
-if(button->pressed == 0)
-{
-colorOut = button->txtColor;
-colorIn = button->bgColor;
-}
-else
-{
-
-colorOut = LCD_Read(x1,y2+1);
-colorIn = button->txtColor;
-}
-if(button->bgColor != button->txtColor)
-{
-
-LCD_DrawRect(x1+3, y2+1, x2+3, y2+3, 1, colorOut);
-LCD_DrawRect(x2+1, y1+3, x2+3, y2+3, 1, colorOut);
-LCD_DrawRect(x1+1, y1+1, x2-1, y1+2, 1, colorIn);
-LCD_DrawRect(x1+1, y1+1, x1+2, y2-1, 1, colorIn);
-}
-}
-
-# 462
-void LCD_ButtonDraw(btn_t * button)
-{
-uint16_t x1,x2,y1,y2;
-uint16_t xText,yText;
-uint8_t i, tempChar;
-uint16_t width=0;
-BMP_STRUCT *bmpPtr;
-
-x1 = button->posX;
-x2 = button->posX + button->width;
-y1 = button->posY;
-y2 = button->posY + button->height;
-if(button->bgColor != button->txtColor)
-{
-LCD_DrawRect(x1, y1, x2, y2, 1, button->bgColor);
-LCD_DrawRect(x1, y1, x2, y2, 0, button->txtColor);
-}
-
-
-
-if((button->text[0] == 'B')&&(button->text[1] == 'M'))
-{
-bmpPtr = (BMP_STRUCT *)button->text;
-yText = (uint16_t) (button->height / 2 + button->posY - (bmpPtr->biHeight / 2));
-xText = (uint16_t) (button->width / 2 + button->posX - (bmpPtr->biWidth / 2));
-LCD_Bitmap((const uint8_t *)bmpPtr,xText,yText);
-}
-
-
-
-else
-{
-yText = (uint16_t) (button->height / 2 + button->posY - (button->font->height / 2));
-for(i=0;i<strlen(button->text);i++)
-{
-tempChar = (uint8_t)((button->text[i]) - button->font->start_char);
-width += (uint16_t)(button->font->descriptor[tempChar].width+2);
-}
-xText = (uint16_t) (button->width / 2 + button->posX - (width / 2));
-LCD_DrawText(button->text, button->font,A_LEFT,
-xText, yText, button->txtColor, button->bgColor);
-}
-LCD_ButtonUpdate(button);
-}
-
-# 514
-uint8_t LCD_InButton(btn_t * button, uint16_t posX, uint16_t posY)
-{
-
-if(posX < button->posX)
-{
-return 0;
-}
-
-if(posX > (button->posX + button->width))
-{
-return 0;
-}
-
-if(posY < button->posY)
-{
-return 0;
-}
-
-if(posY > (button->posY + button->height))
-{
-return 0;
-}
-return 1;
-}
-
-# 546
-uint8_t LCD_InSlider(sld_t * slider, uint16_t posX, uint16_t posY)
-{
-
-if(posX < slider->posX)
-{
-return 0;
-}
-
-if(posX > (slider->posX + slider->width))
-{
-return 0;
-}
-
-if(posY < slider->posY)
-{
-return 0;
-}
-
-if(posY > (slider->posY + slider->height))
-{
-return 0;
-}
-return 1;
-}
-
-# 584
-void LCD_DrawRect(uint16_t posX1,uint16_t posY1, uint16_t posX2,
-uint16_t posY2,uint8_t fill,uint16_t color)
-{
-uint16_t i;
-uint16_t j;
-uint16_t temp;
-uint8_t colorH,colorL;
-
-colorH = color>>8;
-colorL = color;
-
-
-
-if(posX1 > posX2)
-{
-temp = posX1;
-posX1 = posX2;
-posX2 = temp;
-}
-if(posY1 > posY2)
-{
-temp = posY1;
-posY1 = posY2;
-posY2 = temp;
-}
-
-if(fill==1)
-{
-
-PORTA = 0x2A; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posX1>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX1; LATB4 = 0; LATB4 = 1;;
-PORTA = posX2>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX2; LATB4 = 0; LATB4 = 1;;
-
-PORTA = 0x2B; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posY1>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posY1; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1) >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1); LATB4 = 0; LATB4 = 1;;
-
-PORTA = 0x2C; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-for(i=posX1;i<=posX2;i++)
-{
-for(j=posY1;j<=posY2;j++)
-{
-PORTA = colorH; LATB4 = 0; LATB4 = 1;;
-PORTA = colorL; LATB4 = 0; LATB4 = 1;;
-}
-}
-}
-
-else
-{
-
-PORTA = 0x2A; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posX1>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX1; LATB4 = 0; LATB4 = 1;;
-PORTA = posX2>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX2; LATB4 = 0; LATB4 = 1;;
-
-PORTA = 0x2B; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posY1>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posY1; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1) >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1); LATB4 = 0; LATB4 = 1;;
-
-PORTA = 0x2C; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-
-for(i=posX1;i<=posX2;i++)
-{
-PORTA = colorH; LATB4 = 0; LATB4 = 1;;
-PORTA = colorL; LATB4 = 0; LATB4 = 1;;
-}
-
-PORTA = 0x2B; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posY2>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posY2; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x2C; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-for(i=posX1;i<=posX2;i++)
-{
-PORTA = colorH; LATB4 = 0; LATB4 = 1;;
-PORTA = colorL; LATB4 = 0; LATB4 = 1;;
-}
-
-PORTA = 0x2A; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posX1>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX1; LATB4 = 0; LATB4 = 1;;
-PORTA = posX1>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX1; LATB4 = 0; LATB4 = 1;;
-
-PORTA = 0x2B; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posY1>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posY1; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1) >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = (240-1); LATB4 = 0; LATB4 = 1;;
-PORTA = 0x2C; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-for(i=posY1;i<=posY2;i++)
-{
-PORTA = colorH; LATB4 = 0; LATB4 = 1;;
-PORTA = colorL; LATB4 = 0; LATB4 = 1;;
-}
-
-PORTA = 0x2A; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posX2>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX2; LATB4 = 0; LATB4 = 1;;
-PORTA = posX2>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX2; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x2C; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-for(i=posY1;i<=posY2;i++)
-{
-PORTA = colorH; LATB4 = 0; LATB4 = 1;;
-PORTA = colorL; LATB4 = 0; LATB4 = 1;;
-}
-}
-}
-
-# 713
-void LCD_DrawText(const uint8_t * msg,const FONT_INFO * font, ALIGN align,
-uint16_t posX, uint16_t posY, uint16_t color, uint16_t bg_color)
-{
-uint8_t x,y,i;
-int8_t tempChar;
+uint8_t width;
 uint16_t offset;
-uint8_t width=0;
-uint8_t fontByte,fontPixel;
-uint16_t posYEnd, posXEnd, yOffset;
+}FONT_CHAR_INFO;
+
+typedef struct
+{
+uint8_t height;
+uint8_t start_char;
+uint8_t end_char;
+const FONT_CHAR_INFO * descriptor;
+const uint8_t * bitmap;
+
+}FONT_INFO;
+
+# 252 "lcd_lowlevel.h"
+void LCD_PowerOff(void);
+
+# 261
+void LCD_Lowlevel_Init(void);
+
+# 271
+uint16_t LCD_Read(uint16_t posX, uint16_t posY);
+
+# 15 "main.c"
+void enable_high_speed() {
+PLLEN = 1;
+OSCCON = 0b01110000;
+
+
+}
+
+void createPlayButton(void){
+btn_t rightButton;
+btn_t leftButton;
+
+uint8_t l = 0x4C;
+
+LCD_ButtonCreate(0,0,50,50,0b0000000000000000,0b1111111111111111,&l,0,0,0,0,&leftButton,0);
+LCD_ButtonDraw(&leftButton);
+
+}
+
+void initPhysicButton(void){
+INT0IE = 1;
+INTEDG0 = 0;
+GIE = 1;
+PEIE = 1;
+
+}
+
+void initTimer2(void){
+PR2 = 255;
+TMR2 = 0;
+TMR2IF = 0;
+GIE = 1;
+PEIE = 1;
+TMR2IE = 1;
+TMR2ON = 1;
+}
+
+void main(void) {
+
+
+IRCF0 = 1;
+IRCF1 = 1;
+IRCF2 = 1;
+
+
+enable_high_speed();
+SPIInit();
+TscInit();
+LCD_Init();
+initTimer2();
+initPhysicButton();
+createPlayButton();
 
 
 
-for(i=0;i<strlen(msg);i++)
-{
-tempChar = (msg[i]) - font->start_char;
-width += (uint8_t)(font->descriptor[tempChar].width+2);
-}
-if(align == A_RIGHT)
-{
-posX = posX - width;
-}
-else if (align == A_CENTER)
-{
-posX = (uint16_t)(posX - width / 2);
-}
-
-do
-{
-tempChar = (*msg) - font->start_char;
-offset = font->descriptor[tempChar].offset;
-width = font->descriptor[tempChar].width;
+TRISD0 = 0;
+LATD0 = 1;
+TRISC2 = 0;
+LATC2 = 1;
 
 
 
+TRISD4 = 0;
+LATD4 = 1;
 
-PORTA = 0x2A; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posX>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX; LATB4 = 0; LATB4 = 1;;
-posXEnd = posX+width-1+2;
-PORTA = posXEnd>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posXEnd; LATB4 = 0; LATB4 = 1;;
 
-PORTA = 0x2B; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posY>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posY; LATB4 = 0; LATB4 = 1;;
-posYEnd = posY + font->height-1;
-PORTA = posYEnd>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posYEnd; LATB4 = 0; LATB4 = 1;;
-PORTA = 0x2C; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
+while(1){
 
-for(y=0;y<font->height;y++)
-{
-yOffset = (uint16_t)(offset + (y * ((width+7)/8)));
-for(x=0;x<width;x++)
-{
-fontByte = (uint8_t)(font->bitmap[yOffset + (x/8)]);
-fontPixel = (uint8_t)(fontByte & (0x80 >> (x%8)));
-if(fontPixel != 0)
-{
-PORTA = color>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = color; LATB4 = 0; LATB4 = 1;;
-}
-else
-{
-PORTA = bg_color>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = bg_color; LATB4 = 0; LATB4 = 1;;
-}
-}
-for(x=0;x<2;x++)
-{
-PORTA = bg_color>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = bg_color; LATB4 = 0; LATB4 = 1;;
-}
-}
-posX = posX + 2 + width;
-msg++;
-}while(*msg != 0);
+
+
 }
 
-# 799
-uint16_t RGB2LCD(uint8_t * colorTableEntry)
-{
-uint16_t red,green,blue;
-uint16_t color;
-
-red = (uint16_t)(colorTableEntry[2] >> 3);
-green = (uint16_t)(colorTableEntry[1] >> 2);
-blue = (uint16_t)(colorTableEntry[0] >> 3);
-color = (red << 11) | (green << 5) | (blue << 0);
-return color;
+return;
 }
-
-# 823
-uint8_t LCD_Bitmap(const uint8_t * bmpPtr, uint16_t posX, uint16_t posY)
-{
-uint32_t bfOffBits;
-uint16_t biWidth, biHeight;
-uint8_t * colorTablePtr;
-uint8_t endOfImage;
-uint16_t i,curXPos,curYPos;
-uint8_t pixelCount;
-uint16_t color;
-uint16_t jumpColor;
-uint16_t jumpCount;
-uint16_t newY;
-BMP_STRUCT * strPtr;
-
-strPtr = (BMP_STRUCT *)bmpPtr;
-
-bfOffBits = strPtr->bfOffBits;
-biWidth = strPtr->biWidth;
-biHeight = strPtr->biHeight;
-if((strPtr->biBitCount != 8) ||
-(strPtr->biCompression != 1))
-{
-return 1;
-}
-if(((posX + biWidth) > (320)) ||
-((posY + biHeight) > (240)))
-{
-return 2;
-}
-
-PORTA = 0x36; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-
-PORTA = 0b11100000; LATB4 = 0; LATB4 = 1;;
-
-colorTablePtr = (uint8_t *)bmpPtr + 54;
-bmpPtr += bfOffBits;
-endOfImage = 0;
-jumpColor = RGB2LCD(colorTablePtr);
-
-PORTA = 0x2A; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-PORTA = posX>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX; LATB4 = 0; LATB4 = 1;;
-posX = posX + biWidth-1;
-PORTA = posX>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = posX; LATB4 = 0; LATB4 = 1;;
-
-PORTA = 0x2B; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-newY = 240 - posY - biHeight;
-PORTA = newY>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = newY; LATB4 = 0; LATB4 = 1;;
-newY = newY + biHeight-1;
-PORTA = newY>>8; LATB4 = 0; LATB4 = 1;;
-PORTA = newY; LATB4 = 0; LATB4 = 1;;
-
-PORTA = 0x2C; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-curXPos = 0;
-curYPos = 0;
-do
-{
-if(bmpPtr[0] == 0)
-{
-switch (bmpPtr[1])
-{
-case 0:
-bmpPtr += 2;
-for(i=0;i<biWidth - curXPos;i++)
-{
-PORTA = jumpColor >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = jumpColor; LATB4 = 0; LATB4 = 1;;
-}
-curXPos = 0;
-curYPos++;
-break;
-case 1:
-for(i=0;i<biWidth - curXPos;i++)
-{
-PORTA = jumpColor >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = jumpColor; LATB4 = 0; LATB4 = 1;;
-}
-for(i=0;i<(biHeight - curYPos -1)*biWidth;i++)
-{
-PORTA = jumpColor >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = jumpColor; LATB4 = 0; LATB4 = 1;;
-}
-endOfImage = 1;
-break;
-case 2:
-jumpCount = bmpPtr[2] + (bmpPtr[3]*biWidth);
-for(i=0;i<jumpCount;i++)
-{
-curXPos++;
-PORTA = jumpColor >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = jumpColor; LATB4 = 0; LATB4 = 1;;
-}
-curYPos = curYPos + (jumpCount / biWidth);
-curXPos = curXPos % biWidth;
-bmpPtr += 4;
-break;
-default:
-pixelCount = bmpPtr[1];
-for(i=0;i < pixelCount;i++)
-{
-color = RGB2LCD(colorTablePtr+(bmpPtr[2+i]*4));
-curXPos++;
-PORTA = color >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = color; LATB4 = 0; LATB4 = 1;;
-}
-if(pixelCount < 255)
-{
-pixelCount = (uint8_t)((pixelCount+1) & 0xFE);
-bmpPtr+=pixelCount+2;
-}
-else
-{
-bmpPtr += 258;
-}
-break;
-}
-}
-else
-{
-pixelCount = bmpPtr[0];
-color = RGB2LCD(colorTablePtr+(bmpPtr[1]*4));
-for(i=0;i < pixelCount;i++)
-{
-curXPos++;
-PORTA = color >> 8; LATB4 = 0; LATB4 = 1;;
-PORTA = color; LATB4 = 0; LATB4 = 1;;
-}
-bmpPtr+=2;
-}
-}while(endOfImage == 0);
-PORTA = 0x36; LATC1 = 0; LATB4 = 0; LATB4 = 1; LATC1 = 1;;
-
-PORTA = 0b10100000; LATB4 = 0; LATB4 = 1;;
-return 0;
-}
-

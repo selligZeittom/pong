@@ -8,6 +8,10 @@
 #ifndef BALL_MANAGER_H
 #define	BALL_MANAGER_H
 
+#include <xc.h>             // XC8 General Include File
+#include <stdint.h>         // usage of standard types
+#include <stdbool.h>        // usage of boolean types
+
 typedef struct Ball
 {
     uint16_t xPos, yPos;

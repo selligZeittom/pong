@@ -1,72 +1,4 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"7 CONFIG_PIC18F46K20.c
-[p x FOSC=INTIO67 ]
-"8
-[p x FCMEN=OFF ]
-"9
-[p x IESO=OFF ]
-"12
-[p x PWRT=ON ]
-"13
-[p x BOREN=OFF ]
-"14
-[p x BORV=22 ]
-"17
-[p x WDTEN=OFF ]
-"18
-[p x WDTPS=1 ]
-"21
-[p x CCP2MX=PORTC ]
-"22
-[p x PBADEN=OFF ]
-"23
-[p x LPT1OSC=OFF ]
-"24
-[p x HFOFST=ON ]
-"25
-[p x MCLRE=ON ]
-"28
-[p x STVREN=ON ]
-"29
-[p x LVP=OFF ]
-"30
-[p x XINST=OFF ]
-"33
-[p x CP0=OFF ]
-"34
-[p x CP1=OFF ]
-"35
-[p x CP2=OFF ]
-"36
-[p x CP3=OFF ]
-"39
-[p x CPB=OFF ]
-"40
-[p x CPD=OFF ]
-"43
-[p x WRT0=OFF ]
-"44
-[p x WRT1=OFF ]
-"45
-[p x WRT2=OFF ]
-"46
-[p x WRT3=OFF ]
-"49
-[p x WRTC=OFF ]
-"50
-[p x WRTB=OFF ]
-"51
-[p x WRTD=OFF ]
-"54
-[p x EBTR0=OFF ]
-"55
-[p x EBTR1=OFF ]
-"56
-[p x EBTR2=OFF ]
-"57
-[p x EBTR3=OFF ]
-"60
-[p x EBTRB=OFF ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3029,3 +2961,40 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 38: typedef signed long int int32_t;
+[; ;stdint.h: 45: typedef unsigned char uint8_t;
+[; ;stdint.h: 51: typedef unsigned int uint16_t;
+[; ;stdint.h: 67: typedef unsigned long int uint32_t;
+[; ;stdint.h: 75: typedef signed char int_least8_t;
+[; ;stdint.h: 82: typedef signed int int_least16_t;
+[; ;stdint.h: 104: typedef signed long int int_least32_t;
+[; ;stdint.h: 111: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 117: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 136: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 145: typedef signed char int_fast8_t;
+[; ;stdint.h: 152: typedef signed int int_fast16_t;
+[; ;stdint.h: 174: typedef signed long int int_fast32_t;
+[; ;stdint.h: 181: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 187: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 206: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 212: typedef int32_t intmax_t;
+[; ;stdint.h: 217: typedef uint32_t uintmax_t;
+[; ;stdint.h: 222: typedef int16_t intptr_t;
+[; ;stdint.h: 227: typedef uint16_t uintptr_t;
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;Ball_manager.h: 15: typedef struct Ball
+[; ;Ball_manager.h: 16: {
+[; ;Ball_manager.h: 17: uint16_t xPos, yPos;
+[; ;Ball_manager.h: 19: } Ball;
+"22 Ball_manager.h
+[v _step `uc ~T0 @X0 1 e ]
+[; ;Ball_manager.h: 22: uint8_t step;
+"23
+[v _alpha `uc ~T0 @X0 1 e ]
+[; ;Ball_manager.h: 23: uint8_t alpha;
+[; ;Ball_manager.h: 26: void ball_init(Ball* ball);
+[; ;Ball_manager.h: 27: void compute_ballPosition();
+[; ;Ball_manager.h: 28: void set_xPos(uint16_t new_xPos);
+[; ;Ball_manager.h: 29: void set_yPos(uint16_t new_yPos);

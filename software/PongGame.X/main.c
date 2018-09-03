@@ -49,13 +49,23 @@ void initTimer2(void){
 }
 
 void main(void) {
+    
+    // set clock speed
     IRCF0 = 1;
     IRCF1 = 1;
     IRCF2 = 1;
+    
+    // init
     enable_high_speed();
     SPIInit();
     TscInit();
     LCD_Init();
+    initTimer2();
+    initPhysicButton();
+    createPlayButton();
+    
+    
+    //switch on backlight
     TRISD0 = 0;
     LATD0 = 1;
     TRISC2 = 0;
@@ -66,9 +76,7 @@ void main(void) {
     TRISD4 = 0;
     LATD4 = 1;
     
-    initTimer2();
-    initPhysicButton();
-    createPlayButton();
+    
     while(1){
         
       

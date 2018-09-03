@@ -1,72 +1,38 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"7 CONFIG_PIC18F46K20.c
-[p x FOSC=INTIO67 ]
-"8
-[p x FCMEN=OFF ]
-"9
-[p x IESO=OFF ]
-"12
-[p x PWRT=ON ]
-"13
-[p x BOREN=OFF ]
-"14
-[p x BORV=22 ]
-"17
-[p x WDTEN=OFF ]
-"18
-[p x WDTPS=1 ]
-"21
-[p x CCP2MX=PORTC ]
-"22
-[p x PBADEN=OFF ]
-"23
-[p x LPT1OSC=OFF ]
-"24
-[p x HFOFST=ON ]
-"25
-[p x MCLRE=ON ]
-"28
-[p x STVREN=ON ]
-"29
-[p x LVP=OFF ]
-"30
-[p x XINST=OFF ]
-"33
-[p x CP0=OFF ]
-"34
-[p x CP1=OFF ]
-"35
-[p x CP2=OFF ]
-"36
-[p x CP3=OFF ]
-"39
-[p x CPB=OFF ]
-"40
-[p x CPD=OFF ]
-"43
-[p x WRT0=OFF ]
-"44
-[p x WRT1=OFF ]
-"45
-[p x WRT2=OFF ]
-"46
-[p x WRT3=OFF ]
-"49
-[p x WRTC=OFF ]
-"50
-[p x WRTB=OFF ]
-"51
-[p x WRTD=OFF ]
-"54
-[p x EBTR0=OFF ]
-"55
-[p x EBTR1=OFF ]
-"56
-[p x EBTR2=OFF ]
-"57
-[p x EBTR3=OFF ]
-"60
-[p x EBTRB=OFF ]
+"8 Game_controller.c
+[c E3288 0 1 .. ]
+[n E3288 SM_MODE ST_ON ST_OFF  ]
+[c E3292 0 1 .. ]
+[n E3292 SM_ON ST_MENU ST_GAME  ]
+[c E3296 0 1 2 .. ]
+[n E3296 SM_MENU ST_MENU_WAIT ST_MENU_CTRL_SW ST_MENU_LEVEL_SW  ]
+[c E3301 0 1 .. ]
+[n E3301 SM_SCREEN ST_SCREEN_WAIT ST_SCREEN_UPDATE  ]
+[c E3305 0 1 2 .. ]
+[n E3305 SM_RACKET ST_RACKET_WAIT ST_RACKET_USER ST_RACKET_AI  ]
+[c E3310 0 1 2 3 4 .. ]
+[n E3310 SM_BALL ST_BALL_WAIT ST_BALL_CHECK_Y ST_BALL_CHECK_X ST_BALL_MOVE ST_BALL_GAME_OVER  ]
+"63 Game_controller.h
+[s S300 `E3288 1 `E3288 1 `E3292 1 `E3292 1 `E3296 1 `E3296 1 `E3301 1 `E3301 1 `E3305 1 `E3305 1 `E3310 1 `E3310 1 ]
+[n S300 Game_controller sm_mode old_sm_mode sm_on old_sm_on sm_menu old_sm_menu sm_screen old_sm_screen sm_racket old_sm_racket sm_ball old_sm_ball ]
+"157
+[v _sleep_mode `(v ~T0 @X0 0 ef ]
+"162
+[v _wake_up `(v ~T0 @X0 0 ef ]
+"111
+[v _display_menu `(v ~T0 @X0 0 ef ]
+"121
+[v _switch_control `(v ~T0 @X0 0 ef ]
+"116
+[v _switch_level `(v ~T0 @X0 0 ef ]
+"126
+[v _update_screen `(v ~T0 @X0 0 ef ]
+"136
+[v _move_user_racket `(v ~T0 @X0 0 ef ]
+"131
+[v _move_AI_racket `(v ~T0 @X0 0 ef ]
+"167
+[v _reset_game `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3029,3 +2995,1406 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 38: typedef signed long int int32_t;
+[; ;stdint.h: 45: typedef unsigned char uint8_t;
+[; ;stdint.h: 51: typedef unsigned int uint16_t;
+[; ;stdint.h: 67: typedef unsigned long int uint32_t;
+[; ;stdint.h: 75: typedef signed char int_least8_t;
+[; ;stdint.h: 82: typedef signed int int_least16_t;
+[; ;stdint.h: 104: typedef signed long int int_least32_t;
+[; ;stdint.h: 111: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 117: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 136: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 145: typedef signed char int_fast8_t;
+[; ;stdint.h: 152: typedef signed int int_fast16_t;
+[; ;stdint.h: 174: typedef signed long int int_fast32_t;
+[; ;stdint.h: 181: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 187: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 206: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 212: typedef int32_t intmax_t;
+[; ;stdint.h: 217: typedef uint32_t uintmax_t;
+[; ;stdint.h: 222: typedef int16_t intptr_t;
+[; ;stdint.h: 227: typedef uint16_t uintptr_t;
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;xf.h: 18: typedef uint8_t Event;
+[; ;xf.h: 19: typedef uint16_t Time;
+[; ;xf.h: 20: typedef uint8_t TimerID;
+[; ;xf.h: 23: typedef struct Timer
+[; ;xf.h: 24: {
+[; ;xf.h: 25: Time tm;
+[; ;xf.h: 26: Event ev;
+[; ;xf.h: 27: } Timer;
+[; ;xf.h: 37: typedef struct XF
+[; ;xf.h: 38: {
+[; ;xf.h: 39: Timer timerList[8];
+[; ;xf.h: 40: Event eventQueue[12];
+[; ;xf.h: 41: uint8_t in;
+[; ;xf.h: 42: uint8_t out;
+[; ;xf.h: 43: } XF;
+[; ;xf.h: 51: void XF_init();
+[; ;xf.h: 59: bool XF_pushEvent(Event ev, bool inISR);
+[; ;xf.h: 66: Event XF_popEvent(bool inISR);
+[; ;xf.h: 75: TimerID XF_scheduleTimer(Time tm, Event ev, bool inISR);
+[; ;xf.h: 83: void XF_unscheduleTimer(TimerID id, bool inISR);
+[; ;xf.h: 90: void XF_decrementAndQueueTimers();
+"14 GlobalVariables.h
+[v _EV_BTN_PRESSED `Cuc ~T0 @X0 1 e ]
+[i _EV_BTN_PRESSED
+-> -> 0 `i `uc
+]
+[; ;GlobalVariables.h: 14: const Event EV_BTN_PRESSED = 0;
+"15
+[v _EV_BTN_TIMEOUT `Cuc ~T0 @X0 1 e ]
+[i _EV_BTN_TIMEOUT
+-> -> 1 `i `uc
+]
+[; ;GlobalVariables.h: 15: const Event EV_BTN_TIMEOUT = 1;
+"16
+[v _EV_BTN_GOTO_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_BTN_GOTO_WAIT
+-> -> 2 `i `uc
+]
+[; ;GlobalVariables.h: 16: const Event EV_BTN_GOTO_WAIT = 2;
+"19
+[v _EV_TIMEOUT_TSC `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_TSC
+-> -> 10 `i `uc
+]
+[; ;GlobalVariables.h: 19: const Event EV_TIMEOUT_TSC = 10;
+"20
+[v _EV_GOTO_TSC_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_TSC_WAIT
+-> -> 11 `i `uc
+]
+[; ;GlobalVariables.h: 20: const Event EV_GOTO_TSC_WAIT = 11;
+"23
+[v _EV_ON `Cuc ~T0 @X0 1 e ]
+[i _EV_ON
+-> -> 20 `i `uc
+]
+[; ;GlobalVariables.h: 23: const Event EV_ON = 20;
+"24
+[v _EV_OFF `Cuc ~T0 @X0 1 e ]
+[i _EV_OFF
+-> -> 21 `i `uc
+]
+[; ;GlobalVariables.h: 24: const Event EV_OFF = 21;
+"27
+[v _EV_GAME `Cuc ~T0 @X0 1 e ]
+[i _EV_GAME
+-> -> 30 `i `uc
+]
+[; ;GlobalVariables.h: 27: const Event EV_GAME = 30;
+"28
+[v _EV_MENU `Cuc ~T0 @X0 1 e ]
+[i _EV_MENU
+-> -> 31 `i `uc
+]
+[; ;GlobalVariables.h: 28: const Event EV_MENU = 31;
+"31
+[v _EV_LEVEL_SW `Cuc ~T0 @X0 1 e ]
+[i _EV_LEVEL_SW
+-> -> 40 `i `uc
+]
+[; ;GlobalVariables.h: 31: const Event EV_LEVEL_SW = 40;
+"32
+[v _EV_CTRL_SW `Cuc ~T0 @X0 1 e ]
+[i _EV_CTRL_SW
+-> -> 41 `i `uc
+]
+[; ;GlobalVariables.h: 32: const Event EV_CTRL_SW = 41;
+"33
+[v _EV_GOTO_MENU_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_MENU_WAIT
+-> -> 42 `i `uc
+]
+[; ;GlobalVariables.h: 33: const Event EV_GOTO_MENU_WAIT = 42;
+"36
+[v _EV_TIMEOUT_SCREEN `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_SCREEN
+-> -> 50 `i `uc
+]
+[; ;GlobalVariables.h: 36: const Event EV_TIMEOUT_SCREEN = 50;
+"37
+[v _EV_GOTO_SCREEN_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_SCREEN_WAIT
+-> -> 51 `i `uc
+]
+[; ;GlobalVariables.h: 37: const Event EV_GOTO_SCREEN_WAIT = 51;
+"40
+[v _EV_TIMEOUT_AI `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_AI
+-> -> 60 `i `uc
+]
+[; ;GlobalVariables.h: 40: const Event EV_TIMEOUT_AI = 60;
+"41
+[v _EV_TIMEOUT_USER `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_USER
+-> -> 61 `i `uc
+]
+[; ;GlobalVariables.h: 41: const Event EV_TIMEOUT_USER = 61;
+"42
+[v _EV_GOTO_RACKET_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_RACKET_WAIT
+-> -> 62 `i `uc
+]
+[; ;GlobalVariables.h: 42: const Event EV_GOTO_RACKET_WAIT = 62;
+"45
+[v _EV_TIMEOUT_BALL `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_BALL
+-> -> 70 `i `uc
+]
+[; ;GlobalVariables.h: 45: const Event EV_TIMEOUT_BALL = 70;
+"46
+[v _EV_CHECK_RACKET `Cuc ~T0 @X0 1 e ]
+[i _EV_CHECK_RACKET
+-> -> 71 `i `uc
+]
+[; ;GlobalVariables.h: 46: const Event EV_CHECK_RACKET = 71;
+"47
+[v _EV_MOVE `Cuc ~T0 @X0 1 e ]
+[i _EV_MOVE
+-> -> 72 `i `uc
+]
+[; ;GlobalVariables.h: 47: const Event EV_MOVE = 72;
+"48
+[v _EV_GAME_OVER `Cuc ~T0 @X0 1 e ]
+[i _EV_GAME_OVER
+-> -> 73 `i `uc
+]
+[; ;GlobalVariables.h: 48: const Event EV_GAME_OVER = 73;
+"49
+[v _EV_GOTO_BALL_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_BALL_WAIT
+-> -> 74 `i `uc
+]
+[; ;GlobalVariables.h: 49: const Event EV_GOTO_BALL_WAIT = 74;
+"53
+[v _EV_TIMEOUT_ACC `Cuc ~T0 @X0 1 e ]
+[i _EV_TIMEOUT_ACC
+-> -> 80 `i `uc
+]
+[; ;GlobalVariables.h: 53: const Event EV_TIMEOUT_ACC = 80;
+"54
+[v _EV_GOTO_ACC_WAIT `Cuc ~T0 @X0 1 e ]
+[i _EV_GOTO_ACC_WAIT
+-> -> 81 `i `uc
+]
+[; ;GlobalVariables.h: 54: const Event EV_GOTO_ACC_WAIT = 81;
+[; ;Game_controller.h: 14: typedef enum SM_MODE
+[; ;Game_controller.h: 15: {
+[; ;Game_controller.h: 16: ST_ON,
+[; ;Game_controller.h: 17: ST_OFF,
+[; ;Game_controller.h: 18: } SM_MODE;
+[; ;Game_controller.h: 20: typedef enum SM_ON
+[; ;Game_controller.h: 21: {
+[; ;Game_controller.h: 22: ST_MENU,
+[; ;Game_controller.h: 23: ST_GAME,
+[; ;Game_controller.h: 24: } SM_ON;
+[; ;Game_controller.h: 26: typedef enum SM_MENU
+[; ;Game_controller.h: 27: {
+[; ;Game_controller.h: 28: ST_MENU_WAIT,
+[; ;Game_controller.h: 29: ST_MENU_CTRL_SW,
+[; ;Game_controller.h: 30: ST_MENU_LEVEL_SW,
+[; ;Game_controller.h: 31: } SM_MENU;
+[; ;Game_controller.h: 33: typedef enum SM_SCREEN
+[; ;Game_controller.h: 34: {
+[; ;Game_controller.h: 35: ST_SCREEN_WAIT,
+[; ;Game_controller.h: 36: ST_SCREEN_UPDATE,
+[; ;Game_controller.h: 37: } SM_SCREEN;
+[; ;Game_controller.h: 39: typedef enum SM_RACKET
+[; ;Game_controller.h: 40: {
+[; ;Game_controller.h: 41: ST_RACKET_WAIT,
+[; ;Game_controller.h: 42: ST_RACKET_USER,
+[; ;Game_controller.h: 43: ST_RACKET_AI,
+[; ;Game_controller.h: 44: } SM_RACKET;
+[; ;Game_controller.h: 46: typedef enum SM_BALL
+[; ;Game_controller.h: 47: {
+[; ;Game_controller.h: 48: ST_BALL_WAIT,
+[; ;Game_controller.h: 49: ST_BALL_CHECK_Y,
+[; ;Game_controller.h: 50: ST_BALL_CHECK_X,
+[; ;Game_controller.h: 51: ST_BALL_MOVE,
+[; ;Game_controller.h: 52: ST_BALL_GAME_OVER,
+[; ;Game_controller.h: 53: } SM_BALL;
+[; ;Game_controller.h: 63: typedef struct Game_controller
+[; ;Game_controller.h: 64: {
+[; ;Game_controller.h: 65: SM_MODE sm_mode, old_sm_mode;
+[; ;Game_controller.h: 66: SM_ON sm_on, old_sm_on;
+[; ;Game_controller.h: 67: SM_MENU sm_menu, old_sm_menu;
+[; ;Game_controller.h: 68: SM_SCREEN sm_screen, old_sm_screen;
+[; ;Game_controller.h: 69: SM_RACKET sm_racket, old_sm_racket;
+[; ;Game_controller.h: 70: SM_BALL sm_ball, old_sm_ball;
+[; ;Game_controller.h: 71: }Game_controller;
+[; ;Game_controller.h: 76: void init_Game_controller(Game_controller* gameCtrl);
+[; ;Game_controller.h: 81: void state_machine_mode(Game_controller* gameCtrl, Event ev);
+[; ;Game_controller.h: 86: void state_machine_on(Game_controller* gameCtrl, Event ev);
+[; ;Game_controller.h: 91: void state_machine_menu(Game_controller* gameCtrl, Event ev);
+[; ;Game_controller.h: 96: void state_machine_screen(Game_controller* gameCtrl, Event ev);
+[; ;Game_controller.h: 101: void state_machine_racket(Game_controller* gameCtrl, Event ev);
+[; ;Game_controller.h: 106: void state_machine_ball(Game_controller* gameCtrl, Event ev);
+[; ;Game_controller.h: 111: void display_menu();
+[; ;Game_controller.h: 116: void switch_level();
+[; ;Game_controller.h: 121: void switch_control();
+[; ;Game_controller.h: 126: void update_screen();
+[; ;Game_controller.h: 131: void move_AI_racket();
+[; ;Game_controller.h: 136: void move_user_racket();
+[; ;Game_controller.h: 141: void check_Y_ball(uint16_t y_ball);
+[; ;Game_controller.h: 146: void check_X_ball(uint16_t x_ball, uint16_t x_racket);
+[; ;Game_controller.h: 152: void compute_movement_ball(uint16_t x_ball);
+[; ;Game_controller.h: 157: void sleep_mode();
+[; ;Game_controller.h: 162: void wake_up();
+[; ;Game_controller.h: 167: void reset_game();
+"7 Game_controller.c
+[v _init_Game_controller `(v ~T0 @X0 1 ef1`*S300 ]
+"8
+{
+[; ;Game_controller.c: 7: void init_Game_controller(Game_controller* gameCtrl)
+[; ;Game_controller.c: 8: {
+[e :U _init_Game_controller ]
+"7
+[v _gameCtrl `*S300 ~T0 @X0 1 r1 ]
+"8
+[f ]
+[; ;Game_controller.c: 10: gameCtrl->sm_mode = ST_ON;
+"10
+[e = . *U _gameCtrl 0 . `E3288 0 ]
+[; ;Game_controller.c: 11: gameCtrl->old_sm_mode = gameCtrl->sm_mode;
+"11
+[e = . *U _gameCtrl 1 . *U _gameCtrl 0 ]
+[; ;Game_controller.c: 14: gameCtrl->sm_on = ST_MENU;
+"14
+[e = . *U _gameCtrl 2 . `E3292 0 ]
+[; ;Game_controller.c: 15: gameCtrl->old_sm_on = gameCtrl->sm_on;
+"15
+[e = . *U _gameCtrl 3 . *U _gameCtrl 2 ]
+[; ;Game_controller.c: 18: gameCtrl->sm_menu = ST_MENU_WAIT;
+"18
+[e = . *U _gameCtrl 4 . `E3296 0 ]
+[; ;Game_controller.c: 19: gameCtrl->old_sm_menu = gameCtrl->sm_menu;
+"19
+[e = . *U _gameCtrl 5 . *U _gameCtrl 4 ]
+[; ;Game_controller.c: 22: gameCtrl->sm_screen = ST_SCREEN_WAIT;
+"22
+[e = . *U _gameCtrl 6 . `E3301 0 ]
+[; ;Game_controller.c: 23: gameCtrl->old_sm_screen = gameCtrl->sm_screen;
+"23
+[e = . *U _gameCtrl 7 . *U _gameCtrl 6 ]
+[; ;Game_controller.c: 26: gameCtrl->sm_racket = ST_RACKET_WAIT;
+"26
+[e = . *U _gameCtrl 8 . `E3305 0 ]
+[; ;Game_controller.c: 27: gameCtrl->old_sm_racket = gameCtrl->sm_racket;
+"27
+[e = . *U _gameCtrl 9 . *U _gameCtrl 8 ]
+[; ;Game_controller.c: 30: gameCtrl->sm_ball = ST_BALL_WAIT;
+"30
+[e = . *U _gameCtrl 10 . `E3310 0 ]
+[; ;Game_controller.c: 31: gameCtrl->old_sm_ball = gameCtrl->old_sm_ball;
+"31
+[e = . *U _gameCtrl 11 . *U _gameCtrl 11 ]
+[; ;Game_controller.c: 32: }
+"32
+[e :UE 301 ]
+}
+"37
+[v _state_machine_mode `(v ~T0 @X0 1 ef2`*S300`uc ]
+"38
+{
+[; ;Game_controller.c: 37: void state_machine_mode(Game_controller* gameCtrl, Event ev)
+[; ;Game_controller.c: 38: {
+[e :U _state_machine_mode ]
+"37
+[v _gameCtrl `*S300 ~T0 @X0 1 r1 ]
+[v _ev `uc ~T0 @X0 1 r2 ]
+"38
+[f ]
+[; ;Game_controller.c: 40: gameCtrl->old_sm_mode = gameCtrl->sm_mode;
+"40
+[e = . *U _gameCtrl 1 . *U _gameCtrl 0 ]
+[; ;Game_controller.c: 43: switch (gameCtrl->sm_mode)
+"43
+[e $U 304  ]
+[; ;Game_controller.c: 44: {
+"44
+{
+[; ;Game_controller.c: 45: case ST_OFF:
+"45
+[e :U 305 ]
+[; ;Game_controller.c: 47: if(ev == EV_ON)
+"47
+[e $ ! == -> _ev `i -> _EV_ON `i 306  ]
+[; ;Game_controller.c: 48: {
+"48
+{
+[; ;Game_controller.c: 49: gameCtrl->sm_mode = ST_ON;
+"49
+[e = . *U _gameCtrl 0 . `E3288 0 ]
+"50
+}
+[e :U 306 ]
+[; ;Game_controller.c: 50: }
+[; ;Game_controller.c: 51: break;
+"51
+[e $U 303  ]
+[; ;Game_controller.c: 52: case ST_ON:
+"52
+[e :U 307 ]
+[; ;Game_controller.c: 54: if(ev == EV_OFF)
+"54
+[e $ ! == -> _ev `i -> _EV_OFF `i 308  ]
+[; ;Game_controller.c: 55: {
+"55
+{
+[; ;Game_controller.c: 56: gameCtrl->sm_mode = ST_OFF;
+"56
+[e = . *U _gameCtrl 0 . `E3288 1 ]
+"57
+}
+[e :U 308 ]
+[; ;Game_controller.c: 57: }
+[; ;Game_controller.c: 58: break;
+"58
+[e $U 303  ]
+[; ;Game_controller.c: 59: default:
+"59
+[e :U 309 ]
+[; ;Game_controller.c: 60: break;
+"60
+[e $U 303  ]
+"61
+}
+[; ;Game_controller.c: 61: }
+[e $U 303  ]
+"43
+[e :U 304 ]
+[e [\ . *U _gameCtrl 0 , $ . `E3288 1 305
+ , $ . `E3288 0 307
+ 309 ]
+"61
+[e :U 303 ]
+[; ;Game_controller.c: 64: if(gameCtrl->sm_mode != gameCtrl->old_sm_on)
+"64
+[e $ ! != -> . *U _gameCtrl 0 `i -> . *U _gameCtrl 3 `i 310  ]
+[; ;Game_controller.c: 65: {
+"65
+{
+[; ;Game_controller.c: 66: switch (gameCtrl->sm_mode)
+"66
+[e $U 312  ]
+[; ;Game_controller.c: 67: {
+"67
+{
+[; ;Game_controller.c: 68: case ST_OFF:
+"68
+[e :U 313 ]
+[; ;Game_controller.c: 70: sleep_mode();
+"70
+[e ( _sleep_mode ..  ]
+[; ;Game_controller.c: 71: break;
+"71
+[e $U 311  ]
+[; ;Game_controller.c: 72: case ST_ON:
+"72
+[e :U 314 ]
+[; ;Game_controller.c: 74: wake_up();
+"74
+[e ( _wake_up ..  ]
+[; ;Game_controller.c: 75: break;
+"75
+[e $U 311  ]
+[; ;Game_controller.c: 76: default:
+"76
+[e :U 315 ]
+[; ;Game_controller.c: 77: break;
+"77
+[e $U 311  ]
+"78
+}
+[; ;Game_controller.c: 78: }
+[e $U 311  ]
+"66
+[e :U 312 ]
+[e [\ . *U _gameCtrl 0 , $ . `E3288 1 313
+ , $ . `E3288 0 314
+ 315 ]
+"78
+[e :U 311 ]
+"79
+}
+[e :U 310 ]
+[; ;Game_controller.c: 79: }
+[; ;Game_controller.c: 80: }
+"80
+[e :UE 302 ]
+}
+"85
+[v _state_machine_on `(v ~T0 @X0 1 ef2`*S300`uc ]
+"86
+{
+[; ;Game_controller.c: 85: void state_machine_on(Game_controller* gameCtrl, Event ev)
+[; ;Game_controller.c: 86: {
+[e :U _state_machine_on ]
+"85
+[v _gameCtrl `*S300 ~T0 @X0 1 r1 ]
+[v _ev `uc ~T0 @X0 1 r2 ]
+"86
+[f ]
+[; ;Game_controller.c: 88: gameCtrl->old_sm_on = gameCtrl->sm_on;
+"88
+[e = . *U _gameCtrl 3 . *U _gameCtrl 2 ]
+[; ;Game_controller.c: 90: switch (gameCtrl->sm_on) {
+"90
+[e $U 318  ]
+{
+[; ;Game_controller.c: 91: case ST_MENU:
+"91
+[e :U 319 ]
+[; ;Game_controller.c: 93: if(ev == EV_GAME)
+"93
+[e $ ! == -> _ev `i -> _EV_GAME `i 320  ]
+[; ;Game_controller.c: 94: {
+"94
+{
+[; ;Game_controller.c: 95: gameCtrl->sm_on = ST_GAME;
+"95
+[e = . *U _gameCtrl 2 . `E3292 1 ]
+"96
+}
+[e :U 320 ]
+[; ;Game_controller.c: 96: }
+[; ;Game_controller.c: 97: break;
+"97
+[e $U 317  ]
+[; ;Game_controller.c: 98: case ST_GAME:
+"98
+[e :U 321 ]
+[; ;Game_controller.c: 100: if(ev == EV_MENU)
+"100
+[e $ ! == -> _ev `i -> _EV_MENU `i 322  ]
+[; ;Game_controller.c: 101: {
+"101
+{
+[; ;Game_controller.c: 102: gameCtrl->sm_on = ST_MENU;
+"102
+[e = . *U _gameCtrl 2 . `E3292 0 ]
+"103
+}
+[e :U 322 ]
+[; ;Game_controller.c: 103: }
+[; ;Game_controller.c: 104: break;
+"104
+[e $U 317  ]
+[; ;Game_controller.c: 105: default:
+"105
+[e :U 323 ]
+[; ;Game_controller.c: 106: break;
+"106
+[e $U 317  ]
+"107
+}
+[; ;Game_controller.c: 107: }
+[e $U 317  ]
+"90
+[e :U 318 ]
+[e [\ . *U _gameCtrl 2 , $ . `E3292 0 319
+ , $ . `E3292 1 321
+ 323 ]
+"107
+[e :U 317 ]
+[; ;Game_controller.c: 110: if(gameCtrl->sm_on != gameCtrl->old_sm_on)
+"110
+[e $ ! != -> . *U _gameCtrl 2 `i -> . *U _gameCtrl 3 `i 324  ]
+[; ;Game_controller.c: 111: {
+"111
+{
+[; ;Game_controller.c: 112: switch (gameCtrl->sm_on) {
+"112
+[e $U 326  ]
+{
+[; ;Game_controller.c: 113: case ST_MENU:
+"113
+[e :U 327 ]
+[; ;Game_controller.c: 115: display_menu();
+"115
+[e ( _display_menu ..  ]
+[; ;Game_controller.c: 116: break;
+"116
+[e $U 325  ]
+[; ;Game_controller.c: 117: case ST_GAME:
+"117
+[e :U 328 ]
+[; ;Game_controller.c: 119: break;
+"119
+[e $U 325  ]
+[; ;Game_controller.c: 120: default:
+"120
+[e :U 329 ]
+[; ;Game_controller.c: 121: break;
+"121
+[e $U 325  ]
+"122
+}
+[; ;Game_controller.c: 122: }
+[e $U 325  ]
+"112
+[e :U 326 ]
+[e [\ . *U _gameCtrl 2 , $ . `E3292 0 327
+ , $ . `E3292 1 328
+ 329 ]
+"122
+[e :U 325 ]
+"123
+}
+[e :U 324 ]
+[; ;Game_controller.c: 123: }
+[; ;Game_controller.c: 124: }
+"124
+[e :UE 316 ]
+}
+"129
+[v _state_machine_menu `(v ~T0 @X0 1 ef2`*S300`uc ]
+"130
+{
+[; ;Game_controller.c: 129: void state_machine_menu(Game_controller* gameCtrl, Event ev)
+[; ;Game_controller.c: 130: {
+[e :U _state_machine_menu ]
+"129
+[v _gameCtrl `*S300 ~T0 @X0 1 r1 ]
+[v _ev `uc ~T0 @X0 1 r2 ]
+"130
+[f ]
+[; ;Game_controller.c: 132: gameCtrl->old_sm_menu = gameCtrl->sm_menu;
+"132
+[e = . *U _gameCtrl 5 . *U _gameCtrl 4 ]
+[; ;Game_controller.c: 134: switch (gameCtrl->sm_menu) {
+"134
+[e $U 332  ]
+{
+[; ;Game_controller.c: 135: case ST_MENU_WAIT:
+"135
+[e :U 333 ]
+[; ;Game_controller.c: 137: if(ev == EV_LEVEL_SW)
+"137
+[e $ ! == -> _ev `i -> _EV_LEVEL_SW `i 334  ]
+[; ;Game_controller.c: 138: {
+"138
+{
+[; ;Game_controller.c: 139: gameCtrl->sm_menu = ST_MENU_LEVEL_SW;
+"139
+[e = . *U _gameCtrl 4 . `E3296 2 ]
+"140
+}
+[e :U 334 ]
+[; ;Game_controller.c: 140: }
+[; ;Game_controller.c: 143: if(ev == EV_CTRL_SW)
+"143
+[e $ ! == -> _ev `i -> _EV_CTRL_SW `i 335  ]
+[; ;Game_controller.c: 144: {
+"144
+{
+[; ;Game_controller.c: 145: gameCtrl->sm_menu = ST_MENU_CTRL_SW;
+"145
+[e = . *U _gameCtrl 4 . `E3296 1 ]
+"146
+}
+[e :U 335 ]
+[; ;Game_controller.c: 146: }
+[; ;Game_controller.c: 147: break;
+"147
+[e $U 331  ]
+[; ;Game_controller.c: 149: case ST_MENU_CTRL_SW:
+"149
+[e :U 336 ]
+[; ;Game_controller.c: 151: if(ev == EV_GOTO_MENU_WAIT)
+"151
+[e $ ! == -> _ev `i -> _EV_GOTO_MENU_WAIT `i 337  ]
+[; ;Game_controller.c: 152: {
+"152
+{
+[; ;Game_controller.c: 153: gameCtrl->sm_menu = ST_MENU_WAIT;
+"153
+[e = . *U _gameCtrl 4 . `E3296 0 ]
+"154
+}
+[e :U 337 ]
+[; ;Game_controller.c: 154: }
+[; ;Game_controller.c: 155: break;
+"155
+[e $U 331  ]
+[; ;Game_controller.c: 156: case ST_MENU_LEVEL_SW:
+"156
+[e :U 338 ]
+[; ;Game_controller.c: 158: if(ev == EV_GOTO_MENU_WAIT)
+"158
+[e $ ! == -> _ev `i -> _EV_GOTO_MENU_WAIT `i 339  ]
+[; ;Game_controller.c: 159: {
+"159
+{
+[; ;Game_controller.c: 160: gameCtrl->sm_menu = ST_MENU_WAIT;
+"160
+[e = . *U _gameCtrl 4 . `E3296 0 ]
+"161
+}
+[e :U 339 ]
+[; ;Game_controller.c: 161: }
+[; ;Game_controller.c: 162: break;
+"162
+[e $U 331  ]
+[; ;Game_controller.c: 163: default:
+"163
+[e :U 340 ]
+[; ;Game_controller.c: 164: break;
+"164
+[e $U 331  ]
+"165
+}
+[; ;Game_controller.c: 165: }
+[e $U 331  ]
+"134
+[e :U 332 ]
+[e [\ . *U _gameCtrl 4 , $ . `E3296 0 333
+ , $ . `E3296 1 336
+ , $ . `E3296 2 338
+ 340 ]
+"165
+[e :U 331 ]
+[; ;Game_controller.c: 168: if(gameCtrl->sm_menu != gameCtrl->old_sm_menu)
+"168
+[e $ ! != -> . *U _gameCtrl 4 `i -> . *U _gameCtrl 5 `i 341  ]
+[; ;Game_controller.c: 169: {
+"169
+{
+[; ;Game_controller.c: 170: switch (gameCtrl->sm_menu) {
+"170
+[e $U 343  ]
+{
+[; ;Game_controller.c: 171: case ST_MENU_WAIT:
+"171
+[e :U 344 ]
+[; ;Game_controller.c: 173: display_menu();
+"173
+[e ( _display_menu ..  ]
+[; ;Game_controller.c: 174: break;
+"174
+[e $U 342  ]
+[; ;Game_controller.c: 176: case ST_MENU_CTRL_SW:
+"176
+[e :U 345 ]
+[; ;Game_controller.c: 178: switch_control();
+"178
+[e ( _switch_control ..  ]
+[; ;Game_controller.c: 179: break;
+"179
+[e $U 342  ]
+[; ;Game_controller.c: 180: case ST_MENU_LEVEL_SW:
+"180
+[e :U 346 ]
+[; ;Game_controller.c: 182: switch_level();
+"182
+[e ( _switch_level ..  ]
+[; ;Game_controller.c: 183: break;
+"183
+[e $U 342  ]
+[; ;Game_controller.c: 184: default:
+"184
+[e :U 347 ]
+[; ;Game_controller.c: 185: break;
+"185
+[e $U 342  ]
+"186
+}
+[; ;Game_controller.c: 186: }
+[e $U 342  ]
+"170
+[e :U 343 ]
+[e [\ . *U _gameCtrl 4 , $ . `E3296 0 344
+ , $ . `E3296 1 345
+ , $ . `E3296 2 346
+ 347 ]
+"186
+[e :U 342 ]
+"187
+}
+[e :U 341 ]
+[; ;Game_controller.c: 187: }
+[; ;Game_controller.c: 188: }
+"188
+[e :UE 330 ]
+}
+"193
+[v _state_machine_screen `(v ~T0 @X0 1 ef2`*S300`uc ]
+"194
+{
+[; ;Game_controller.c: 193: void state_machine_screen(Game_controller* gameCtrl, Event ev)
+[; ;Game_controller.c: 194: {
+[e :U _state_machine_screen ]
+"193
+[v _gameCtrl `*S300 ~T0 @X0 1 r1 ]
+[v _ev `uc ~T0 @X0 1 r2 ]
+"194
+[f ]
+[; ;Game_controller.c: 196: gameCtrl->old_sm_screen = gameCtrl->sm_screen;
+"196
+[e = . *U _gameCtrl 7 . *U _gameCtrl 6 ]
+[; ;Game_controller.c: 198: switch (gameCtrl->sm_screen) {
+"198
+[e $U 350  ]
+{
+[; ;Game_controller.c: 199: case ST_SCREEN_WAIT:
+"199
+[e :U 351 ]
+[; ;Game_controller.c: 201: if(ev == EV_TIMEOUT_SCREEN)
+"201
+[e $ ! == -> _ev `i -> _EV_TIMEOUT_SCREEN `i 352  ]
+[; ;Game_controller.c: 202: {
+"202
+{
+[; ;Game_controller.c: 203: gameCtrl->sm_screen == ST_SCREEN_UPDATE;
+"203
+[e == -> . *U _gameCtrl 6 `i -> . `E3301 1 `i ]
+"204
+}
+[e :U 352 ]
+[; ;Game_controller.c: 204: }
+[; ;Game_controller.c: 205: break;
+"205
+[e $U 349  ]
+[; ;Game_controller.c: 206: case ST_SCREEN_UPDATE:
+"206
+[e :U 353 ]
+[; ;Game_controller.c: 208: if(ev == EV_GOTO_SCREEN_WAIT)
+"208
+[e $ ! == -> _ev `i -> _EV_GOTO_SCREEN_WAIT `i 354  ]
+[; ;Game_controller.c: 209: {
+"209
+{
+[; ;Game_controller.c: 210: gameCtrl->sm_screen = ST_SCREEN_WAIT;
+"210
+[e = . *U _gameCtrl 6 . `E3301 0 ]
+"211
+}
+[e :U 354 ]
+[; ;Game_controller.c: 211: }
+[; ;Game_controller.c: 212: break;
+"212
+[e $U 349  ]
+[; ;Game_controller.c: 213: default:
+"213
+[e :U 355 ]
+[; ;Game_controller.c: 214: break;
+"214
+[e $U 349  ]
+"215
+}
+[; ;Game_controller.c: 215: }
+[e $U 349  ]
+"198
+[e :U 350 ]
+[e [\ . *U _gameCtrl 6 , $ . `E3301 0 351
+ , $ . `E3301 1 353
+ 355 ]
+"215
+[e :U 349 ]
+[; ;Game_controller.c: 218: if(gameCtrl->sm_screen != gameCtrl->old_sm_screen)
+"218
+[e $ ! != -> . *U _gameCtrl 6 `i -> . *U _gameCtrl 7 `i 356  ]
+[; ;Game_controller.c: 219: {
+"219
+{
+[; ;Game_controller.c: 220: switch (gameCtrl->sm_screen) {
+"220
+[e $U 358  ]
+{
+[; ;Game_controller.c: 221: case ST_SCREEN_WAIT:
+"221
+[e :U 359 ]
+[; ;Game_controller.c: 223: break;
+"223
+[e $U 357  ]
+[; ;Game_controller.c: 224: case ST_SCREEN_UPDATE:
+"224
+[e :U 360 ]
+[; ;Game_controller.c: 226: update_screen();
+"226
+[e ( _update_screen ..  ]
+[; ;Game_controller.c: 227: break;
+"227
+[e $U 357  ]
+[; ;Game_controller.c: 228: default:
+"228
+[e :U 361 ]
+[; ;Game_controller.c: 229: break;
+"229
+[e $U 357  ]
+"230
+}
+[; ;Game_controller.c: 230: }
+[e $U 357  ]
+"220
+[e :U 358 ]
+[e [\ . *U _gameCtrl 6 , $ . `E3301 0 359
+ , $ . `E3301 1 360
+ 361 ]
+"230
+[e :U 357 ]
+"231
+}
+[e :U 356 ]
+[; ;Game_controller.c: 231: }
+[; ;Game_controller.c: 232: }
+"232
+[e :UE 348 ]
+}
+"237
+[v _state_machine_racket `(v ~T0 @X0 1 ef2`*S300`uc ]
+"238
+{
+[; ;Game_controller.c: 237: void state_machine_racket(Game_controller* gameCtrl, Event ev)
+[; ;Game_controller.c: 238: {
+[e :U _state_machine_racket ]
+"237
+[v _gameCtrl `*S300 ~T0 @X0 1 r1 ]
+[v _ev `uc ~T0 @X0 1 r2 ]
+"238
+[f ]
+[; ;Game_controller.c: 240: gameCtrl->old_sm_racket = gameCtrl->sm_racket;
+"240
+[e = . *U _gameCtrl 9 . *U _gameCtrl 8 ]
+[; ;Game_controller.c: 242: switch (gameCtrl->sm_racket) {
+"242
+[e $U 364  ]
+{
+[; ;Game_controller.c: 243: case ST_RACKET_WAIT:
+"243
+[e :U 365 ]
+[; ;Game_controller.c: 245: if(ev == EV_TIMEOUT_AI)
+"245
+[e $ ! == -> _ev `i -> _EV_TIMEOUT_AI `i 366  ]
+[; ;Game_controller.c: 246: {
+"246
+{
+[; ;Game_controller.c: 247: gameCtrl->sm_racket = ST_RACKET_AI;
+"247
+[e = . *U _gameCtrl 8 . `E3305 2 ]
+"248
+}
+[e :U 366 ]
+[; ;Game_controller.c: 248: }
+[; ;Game_controller.c: 251: if(ev == EV_TIMEOUT_USER)
+"251
+[e $ ! == -> _ev `i -> _EV_TIMEOUT_USER `i 367  ]
+[; ;Game_controller.c: 252: {
+"252
+{
+[; ;Game_controller.c: 253: gameCtrl->sm_racket = ST_RACKET_USER;
+"253
+[e = . *U _gameCtrl 8 . `E3305 1 ]
+"254
+}
+[e :U 367 ]
+[; ;Game_controller.c: 254: }
+[; ;Game_controller.c: 255: break;
+"255
+[e $U 363  ]
+[; ;Game_controller.c: 256: case ST_RACKET_USER:
+"256
+[e :U 368 ]
+[; ;Game_controller.c: 258: if(ev == EV_GOTO_RACKET_WAIT)
+"258
+[e $ ! == -> _ev `i -> _EV_GOTO_RACKET_WAIT `i 369  ]
+[; ;Game_controller.c: 259: {
+"259
+{
+[; ;Game_controller.c: 260: gameCtrl->sm_racket = ST_RACKET_WAIT;
+"260
+[e = . *U _gameCtrl 8 . `E3305 0 ]
+"261
+}
+[e :U 369 ]
+[; ;Game_controller.c: 261: }
+[; ;Game_controller.c: 262: break;
+"262
+[e $U 363  ]
+[; ;Game_controller.c: 263: case ST_RACKET_AI:
+"263
+[e :U 370 ]
+[; ;Game_controller.c: 265: if(ev == EV_GOTO_RACKET_WAIT)
+"265
+[e $ ! == -> _ev `i -> _EV_GOTO_RACKET_WAIT `i 371  ]
+[; ;Game_controller.c: 266: {
+"266
+{
+[; ;Game_controller.c: 267: gameCtrl->sm_racket = ST_RACKET_WAIT;
+"267
+[e = . *U _gameCtrl 8 . `E3305 0 ]
+"268
+}
+[e :U 371 ]
+[; ;Game_controller.c: 268: }
+[; ;Game_controller.c: 269: break;
+"269
+[e $U 363  ]
+[; ;Game_controller.c: 270: default:
+"270
+[e :U 372 ]
+[; ;Game_controller.c: 271: break;
+"271
+[e $U 363  ]
+"272
+}
+[; ;Game_controller.c: 272: }
+[e $U 363  ]
+"242
+[e :U 364 ]
+[e [\ . *U _gameCtrl 8 , $ . `E3305 0 365
+ , $ . `E3305 1 368
+ , $ . `E3305 2 370
+ 372 ]
+"272
+[e :U 363 ]
+[; ;Game_controller.c: 275: if(gameCtrl->sm_racket != gameCtrl->old_sm_racket)
+"275
+[e $ ! != -> . *U _gameCtrl 8 `i -> . *U _gameCtrl 9 `i 373  ]
+[; ;Game_controller.c: 276: {
+"276
+{
+[; ;Game_controller.c: 277: switch (gameCtrl->sm_racket) {
+"277
+[e $U 375  ]
+{
+[; ;Game_controller.c: 278: case ST_RACKET_WAIT:
+"278
+[e :U 376 ]
+[; ;Game_controller.c: 280: break;
+"280
+[e $U 374  ]
+[; ;Game_controller.c: 281: case ST_RACKET_USER:
+"281
+[e :U 377 ]
+[; ;Game_controller.c: 283: move_user_racket();
+"283
+[e ( _move_user_racket ..  ]
+[; ;Game_controller.c: 284: break;
+"284
+[e $U 374  ]
+[; ;Game_controller.c: 285: case ST_RACKET_AI:
+"285
+[e :U 378 ]
+[; ;Game_controller.c: 287: move_AI_racket();
+"287
+[e ( _move_AI_racket ..  ]
+[; ;Game_controller.c: 288: break;
+"288
+[e $U 374  ]
+[; ;Game_controller.c: 289: default:
+"289
+[e :U 379 ]
+[; ;Game_controller.c: 290: break;
+"290
+[e $U 374  ]
+"291
+}
+[; ;Game_controller.c: 291: }
+[e $U 374  ]
+"277
+[e :U 375 ]
+[e [\ . *U _gameCtrl 8 , $ . `E3305 0 376
+ , $ . `E3305 1 377
+ , $ . `E3305 2 378
+ 379 ]
+"291
+[e :U 374 ]
+"292
+}
+[e :U 373 ]
+[; ;Game_controller.c: 292: }
+[; ;Game_controller.c: 293: }
+"293
+[e :UE 362 ]
+}
+"298
+[v _state_machine_ball `(v ~T0 @X0 1 ef2`*S300`uc ]
+"299
+{
+[; ;Game_controller.c: 298: void state_machine_ball(Game_controller* gameCtrl, Event ev)
+[; ;Game_controller.c: 299: {
+[e :U _state_machine_ball ]
+"298
+[v _gameCtrl `*S300 ~T0 @X0 1 r1 ]
+[v _ev `uc ~T0 @X0 1 r2 ]
+"299
+[f ]
+[; ;Game_controller.c: 301: gameCtrl->old_sm_ball = gameCtrl->sm_ball;
+"301
+[e = . *U _gameCtrl 11 . *U _gameCtrl 10 ]
+[; ;Game_controller.c: 303: switch (gameCtrl->sm_ball) {
+"303
+[e $U 382  ]
+{
+[; ;Game_controller.c: 304: case ST_BALL_WAIT:
+"304
+[e :U 383 ]
+[; ;Game_controller.c: 306: if(ev == EV_TIMEOUT_BALL)
+"306
+[e $ ! == -> _ev `i -> _EV_TIMEOUT_BALL `i 384  ]
+[; ;Game_controller.c: 307: {
+"307
+{
+[; ;Game_controller.c: 308: gameCtrl->sm_ball = ST_BALL_CHECK_Y;
+"308
+[e = . *U _gameCtrl 10 . `E3310 1 ]
+"309
+}
+[e :U 384 ]
+[; ;Game_controller.c: 309: }
+[; ;Game_controller.c: 310: break;
+"310
+[e $U 381  ]
+[; ;Game_controller.c: 312: case ST_BALL_CHECK_Y:
+"312
+[e :U 385 ]
+[; ;Game_controller.c: 316: if(ev == EV_CHECK_RACKET)
+"316
+[e $ ! == -> _ev `i -> _EV_CHECK_RACKET `i 386  ]
+[; ;Game_controller.c: 317: {
+"317
+{
+[; ;Game_controller.c: 318: gameCtrl->sm_ball = ST_BALL_CHECK_X;
+"318
+[e = . *U _gameCtrl 10 . `E3310 2 ]
+"319
+}
+[e :U 386 ]
+[; ;Game_controller.c: 319: }
+[; ;Game_controller.c: 324: if(ev == EV_MOVE)
+"324
+[e $ ! == -> _ev `i -> _EV_MOVE `i 387  ]
+[; ;Game_controller.c: 325: {
+"325
+{
+[; ;Game_controller.c: 326: gameCtrl->sm_ball = ST_BALL_MOVE;
+"326
+[e = . *U _gameCtrl 10 . `E3310 3 ]
+"327
+}
+[e :U 387 ]
+[; ;Game_controller.c: 327: }
+[; ;Game_controller.c: 328: break;
+"328
+[e $U 381  ]
+[; ;Game_controller.c: 330: case ST_BALL_CHECK_X:
+"330
+[e :U 388 ]
+[; ;Game_controller.c: 332: if(ev == EV_GAME_OVER)
+"332
+[e $ ! == -> _ev `i -> _EV_GAME_OVER `i 389  ]
+[; ;Game_controller.c: 333: {
+"333
+{
+[; ;Game_controller.c: 334: gameCtrl->sm_ball = ST_BALL_GAME_OVER;
+"334
+[e = . *U _gameCtrl 10 . `E3310 4 ]
+"335
+}
+[e :U 389 ]
+[; ;Game_controller.c: 335: }
+[; ;Game_controller.c: 338: if(ev == EV_MOVE)
+"338
+[e $ ! == -> _ev `i -> _EV_MOVE `i 390  ]
+[; ;Game_controller.c: 339: {
+"339
+{
+[; ;Game_controller.c: 340: gameCtrl->sm_ball = ST_BALL_MOVE;
+"340
+[e = . *U _gameCtrl 10 . `E3310 3 ]
+"341
+}
+[e :U 390 ]
+[; ;Game_controller.c: 341: }
+[; ;Game_controller.c: 342: break;
+"342
+[e $U 381  ]
+[; ;Game_controller.c: 344: case ST_BALL_MOVE:
+"344
+[e :U 391 ]
+[; ;Game_controller.c: 346: if(ev == EV_GOTO_BALL_WAIT)
+"346
+[e $ ! == -> _ev `i -> _EV_GOTO_BALL_WAIT `i 392  ]
+[; ;Game_controller.c: 347: {
+"347
+{
+[; ;Game_controller.c: 348: gameCtrl->sm_ball = ST_BALL_WAIT;
+"348
+[e = . *U _gameCtrl 10 . `E3310 0 ]
+"349
+}
+[e :U 392 ]
+[; ;Game_controller.c: 349: }
+[; ;Game_controller.c: 350: break;
+"350
+[e $U 381  ]
+[; ;Game_controller.c: 352: case ST_BALL_GAME_OVER:
+"352
+[e :U 393 ]
+[; ;Game_controller.c: 354: if(ev == EV_MENU)
+"354
+[e $ ! == -> _ev `i -> _EV_MENU `i 394  ]
+[; ;Game_controller.c: 355: {
+"355
+{
+[; ;Game_controller.c: 356: gameCtrl->sm_ball = ST_BALL_WAIT;
+"356
+[e = . *U _gameCtrl 10 . `E3310 0 ]
+"358
+}
+[e :U 394 ]
+[; ;Game_controller.c: 358: }
+[; ;Game_controller.c: 359: break;
+"359
+[e $U 381  ]
+[; ;Game_controller.c: 361: default:
+"361
+[e :U 395 ]
+[; ;Game_controller.c: 362: break;
+"362
+[e $U 381  ]
+"363
+}
+[; ;Game_controller.c: 363: }
+[e $U 381  ]
+"303
+[e :U 382 ]
+[e [\ . *U _gameCtrl 10 , $ . `E3310 0 383
+ , $ . `E3310 1 385
+ , $ . `E3310 2 388
+ , $ . `E3310 3 391
+ , $ . `E3310 4 393
+ 395 ]
+"363
+[e :U 381 ]
+[; ;Game_controller.c: 366: if(gameCtrl->sm_ball != gameCtrl->old_sm_ball)
+"366
+[e $ ! != -> . *U _gameCtrl 10 `i -> . *U _gameCtrl 11 `i 396  ]
+[; ;Game_controller.c: 367: {
+"367
+{
+[; ;Game_controller.c: 368: switch (gameCtrl->sm_ball) {
+"368
+[e $U 398  ]
+{
+[; ;Game_controller.c: 369: case ST_BALL_WAIT:
+"369
+[e :U 399 ]
+[; ;Game_controller.c: 371: break;
+"371
+[e $U 397  ]
+[; ;Game_controller.c: 373: case ST_BALL_CHECK_Y:
+"373
+[e :U 400 ]
+[; ;Game_controller.c: 376: break;
+"376
+[e $U 397  ]
+[; ;Game_controller.c: 378: case ST_BALL_CHECK_X:
+"378
+[e :U 401 ]
+[; ;Game_controller.c: 381: break;
+"381
+[e $U 397  ]
+[; ;Game_controller.c: 383: case ST_BALL_MOVE:
+"383
+[e :U 402 ]
+[; ;Game_controller.c: 386: break;
+"386
+[e $U 397  ]
+[; ;Game_controller.c: 388: case ST_BALL_GAME_OVER:
+"388
+[e :U 403 ]
+[; ;Game_controller.c: 390: reset_game();
+"390
+[e ( _reset_game ..  ]
+[; ;Game_controller.c: 391: break;
+"391
+[e $U 397  ]
+[; ;Game_controller.c: 393: default:
+"393
+[e :U 404 ]
+[; ;Game_controller.c: 394: break;
+"394
+[e $U 397  ]
+"395
+}
+[; ;Game_controller.c: 395: }
+[e $U 397  ]
+"368
+[e :U 398 ]
+[e [\ . *U _gameCtrl 10 , $ . `E3310 0 399
+ , $ . `E3310 1 400
+ , $ . `E3310 2 401
+ , $ . `E3310 3 402
+ , $ . `E3310 4 403
+ 404 ]
+"395
+[e :U 397 ]
+"396
+}
+[e :U 396 ]
+[; ;Game_controller.c: 396: }
+[; ;Game_controller.c: 397: }
+"397
+[e :UE 380 ]
+}
+"402
+[v _display_menu `(v ~T0 @X0 1 ef ]
+"403
+{
+[; ;Game_controller.c: 402: void display_menu()
+[; ;Game_controller.c: 403: {
+[e :U _display_menu ]
+[f ]
+[; ;Game_controller.c: 405: }
+"405
+[e :UE 405 ]
+}
+"410
+[v _switch_level `(v ~T0 @X0 1 ef ]
+"411
+{
+[; ;Game_controller.c: 410: void switch_level()
+[; ;Game_controller.c: 411: {
+[e :U _switch_level ]
+[f ]
+[; ;Game_controller.c: 413: }
+"413
+[e :UE 406 ]
+}
+"418
+[v _switch_control `(v ~T0 @X0 1 ef ]
+"419
+{
+[; ;Game_controller.c: 418: void switch_control()
+[; ;Game_controller.c: 419: {
+[e :U _switch_control ]
+[f ]
+[; ;Game_controller.c: 421: }
+"421
+[e :UE 407 ]
+}
+"426
+[v _update_screen `(v ~T0 @X0 1 ef ]
+"427
+{
+[; ;Game_controller.c: 426: void update_screen()
+[; ;Game_controller.c: 427: {
+[e :U _update_screen ]
+[f ]
+[; ;Game_controller.c: 429: }
+"429
+[e :UE 408 ]
+}
+"434
+[v _move_AI_racket `(v ~T0 @X0 1 ef ]
+"435
+{
+[; ;Game_controller.c: 434: void move_AI_racket()
+[; ;Game_controller.c: 435: {
+[e :U _move_AI_racket ]
+[f ]
+[; ;Game_controller.c: 437: }
+"437
+[e :UE 409 ]
+}
+"442
+[v _move_user_racket `(v ~T0 @X0 1 ef ]
+"443
+{
+[; ;Game_controller.c: 442: void move_user_racket()
+[; ;Game_controller.c: 443: {
+[e :U _move_user_racket ]
+[f ]
+[; ;Game_controller.c: 445: }
+"445
+[e :UE 410 ]
+}
+"450
+[v _check_Y_ball `(v ~T0 @X0 1 ef1`ui ]
+"451
+{
+[; ;Game_controller.c: 450: void check_Y_ball(uint16_t y_ball)
+[; ;Game_controller.c: 451: {
+[e :U _check_Y_ball ]
+"450
+[v _y_ball `ui ~T0 @X0 1 r1 ]
+"451
+[f ]
+[; ;Game_controller.c: 453: }
+"453
+[e :UE 411 ]
+}
+"458
+[v _check_X_ball `(v ~T0 @X0 1 ef2`ui`ui ]
+"459
+{
+[; ;Game_controller.c: 458: void check_X_ball(uint16_t x_ball, uint16_t x_racket)
+[; ;Game_controller.c: 459: {
+[e :U _check_X_ball ]
+"458
+[v _x_ball `ui ~T0 @X0 1 r1 ]
+[v _x_racket `ui ~T0 @X0 1 r2 ]
+"459
+[f ]
+[; ;Game_controller.c: 461: }
+"461
+[e :UE 412 ]
+}
+"467
+[v _compute_movement_ball `(v ~T0 @X0 1 ef1`ui ]
+"468
+{
+[; ;Game_controller.c: 467: void compute_movement_ball(uint16_t x_ball)
+[; ;Game_controller.c: 468: {
+[e :U _compute_movement_ball ]
+"467
+[v _x_ball `ui ~T0 @X0 1 r1 ]
+"468
+[f ]
+[; ;Game_controller.c: 470: }
+"470
+[e :UE 413 ]
+}
+"475
+[v _sleep_mode `(v ~T0 @X0 1 ef ]
+"476
+{
+[; ;Game_controller.c: 475: void sleep_mode()
+[; ;Game_controller.c: 476: {
+[e :U _sleep_mode ]
+[f ]
+[; ;Game_controller.c: 478: }
+"478
+[e :UE 414 ]
+}
+"483
+[v _wake_up `(v ~T0 @X0 1 ef ]
+"484
+{
+[; ;Game_controller.c: 483: void wake_up()
+[; ;Game_controller.c: 484: {
+[e :U _wake_up ]
+[f ]
+[; ;Game_controller.c: 486: }
+"486
+[e :UE 415 ]
+}
+"491
+[v _reset_game `(v ~T0 @X0 1 ef ]
+"492
+{
+[; ;Game_controller.c: 491: void reset_game()
+[; ;Game_controller.c: 492: {
+[e :U _reset_game ]
+[f ]
+[; ;Game_controller.c: 494: }
+"494
+[e :UE 416 ]
+}
